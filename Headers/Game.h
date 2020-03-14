@@ -11,10 +11,14 @@
 class Game {
 public:
     Game(AbstractFactory *AF);
-    void Run();
+    void run();
 
 private:
-    AbstractFactory* _factory;
+    AbstractFactory* m_factory;
+
+    string m_playerShipPath = "../assets/ship.png";
+    int m_windowHeight = 960;
+    int m_windowWidth = 640;
 };
 
 

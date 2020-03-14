@@ -112,38 +112,24 @@ CMakeFiles/Project.dir/CPP-Files/EnemyShip.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/CPP-Files/EnemyShip.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Users\cliff\Documents\C++\Project\CPP-Files\EnemyShip.cpp -o CMakeFiles\Project.dir\CPP-Files\EnemyShip.cpp.s
 
-CMakeFiles/Project.dir/CPP-Files/Graphics.cpp.obj: CMakeFiles/Project.dir/flags.make
-CMakeFiles/Project.dir/CPP-Files/Graphics.cpp.obj: CMakeFiles/Project.dir/includes_CXX.rsp
-CMakeFiles/Project.dir/CPP-Files/Graphics.cpp.obj: ../CPP-Files/Graphics.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Project.dir/CPP-Files/Graphics.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project.dir\CPP-Files\Graphics.cpp.obj -c D:\Users\cliff\Documents\C++\Project\CPP-Files\Graphics.cpp
+CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: CMakeFiles/Project.dir/includes_CXX.rsp
+CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: ../Factories/SDLFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project.dir\Factories\SDLFactory.cpp.obj -c D:\Users\cliff\Documents\C++\Project\Factories\SDLFactory.cpp
 
-CMakeFiles/Project.dir/CPP-Files/Graphics.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/CPP-Files/Graphics.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Users\cliff\Documents\C++\Project\CPP-Files\Graphics.cpp > CMakeFiles\Project.dir\CPP-Files\Graphics.cpp.i
+CMakeFiles/Project.dir/Factories/SDLFactory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/Factories/SDLFactory.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Users\cliff\Documents\C++\Project\Factories\SDLFactory.cpp > CMakeFiles\Project.dir\Factories\SDLFactory.cpp.i
 
-CMakeFiles/Project.dir/CPP-Files/Graphics.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/CPP-Files/Graphics.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Users\cliff\Documents\C++\Project\CPP-Files\Graphics.cpp -o CMakeFiles\Project.dir\CPP-Files\Graphics.cpp.s
-
-CMakeFiles/Project.dir/CPP-Files/ObjectFactory.cpp.obj: CMakeFiles/Project.dir/flags.make
-CMakeFiles/Project.dir/CPP-Files/ObjectFactory.cpp.obj: CMakeFiles/Project.dir/includes_CXX.rsp
-CMakeFiles/Project.dir/CPP-Files/ObjectFactory.cpp.obj: ../CPP-Files/ObjectFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Project.dir/CPP-Files/ObjectFactory.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project.dir\CPP-Files\ObjectFactory.cpp.obj -c D:\Users\cliff\Documents\C++\Project\CPP-Files\ObjectFactory.cpp
-
-CMakeFiles/Project.dir/CPP-Files/ObjectFactory.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/CPP-Files/ObjectFactory.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Users\cliff\Documents\C++\Project\CPP-Files\ObjectFactory.cpp > CMakeFiles\Project.dir\CPP-Files\ObjectFactory.cpp.i
-
-CMakeFiles/Project.dir/CPP-Files/ObjectFactory.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/CPP-Files/ObjectFactory.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Users\cliff\Documents\C++\Project\CPP-Files\ObjectFactory.cpp -o CMakeFiles\Project.dir\CPP-Files\ObjectFactory.cpp.s
+CMakeFiles/Project.dir/Factories/SDLFactory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/Factories/SDLFactory.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Users\cliff\Documents\C++\Project\Factories\SDLFactory.cpp -o CMakeFiles\Project.dir\Factories\SDLFactory.cpp.s
 
 CMakeFiles/Project.dir/CPP-Files/TextureManager.cpp.obj: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/CPP-Files/TextureManager.cpp.obj: CMakeFiles/Project.dir/includes_CXX.rsp
 CMakeFiles/Project.dir/CPP-Files/TextureManager.cpp.obj: ../CPP-Files/TextureManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Project.dir/CPP-Files/TextureManager.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Project.dir/CPP-Files/TextureManager.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project.dir\CPP-Files\TextureManager.cpp.obj -c D:\Users\cliff\Documents\C++\Project\CPP-Files\TextureManager.cpp
 
 CMakeFiles/Project.dir/CPP-Files/TextureManager.cpp.i: cmake_force
@@ -157,7 +143,7 @@ CMakeFiles/Project.dir/CPP-Files/TextureManager.cpp.s: cmake_force
 CMakeFiles/Project.dir/CPP-Files/Game.cpp.obj: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/CPP-Files/Game.cpp.obj: CMakeFiles/Project.dir/includes_CXX.rsp
 CMakeFiles/Project.dir/CPP-Files/Game.cpp.obj: ../CPP-Files/Game.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Project.dir/CPP-Files/Game.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Project.dir/CPP-Files/Game.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project.dir\CPP-Files\Game.cpp.obj -c D:\Users\cliff\Documents\C++\Project\CPP-Files\Game.cpp
 
 CMakeFiles/Project.dir/CPP-Files/Game.cpp.i: cmake_force
@@ -168,16 +154,90 @@ CMakeFiles/Project.dir/CPP-Files/Game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/CPP-Files/Game.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Users\cliff\Documents\C++\Project\CPP-Files\Game.cpp -o CMakeFiles\Project.dir\CPP-Files\Game.cpp.s
 
+CMakeFiles/Project.dir/CPP-Files/SDLPlayerShip.cpp.obj: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/CPP-Files/SDLPlayerShip.cpp.obj: CMakeFiles/Project.dir/includes_CXX.rsp
+CMakeFiles/Project.dir/CPP-Files/SDLPlayerShip.cpp.obj: ../CPP-Files/SDLPlayerShip.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Project.dir/CPP-Files/SDLPlayerShip.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project.dir\CPP-Files\SDLPlayerShip.cpp.obj -c D:\Users\cliff\Documents\C++\Project\CPP-Files\SDLPlayerShip.cpp
+
+CMakeFiles/Project.dir/CPP-Files/SDLPlayerShip.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/CPP-Files/SDLPlayerShip.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Users\cliff\Documents\C++\Project\CPP-Files\SDLPlayerShip.cpp > CMakeFiles\Project.dir\CPP-Files\SDLPlayerShip.cpp.i
+
+CMakeFiles/Project.dir/CPP-Files/SDLPlayerShip.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/CPP-Files/SDLPlayerShip.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Users\cliff\Documents\C++\Project\CPP-Files\SDLPlayerShip.cpp -o CMakeFiles\Project.dir\CPP-Files\SDLPlayerShip.cpp.s
+
+CMakeFiles/Project.dir/CPP-Files/SDLEnemyShip.cpp.obj: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/CPP-Files/SDLEnemyShip.cpp.obj: CMakeFiles/Project.dir/includes_CXX.rsp
+CMakeFiles/Project.dir/CPP-Files/SDLEnemyShip.cpp.obj: ../CPP-Files/SDLEnemyShip.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Project.dir/CPP-Files/SDLEnemyShip.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project.dir\CPP-Files\SDLEnemyShip.cpp.obj -c D:\Users\cliff\Documents\C++\Project\CPP-Files\SDLEnemyShip.cpp
+
+CMakeFiles/Project.dir/CPP-Files/SDLEnemyShip.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/CPP-Files/SDLEnemyShip.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Users\cliff\Documents\C++\Project\CPP-Files\SDLEnemyShip.cpp > CMakeFiles\Project.dir\CPP-Files\SDLEnemyShip.cpp.i
+
+CMakeFiles/Project.dir/CPP-Files/SDLEnemyShip.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/CPP-Files/SDLEnemyShip.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Users\cliff\Documents\C++\Project\CPP-Files\SDLEnemyShip.cpp -o CMakeFiles\Project.dir\CPP-Files\SDLEnemyShip.cpp.s
+
+CMakeFiles/Project.dir/CPP-Files/SDLKeyStates.cpp.obj: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/CPP-Files/SDLKeyStates.cpp.obj: CMakeFiles/Project.dir/includes_CXX.rsp
+CMakeFiles/Project.dir/CPP-Files/SDLKeyStates.cpp.obj: ../CPP-Files/SDLKeyStates.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Project.dir/CPP-Files/SDLKeyStates.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project.dir\CPP-Files\SDLKeyStates.cpp.obj -c D:\Users\cliff\Documents\C++\Project\CPP-Files\SDLKeyStates.cpp
+
+CMakeFiles/Project.dir/CPP-Files/SDLKeyStates.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/CPP-Files/SDLKeyStates.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Users\cliff\Documents\C++\Project\CPP-Files\SDLKeyStates.cpp > CMakeFiles\Project.dir\CPP-Files\SDLKeyStates.cpp.i
+
+CMakeFiles/Project.dir/CPP-Files/SDLKeyStates.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/CPP-Files/SDLKeyStates.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Users\cliff\Documents\C++\Project\CPP-Files\SDLKeyStates.cpp -o CMakeFiles\Project.dir\CPP-Files\SDLKeyStates.cpp.s
+
+CMakeFiles/Project.dir/CPP-Files/Background.cpp.obj: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/CPP-Files/Background.cpp.obj: CMakeFiles/Project.dir/includes_CXX.rsp
+CMakeFiles/Project.dir/CPP-Files/Background.cpp.obj: ../CPP-Files/Background.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Project.dir/CPP-Files/Background.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project.dir\CPP-Files\Background.cpp.obj -c D:\Users\cliff\Documents\C++\Project\CPP-Files\Background.cpp
+
+CMakeFiles/Project.dir/CPP-Files/Background.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/CPP-Files/Background.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Users\cliff\Documents\C++\Project\CPP-Files\Background.cpp > CMakeFiles\Project.dir\CPP-Files\Background.cpp.i
+
+CMakeFiles/Project.dir/CPP-Files/Background.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/CPP-Files/Background.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Users\cliff\Documents\C++\Project\CPP-Files\Background.cpp -o CMakeFiles\Project.dir\CPP-Files\Background.cpp.s
+
+CMakeFiles/Project.dir/CPP-Files/SDLBackground.cpp.obj: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/CPP-Files/SDLBackground.cpp.obj: CMakeFiles/Project.dir/includes_CXX.rsp
+CMakeFiles/Project.dir/CPP-Files/SDLBackground.cpp.obj: ../CPP-Files/SDLBackground.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Project.dir/CPP-Files/SDLBackground.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project.dir\CPP-Files\SDLBackground.cpp.obj -c D:\Users\cliff\Documents\C++\Project\CPP-Files\SDLBackground.cpp
+
+CMakeFiles/Project.dir/CPP-Files/SDLBackground.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/CPP-Files/SDLBackground.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Users\cliff\Documents\C++\Project\CPP-Files\SDLBackground.cpp > CMakeFiles\Project.dir\CPP-Files\SDLBackground.cpp.i
+
+CMakeFiles/Project.dir/CPP-Files/SDLBackground.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/CPP-Files/SDLBackground.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Users\cliff\Documents\C++\Project\CPP-Files\SDLBackground.cpp -o CMakeFiles\Project.dir\CPP-Files\SDLBackground.cpp.s
+
 # Object files for target Project
 Project_OBJECTS = \
 "CMakeFiles/Project.dir/CPP-Files/main.cpp.obj" \
 "CMakeFiles/Project.dir/CPP-Files/Ship.cpp.obj" \
 "CMakeFiles/Project.dir/CPP-Files/PlayerShip.cpp.obj" \
 "CMakeFiles/Project.dir/CPP-Files/EnemyShip.cpp.obj" \
-"CMakeFiles/Project.dir/CPP-Files/Graphics.cpp.obj" \
-"CMakeFiles/Project.dir/CPP-Files/ObjectFactory.cpp.obj" \
+"CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj" \
 "CMakeFiles/Project.dir/CPP-Files/TextureManager.cpp.obj" \
-"CMakeFiles/Project.dir/CPP-Files/Game.cpp.obj"
+"CMakeFiles/Project.dir/CPP-Files/Game.cpp.obj" \
+"CMakeFiles/Project.dir/CPP-Files/SDLPlayerShip.cpp.obj" \
+"CMakeFiles/Project.dir/CPP-Files/SDLEnemyShip.cpp.obj" \
+"CMakeFiles/Project.dir/CPP-Files/SDLKeyStates.cpp.obj" \
+"CMakeFiles/Project.dir/CPP-Files/Background.cpp.obj" \
+"CMakeFiles/Project.dir/CPP-Files/SDLBackground.cpp.obj"
 
 # External object files for target Project
 Project_EXTERNAL_OBJECTS =
@@ -186,16 +246,20 @@ Project.exe: CMakeFiles/Project.dir/CPP-Files/main.cpp.obj
 Project.exe: CMakeFiles/Project.dir/CPP-Files/Ship.cpp.obj
 Project.exe: CMakeFiles/Project.dir/CPP-Files/PlayerShip.cpp.obj
 Project.exe: CMakeFiles/Project.dir/CPP-Files/EnemyShip.cpp.obj
-Project.exe: CMakeFiles/Project.dir/CPP-Files/Graphics.cpp.obj
-Project.exe: CMakeFiles/Project.dir/CPP-Files/ObjectFactory.cpp.obj
+Project.exe: CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj
 Project.exe: CMakeFiles/Project.dir/CPP-Files/TextureManager.cpp.obj
 Project.exe: CMakeFiles/Project.dir/CPP-Files/Game.cpp.obj
+Project.exe: CMakeFiles/Project.dir/CPP-Files/SDLPlayerShip.cpp.obj
+Project.exe: CMakeFiles/Project.dir/CPP-Files/SDLEnemyShip.cpp.obj
+Project.exe: CMakeFiles/Project.dir/CPP-Files/SDLKeyStates.cpp.obj
+Project.exe: CMakeFiles/Project.dir/CPP-Files/Background.cpp.obj
+Project.exe: CMakeFiles/Project.dir/CPP-Files/SDLBackground.cpp.obj
 Project.exe: CMakeFiles/Project.dir/build.make
 Project.exe: C:/MinGW/lib/lib/libSDL2.dll.a
 Project.exe: CMakeFiles/Project.dir/linklibs.rsp
 Project.exe: CMakeFiles/Project.dir/objects1.rsp
 Project.exe: CMakeFiles/Project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable Project.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable Project.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Project.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

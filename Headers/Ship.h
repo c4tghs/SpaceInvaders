@@ -8,8 +8,10 @@
 
 class Ship {
 public:
-    virtual void moveLeft() = 0;
-    virtual void moveRight() = 0;
+    virtual int getXPosition()=0;
+    virtual int getYPosition()=0;
+    virtual void render() = 0;
+    virtual void close() = 0;
 
 };
 

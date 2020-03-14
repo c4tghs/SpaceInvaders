@@ -82,19 +82,28 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/Background.cpp">
+			<Option target="Project"/>
+		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/EnemyShip.cpp">
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/Game.cpp">
 			<Option target="Project"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/Graphics.cpp">
-			<Option target="Project"/>
-		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/ObjectFactory.cpp">
-			<Option target="Project"/>
-		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/PlayerShip.cpp">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/SDLBackground.cpp">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/SDLEnemyShip.cpp">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/SDLKeyStates.cpp">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/SDLPlayerShip.cpp">
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/Ship.cpp">
@@ -109,7 +118,13 @@
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Factories/AbstractFactory.h">
 			<Option target="Project"/>
 		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Factories/SDLFactory.cpp">
+			<Option target="Project"/>
+		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Factories/SDLFactory.h">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/Background.h">
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/EnemyShip.h">
@@ -118,13 +133,19 @@
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/Game.h">
 			<Option target="Project"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/Graphics.h">
-			<Option target="Project"/>
-		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/ObjectFactory.h">
-			<Option target="Project"/>
-		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/PlayerShip.h">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/SDLBackground.h">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/SDLEnemyShip.h">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/SDLKeyStates.h">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/SDLPlayerShip.h">
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/Ship.h">

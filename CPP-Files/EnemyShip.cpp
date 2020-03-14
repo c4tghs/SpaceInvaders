@@ -3,3 +3,6 @@
 //
 
 #include "../Headers/EnemyShip.h"
+EnemyShip::EnemyShip() {
+
+}

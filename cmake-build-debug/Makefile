@@ -122,6 +122,33 @@ Project/fast:
 	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/build
 .PHONY : Project/fast
 
+CPP-Files/Background.obj: CPP-Files/Background.cpp.obj
+
+.PHONY : CPP-Files/Background.obj
+
+# target to build an object file
+CPP-Files/Background.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/Background.cpp.obj
+.PHONY : CPP-Files/Background.cpp.obj
+
+CPP-Files/Background.i: CPP-Files/Background.cpp.i
+
+.PHONY : CPP-Files/Background.i
+
+# target to preprocess a source file
+CPP-Files/Background.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/Background.cpp.i
+.PHONY : CPP-Files/Background.cpp.i
+
+CPP-Files/Background.s: CPP-Files/Background.cpp.s
+
+.PHONY : CPP-Files/Background.s
+
+# target to generate assembly for a file
+CPP-Files/Background.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/Background.cpp.s
+.PHONY : CPP-Files/Background.cpp.s
+
 CPP-Files/EnemyShip.obj: CPP-Files/EnemyShip.cpp.obj
 
 .PHONY : CPP-Files/EnemyShip.obj
@@ -176,60 +203,6 @@ CPP-Files/Game.cpp.s:
 	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/Game.cpp.s
 .PHONY : CPP-Files/Game.cpp.s
 
-CPP-Files/Graphics.obj: CPP-Files/Graphics.cpp.obj
-
-.PHONY : CPP-Files/Graphics.obj
-
-# target to build an object file
-CPP-Files/Graphics.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/Graphics.cpp.obj
-.PHONY : CPP-Files/Graphics.cpp.obj
-
-CPP-Files/Graphics.i: CPP-Files/Graphics.cpp.i
-
-.PHONY : CPP-Files/Graphics.i
-
-# target to preprocess a source file
-CPP-Files/Graphics.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/Graphics.cpp.i
-.PHONY : CPP-Files/Graphics.cpp.i
-
-CPP-Files/Graphics.s: CPP-Files/Graphics.cpp.s
-
-.PHONY : CPP-Files/Graphics.s
-
-# target to generate assembly for a file
-CPP-Files/Graphics.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/Graphics.cpp.s
-.PHONY : CPP-Files/Graphics.cpp.s
-
-CPP-Files/ObjectFactory.obj: CPP-Files/ObjectFactory.cpp.obj
-
-.PHONY : CPP-Files/ObjectFactory.obj
-
-# target to build an object file
-CPP-Files/ObjectFactory.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/ObjectFactory.cpp.obj
-.PHONY : CPP-Files/ObjectFactory.cpp.obj
-
-CPP-Files/ObjectFactory.i: CPP-Files/ObjectFactory.cpp.i
-
-.PHONY : CPP-Files/ObjectFactory.i
-
-# target to preprocess a source file
-CPP-Files/ObjectFactory.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/ObjectFactory.cpp.i
-.PHONY : CPP-Files/ObjectFactory.cpp.i
-
-CPP-Files/ObjectFactory.s: CPP-Files/ObjectFactory.cpp.s
-
-.PHONY : CPP-Files/ObjectFactory.s
-
-# target to generate assembly for a file
-CPP-Files/ObjectFactory.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/ObjectFactory.cpp.s
-.PHONY : CPP-Files/ObjectFactory.cpp.s
-
 CPP-Files/PlayerShip.obj: CPP-Files/PlayerShip.cpp.obj
 
 .PHONY : CPP-Files/PlayerShip.obj
@@ -256,6 +229,114 @@ CPP-Files/PlayerShip.s: CPP-Files/PlayerShip.cpp.s
 CPP-Files/PlayerShip.cpp.s:
 	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/PlayerShip.cpp.s
 .PHONY : CPP-Files/PlayerShip.cpp.s
+
+CPP-Files/SDLBackground.obj: CPP-Files/SDLBackground.cpp.obj
+
+.PHONY : CPP-Files/SDLBackground.obj
+
+# target to build an object file
+CPP-Files/SDLBackground.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/SDLBackground.cpp.obj
+.PHONY : CPP-Files/SDLBackground.cpp.obj
+
+CPP-Files/SDLBackground.i: CPP-Files/SDLBackground.cpp.i
+
+.PHONY : CPP-Files/SDLBackground.i
+
+# target to preprocess a source file
+CPP-Files/SDLBackground.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/SDLBackground.cpp.i
+.PHONY : CPP-Files/SDLBackground.cpp.i
+
+CPP-Files/SDLBackground.s: CPP-Files/SDLBackground.cpp.s
+
+.PHONY : CPP-Files/SDLBackground.s
+
+# target to generate assembly for a file
+CPP-Files/SDLBackground.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/SDLBackground.cpp.s
+.PHONY : CPP-Files/SDLBackground.cpp.s
+
+CPP-Files/SDLEnemyShip.obj: CPP-Files/SDLEnemyShip.cpp.obj
+
+.PHONY : CPP-Files/SDLEnemyShip.obj
+
+# target to build an object file
+CPP-Files/SDLEnemyShip.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/SDLEnemyShip.cpp.obj
+.PHONY : CPP-Files/SDLEnemyShip.cpp.obj
+
+CPP-Files/SDLEnemyShip.i: CPP-Files/SDLEnemyShip.cpp.i
+
+.PHONY : CPP-Files/SDLEnemyShip.i
+
+# target to preprocess a source file
+CPP-Files/SDLEnemyShip.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/SDLEnemyShip.cpp.i
+.PHONY : CPP-Files/SDLEnemyShip.cpp.i
+
+CPP-Files/SDLEnemyShip.s: CPP-Files/SDLEnemyShip.cpp.s
+
+.PHONY : CPP-Files/SDLEnemyShip.s
+
+# target to generate assembly for a file
+CPP-Files/SDLEnemyShip.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/SDLEnemyShip.cpp.s
+.PHONY : CPP-Files/SDLEnemyShip.cpp.s
+
+CPP-Files/SDLKeyStates.obj: CPP-Files/SDLKeyStates.cpp.obj
+
+.PHONY : CPP-Files/SDLKeyStates.obj
+
+# target to build an object file
+CPP-Files/SDLKeyStates.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/SDLKeyStates.cpp.obj
+.PHONY : CPP-Files/SDLKeyStates.cpp.obj
+
+CPP-Files/SDLKeyStates.i: CPP-Files/SDLKeyStates.cpp.i
+
+.PHONY : CPP-Files/SDLKeyStates.i
+
+# target to preprocess a source file
+CPP-Files/SDLKeyStates.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/SDLKeyStates.cpp.i
+.PHONY : CPP-Files/SDLKeyStates.cpp.i
+
+CPP-Files/SDLKeyStates.s: CPP-Files/SDLKeyStates.cpp.s
+
+.PHONY : CPP-Files/SDLKeyStates.s
+
+# target to generate assembly for a file
+CPP-Files/SDLKeyStates.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/SDLKeyStates.cpp.s
+.PHONY : CPP-Files/SDLKeyStates.cpp.s
+
+CPP-Files/SDLPlayerShip.obj: CPP-Files/SDLPlayerShip.cpp.obj
+
+.PHONY : CPP-Files/SDLPlayerShip.obj
+
+# target to build an object file
+CPP-Files/SDLPlayerShip.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/SDLPlayerShip.cpp.obj
+.PHONY : CPP-Files/SDLPlayerShip.cpp.obj
+
+CPP-Files/SDLPlayerShip.i: CPP-Files/SDLPlayerShip.cpp.i
+
+.PHONY : CPP-Files/SDLPlayerShip.i
+
+# target to preprocess a source file
+CPP-Files/SDLPlayerShip.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/SDLPlayerShip.cpp.i
+.PHONY : CPP-Files/SDLPlayerShip.cpp.i
+
+CPP-Files/SDLPlayerShip.s: CPP-Files/SDLPlayerShip.cpp.s
+
+.PHONY : CPP-Files/SDLPlayerShip.s
+
+# target to generate assembly for a file
+CPP-Files/SDLPlayerShip.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/SDLPlayerShip.cpp.s
+.PHONY : CPP-Files/SDLPlayerShip.cpp.s
 
 CPP-Files/Ship.obj: CPP-Files/Ship.cpp.obj
 
@@ -338,6 +419,33 @@ CPP-Files/main.cpp.s:
 	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/main.cpp.s
 .PHONY : CPP-Files/main.cpp.s
 
+Factories/SDLFactory.obj: Factories/SDLFactory.cpp.obj
+
+.PHONY : Factories/SDLFactory.obj
+
+# target to build an object file
+Factories/SDLFactory.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj
+.PHONY : Factories/SDLFactory.cpp.obj
+
+Factories/SDLFactory.i: Factories/SDLFactory.cpp.i
+
+.PHONY : Factories/SDLFactory.i
+
+# target to preprocess a source file
+Factories/SDLFactory.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Factories/SDLFactory.cpp.i
+.PHONY : Factories/SDLFactory.cpp.i
+
+Factories/SDLFactory.s: Factories/SDLFactory.cpp.s
+
+.PHONY : Factories/SDLFactory.s
+
+# target to generate assembly for a file
+Factories/SDLFactory.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Factories/SDLFactory.cpp.s
+.PHONY : Factories/SDLFactory.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -347,21 +455,30 @@ help:
 	@echo ... Project
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... CPP-Files/Background.obj
+	@echo ... CPP-Files/Background.i
+	@echo ... CPP-Files/Background.s
 	@echo ... CPP-Files/EnemyShip.obj
 	@echo ... CPP-Files/EnemyShip.i
 	@echo ... CPP-Files/EnemyShip.s
 	@echo ... CPP-Files/Game.obj
 	@echo ... CPP-Files/Game.i
 	@echo ... CPP-Files/Game.s
-	@echo ... CPP-Files/Graphics.obj
-	@echo ... CPP-Files/Graphics.i
-	@echo ... CPP-Files/Graphics.s
-	@echo ... CPP-Files/ObjectFactory.obj
-	@echo ... CPP-Files/ObjectFactory.i
-	@echo ... CPP-Files/ObjectFactory.s
 	@echo ... CPP-Files/PlayerShip.obj
 	@echo ... CPP-Files/PlayerShip.i
 	@echo ... CPP-Files/PlayerShip.s
+	@echo ... CPP-Files/SDLBackground.obj
+	@echo ... CPP-Files/SDLBackground.i
+	@echo ... CPP-Files/SDLBackground.s
+	@echo ... CPP-Files/SDLEnemyShip.obj
+	@echo ... CPP-Files/SDLEnemyShip.i
+	@echo ... CPP-Files/SDLEnemyShip.s
+	@echo ... CPP-Files/SDLKeyStates.obj
+	@echo ... CPP-Files/SDLKeyStates.i
+	@echo ... CPP-Files/SDLKeyStates.s
+	@echo ... CPP-Files/SDLPlayerShip.obj
+	@echo ... CPP-Files/SDLPlayerShip.i
+	@echo ... CPP-Files/SDLPlayerShip.s
 	@echo ... CPP-Files/Ship.obj
 	@echo ... CPP-Files/Ship.i
 	@echo ... CPP-Files/Ship.s
@@ -371,6 +488,9 @@ help:
 	@echo ... CPP-Files/main.obj
 	@echo ... CPP-Files/main.i
 	@echo ... CPP-Files/main.s
+	@echo ... Factories/SDLFactory.obj
+	@echo ... Factories/SDLFactory.i
+	@echo ... Factories/SDLFactory.s
 .PHONY : help
 
 

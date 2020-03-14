@@ -10,8 +10,11 @@
 
 class EnemyShip: public Ship {
 public:
-    void moveLeft();
-    void moveRight();
+    EnemyShip();
+    virtual int getXPosition()=0;
+    virtual int getYPosition()=0;
+    virtual void render() = 0;
+    virtual void close() = 0;
 };
 
 

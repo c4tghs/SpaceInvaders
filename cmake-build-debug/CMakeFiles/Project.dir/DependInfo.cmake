@@ -4,14 +4,18 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "D:/Users/cliff/Documents/C++/Project/CPP-Files/Background.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/Background.cpp.obj"
   "D:/Users/cliff/Documents/C++/Project/CPP-Files/EnemyShip.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/EnemyShip.cpp.obj"
   "D:/Users/cliff/Documents/C++/Project/CPP-Files/Game.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/Game.cpp.obj"
-  "D:/Users/cliff/Documents/C++/Project/CPP-Files/Graphics.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/Graphics.cpp.obj"
-  "D:/Users/cliff/Documents/C++/Project/CPP-Files/ObjectFactory.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/ObjectFactory.cpp.obj"
   "D:/Users/cliff/Documents/C++/Project/CPP-Files/PlayerShip.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/PlayerShip.cpp.obj"
+  "D:/Users/cliff/Documents/C++/Project/CPP-Files/SDLBackground.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/SDLBackground.cpp.obj"
+  "D:/Users/cliff/Documents/C++/Project/CPP-Files/SDLEnemyShip.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/SDLEnemyShip.cpp.obj"
+  "D:/Users/cliff/Documents/C++/Project/CPP-Files/SDLKeyStates.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/SDLKeyStates.cpp.obj"
+  "D:/Users/cliff/Documents/C++/Project/CPP-Files/SDLPlayerShip.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/SDLPlayerShip.cpp.obj"
   "D:/Users/cliff/Documents/C++/Project/CPP-Files/Ship.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/Ship.cpp.obj"
   "D:/Users/cliff/Documents/C++/Project/CPP-Files/TextureManager.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/TextureManager.cpp.obj"
   "D:/Users/cliff/Documents/C++/Project/CPP-Files/main.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/main.cpp.obj"
+  "D:/Users/cliff/Documents/C++/Project/Factories/SDLFactory.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -11,18 +11,12 @@
 class PlayerShip: public Ship {
 public:
     PlayerShip();
-    ~PlayerShip();
-    void moveLeft();
-    void moveRight();
-    void shoot();
-    int getX();
-    int getY();
-    void setX(int x);
-    void setY(int y);
-    //virtual void draw(); //
-private:
-    int m_x;
-    int m_y;
+
+    virtual int getXPosition()=0;
+    virtual int getYPosition()=0;
+    virtual void render() = 0;
+    virtual void close() = 0;
+
 };
 
 

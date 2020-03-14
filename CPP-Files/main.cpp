@@ -2,21 +2,28 @@
 #include <SDL.h>
 using namespace std;
 #include <stdio.h>
-#include "../Headers/Graphics.h"
+#include "../Factories/AbstractFactory.h"
+#include "../Factories/SDLFactory.h"
+#include "../Headers/Game.h"
 
 int main(int argc, char *argv[]) {
 
-    Graphics test;
+    AbstractFactory *AF = new SDLFactory();
+    Game *g = new Game(AF);
+    cout << "Testing" << endl;
+    g->run();
+
+    /*SDLFactory test;
     //check if everything was initialised correctly
-    test.initialise();
+    test.initialise(960,640);
     while (test.getRunningState())
     {
-        test.Events();
+        test.getEvents();
         test.Update();
-        test.Render();
+        test.render();
     }
     //clean everything
-    test.Clean();
+    test.close();*/
 
     return 0;
 }
