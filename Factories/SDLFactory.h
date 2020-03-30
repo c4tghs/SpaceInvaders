@@ -19,7 +19,7 @@ public:
     SDLFactory(){};
 
     Ship* createPlayerShip(string playerShipPath);
-    Ship* createEnemyShip(string enemyShipPath);
+    Ship* createEnemyShip(string enemyShipPath, int xPos, int yPos);
     Background* createBackground();
 
 

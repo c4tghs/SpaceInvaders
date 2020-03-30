@@ -149,6 +149,33 @@ CPP-Files/Background.cpp.s:
 	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/Background.cpp.s
 .PHONY : CPP-Files/Background.cpp.s
 
+CPP-Files/Bullet.obj: CPP-Files/Bullet.cpp.obj
+
+.PHONY : CPP-Files/Bullet.obj
+
+# target to build an object file
+CPP-Files/Bullet.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/Bullet.cpp.obj
+.PHONY : CPP-Files/Bullet.cpp.obj
+
+CPP-Files/Bullet.i: CPP-Files/Bullet.cpp.i
+
+.PHONY : CPP-Files/Bullet.i
+
+# target to preprocess a source file
+CPP-Files/Bullet.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/Bullet.cpp.i
+.PHONY : CPP-Files/Bullet.cpp.i
+
+CPP-Files/Bullet.s: CPP-Files/Bullet.cpp.s
+
+.PHONY : CPP-Files/Bullet.s
+
+# target to generate assembly for a file
+CPP-Files/Bullet.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/Bullet.cpp.s
+.PHONY : CPP-Files/Bullet.cpp.s
+
 CPP-Files/EnemyShip.obj: CPP-Files/EnemyShip.cpp.obj
 
 .PHONY : CPP-Files/EnemyShip.obj
@@ -257,6 +284,33 @@ CPP-Files/SDLBackground.cpp.s:
 	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/SDLBackground.cpp.s
 .PHONY : CPP-Files/SDLBackground.cpp.s
 
+CPP-Files/SDLBullet.obj: CPP-Files/SDLBullet.cpp.obj
+
+.PHONY : CPP-Files/SDLBullet.obj
+
+# target to build an object file
+CPP-Files/SDLBullet.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/SDLBullet.cpp.obj
+.PHONY : CPP-Files/SDLBullet.cpp.obj
+
+CPP-Files/SDLBullet.i: CPP-Files/SDLBullet.cpp.i
+
+.PHONY : CPP-Files/SDLBullet.i
+
+# target to preprocess a source file
+CPP-Files/SDLBullet.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/SDLBullet.cpp.i
+.PHONY : CPP-Files/SDLBullet.cpp.i
+
+CPP-Files/SDLBullet.s: CPP-Files/SDLBullet.cpp.s
+
+.PHONY : CPP-Files/SDLBullet.s
+
+# target to generate assembly for a file
+CPP-Files/SDLBullet.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/SDLBullet.cpp.s
+.PHONY : CPP-Files/SDLBullet.cpp.s
+
 CPP-Files/SDLEnemyShip.obj: CPP-Files/SDLEnemyShip.cpp.obj
 
 .PHONY : CPP-Files/SDLEnemyShip.obj
@@ -338,6 +392,33 @@ CPP-Files/SDLPlayerShip.cpp.s:
 	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/SDLPlayerShip.cpp.s
 .PHONY : CPP-Files/SDLPlayerShip.cpp.s
 
+CPP-Files/SDLTimer.obj: CPP-Files/SDLTimer.cpp.obj
+
+.PHONY : CPP-Files/SDLTimer.obj
+
+# target to build an object file
+CPP-Files/SDLTimer.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/SDLTimer.cpp.obj
+.PHONY : CPP-Files/SDLTimer.cpp.obj
+
+CPP-Files/SDLTimer.i: CPP-Files/SDLTimer.cpp.i
+
+.PHONY : CPP-Files/SDLTimer.i
+
+# target to preprocess a source file
+CPP-Files/SDLTimer.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/SDLTimer.cpp.i
+.PHONY : CPP-Files/SDLTimer.cpp.i
+
+CPP-Files/SDLTimer.s: CPP-Files/SDLTimer.cpp.s
+
+.PHONY : CPP-Files/SDLTimer.s
+
+# target to generate assembly for a file
+CPP-Files/SDLTimer.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/SDLTimer.cpp.s
+.PHONY : CPP-Files/SDLTimer.cpp.s
+
 CPP-Files/Ship.obj: CPP-Files/Ship.cpp.obj
 
 .PHONY : CPP-Files/Ship.obj
@@ -391,6 +472,33 @@ CPP-Files/TextureManager.s: CPP-Files/TextureManager.cpp.s
 CPP-Files/TextureManager.cpp.s:
 	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/TextureManager.cpp.s
 .PHONY : CPP-Files/TextureManager.cpp.s
+
+CPP-Files/Timer.obj: CPP-Files/Timer.cpp.obj
+
+.PHONY : CPP-Files/Timer.obj
+
+# target to build an object file
+CPP-Files/Timer.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/Timer.cpp.obj
+.PHONY : CPP-Files/Timer.cpp.obj
+
+CPP-Files/Timer.i: CPP-Files/Timer.cpp.i
+
+.PHONY : CPP-Files/Timer.i
+
+# target to preprocess a source file
+CPP-Files/Timer.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/Timer.cpp.i
+.PHONY : CPP-Files/Timer.cpp.i
+
+CPP-Files/Timer.s: CPP-Files/Timer.cpp.s
+
+.PHONY : CPP-Files/Timer.s
+
+# target to generate assembly for a file
+CPP-Files/Timer.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/Timer.cpp.s
+.PHONY : CPP-Files/Timer.cpp.s
 
 CPP-Files/main.obj: CPP-Files/main.cpp.obj
 
@@ -458,6 +566,9 @@ help:
 	@echo ... CPP-Files/Background.obj
 	@echo ... CPP-Files/Background.i
 	@echo ... CPP-Files/Background.s
+	@echo ... CPP-Files/Bullet.obj
+	@echo ... CPP-Files/Bullet.i
+	@echo ... CPP-Files/Bullet.s
 	@echo ... CPP-Files/EnemyShip.obj
 	@echo ... CPP-Files/EnemyShip.i
 	@echo ... CPP-Files/EnemyShip.s
@@ -470,6 +581,9 @@ help:
 	@echo ... CPP-Files/SDLBackground.obj
 	@echo ... CPP-Files/SDLBackground.i
 	@echo ... CPP-Files/SDLBackground.s
+	@echo ... CPP-Files/SDLBullet.obj
+	@echo ... CPP-Files/SDLBullet.i
+	@echo ... CPP-Files/SDLBullet.s
 	@echo ... CPP-Files/SDLEnemyShip.obj
 	@echo ... CPP-Files/SDLEnemyShip.i
 	@echo ... CPP-Files/SDLEnemyShip.s
@@ -479,12 +593,18 @@ help:
 	@echo ... CPP-Files/SDLPlayerShip.obj
 	@echo ... CPP-Files/SDLPlayerShip.i
 	@echo ... CPP-Files/SDLPlayerShip.s
+	@echo ... CPP-Files/SDLTimer.obj
+	@echo ... CPP-Files/SDLTimer.i
+	@echo ... CPP-Files/SDLTimer.s
 	@echo ... CPP-Files/Ship.obj
 	@echo ... CPP-Files/Ship.i
 	@echo ... CPP-Files/Ship.s
 	@echo ... CPP-Files/TextureManager.obj
 	@echo ... CPP-Files/TextureManager.i
 	@echo ... CPP-Files/TextureManager.s
+	@echo ... CPP-Files/Timer.obj
+	@echo ... CPP-Files/Timer.i
+	@echo ... CPP-Files/Timer.s
 	@echo ... CPP-Files/main.obj
 	@echo ... CPP-Files/main.i
 	@echo ... CPP-Files/main.s

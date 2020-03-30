@@ -6,6 +6,7 @@
 #define PROJECT_ENEMYSHIP_H
 
 
+#include <vector>
 #include "Ship.h"
 
 class EnemyShip: public Ship {
@@ -13,8 +14,11 @@ public:
     EnemyShip();
     virtual int getXPosition()=0;
     virtual int getYPosition()=0;
+    virtual void setXPosition(int x)=0;
+    virtual void setYPosition(int y)=0;
     virtual void render() = 0;
     virtual void close() = 0;
+    virtual void moveEnemyShip()=0;
 };
 
 

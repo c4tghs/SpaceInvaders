@@ -85,6 +85,9 @@
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/Background.cpp">
 			<Option target="Project"/>
 		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/Bullet.cpp">
+			<Option target="Project"/>
+		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/EnemyShip.cpp">
 			<Option target="Project"/>
 		</Unit>
@@ -97,6 +100,9 @@
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/SDLBackground.cpp">
 			<Option target="Project"/>
 		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/SDLBullet.cpp">
+			<Option target="Project"/>
+		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/SDLEnemyShip.cpp">
 			<Option target="Project"/>
 		</Unit>
@@ -106,10 +112,16 @@
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/SDLPlayerShip.cpp">
 			<Option target="Project"/>
 		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/SDLTimer.cpp">
+			<Option target="Project"/>
+		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/Ship.cpp">
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/TextureManager.cpp">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/Timer.cpp">
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/main.cpp">
@@ -127,6 +139,9 @@
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/Background.h">
 			<Option target="Project"/>
 		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/Bullet.h">
+			<Option target="Project"/>
+		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/EnemyShip.h">
 			<Option target="Project"/>
 		</Unit>
@@ -139,6 +154,9 @@
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/SDLBackground.h">
 			<Option target="Project"/>
 		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/SDLBullet.h">
+			<Option target="Project"/>
+		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/SDLEnemyShip.h">
 			<Option target="Project"/>
 		</Unit>
@@ -148,10 +166,16 @@
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/SDLPlayerShip.h">
 			<Option target="Project"/>
 		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/SDLTimer.h">
+			<Option target="Project"/>
+		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/Ship.h">
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/TextureManager.h">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/Timer.h">
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/CMakeLists.txt">

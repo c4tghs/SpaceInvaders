@@ -17,8 +17,9 @@ private:
     AbstractFactory* m_factory;
 
     string m_playerShipPath = "../assets/ship.png";
-    int m_windowHeight = 960;
-    int m_windowWidth = 640;
+    string m_enemyShipPath = "../assets/alien1.png";
+    int m_windowHeight = 640;
+    int m_windowWidth = 960;
 };
 
 

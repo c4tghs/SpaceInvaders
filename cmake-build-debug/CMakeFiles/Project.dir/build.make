@@ -224,6 +224,62 @@ CMakeFiles/Project.dir/CPP-Files/SDLBackground.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/CPP-Files/SDLBackground.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Users\cliff\Documents\C++\Project\CPP-Files\SDLBackground.cpp -o CMakeFiles\Project.dir\CPP-Files\SDLBackground.cpp.s
 
+CMakeFiles/Project.dir/CPP-Files/Bullet.cpp.obj: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/CPP-Files/Bullet.cpp.obj: CMakeFiles/Project.dir/includes_CXX.rsp
+CMakeFiles/Project.dir/CPP-Files/Bullet.cpp.obj: ../CPP-Files/Bullet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Project.dir/CPP-Files/Bullet.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project.dir\CPP-Files\Bullet.cpp.obj -c D:\Users\cliff\Documents\C++\Project\CPP-Files\Bullet.cpp
+
+CMakeFiles/Project.dir/CPP-Files/Bullet.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/CPP-Files/Bullet.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Users\cliff\Documents\C++\Project\CPP-Files\Bullet.cpp > CMakeFiles\Project.dir\CPP-Files\Bullet.cpp.i
+
+CMakeFiles/Project.dir/CPP-Files/Bullet.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/CPP-Files/Bullet.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Users\cliff\Documents\C++\Project\CPP-Files\Bullet.cpp -o CMakeFiles\Project.dir\CPP-Files\Bullet.cpp.s
+
+CMakeFiles/Project.dir/CPP-Files/SDLBullet.cpp.obj: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/CPP-Files/SDLBullet.cpp.obj: CMakeFiles/Project.dir/includes_CXX.rsp
+CMakeFiles/Project.dir/CPP-Files/SDLBullet.cpp.obj: ../CPP-Files/SDLBullet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Project.dir/CPP-Files/SDLBullet.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project.dir\CPP-Files\SDLBullet.cpp.obj -c D:\Users\cliff\Documents\C++\Project\CPP-Files\SDLBullet.cpp
+
+CMakeFiles/Project.dir/CPP-Files/SDLBullet.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/CPP-Files/SDLBullet.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Users\cliff\Documents\C++\Project\CPP-Files\SDLBullet.cpp > CMakeFiles\Project.dir\CPP-Files\SDLBullet.cpp.i
+
+CMakeFiles/Project.dir/CPP-Files/SDLBullet.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/CPP-Files/SDLBullet.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Users\cliff\Documents\C++\Project\CPP-Files\SDLBullet.cpp -o CMakeFiles\Project.dir\CPP-Files\SDLBullet.cpp.s
+
+CMakeFiles/Project.dir/CPP-Files/Timer.cpp.obj: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/CPP-Files/Timer.cpp.obj: CMakeFiles/Project.dir/includes_CXX.rsp
+CMakeFiles/Project.dir/CPP-Files/Timer.cpp.obj: ../CPP-Files/Timer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Project.dir/CPP-Files/Timer.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project.dir\CPP-Files\Timer.cpp.obj -c D:\Users\cliff\Documents\C++\Project\CPP-Files\Timer.cpp
+
+CMakeFiles/Project.dir/CPP-Files/Timer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/CPP-Files/Timer.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Users\cliff\Documents\C++\Project\CPP-Files\Timer.cpp > CMakeFiles\Project.dir\CPP-Files\Timer.cpp.i
+
+CMakeFiles/Project.dir/CPP-Files/Timer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/CPP-Files/Timer.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Users\cliff\Documents\C++\Project\CPP-Files\Timer.cpp -o CMakeFiles\Project.dir\CPP-Files\Timer.cpp.s
+
+CMakeFiles/Project.dir/CPP-Files/SDLTimer.cpp.obj: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/CPP-Files/SDLTimer.cpp.obj: CMakeFiles/Project.dir/includes_CXX.rsp
+CMakeFiles/Project.dir/CPP-Files/SDLTimer.cpp.obj: ../CPP-Files/SDLTimer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Project.dir/CPP-Files/SDLTimer.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project.dir\CPP-Files\SDLTimer.cpp.obj -c D:\Users\cliff\Documents\C++\Project\CPP-Files\SDLTimer.cpp
+
+CMakeFiles/Project.dir/CPP-Files/SDLTimer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/CPP-Files/SDLTimer.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Users\cliff\Documents\C++\Project\CPP-Files\SDLTimer.cpp > CMakeFiles\Project.dir\CPP-Files\SDLTimer.cpp.i
+
+CMakeFiles/Project.dir/CPP-Files/SDLTimer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/CPP-Files/SDLTimer.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Users\cliff\Documents\C++\Project\CPP-Files\SDLTimer.cpp -o CMakeFiles\Project.dir\CPP-Files\SDLTimer.cpp.s
+
 # Object files for target Project
 Project_OBJECTS = \
 "CMakeFiles/Project.dir/CPP-Files/main.cpp.obj" \
@@ -237,7 +293,11 @@ Project_OBJECTS = \
 "CMakeFiles/Project.dir/CPP-Files/SDLEnemyShip.cpp.obj" \
 "CMakeFiles/Project.dir/CPP-Files/SDLKeyStates.cpp.obj" \
 "CMakeFiles/Project.dir/CPP-Files/Background.cpp.obj" \
-"CMakeFiles/Project.dir/CPP-Files/SDLBackground.cpp.obj"
+"CMakeFiles/Project.dir/CPP-Files/SDLBackground.cpp.obj" \
+"CMakeFiles/Project.dir/CPP-Files/Bullet.cpp.obj" \
+"CMakeFiles/Project.dir/CPP-Files/SDLBullet.cpp.obj" \
+"CMakeFiles/Project.dir/CPP-Files/Timer.cpp.obj" \
+"CMakeFiles/Project.dir/CPP-Files/SDLTimer.cpp.obj"
 
 # External object files for target Project
 Project_EXTERNAL_OBJECTS =
@@ -254,12 +314,16 @@ Project.exe: CMakeFiles/Project.dir/CPP-Files/SDLEnemyShip.cpp.obj
 Project.exe: CMakeFiles/Project.dir/CPP-Files/SDLKeyStates.cpp.obj
 Project.exe: CMakeFiles/Project.dir/CPP-Files/Background.cpp.obj
 Project.exe: CMakeFiles/Project.dir/CPP-Files/SDLBackground.cpp.obj
+Project.exe: CMakeFiles/Project.dir/CPP-Files/Bullet.cpp.obj
+Project.exe: CMakeFiles/Project.dir/CPP-Files/SDLBullet.cpp.obj
+Project.exe: CMakeFiles/Project.dir/CPP-Files/Timer.cpp.obj
+Project.exe: CMakeFiles/Project.dir/CPP-Files/SDLTimer.cpp.obj
 Project.exe: CMakeFiles/Project.dir/build.make
 Project.exe: C:/MinGW/lib/lib/libSDL2.dll.a
 Project.exe: CMakeFiles/Project.dir/linklibs.rsp
 Project.exe: CMakeFiles/Project.dir/objects1.rsp
 Project.exe: CMakeFiles/Project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable Project.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable Project.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Project.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

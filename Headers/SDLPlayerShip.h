@@ -17,6 +17,8 @@ public:
     SDLPlayerShip(SDL_Renderer *renderer,int screenHeight,int screenWidth,string playerShipPath);
     int getXPosition();
     int getYPosition();
+    void setXPosition(int x);
+    void setYPosition(int y);
     void render();
     void close();
 
@@ -27,9 +29,11 @@ private:
     int m_xPos;
     int m_yPos;
     SDL_Renderer* m_renderer;
-    basic_string<char> m_playerShipPath;
+    string m_playerShipPath;
     int m_screenHeight;
     int m_screenWidth;
+    int m_shipHeight;
+    int m_shipWidth;
     SDLKeyStates* m_keyStates;
 
 };

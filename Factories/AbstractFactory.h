@@ -14,7 +14,7 @@ using namespace std;
 class AbstractFactory {
 public:
     virtual Ship* createPlayerShip(string playerShipPath)=0;
-    virtual Ship* createEnemyShip(string enemyShipPath)=0;
+    virtual Ship* createEnemyShip(string enemyShipPath, int xPos, int yPos)=0;
     virtual Background* createBackground()=0;
 
     virtual void initialise(int windowWidth, int windowHeight)=0;

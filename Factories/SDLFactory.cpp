@@ -24,8 +24,8 @@ Ship* SDLFactory::createPlayerShip(string playerShipPath)
  * @param enemyShipPath
  * @return
  */
-Ship* SDLFactory::createEnemyShip(string enemyShipPath) {
-    return new SDLEnemyShip(m_renderer,enemyShipPath);
+Ship* SDLFactory::createEnemyShip(string enemyShipPath, int xPos, int yPos) {
+    return new SDLEnemyShip(m_renderer,m_screenHeight,m_screenWidth,enemyShipPath,xPos,yPos);
 }
 
 /**
@@ -77,7 +77,7 @@ void SDLFactory::initialise(int windowWidth, int windowHeight){
         createWindow("SDL engine", m_screenWidth, m_screenHeight);
 
         //check if window was created successfully
-        if(m_window == nullptr)
+        if(m_window == NULL)
         {
             SDL_Log("Failed to create Window: %s",SDL_GetError());
         } else
@@ -86,20 +86,40 @@ void SDLFactory::initialise(int windowWidth, int windowHeight){
             createRender();
 
             //check if renderer was created succesfully
-            if(m_renderer == nullptr)
+            if(m_renderer == NULL)
             {
                 SDL_Log("Failed to create Renderer: %s",SDL_GetError());
                 m_IsRunning = false;
+            } else
+            {
+                //initialise PNG loading
+                int imgFlags = IMG_INIT_PNG;
+                if(!(IMG_Init(imgFlags) & imgFlags))
+                {
+                    SDL_Log("Failed to initialise SDL_image: %s",IMG_GetError());
+                    printf("Failed to initialise SDL_image: %s",IMG_GetError());
+                    m_IsRunning = false;
+                } else
+                {
+                    //initialise PNG loading
+                    int imgFlags_JPG = IMG_INIT_JPG;
+                    if(!(IMG_Init(imgFlags_JPG) & imgFlags_JPG))
+                    {
+                        SDL_Log("Failed to initialise SDL_image: %s",IMG_GetError());
+                        printf("Failed to initialise SDL_image: %s",IMG_GetError());
+                        m_IsRunning = false;
+                    } else
+                    {
+                        m_IsRunning = true;
+                    }
+                }
+
             }
-            m_IsRunning = true;
+
 
         }
 
     }
-    cout << m_IsRunning <<endl;
-
-    //return
-
 }
 
 /**
@@ -110,6 +130,7 @@ void SDLFactory::close()
 {
     SDL_DestroyWindow(m_window);
     //SDL_DestroyRenderer(m_renderer);
+    IMG_Quit();
     SDL_Quit();
     cout << "Game cleaned succesfully" << endl;
 }
