@@ -15,7 +15,7 @@ void SDLBackground::render() {
     //clear renderer before adding things
     SDL_RenderClear(m_renderer);
     //set background color
-    SDL_SetRenderDrawColor(m_renderer,100,218,254,255);
+    SDL_SetRenderDrawColor(m_renderer,0,0,0,255);
 
 }
 void SDLBackground::close() {

@@ -19,10 +19,11 @@ public:
     virtual void render() = 0;
     virtual void close() = 0;
     void movePlayerShip();
+    virtual bool hitBoundary()=0;
+    virtual int getMoveDirection()=0;
+    virtual void setMoveDirection(int direction)=0;
 
-private:
-    int m_xPos;
-    int m_yPos;
+
 
 };
 

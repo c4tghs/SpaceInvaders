@@ -6,25 +6,21 @@
 #define PROJECT_SDLTIMER_H
 
 
-#include "Timer.h"
 #include "SDL.h"
+#include "Timer.h"
 
-class SDLTimer: public Timer {
+class SDLTimer: public Timer{
 public:
-     static SDLTimer* instance();
-     void reset()=0;
-     void timeScale()=0;
-     void update()=0;
+     SDLTimer();
+     void update();
      float getDeltaTime();
-     void setTimeScale(float t);
-     float getTimeScale();
+     void reset();
+
 
 private:
-    static SDLTimer* m_instance;
+    float m_deltaTime;
     unsigned int m_startTicks;
     unsigned int m_elapsedTicks;
-    float m_deltaTime;
-    float m_timeScale();
 };
 
 

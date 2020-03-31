@@ -16,10 +16,12 @@ public:
 private:
     AbstractFactory* m_factory;
 
-    string m_playerShipPath = "../assets/ship.png";
-    string m_enemyShipPath = "../assets/alien1.png";
-    int m_windowHeight = 640;
-    int m_windowWidth = 960;
+    std::string m_playerShipPath = "../assets/ship.png";
+    std::string m_enemyShipPath = "../assets/alien1.png";
+    /*int m_windowHeight = 640;
+    int m_windowWidth = 960;*/
+    int m_windowHeight = 720 ;
+    int m_windowWidth = 1280;
 };
 
 

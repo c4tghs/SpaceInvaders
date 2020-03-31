@@ -14,14 +14,12 @@ TextureManager::TextureManager(SDL_Renderer *renderer){
     m_renderer = renderer;
 }
 void TextureManager::LoadTexture(std::string filename, SDL_Renderer *ren) {
-    bool loaded = false;
     SDL_Surface* surface = IMG_Load(filename.c_str());
     SDL_Texture* tex;
     if(surface == NULL)
     {
         SDL_Log("Failed to load image: %s",SDL_GetError());
         printf("Failed to load image: %s",SDL_GetError());
-        loaded = false;
     }
     else
     {
@@ -34,14 +32,12 @@ void TextureManager::LoadTexture(std::string filename, SDL_Renderer *ren) {
         {
             SDL_Log("Failed to create texture: %s",SDL_GetError());
             printf("Failed to create texture: %s",SDL_GetError());
-            loaded = false;
+
         }
         else
         {
-
             m_width = surface->w;
             m_height = surface->h;
-            loaded = true;
         }
         //remove old loaded surface
         SDL_FreeSurface(surface);

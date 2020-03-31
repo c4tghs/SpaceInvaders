@@ -15,7 +15,7 @@
  * @param playerShipPath
  * @return
  */
-Ship* SDLFactory::createPlayerShip(string playerShipPath)
+Ship* SDLFactory::createPlayerShip(std::string playerShipPath)
 {
     return new SDLPlayerShip(m_renderer,m_screenHeight,m_screenWidth,playerShipPath);
 }
@@ -24,8 +24,8 @@ Ship* SDLFactory::createPlayerShip(string playerShipPath)
  * @param enemyShipPath
  * @return
  */
-Ship* SDLFactory::createEnemyShip(string enemyShipPath, int xPos, int yPos) {
-    return new SDLEnemyShip(m_renderer,m_screenHeight,m_screenWidth,enemyShipPath,xPos,yPos);
+Ship * SDLFactory::createEnemyShip(std::string enemyShipPath, int xPos, int yPos) {
+    return new SDLEnemyShip(m_renderer, m_screenHeight, m_screenWidth, enemyShipPath, xPos, yPos);
 }
 
 /**
@@ -53,6 +53,7 @@ void SDLFactory::createWindow(const char* title, int width, int height) {
 void SDLFactory::createRender() {
     m_renderer = SDL_CreateRenderer(m_window,-1,SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC); //SDL_RENDERER_PRESENTVSYNC = synchronisation
 }
+
 /***
  * Method that returns private member renderer
  * @return private SDL_Renderer
@@ -74,7 +75,7 @@ void SDLFactory::initialise(int windowWidth, int windowHeight){
         SDL_Log("Failed to initialise SDL: %s",SDL_GetError());
     } else{
         //create SDL window
-        createWindow("SDL engine", m_screenWidth, m_screenHeight);
+        createWindow("Space invaders", m_screenWidth, m_screenHeight);
 
         //check if window was created successfully
         if(m_window == NULL)
@@ -132,7 +133,7 @@ void SDLFactory::close()
     //SDL_DestroyRenderer(m_renderer);
     IMG_Quit();
     SDL_Quit();
-    cout << "Game cleaned succesfully" << endl;
+    std::cout << "Game cleaned succesfully" << std::endl;
 }
 
 /**

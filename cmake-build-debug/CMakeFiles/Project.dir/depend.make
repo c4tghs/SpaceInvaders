@@ -7,6 +7,13 @@ CMakeFiles/Project.dir/CPP-Files/Background.cpp.obj: ../Headers/Background.h
 CMakeFiles/Project.dir/CPP-Files/Bullet.cpp.obj: ../CPP-Files/Bullet.cpp
 CMakeFiles/Project.dir/CPP-Files/Bullet.cpp.obj: ../Headers/Bullet.h
 
+CMakeFiles/Project.dir/CPP-Files/EnemyManager.cpp.obj: ../CPP-Files/EnemyManager.cpp
+CMakeFiles/Project.dir/CPP-Files/EnemyManager.cpp.obj: ../Factories/AbstractFactory.h
+CMakeFiles/Project.dir/CPP-Files/EnemyManager.cpp.obj: ../Headers/Background.h
+CMakeFiles/Project.dir/CPP-Files/EnemyManager.cpp.obj: ../Headers/EnemyManager.h
+CMakeFiles/Project.dir/CPP-Files/EnemyManager.cpp.obj: ../Headers/Ship.h
+CMakeFiles/Project.dir/CPP-Files/EnemyManager.cpp.obj: ../Headers/Timer.h
+
 CMakeFiles/Project.dir/CPP-Files/EnemyShip.cpp.obj: ../CPP-Files/EnemyShip.cpp
 CMakeFiles/Project.dir/CPP-Files/EnemyShip.cpp.obj: ../Headers/EnemyShip.h
 CMakeFiles/Project.dir/CPP-Files/EnemyShip.cpp.obj: ../Headers/Ship.h
@@ -14,8 +21,10 @@ CMakeFiles/Project.dir/CPP-Files/EnemyShip.cpp.obj: ../Headers/Ship.h
 CMakeFiles/Project.dir/CPP-Files/Game.cpp.obj: ../CPP-Files/Game.cpp
 CMakeFiles/Project.dir/CPP-Files/Game.cpp.obj: ../Factories/AbstractFactory.h
 CMakeFiles/Project.dir/CPP-Files/Game.cpp.obj: ../Headers/Background.h
+CMakeFiles/Project.dir/CPP-Files/Game.cpp.obj: ../Headers/EnemyManager.h
 CMakeFiles/Project.dir/CPP-Files/Game.cpp.obj: ../Headers/Game.h
 CMakeFiles/Project.dir/CPP-Files/Game.cpp.obj: ../Headers/Ship.h
+CMakeFiles/Project.dir/CPP-Files/Game.cpp.obj: ../Headers/Timer.h
 
 CMakeFiles/Project.dir/CPP-Files/PlayerShip.cpp.obj: ../CPP-Files/PlayerShip.cpp
 CMakeFiles/Project.dir/CPP-Files/PlayerShip.cpp.obj: ../Headers/PlayerShip.h
@@ -292,6 +301,7 @@ CMakeFiles/Project.dir/CPP-Files/main.cpp.obj: ../Factories/SDLFactory.h
 CMakeFiles/Project.dir/CPP-Files/main.cpp.obj: ../Headers/Background.h
 CMakeFiles/Project.dir/CPP-Files/main.cpp.obj: ../Headers/Game.h
 CMakeFiles/Project.dir/CPP-Files/main.cpp.obj: ../Headers/Ship.h
+CMakeFiles/Project.dir/CPP-Files/main.cpp.obj: ../Headers/Timer.h
 
 CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: C:/MinGW/include/SDL2/SDL.h
 CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: C:/MinGW/include/SDL2/SDL_assert.h

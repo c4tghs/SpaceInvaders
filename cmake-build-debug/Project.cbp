@@ -88,6 +88,9 @@
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/Bullet.cpp">
 			<Option target="Project"/>
 		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/EnemyManager.cpp">
+			<Option target="Project"/>
+		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/EnemyShip.cpp">
 			<Option target="Project"/>
 		</Unit>
@@ -140,6 +143,9 @@
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/Bullet.h">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/EnemyManager.h">
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/EnemyShip.h">

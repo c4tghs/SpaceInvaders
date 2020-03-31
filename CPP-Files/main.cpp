@@ -1,7 +1,5 @@
 #include <iostream>
-#include <SDL.h>
-using namespace std;
-#include <stdio.h>
+
 #include "../Factories/AbstractFactory.h"
 #include "../Factories/SDLFactory.h"
 #include "../Headers/Game.h"

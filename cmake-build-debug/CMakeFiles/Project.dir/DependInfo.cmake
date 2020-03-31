@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "D:/Users/cliff/Documents/C++/Project/CPP-Files/Background.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/Background.cpp.obj"
   "D:/Users/cliff/Documents/C++/Project/CPP-Files/Bullet.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/Bullet.cpp.obj"
+  "D:/Users/cliff/Documents/C++/Project/CPP-Files/EnemyManager.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/EnemyManager.cpp.obj"
   "D:/Users/cliff/Documents/C++/Project/CPP-Files/EnemyShip.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/EnemyShip.cpp.obj"
   "D:/Users/cliff/Documents/C++/Project/CPP-Files/Game.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/Game.cpp.obj"
   "D:/Users/cliff/Documents/C++/Project/CPP-Files/PlayerShip.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/PlayerShip.cpp.obj"

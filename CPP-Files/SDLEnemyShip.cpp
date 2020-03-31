@@ -3,17 +3,19 @@
 //
 
 #include "../Headers/SDLEnemyShip.h"
-SDLEnemyShip:: SDLEnemyShip(SDL_Renderer *renderer,int screenHeight,int screenWidth,string enemyShipPath, int xPos, int yPos){
+SDLEnemyShip::SDLEnemyShip(SDL_Renderer *renderer, int screenHeight, int screenWidth, std::string enemyShipPath,int xPos,int yPos) {
     m_renderer = renderer;
     m_enemyShipPath = enemyShipPath;
     m_screenHeight = screenHeight;
     m_screenWidth = screenWidth;
-    m_shipHeight = m_screenHeight/10;
-    m_shipWidth = m_screenWidth/10;
+    m_shipHeight = m_screenHeight/25;
+    m_shipWidth = m_screenWidth/25;
     m_xPos = xPos;
     m_yPos = yPos;
     TextureManager *enemyShipTexture = new TextureManager(m_renderer);
     m_enemyShipTexture = enemyShipTexture;
+    m_moveDirection = 1;
+    m_timer = new SDLTimer();
     //create texture
     loadMedia();
 
@@ -28,26 +30,32 @@ void SDLEnemyShip::loadMedia() {
 }
 void SDLEnemyShip::moveEnemyShip() {
 
-    m_xPos = SDL_GetTicks()/10;
-    /*if(m_xPos <= m_screenWidth-m_shipWidth)
-    {
+    m_xPos += (50*(m_timer->getDeltaTime()/5))*m_moveDirection;
 
-    }*/
-    if(m_xPos >= m_screenWidth-m_shipWidth)
+}
+void SDLEnemyShip::setMoveDirection(int direction) {
+    m_moveDirection = direction;
+}
+/**
+ * Method used to check if an enemy ship has hit boundary
+ * 0 or m_screenWidth-m_shipWidth
+ * @return
+ */
+bool SDLEnemyShip::hitBoundary() {
+    if(m_xPos < 0)
     {
-        //m_xPos -= m_screenWidth-m_shipWidth;
-        m_xPos -= SDL_GetTicks()/10;
-        m_yPos +=1;
+        m_xPos = 0;
+        return true;
     }
-    if(m_xPos <= m_shipWidth)
+    else if (m_xPos > m_screenWidth-m_shipWidth)
     {
-        m_yPos +=1;
+        m_xPos = m_screenWidth-m_shipWidth;
+        return true;
     }
-    if(m_yPos >= m_screenHeight-m_shipHeight)
-    {
-        m_yPos = 100;
-    }
-
+    return false;
+}
+int SDLEnemyShip::getMoveDirection() {
+    return m_moveDirection;
 }
 int SDLEnemyShip::getXPosition()
 {
@@ -64,6 +72,8 @@ void SDLEnemyShip::setYPosition(int y){
 }
 void SDLEnemyShip::render(){
     moveEnemyShip();
+    //update time
+    m_timer->update();
 
     SDL_Rect render = {m_xPos,m_yPos,m_shipWidth,m_shipHeight};
     SDL_RenderCopy(m_renderer,m_enemyShipTexture->getTexture(),NULL,&render);

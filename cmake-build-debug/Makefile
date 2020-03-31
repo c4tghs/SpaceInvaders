@@ -176,6 +176,33 @@ CPP-Files/Bullet.cpp.s:
 	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/Bullet.cpp.s
 .PHONY : CPP-Files/Bullet.cpp.s
 
+CPP-Files/EnemyManager.obj: CPP-Files/EnemyManager.cpp.obj
+
+.PHONY : CPP-Files/EnemyManager.obj
+
+# target to build an object file
+CPP-Files/EnemyManager.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/EnemyManager.cpp.obj
+.PHONY : CPP-Files/EnemyManager.cpp.obj
+
+CPP-Files/EnemyManager.i: CPP-Files/EnemyManager.cpp.i
+
+.PHONY : CPP-Files/EnemyManager.i
+
+# target to preprocess a source file
+CPP-Files/EnemyManager.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/EnemyManager.cpp.i
+.PHONY : CPP-Files/EnemyManager.cpp.i
+
+CPP-Files/EnemyManager.s: CPP-Files/EnemyManager.cpp.s
+
+.PHONY : CPP-Files/EnemyManager.s
+
+# target to generate assembly for a file
+CPP-Files/EnemyManager.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/CPP-Files/EnemyManager.cpp.s
+.PHONY : CPP-Files/EnemyManager.cpp.s
+
 CPP-Files/EnemyShip.obj: CPP-Files/EnemyShip.cpp.obj
 
 .PHONY : CPP-Files/EnemyShip.obj
@@ -569,6 +596,9 @@ help:
 	@echo ... CPP-Files/Bullet.obj
 	@echo ... CPP-Files/Bullet.i
 	@echo ... CPP-Files/Bullet.s
+	@echo ... CPP-Files/EnemyManager.obj
+	@echo ... CPP-Files/EnemyManager.i
+	@echo ... CPP-Files/EnemyManager.s
 	@echo ... CPP-Files/EnemyShip.obj
 	@echo ... CPP-Files/EnemyShip.i
 	@echo ... CPP-Files/EnemyShip.s

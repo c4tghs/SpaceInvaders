@@ -4,7 +4,7 @@
 
 #include "../Headers/SDLPlayerShip.h"
 
-SDLPlayerShip::SDLPlayerShip(SDL_Renderer *renderer,int screenHeight,int screenWidth,string playerShipPath)
+SDLPlayerShip::SDLPlayerShip(SDL_Renderer *renderer,int screenHeight,int screenWidth,std::string playerShipPath)
 {
     m_renderer = renderer;
     m_playerShipPath = playerShipPath;
@@ -68,4 +68,13 @@ void SDLPlayerShip::movePlayerShip() {
 }
 void SDLPlayerShip::close() {
  m_playerShipTexture->free();
+}
+bool SDLPlayerShip::hitBoundary(){
+    return false;
+}
+int SDLPlayerShip::getMoveDirection(){
+    return 1;
+}
+void SDLPlayerShip::setMoveDirection(int direction){
+
 }

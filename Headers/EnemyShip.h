@@ -19,6 +19,9 @@ public:
     virtual void render() = 0;
     virtual void close() = 0;
     virtual void moveEnemyShip()=0;
+    virtual bool hitBoundary()=0;
+    virtual int getMoveDirection()=0;
+    virtual void setMoveDirection(int direction)=0;
 };
 
 

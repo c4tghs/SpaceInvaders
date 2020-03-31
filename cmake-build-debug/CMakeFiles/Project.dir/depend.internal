@@ -7,6 +7,13 @@ CMakeFiles/Project.dir/CPP-Files/Background.cpp.obj
 CMakeFiles/Project.dir/CPP-Files/Bullet.cpp.obj
  D:/Users/cliff/Documents/C++/Project/CPP-Files/Bullet.cpp
  D:/Users/cliff/Documents/C++/Project/Headers/Bullet.h
+CMakeFiles/Project.dir/CPP-Files/EnemyManager.cpp.obj
+ D:/Users/cliff/Documents/C++/Project/CPP-Files/EnemyManager.cpp
+ D:/Users/cliff/Documents/C++/Project/Factories/AbstractFactory.h
+ D:/Users/cliff/Documents/C++/Project/Headers/Background.h
+ D:/Users/cliff/Documents/C++/Project/Headers/EnemyManager.h
+ D:/Users/cliff/Documents/C++/Project/Headers/Ship.h
+ D:/Users/cliff/Documents/C++/Project/Headers/Timer.h
 CMakeFiles/Project.dir/CPP-Files/EnemyShip.cpp.obj
  D:/Users/cliff/Documents/C++/Project/CPP-Files/EnemyShip.cpp
  D:/Users/cliff/Documents/C++/Project/Headers/EnemyShip.h
@@ -15,8 +22,10 @@ CMakeFiles/Project.dir/CPP-Files/Game.cpp.obj
  D:/Users/cliff/Documents/C++/Project/CPP-Files/Game.cpp
  D:/Users/cliff/Documents/C++/Project/Factories/AbstractFactory.h
  D:/Users/cliff/Documents/C++/Project/Headers/Background.h
+ D:/Users/cliff/Documents/C++/Project/Headers/EnemyManager.h
  D:/Users/cliff/Documents/C++/Project/Headers/Game.h
  D:/Users/cliff/Documents/C++/Project/Headers/Ship.h
+ D:/Users/cliff/Documents/C++/Project/Headers/Timer.h
 CMakeFiles/Project.dir/CPP-Files/PlayerShip.cpp.obj
  D:/Users/cliff/Documents/C++/Project/CPP-Files/PlayerShip.cpp
  D:/Users/cliff/Documents/C++/Project/Headers/PlayerShip.h
@@ -293,6 +302,7 @@ CMakeFiles/Project.dir/CPP-Files/main.cpp.obj
  D:/Users/cliff/Documents/C++/Project/Headers/Background.h
  D:/Users/cliff/Documents/C++/Project/Headers/Game.h
  D:/Users/cliff/Documents/C++/Project/Headers/Ship.h
+ D:/Users/cliff/Documents/C++/Project/Headers/Timer.h
 CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj
  C:/MinGW/include/SDL2/SDL.h
  C:/MinGW/include/SDL2/SDL_assert.h

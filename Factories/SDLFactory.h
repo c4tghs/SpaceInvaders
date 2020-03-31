@@ -5,22 +5,22 @@
 #ifndef PROJECT_SDLFACTORY_H
 #define PROJECT_SDLFACTORY_H
 
-//using namespace std;
-
 
 #include <string>
 #include "SDL.h"
 #include "SDL_image.h"
 #include "../Headers/Ship.h"
 #include "AbstractFactory.h"
+#include "../Headers/Timer.h"
 
 class SDLFactory:public AbstractFactory {
 public:
     SDLFactory(){};
 
-    Ship* createPlayerShip(string playerShipPath);
-    Ship* createEnemyShip(string enemyShipPath, int xPos, int yPos);
+    Ship* createPlayerShip(std::string playerShipPath);
+    Ship *createEnemyShip(std::string enemyShipPath, int xPos, int yPos);
     Background* createBackground();
+    Timer* createTimer();
 
 
     void createWindow(const char* title,int width, int height);
@@ -32,8 +32,6 @@ public:
     bool getEvents();
 
 private:
-    int m_count = 0;
-    bool m_rightDirection = true;
     bool m_IsRunning;
     SDL_Window *m_window;
     SDL_Renderer *m_renderer;
