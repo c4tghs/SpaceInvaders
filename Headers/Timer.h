@@ -5,6 +5,8 @@
 #ifndef PROJECT_TIMER_H
 #define PROJECT_TIMER_H
 
+//constant used to make sure speed is constant
+const float TARGET_DELTATIME = 1.5f;
 
 class Timer {
 public:

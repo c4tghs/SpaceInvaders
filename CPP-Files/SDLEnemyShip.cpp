@@ -30,7 +30,8 @@ void SDLEnemyShip::loadMedia() {
 }
 void SDLEnemyShip::moveEnemyShip() {
 
-    m_xPos += (50*(m_timer->getDeltaTime()/5))*m_moveDirection;
+    m_xPos += m_timer->getDeltaTime()*m_moveDirection;
+    //m_timer->reset();
 
 }
 void SDLEnemyShip::setMoveDirection(int direction) {
@@ -72,6 +73,7 @@ void SDLEnemyShip::setYPosition(int y){
 }
 void SDLEnemyShip::render(){
     moveEnemyShip();
+
     //update time
     m_timer->update();
 

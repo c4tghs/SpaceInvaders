@@ -30,6 +30,10 @@ void SDLTimer::update() {
     //elapsedTicks is the time between reset and current time;
     m_elapsedTicks = SDL_GetTicks() - m_startTicks;
     //divide by 1000 to get time in seconds
-    m_deltaTime  = m_elapsedTicks /1000.0;
+    m_deltaTime  = m_elapsedTicks/1000.0;
+    if(m_deltaTime > TARGET_DELTATIME)
+    {
+        m_deltaTime = TARGET_DELTATIME;
+    }
 }
 

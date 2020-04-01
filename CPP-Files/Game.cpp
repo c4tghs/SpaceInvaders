@@ -14,19 +14,8 @@ void Game::run() {
     Background *background = m_factory->createBackground();
     Ship* playerShip = m_factory->createPlayerShip(m_playerShipPath);
     EnemyManager* manager = new EnemyManager(m_factory,m_enemyShipPath);
-    manager->createEnemies(55);
+    manager->createEnemies(10);
     std::vector<Ship *> enemyShips = manager->getEnemies();
-    /*enemyShips.reserve(10);
-    enemyShips.emplace_back(m_factory->createEnemyShip(m_enemyShipPath, 50, 50));
-    enemyShips.emplace_back(m_factory->createEnemyShip(m_enemyShipPath,150,50));
-    enemyShips.emplace_back(m_factory->createEnemyShip(m_enemyShipPath,250,50));
-    enemyShips.emplace_back(m_factory->createEnemyShip(m_enemyShipPath,350,50));
-    enemyShips.emplace_back(m_factory->createEnemyShip(m_enemyShipPath,450,50));
-    enemyShips.emplace_back(m_factory->createEnemyShip(m_enemyShipPath,550,50));
-    enemyShips.emplace_back(m_factory->createEnemyShip(m_enemyShipPath,650,50));
-    enemyShips.emplace_back(m_factory->createEnemyShip(m_enemyShipPath,750,50));
-    enemyShips.emplace_back(m_factory->createEnemyShip(m_enemyShipPath,150,150));
-    enemyShips.emplace_back(m_factory->createEnemyShip(m_enemyShipPath,50,150));*/
 
     while(m_factory->getEvents())
     {

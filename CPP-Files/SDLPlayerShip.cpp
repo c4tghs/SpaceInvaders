@@ -15,7 +15,9 @@ SDLPlayerShip::SDLPlayerShip(SDL_Renderer *renderer,int screenHeight,int screenW
     m_xPos = (m_screenWidth/2)-50;
     m_yPos = m_screenHeight-(m_shipHeight+10);
     TextureManager *playerShipTexture = new TextureManager(m_renderer);
+    m_moveDirection = 1;
     m_playerShipTexture = playerShipTexture;
+    m_timer = new SDLTimer();
     //create texture
     loadMedia();
 }
@@ -40,6 +42,8 @@ void SDLPlayerShip::loadMedia() {
 }
 void SDLPlayerShip::render() {
     movePlayerShip();
+    //update timer
+    m_timer->update();
 
     //SDL_Rect render = {m_xPos,m_yPos};
     SDL_Rect render = {m_xPos,m_yPos,m_shipWidth,m_shipHeight};
@@ -51,30 +55,34 @@ void SDLPlayerShip::movePlayerShip() {
     {
         //left
         case 1:
-            m_xPos = m_xPos -5;
+            m_xPos -= m_timer->getDeltaTime()*5;//m_xPos -5;
             break;
         case 2:
-            m_xPos = m_xPos +5;
+            m_xPos += m_timer->getDeltaTime()*5;//m_xPos +5;
             break;
     }
-    if(m_xPos <=0)
-    {
-        m_xPos = 0;
-    }
-    if(m_xPos >= m_screenWidth-m_shipWidth)
-    {
-        m_xPos = m_screenWidth-m_shipWidth;
-    }
+    hitBoundary();
+
 }
 void SDLPlayerShip::close() {
  m_playerShipTexture->free();
 }
 bool SDLPlayerShip::hitBoundary(){
+    if(m_xPos < 0)
+    {
+        m_xPos = 0;
+        return true;
+    }
+    else if (m_xPos > m_screenWidth-m_shipWidth)
+    {
+        m_xPos = m_screenWidth-m_shipWidth;
+        return true;
+    }
     return false;
 }
 int SDLPlayerShip::getMoveDirection(){
-    return 1;
+    return m_moveDirection;
 }
 void SDLPlayerShip::setMoveDirection(int direction){
-
+    m_moveDirection =  direction;
 }

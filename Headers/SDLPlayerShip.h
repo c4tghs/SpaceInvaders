@@ -10,6 +10,7 @@
 #include "PlayerShip.h"
 #include "SDLKeyStates.h"
 #include "TextureManager.h"
+#include "SDLTimer.h"
 
 class SDLPlayerShip: public PlayerShip {
 public:
@@ -20,13 +21,13 @@ public:
     void setYPosition(int y);
     void render();
     void close();
+    void movePlayerShip();
     bool hitBoundary();
     int getMoveDirection();
     void setMoveDirection(int direction);
 
 private:
     void loadMedia();
-    void movePlayerShip();
     TextureManager *m_playerShipTexture;
     int m_xPos;
     int m_yPos;
@@ -36,6 +37,8 @@ private:
     int m_screenWidth;
     int m_shipHeight;
     int m_shipWidth;
+    SDLTimer *m_timer;
+    int m_moveDirection;
     SDLKeyStates* m_keyStates;
 
 };
