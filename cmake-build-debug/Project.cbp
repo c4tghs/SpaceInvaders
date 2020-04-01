@@ -82,52 +82,28 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/Background.cpp">
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/EnemyManager.cpp">
 			<Option target="Project"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/Bullet.cpp">
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/Game.cpp">
 			<Option target="Project"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/EnemyManager.cpp">
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/PlayerManager.cpp">
 			<Option target="Project"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/EnemyShip.cpp">
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/TextureManager.cpp">
 			<Option target="Project"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/Game.cpp">
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/Headers/EnemyManager.h">
 			<Option target="Project"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/PlayerShip.cpp">
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/Headers/Game.h">
 			<Option target="Project"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/SDLBackground.cpp">
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/Headers/PlayerManager.h">
 			<Option target="Project"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/SDLBullet.cpp">
-			<Option target="Project"/>
-		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/SDLEnemyShip.cpp">
-			<Option target="Project"/>
-		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/SDLKeyStates.cpp">
-			<Option target="Project"/>
-		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/SDLPlayerShip.cpp">
-			<Option target="Project"/>
-		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/SDLTimer.cpp">
-			<Option target="Project"/>
-		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/Ship.cpp">
-			<Option target="Project"/>
-		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/TextureManager.cpp">
-			<Option target="Project"/>
-		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/Timer.cpp">
-			<Option target="Project"/>
-		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/CPP-Files/main.cpp">
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/Headers/TextureManager.h">
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Factories/AbstractFactory.h">
@@ -139,49 +115,73 @@
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Factories/SDLFactory.h">
 			<Option target="Project"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/Background.h">
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/Background.cpp">
 			<Option target="Project"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/Bullet.h">
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/Bullet.cpp">
 			<Option target="Project"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/EnemyManager.h">
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/EnemyShip.cpp">
 			<Option target="Project"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/EnemyShip.h">
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/PlayerShip.cpp">
 			<Option target="Project"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/Game.h">
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/Headers/Background.h">
 			<Option target="Project"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/PlayerShip.h">
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/Headers/Bullet.h">
 			<Option target="Project"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/SDLBackground.h">
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/Headers/EnemyShip.h">
 			<Option target="Project"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/SDLBullet.h">
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/Headers/PlayerShip.h">
 			<Option target="Project"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/SDLEnemyShip.h">
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/Headers/Ship.h">
 			<Option target="Project"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/SDLKeyStates.h">
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/Headers/Timer.h">
 			<Option target="Project"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/SDLPlayerShip.h">
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/SDL/CPP-Files/SDLBackground.cpp">
 			<Option target="Project"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/SDLTimer.h">
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/SDL/CPP-Files/SDLBullet.cpp">
 			<Option target="Project"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/Ship.h">
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/SDL/CPP-Files/SDLEnemyShip.cpp">
 			<Option target="Project"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/TextureManager.h">
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/SDL/CPP-Files/SDLKeyStates.cpp">
 			<Option target="Project"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/Headers/Timer.h">
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/SDL/CPP-Files/SDLPlayerShip.cpp">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/SDL/CPP-Files/SDLTimer.cpp">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLBackground.h">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLBullet.h">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLEnemyShip.h">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLKeyStates.h">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLPlayerShip.h">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLTimer.h">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/main.cpp">
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/CMakeLists.txt">

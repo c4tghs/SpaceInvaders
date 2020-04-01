@@ -4,23 +4,22 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/Users/cliff/Documents/C++/Project/CPP-Files/Background.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/Background.cpp.obj"
-  "D:/Users/cliff/Documents/C++/Project/CPP-Files/Bullet.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/Bullet.cpp.obj"
-  "D:/Users/cliff/Documents/C++/Project/CPP-Files/EnemyManager.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/EnemyManager.cpp.obj"
-  "D:/Users/cliff/Documents/C++/Project/CPP-Files/EnemyShip.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/EnemyShip.cpp.obj"
-  "D:/Users/cliff/Documents/C++/Project/CPP-Files/Game.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/Game.cpp.obj"
-  "D:/Users/cliff/Documents/C++/Project/CPP-Files/PlayerShip.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/PlayerShip.cpp.obj"
-  "D:/Users/cliff/Documents/C++/Project/CPP-Files/SDLBackground.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/SDLBackground.cpp.obj"
-  "D:/Users/cliff/Documents/C++/Project/CPP-Files/SDLBullet.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/SDLBullet.cpp.obj"
-  "D:/Users/cliff/Documents/C++/Project/CPP-Files/SDLEnemyShip.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/SDLEnemyShip.cpp.obj"
-  "D:/Users/cliff/Documents/C++/Project/CPP-Files/SDLKeyStates.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/SDLKeyStates.cpp.obj"
-  "D:/Users/cliff/Documents/C++/Project/CPP-Files/SDLPlayerShip.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/SDLPlayerShip.cpp.obj"
-  "D:/Users/cliff/Documents/C++/Project/CPP-Files/SDLTimer.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/SDLTimer.cpp.obj"
-  "D:/Users/cliff/Documents/C++/Project/CPP-Files/Ship.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/Ship.cpp.obj"
-  "D:/Users/cliff/Documents/C++/Project/CPP-Files/TextureManager.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/TextureManager.cpp.obj"
-  "D:/Users/cliff/Documents/C++/Project/CPP-Files/Timer.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/Timer.cpp.obj"
-  "D:/Users/cliff/Documents/C++/Project/CPP-Files/main.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/CPP-Files/main.cpp.obj"
+  "D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/EnemyManager.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj"
+  "D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/Game.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj"
+  "D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/PlayerManager.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj"
+  "D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/TextureManager.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Controllers/CPP-Files/TextureManager.cpp.obj"
   "D:/Users/cliff/Documents/C++/Project/Factories/SDLFactory.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj"
+  "D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/Background.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Models/CPP-Files/Background.cpp.obj"
+  "D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/Bullet.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Models/CPP-Files/Bullet.cpp.obj"
+  "D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/EnemyShip.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Models/CPP-Files/EnemyShip.cpp.obj"
+  "D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/PlayerShip.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Models/CPP-Files/PlayerShip.cpp.obj"
+  "D:/Users/cliff/Documents/C++/Project/SDL/CPP-Files/SDLBackground.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/SDL/CPP-Files/SDLBackground.cpp.obj"
+  "D:/Users/cliff/Documents/C++/Project/SDL/CPP-Files/SDLBullet.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/SDL/CPP-Files/SDLBullet.cpp.obj"
+  "D:/Users/cliff/Documents/C++/Project/SDL/CPP-Files/SDLEnemyShip.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj"
+  "D:/Users/cliff/Documents/C++/Project/SDL/CPP-Files/SDLKeyStates.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/SDL/CPP-Files/SDLKeyStates.cpp.obj"
+  "D:/Users/cliff/Documents/C++/Project/SDL/CPP-Files/SDLPlayerShip.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/SDL/CPP-Files/SDLPlayerShip.cpp.obj"
+  "D:/Users/cliff/Documents/C++/Project/SDL/CPP-Files/SDLTimer.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/SDL/CPP-Files/SDLTimer.cpp.obj"
+  "D:/Users/cliff/Documents/C++/Project/main.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

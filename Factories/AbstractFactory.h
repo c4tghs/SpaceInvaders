@@ -1,15 +1,15 @@
-//
-// Created by cliff on 08/03/2020.
-//
+/**
+ * Header for abstract factory
+ */
 
 #ifndef PROJECT_ABSTRACTFACTORY_H
 #define PROJECT_ABSTRACTFACTORY_H
 
 
 #include <string>
-#include "../Headers/Ship.h"
-#include "../Headers/Background.h"
-#include "../Headers/Timer.h"
+#include "../Models/Headers/Ship.h"
+#include "../Models/Headers/Background.h"
+#include "../Models/Headers/Timer.h"
 namespace GameNs{
     class AbstractFactory {
     public:

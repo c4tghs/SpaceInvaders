@@ -5,9 +5,9 @@
 #include <iostream>
 #include "SDLFactory.h"
 
-#include "../Headers/SDLPlayerShip.h"
-#include "../Headers/SDLEnemyShip.h"
-#include "../Headers/SDLBackground.h"
+#include "../SDL/Headers/SDLPlayerShip.h"
+#include "../SDL/Headers/SDLEnemyShip.h"
+#include "../SDL/Headers/SDLBackground.h"
 
 
 /**
@@ -20,18 +20,19 @@ GameNs::Ship* SDLNs::SDLFactory::createPlayerShip(std::string playerShipPath)
     return new SDLPlayerShip(m_renderer,m_screenHeight,m_screenWidth,playerShipPath);
 }
 /**
- *
- * @param enemyShipPath
- * @return
+ * Method used to create an instance of SDL enemyShip
+ * @param enemyShipPath - path to image of enemyShip
+ * @param xPos - x postion of ship
+ * @param yPos - y position of ship
+ * @return - the created instance
  */
 GameNs::Ship * SDLNs::SDLFactory::createEnemyShip(std::string enemyShipPath, int xPos, int yPos) {
     return new SDLEnemyShip(m_renderer, m_screenHeight, m_screenWidth, enemyShipPath, xPos, yPos);
 }
 
 /**
- *
- * @param backgroundPath
- * @return
+ * Method used to create an instance of SDL background
+ * @return the created instance
  */
 GameNs::Background* SDLNs::SDLFactory::createBackground()
 {
@@ -39,7 +40,7 @@ GameNs::Background* SDLNs::SDLFactory::createBackground()
 }
 
 /***
- * Method used to create an SDL window
+ * Method used to create an instance of SDL window
  * @param title - title of the window
  * @param width - width of the window
  * @param height - height of the window
@@ -48,7 +49,7 @@ void SDLNs::SDLFactory::createWindow(const char* title, int width, int height) {
     m_window = SDL_CreateWindow(title,SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,width,height,SDL_WINDOW_SHOWN);
 }
 /**
- * Method used to create an SDL renderer
+ * Method used to create an an instance of SDL renderer
  */
 void SDLNs::SDLFactory::createRender() {
     m_renderer = SDL_CreateRenderer(m_window,-1,SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC); //SDL_RENDERER_PRESENTVSYNC = synchronisation
@@ -63,8 +64,9 @@ SDL_Renderer* SDLNs::SDLFactory::getRenderer()
     return m_renderer;
 }
 /**
- *
- * @return Boolean - if engine is running or not
+ * Method to initialise parameters ie, window, render etc.
+ * @param windowWidth - width of the window
+ * @param windowHeight - height of the window
  */
 void SDLNs::SDLFactory::initialise(int windowWidth, int windowHeight){
     m_screenWidth = windowWidth;
@@ -102,7 +104,7 @@ void SDLNs::SDLFactory::initialise(int windowWidth, int windowHeight){
                     m_IsRunning = false;
                 } else
                 {
-                    //initialise PNG loading
+                    //initialise JPG loading
                     int imgFlags_JPG = IMG_INIT_JPG;
                     if(!(IMG_Init(imgFlags_JPG) & imgFlags_JPG))
                     {
@@ -137,17 +139,17 @@ void SDLNs::SDLFactory::close()
 }
 
 /**
- * Method used to set certain features of the renderer
+ * Method used to present the renderer
  */
 void SDLNs::SDLFactory::render(){
     SDL_RenderPresent(m_renderer);
 }
 /**
  * Method used to handle events
+ * @return True or False
  */
 bool SDLNs::SDLFactory::getEvents()
 {
-
     SDL_Event event;
 
     while(SDL_PollEvent(&event) !=0)
