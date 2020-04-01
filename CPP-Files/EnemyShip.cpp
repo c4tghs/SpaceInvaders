@@ -3,6 +3,6 @@
 //
 
 #include "../Headers/EnemyShip.h"
-EnemyShip::EnemyShip() {
+GameNs::EnemyShip::EnemyShip() {
 
 }

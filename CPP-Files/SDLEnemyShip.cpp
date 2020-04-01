@@ -3,7 +3,7 @@
 //
 
 #include "../Headers/SDLEnemyShip.h"
-SDLEnemyShip::SDLEnemyShip(SDL_Renderer *renderer, int screenHeight, int screenWidth, std::string enemyShipPath,int xPos,int yPos) {
+SDLNs::SDLEnemyShip::SDLEnemyShip(SDL_Renderer *renderer, int screenHeight, int screenWidth, std::string enemyShipPath,int xPos,int yPos) {
     m_renderer = renderer;
     m_enemyShipPath = enemyShipPath;
     m_screenHeight = screenHeight;
@@ -12,7 +12,7 @@ SDLEnemyShip::SDLEnemyShip(SDL_Renderer *renderer, int screenHeight, int screenW
     m_shipWidth = m_screenWidth/25;
     m_xPos = xPos;
     m_yPos = yPos;
-    TextureManager *enemyShipTexture = new TextureManager(m_renderer);
+    GameNs::TextureManager *enemyShipTexture = new GameNs::TextureManager(m_renderer);
     m_enemyShipTexture = enemyShipTexture;
     m_moveDirection = 1;
     m_timer = new SDLTimer();
@@ -20,7 +20,7 @@ SDLEnemyShip::SDLEnemyShip(SDL_Renderer *renderer, int screenHeight, int screenW
     loadMedia();
 
 }
-void SDLEnemyShip::loadMedia() {
+void SDLNs::SDLEnemyShip::loadMedia() {
     m_enemyShipTexture->LoadTexture(m_enemyShipPath,m_renderer);
     if(m_enemyShipTexture->getTexture() == NULL)
     {
@@ -28,13 +28,13 @@ void SDLEnemyShip::loadMedia() {
     }
 
 }
-void SDLEnemyShip::moveEnemyShip() {
+void SDLNs::SDLEnemyShip::moveEnemyShip() {
 
     m_xPos += m_timer->getDeltaTime()*m_moveDirection;
     //m_timer->reset();
 
 }
-void SDLEnemyShip::setMoveDirection(int direction) {
+void SDLNs::SDLEnemyShip::setMoveDirection(int direction) {
     m_moveDirection = direction;
 }
 /**
@@ -42,7 +42,7 @@ void SDLEnemyShip::setMoveDirection(int direction) {
  * 0 or m_screenWidth-m_shipWidth
  * @return
  */
-bool SDLEnemyShip::hitBoundary() {
+bool SDLNs::SDLEnemyShip::hitBoundary() {
     if(m_xPos < 0)
     {
         m_xPos = 0;
@@ -55,23 +55,23 @@ bool SDLEnemyShip::hitBoundary() {
     }
     return false;
 }
-int SDLEnemyShip::getMoveDirection() {
+int SDLNs::SDLEnemyShip::getMoveDirection() {
     return m_moveDirection;
 }
-int SDLEnemyShip::getXPosition()
+int SDLNs::SDLEnemyShip::getXPosition()
 {
     return m_xPos;
 }
-int SDLEnemyShip::getYPosition(){
+int SDLNs::SDLEnemyShip::getYPosition(){
     return m_yPos;
 }
-void SDLEnemyShip::setXPosition(int x){
+void SDLNs::SDLEnemyShip::setXPosition(int x){
     m_xPos = x;
 }
-void SDLEnemyShip::setYPosition(int y){
+void SDLNs::SDLEnemyShip::setYPosition(int y){
     m_yPos = y;
 }
-void SDLEnemyShip::render(){
+void SDLNs::SDLEnemyShip::render(){
     moveEnemyShip();
 
     //update time
@@ -81,6 +81,6 @@ void SDLEnemyShip::render(){
     SDL_RenderCopy(m_renderer,m_enemyShipTexture->getTexture(),NULL,&render);
 
 }
-void SDLEnemyShip::close(){
+void SDLNs::SDLEnemyShip::close(){
     m_enemyShipTexture->free();
 }

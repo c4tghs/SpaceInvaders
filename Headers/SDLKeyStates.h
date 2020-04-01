@@ -6,11 +6,15 @@
 #define PROJECT_SDLKEYSTATES_H
 #include "SDL2/SDL.h"
 
-class SDLKeyStates {
-public:
-    SDLKeyStates();
-    int directions();
-};
+namespace SDLNs
+{
+    class SDLKeyStates {
+    public:
+        SDLKeyStates();
+        int directions();
+    };
+}
+
 
 
 #endif //PROJECT_SDLKEYSTATES_H

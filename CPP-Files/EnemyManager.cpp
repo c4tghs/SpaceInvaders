@@ -3,37 +3,36 @@
 //
 
 #include "../Headers/EnemyManager.h"
-EnemyManager::EnemyManager() {}
-EnemyManager::EnemyManager(AbstractFactory *AF,std::string enemyShipPath)
+GameNs::EnemyManager::EnemyManager() {}
+GameNs::EnemyManager::EnemyManager(AbstractFactory *AF,std::string enemyShipPath)
 {
     m_factory = AF;
     m_enemyShipPath = enemyShipPath;
 }
-void EnemyManager::createEnemies(int number) {
-    printf("The number of enemies are %d",number);
+void GameNs::EnemyManager::createEnemies(int number) {
     m_enemyShips.reserve(number);
     int xPos;
     int yPos = 100;
-    for(int i=0; i < number; i++)
+    for(int y =0; y < number/10;y++)
     {
-        //xPos = ((i % 200) *number) + 100;
-        xPos = i * 100;
-        if(i > 10)
+        for(int i=0; i < number; i++)
         {
-            yPos += 100;
+            xPos = ((i % 10) *55) + 10;
+            //xPos = i * 100;
+            yPos = ((i /11) *55)+1;
+            m_enemyShips.emplace_back(m_factory->createEnemyShip(m_enemyShipPath,xPos,yPos));
         }
-        //yPos = ((i /200) *number)+100;
-        m_enemyShips.emplace_back(m_factory->createEnemyShip(m_enemyShipPath,xPos,yPos));
     }
+
 }
-std::vector<Ship *> EnemyManager::getEnemies()
+std::vector<GameNs::Ship *> GameNs::EnemyManager::getEnemies()
 {
     return m_enemyShips;
 }
 /**
  * Update all enemies
  */
-void EnemyManager::updateEnemies() {
+void GameNs::EnemyManager::updateEnemies() {
     bool enemyHitWall = false;
     for(int i =0; i < m_enemyShips.size(); i ++)
     {

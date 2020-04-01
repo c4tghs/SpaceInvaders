@@ -15,7 +15,7 @@
  * @param playerShipPath
  * @return
  */
-Ship* SDLFactory::createPlayerShip(std::string playerShipPath)
+GameNs::Ship* SDLNs::SDLFactory::createPlayerShip(std::string playerShipPath)
 {
     return new SDLPlayerShip(m_renderer,m_screenHeight,m_screenWidth,playerShipPath);
 }
@@ -24,7 +24,7 @@ Ship* SDLFactory::createPlayerShip(std::string playerShipPath)
  * @param enemyShipPath
  * @return
  */
-Ship * SDLFactory::createEnemyShip(std::string enemyShipPath, int xPos, int yPos) {
+GameNs::Ship * SDLNs::SDLFactory::createEnemyShip(std::string enemyShipPath, int xPos, int yPos) {
     return new SDLEnemyShip(m_renderer, m_screenHeight, m_screenWidth, enemyShipPath, xPos, yPos);
 }
 
@@ -33,7 +33,7 @@ Ship * SDLFactory::createEnemyShip(std::string enemyShipPath, int xPos, int yPos
  * @param backgroundPath
  * @return
  */
-Background* SDLFactory::createBackground()
+GameNs::Background* SDLNs::SDLFactory::createBackground()
 {
     return new SDLBackground(m_renderer,m_screenWidth,m_screenHeight);
 }
@@ -44,13 +44,13 @@ Background* SDLFactory::createBackground()
  * @param width - width of the window
  * @param height - height of the window
  */
-void SDLFactory::createWindow(const char* title, int width, int height) {
+void SDLNs::SDLFactory::createWindow(const char* title, int width, int height) {
     m_window = SDL_CreateWindow(title,SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,width,height,SDL_WINDOW_SHOWN);
 }
 /**
  * Method used to create an SDL renderer
  */
-void SDLFactory::createRender() {
+void SDLNs::SDLFactory::createRender() {
     m_renderer = SDL_CreateRenderer(m_window,-1,SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC); //SDL_RENDERER_PRESENTVSYNC = synchronisation
 }
 
@@ -58,7 +58,7 @@ void SDLFactory::createRender() {
  * Method that returns private member renderer
  * @return private SDL_Renderer
  */
-SDL_Renderer* SDLFactory::getRenderer()
+SDL_Renderer* SDLNs::SDLFactory::getRenderer()
 {
     return m_renderer;
 }
@@ -66,7 +66,7 @@ SDL_Renderer* SDLFactory::getRenderer()
  *
  * @return Boolean - if engine is running or not
  */
-void SDLFactory::initialise(int windowWidth, int windowHeight){
+void SDLNs::SDLFactory::initialise(int windowWidth, int windowHeight){
     m_screenWidth = windowWidth;
     m_screenHeight = windowHeight;
     //check if SDL was initialised succesfully
@@ -127,7 +127,7 @@ void SDLFactory::initialise(int windowWidth, int windowHeight){
  * Method used to clean everything after user quits the game
  *
  */
-void SDLFactory::close()
+void SDLNs::SDLFactory::close()
 {
     SDL_DestroyWindow(m_window);
     //SDL_DestroyRenderer(m_renderer);
@@ -139,13 +139,13 @@ void SDLFactory::close()
 /**
  * Method used to set certain features of the renderer
  */
-void SDLFactory::render(){
+void SDLNs::SDLFactory::render(){
     SDL_RenderPresent(m_renderer);
 }
 /**
  * Method used to handle events
  */
-bool SDLFactory::getEvents()
+bool SDLNs::SDLFactory::getEvents()
 {
 
     SDL_Event event;

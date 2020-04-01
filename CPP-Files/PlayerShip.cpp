@@ -4,7 +4,7 @@
 
 #include "../Headers/PlayerShip.h"
 
-PlayerShip::PlayerShip(){
+GameNs::PlayerShip::PlayerShip(){
 
 }
 

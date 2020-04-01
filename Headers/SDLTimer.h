@@ -9,19 +9,22 @@
 #include "SDL.h"
 #include "Timer.h"
 
-class SDLTimer: public Timer{
-public:
-     SDLTimer();
-     void update();
-     float getDeltaTime();
-     void reset();
+namespace SDLNs
+{
+    class SDLTimer: public GameNs::Timer{
+    public:
+        SDLTimer();
+        void update();
+        float getDeltaTime();
+        void reset();
 
+    private:
+        float m_deltaTime;
+        unsigned int m_startTicks;
+        unsigned int m_elapsedTicks;
+    };
 
-private:
-    float m_deltaTime;
-    unsigned int m_startTicks;
-    unsigned int m_elapsedTicks;
-};
+}
 
 
 #endif //PROJECT_SDLTIMER_H

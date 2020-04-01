@@ -3,4 +3,4 @@
 //
 
 #include "../Headers/Background.h"
-Background::Background(){}
+GameNs::Background::Background(){}

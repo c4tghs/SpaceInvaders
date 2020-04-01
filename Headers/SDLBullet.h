@@ -8,19 +8,22 @@
 
 #include "Bullet.h"
 #include "TextureManager.h"
+namespace SDLNs
+{
+    class SDLBullet: public GameNs::Bullet {
+    public:
+        SDLBullet();
+        void fire();
+        void reload();
+        void render();
 
-class SDLBullet: public Bullet {
-public:
-    SDLBullet();
-    void fire();
-    void reload();
-    void render();
+    private:
+        const int m_offScreenBuffer = 10;
+        float m_speed;
+        GameNs::TextureManager* m_texture;
+    };
+}
 
-private:
-    const int m_offScreenBuffer = 10;
-    float m_speed;
-    TextureManager* m_texture;
-};
 
 
 #endif //PROJECT_SDLBULLET_H

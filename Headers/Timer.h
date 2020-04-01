@@ -7,14 +7,16 @@
 
 //constant used to make sure speed is constant
 const float TARGET_DELTATIME = 1.5f;
+namespace GameNs
+{
+    class Timer {
+    public:
+        virtual float getDeltaTime()=0;
+        virtual void update()=0;
+        virtual void reset()=0;
 
-class Timer {
-public:
-    virtual float getDeltaTime()=0;
-    virtual void update()=0;
-    virtual void reset()=0;
-
-};
+    };
+}
 
 
 #endif //PROJECT_TIMER_H

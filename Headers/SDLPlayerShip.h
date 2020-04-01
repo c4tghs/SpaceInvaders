@@ -12,36 +12,40 @@
 #include "TextureManager.h"
 #include "SDLTimer.h"
 
-class SDLPlayerShip: public PlayerShip {
-public:
-    SDLPlayerShip(SDL_Renderer *renderer,int screenHeight,int screenWidth,std::string playerShipPath);
-    int getXPosition();
-    int getYPosition();
-    void setXPosition(int x);
-    void setYPosition(int y);
-    void render();
-    void close();
-    void movePlayerShip();
-    bool hitBoundary();
-    int getMoveDirection();
-    void setMoveDirection(int direction);
+namespace SDLNs
+{
+    class SDLPlayerShip: public GameNs::PlayerShip {
+    public:
+        SDLPlayerShip(SDL_Renderer *renderer,int screenHeight,int screenWidth,std::string playerShipPath);
+        int getXPosition();
+        int getYPosition();
+        void setXPosition(int x);
+        void setYPosition(int y);
+        void render();
+        void close();
+        void movePlayerShip();
+        bool hitBoundary();
+        int getMoveDirection();
+        void setMoveDirection(int direction);
 
-private:
-    void loadMedia();
-    TextureManager *m_playerShipTexture;
-    int m_xPos;
-    int m_yPos;
-    SDL_Renderer* m_renderer;
-    std::string m_playerShipPath;
-    int m_screenHeight;
-    int m_screenWidth;
-    int m_shipHeight;
-    int m_shipWidth;
-    SDLTimer *m_timer;
-    int m_moveDirection;
-    SDLKeyStates* m_keyStates;
+    private:
+        void loadMedia();
+        GameNs::TextureManager *m_playerShipTexture;
+        int m_xPos;
+        int m_yPos;
+        SDL_Renderer* m_renderer;
+        std::string m_playerShipPath;
+        int m_screenHeight;
+        int m_screenWidth;
+        int m_shipHeight;
+        int m_shipWidth;
+        SDLTimer *m_timer;
+        int m_moveDirection;
+        SDLKeyStates* m_keyStates;
 
-};
+    };
+}
+
 
 
 #endif //PROJECT_SDLPLAYERSHIP_H

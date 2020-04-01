@@ -5,20 +5,24 @@
 
 #include <SDL_render.h>
 #include <string>
-class TextureManager {
-public:
+namespace GameNs
+{
+    class TextureManager {
+    public:
 
-    TextureManager();
-    ~TextureManager();
-    TextureManager(SDL_Renderer *renderer);
-    SDL_Texture* getTexture();
-    void LoadTexture(std::string filename, SDL_Renderer *ren);
-    void render(int x, int y, SDL_Rect* rect, SDL_Point* center, SDL_RendererFlip flip);
-    void free();
+        TextureManager();
+        ~TextureManager();
+        TextureManager(SDL_Renderer *renderer);
+        SDL_Texture* getTexture();
+        void LoadTexture(std::string filename, SDL_Renderer *ren);
+        void render(int x, int y, SDL_Rect* rect, SDL_Point* center, SDL_RendererFlip flip);
+        void free();
 
-private:
-    SDL_Renderer* m_renderer;
-    SDL_Texture* m_texture;
-    int m_width;
-    int m_height;
-};
+    private:
+        SDL_Renderer* m_renderer;
+        SDL_Texture* m_texture;
+        int m_width;
+        int m_height;
+    };
+}
+

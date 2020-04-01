@@ -4,16 +4,16 @@
 #include <SDL_image.h>
 #include "../Headers/TextureManager.h"
 
-TextureManager::TextureManager(){
+GameNs::TextureManager::TextureManager(){
 
 }
-TextureManager::~TextureManager() {
+GameNs::TextureManager::~TextureManager() {
     free();
 }
-TextureManager::TextureManager(SDL_Renderer *renderer){
+GameNs::TextureManager::TextureManager(SDL_Renderer *renderer){
     m_renderer = renderer;
 }
-void TextureManager::LoadTexture(std::string filename, SDL_Renderer *ren) {
+void GameNs::TextureManager::LoadTexture(std::string filename, SDL_Renderer *ren) {
     SDL_Surface* surface = IMG_Load(filename.c_str());
     SDL_Texture* tex;
     if(surface == NULL)
@@ -45,7 +45,7 @@ void TextureManager::LoadTexture(std::string filename, SDL_Renderer *ren) {
     m_texture = tex;
 
 }
-SDL_Texture* TextureManager::getTexture(){
+SDL_Texture* GameNs::TextureManager::getTexture(){
     return m_texture;
 }/*
 void TextureManager::render(int x, int y, SDL_Rect* rect, SDL_Point* center, SDL_RendererFlip flip) {
@@ -57,7 +57,7 @@ void TextureManager::render(int x, int y, SDL_Rect* rect, SDL_Point* center, SDL
     }
     SDL_RenderCopyEx(m_renderer,m_texture,rect,&render,NULL,center,flip);
 }*/
-void TextureManager::free() {
+void GameNs::TextureManager::free() {
     if(m_texture != NULL)
     {
         SDL_DestroyTexture(m_texture);

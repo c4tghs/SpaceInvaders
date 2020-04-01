@@ -12,33 +12,36 @@
 #include "../Headers/Ship.h"
 #include "AbstractFactory.h"
 #include "../Headers/Timer.h"
+namespace SDLNs
+{
+    class SDLFactory:public GameNs::AbstractFactory {
+    public:
+        SDLFactory(){};
 
-class SDLFactory:public AbstractFactory {
-public:
-    SDLFactory(){};
-
-    Ship* createPlayerShip(std::string playerShipPath);
-    Ship *createEnemyShip(std::string enemyShipPath, int xPos, int yPos);
-    Background* createBackground();
-    Timer* createTimer();
+        GameNs::Ship* createPlayerShip(std::string playerShipPath);
+        GameNs::Ship *createEnemyShip(std::string enemyShipPath, int xPos, int yPos);
+        GameNs::Background* createBackground();
+        GameNs::Timer* createTimer();
 
 
-    void createWindow(const char* title,int width, int height);
-    void createRender();
-    SDL_Renderer* getRenderer();
-    void initialise(int windowWidth, int windowHeight);
-    void close();
-    void render();
-    bool getEvents();
+        void createWindow(const char* title,int width, int height);
+        void createRender();
+        SDL_Renderer* getRenderer();
+        void initialise(int windowWidth, int windowHeight);
+        void close();
+        void render();
+        bool getEvents();
 
-private:
-    bool m_IsRunning;
-    SDL_Window *m_window;
-    SDL_Renderer *m_renderer;
+    private:
+        bool m_IsRunning;
+        SDL_Window *m_window;
+        SDL_Renderer *m_renderer;
 
-    int m_screenWidth;
-    int m_screenHeight;
-};
+        int m_screenWidth;
+        int m_screenHeight;
+    };
+}
+
 
 
 #endif //PROJECT_SDLFACTORY_H

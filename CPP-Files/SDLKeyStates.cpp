@@ -3,8 +3,8 @@
 //
 
 #include "../Headers/SDLKeyStates.h"
-SDLKeyStates::SDLKeyStates(){}
-int SDLKeyStates::directions() {
+SDLNs::SDLKeyStates::SDLKeyStates(){}
+int SDLNs::SDLKeyStates::directions() {
     SDL_Event event;
     SDL_PollEvent(&event);
 

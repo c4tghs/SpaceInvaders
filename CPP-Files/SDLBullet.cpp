@@ -3,16 +3,16 @@
 //
 
 #include "../Headers/SDLBullet.h"
-SDLBullet::SDLBullet()
+SDLNs::SDLBullet::SDLBullet()
 {
 
 }
-void SDLBullet::render() {
+void SDLNs::SDLBullet::render() {
 
 }
-void SDLBullet::fire() {
+void SDLNs::SDLBullet::fire() {
 
 }
-void SDLBullet::reload() {
+void SDLNs::SDLBullet::reload() {
 
 }

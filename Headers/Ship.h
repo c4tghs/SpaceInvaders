@@ -5,19 +5,22 @@
 #ifndef PROJECT_SHIP_H
 #define PROJECT_SHIP_H
 
+namespace GameNs
+{
+    class Ship {
+    public:
+        virtual int getXPosition()=0;
+        virtual int getYPosition()=0;
+        virtual void setXPosition(int x)=0;
+        virtual void setYPosition(int y)=0;
+        virtual void render() = 0;
+        virtual void close() = 0;
+        virtual bool hitBoundary()=0;
+        virtual int getMoveDirection()=0;
+        virtual void setMoveDirection(int direction)=0;
+    };
+}
 
-class Ship {
-public:
-    virtual int getXPosition()=0;
-    virtual int getYPosition()=0;
-    virtual void setXPosition(int x)=0;
-    virtual void setYPosition(int y)=0;
-    virtual void render() = 0;
-    virtual void close() = 0;
-    virtual bool hitBoundary()=0;
-    virtual int getMoveDirection()=0;
-    virtual void setMoveDirection(int direction)=0;
-};
 
 
 

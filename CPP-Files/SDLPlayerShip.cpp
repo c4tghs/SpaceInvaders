@@ -4,7 +4,7 @@
 
 #include "../Headers/SDLPlayerShip.h"
 
-SDLPlayerShip::SDLPlayerShip(SDL_Renderer *renderer,int screenHeight,int screenWidth,std::string playerShipPath)
+SDLNs::SDLPlayerShip::SDLPlayerShip(SDL_Renderer *renderer,int screenHeight,int screenWidth,std::string playerShipPath)
 {
     m_renderer = renderer;
     m_playerShipPath = playerShipPath;
@@ -14,33 +14,33 @@ SDLPlayerShip::SDLPlayerShip(SDL_Renderer *renderer,int screenHeight,int screenW
     m_shipWidth = m_screenWidth/10;
     m_xPos = (m_screenWidth/2)-50;
     m_yPos = m_screenHeight-(m_shipHeight+10);
-    TextureManager *playerShipTexture = new TextureManager(m_renderer);
+    GameNs::TextureManager *playerShipTexture = new GameNs::TextureManager(m_renderer);
     m_moveDirection = 1;
     m_playerShipTexture = playerShipTexture;
     m_timer = new SDLTimer();
     //create texture
     loadMedia();
 }
-int SDLPlayerShip::getXPosition() {
+int SDLNs::SDLPlayerShip::getXPosition() {
     return m_xPos;
 }
-int SDLPlayerShip::getYPosition() {
+int SDLNs::SDLPlayerShip::getYPosition() {
     return m_yPos;
 }
-void SDLPlayerShip::setXPosition(int x){
+void SDLNs::SDLPlayerShip::setXPosition(int x){
     m_xPos = x;
 }
-void SDLPlayerShip::setYPosition(int y){
+void SDLNs::SDLPlayerShip::setYPosition(int y){
     m_yPos = y;
 }
-void SDLPlayerShip::loadMedia() {
+void SDLNs::SDLPlayerShip::loadMedia() {
     m_playerShipTexture->LoadTexture(m_playerShipPath,m_renderer);
     if(m_playerShipTexture->getTexture() == NULL){
         printf("Something went wrong loading texture %S",SDL_GetError());
     }
 
 }
-void SDLPlayerShip::render() {
+void SDLNs::SDLPlayerShip::render() {
     movePlayerShip();
     //update timer
     m_timer->update();
@@ -49,7 +49,7 @@ void SDLPlayerShip::render() {
     SDL_Rect render = {m_xPos,m_yPos,m_shipWidth,m_shipHeight};
     SDL_RenderCopy(m_renderer,m_playerShipTexture->getTexture(),NULL,&render);
 }
-void SDLPlayerShip::movePlayerShip() {
+void SDLNs::SDLPlayerShip::movePlayerShip() {
     int direction = m_keyStates->directions();
     switch(direction)
     {
@@ -64,10 +64,10 @@ void SDLPlayerShip::movePlayerShip() {
     hitBoundary();
 
 }
-void SDLPlayerShip::close() {
+void SDLNs::SDLPlayerShip::close() {
  m_playerShipTexture->free();
 }
-bool SDLPlayerShip::hitBoundary(){
+bool SDLNs::SDLPlayerShip::hitBoundary(){
     if(m_xPos < 0)
     {
         m_xPos = 0;
@@ -80,9 +80,9 @@ bool SDLPlayerShip::hitBoundary(){
     }
     return false;
 }
-int SDLPlayerShip::getMoveDirection(){
+int SDLNs::SDLPlayerShip::getMoveDirection(){
     return m_moveDirection;
 }
-void SDLPlayerShip::setMoveDirection(int direction){
+void SDLNs::SDLPlayerShip::setMoveDirection(int direction){
     m_moveDirection =  direction;
 }

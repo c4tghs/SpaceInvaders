@@ -6,8 +6,8 @@
 
 int main(int argc, char *argv[]) {
 
-    AbstractFactory *AF = new SDLFactory();
-    Game *g = new Game(AF);
+    GameNs::AbstractFactory *AF = new SDLNs::SDLFactory();
+    GameNs::Game *g = new GameNs::Game(AF);
     g->run();
 
     return 0;
