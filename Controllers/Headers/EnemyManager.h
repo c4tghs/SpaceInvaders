@@ -29,7 +29,7 @@ namespace GameNs
         AbstractFactory* m_factory;
         std::vector<Ship *> m_enemyShips;
         std::string m_enemyShipPath;
-        SDLNs::SDLTimer *m_timer;
+        Timer *m_timer;
         int m_screenHeight;
         int m_screenWidth;
         int m_shipHeight;

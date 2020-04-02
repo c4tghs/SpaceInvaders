@@ -18,8 +18,9 @@ void GameNs::TextureManager::LoadTexture(std::string filename, SDL_Renderer *ren
     SDL_Texture* tex;
     if(surface == NULL)
     {
-        SDL_Log("Failed to load image: %s",SDL_GetError());
-        printf("Failed to load image: %s",SDL_GetError());
+        SDL_Log("Failed to create surface: %s",SDL_GetError());
+        printf("Failed to load surface: %s",SDL_GetError());
+        exit(1);
     }
     else
     {
@@ -32,7 +33,7 @@ void GameNs::TextureManager::LoadTexture(std::string filename, SDL_Renderer *ren
         {
             SDL_Log("Failed to create texture: %s",SDL_GetError());
             printf("Failed to create texture: %s",SDL_GetError());
-
+            exit(1);
         }
         else
         {
@@ -47,16 +48,8 @@ void GameNs::TextureManager::LoadTexture(std::string filename, SDL_Renderer *ren
 }
 SDL_Texture* GameNs::TextureManager::getTexture(){
     return m_texture;
-}/*
-void TextureManager::render(int x, int y, SDL_Rect* rect, SDL_Point* center, SDL_RendererFlip flip) {
-    SDL_Rect render = {x,y};
-    if(rect != NULL)
-    {
-        render.w = rect->w;
-        render.h = rect->h;
-    }
-    SDL_RenderCopyEx(m_renderer,m_texture,rect,&render,NULL,center,flip);
-}*/
+}
+
 void GameNs::TextureManager::free() {
     if(m_texture != NULL)
     {

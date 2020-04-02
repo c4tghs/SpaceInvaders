@@ -18,8 +18,7 @@ namespace GameNs{
 
         std::string m_playerShipPath = "../assets/ship.png";
         std::string m_enemyShipPath = "../assets/alien1.png";
-        /*int m_windowHeight = 640;
-        int m_windowWidth = 960;*/
+        std::string m_playerBulletPath = "../assets/playerBullet.png";
         int m_windowHeight = 720 ;
         int m_windowWidth = 1280;
     };

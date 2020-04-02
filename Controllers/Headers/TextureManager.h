@@ -15,7 +15,6 @@ namespace GameNs
         TextureManager(SDL_Renderer *renderer);
         SDL_Texture* getTexture();
         void LoadTexture(std::string filename, SDL_Renderer *ren);
-        void render(int x, int y, SDL_Rect* rect, SDL_Point* center, SDL_RendererFlip flip);
         void free();
 
     private:

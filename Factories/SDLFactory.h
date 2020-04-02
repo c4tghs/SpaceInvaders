@@ -20,7 +20,8 @@ namespace SDLNs
         GameNs::Ship* createPlayerShip(std::string playerShipPath);
         GameNs::Ship *createEnemyShip(std::string enemyShipPath, int xPos, int yPos);
         GameNs::Background* createBackground();
-
+        GameNs::Bullet* createBullet(std::string bulletPath, int xPos, int yPos);
+        GameNs::Timer* createTimer();
         void createWindow(const char* title,int width, int height);
         void createRender();
         SDL_Renderer* getRenderer();

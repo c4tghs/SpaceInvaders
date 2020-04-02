@@ -46,10 +46,4 @@ void SDLNs::SDLPlayerShip::render() {
 
 void SDLNs::SDLPlayerShip::close() {
  m_playerShipTexture->free();
-}/*
-int SDLNs::SDLPlayerShip::getMoveDirection(){
-    return m_moveDirection;
 }
-void SDLNs::SDLPlayerShip::setMoveDirection(int direction){
-    m_moveDirection =  direction;
-}*/

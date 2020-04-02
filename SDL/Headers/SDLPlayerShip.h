@@ -23,11 +23,10 @@ namespace SDLNs
         void setYPosition(int y);
         void render();
         void close();
-        /*int getMoveDirection();
-        void setMoveDirection(int direction);*/
+        void loadMedia();
 
     private:
-        void loadMedia();
+
         GameNs::TextureManager *m_playerShipTexture;
         int m_xPos;
         int m_yPos;
@@ -37,7 +36,6 @@ namespace SDLNs
         int m_screenWidth;
         int m_shipHeight;
         int m_shipWidth;
-        int m_moveDirection;
     };
 }
 

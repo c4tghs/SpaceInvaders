@@ -15,6 +15,10 @@ int SDLNs::SDLKeyStates::directions() {
   }
   else if(keystate[SDL_SCANCODE_RIGHT]){
       return 2;
-  };
+  }
+  else if(keystate[SDL_SCANCODE_SPACE])
+  {
+      return 3;
+  }
   return  0;
 }

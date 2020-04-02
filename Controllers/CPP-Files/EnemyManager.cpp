@@ -13,7 +13,7 @@ GameNs::EnemyManager::EnemyManager(AbstractFactory *AF,std::string enemyShipPath
 {
     m_factory = AF;
     m_enemyShipPath = enemyShipPath;
-    m_timer = new SDLNs::SDLTimer();
+    m_timer = AF->createTimer();
     m_screenHeight = screenHeight;
     m_screenWidth = screenWidth;
     m_shipHeight = m_screenHeight/25;
@@ -37,7 +37,6 @@ void GameNs::EnemyManager::createEnemies(int number) {
             m_enemyShips.emplace_back(m_factory->createEnemyShip(m_enemyShipPath,xPos,yPos));
         }
     }
-
 }
 /**
  * Method that returns private member enemyships

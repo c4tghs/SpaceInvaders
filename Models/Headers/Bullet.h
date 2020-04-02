@@ -9,9 +9,12 @@ namespace GameNs
 {
     class Bullet {
     public:
-        virtual void fire()=0;
-        virtual void reload()=0;
+        virtual void close()=0;
         virtual void render()=0;
+        virtual int getXPosition()=0;
+        virtual int getYPosition()=0;
+        virtual void setXPosition(int x)=0;
+        virtual void setYPosition(int y)=0;
     };
 }
 

@@ -20,7 +20,7 @@ GameNs::Game::Game(AbstractFactory *AF) {
 void GameNs::Game::run() {
     m_factory->initialise(m_windowWidth,m_windowHeight);
     Background *background = m_factory->createBackground();
-    PlayerManager* playerManager = new PlayerManager(m_factory,m_playerShipPath,m_windowHeight,m_windowWidth);
+    PlayerManager* playerManager = new PlayerManager(m_factory,m_playerShipPath,m_playerBulletPath,m_windowHeight,m_windowWidth);
     //Ship* playerShip = m_factory->createPlayerShip(m_playerShipPath);
     EnemyManager* enemyManager = new EnemyManager(m_factory, m_enemyShipPath, m_windowHeight, m_windowWidth);
     enemyManager->createEnemies(50);

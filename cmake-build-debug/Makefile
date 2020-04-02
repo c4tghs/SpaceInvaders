@@ -122,6 +122,33 @@ Project/fast:
 	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/build
 .PHONY : Project/fast
 
+Controllers/CPP-Files/BulletManager.obj: Controllers/CPP-Files/BulletManager.cpp.obj
+
+.PHONY : Controllers/CPP-Files/BulletManager.obj
+
+# target to build an object file
+Controllers/CPP-Files/BulletManager.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj
+.PHONY : Controllers/CPP-Files/BulletManager.cpp.obj
+
+Controllers/CPP-Files/BulletManager.i: Controllers/CPP-Files/BulletManager.cpp.i
+
+.PHONY : Controllers/CPP-Files/BulletManager.i
+
+# target to preprocess a source file
+Controllers/CPP-Files/BulletManager.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.i
+.PHONY : Controllers/CPP-Files/BulletManager.cpp.i
+
+Controllers/CPP-Files/BulletManager.s: Controllers/CPP-Files/BulletManager.cpp.s
+
+.PHONY : Controllers/CPP-Files/BulletManager.s
+
+# target to generate assembly for a file
+Controllers/CPP-Files/BulletManager.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.s
+.PHONY : Controllers/CPP-Files/BulletManager.cpp.s
+
 Controllers/CPP-Files/EnemyManager.obj: Controllers/CPP-Files/EnemyManager.cpp.obj
 
 .PHONY : Controllers/CPP-Files/EnemyManager.obj
@@ -563,6 +590,9 @@ help:
 	@echo ... Project
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Controllers/CPP-Files/BulletManager.obj
+	@echo ... Controllers/CPP-Files/BulletManager.i
+	@echo ... Controllers/CPP-Files/BulletManager.s
 	@echo ... Controllers/CPP-Files/EnemyManager.obj
 	@echo ... Controllers/CPP-Files/EnemyManager.i
 	@echo ... Controllers/CPP-Files/EnemyManager.s

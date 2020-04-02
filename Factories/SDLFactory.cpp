@@ -8,6 +8,7 @@
 #include "../SDL/Headers/SDLPlayerShip.h"
 #include "../SDL/Headers/SDLEnemyShip.h"
 #include "../SDL/Headers/SDLBackground.h"
+#include "../SDL/Headers/SDLBullet.h"
 
 
 /**
@@ -54,6 +55,12 @@ void SDLNs::SDLFactory::createWindow(const char* title, int width, int height) {
 void SDLNs::SDLFactory::createRender() {
     m_renderer = SDL_CreateRenderer(m_window,-1,SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC); //SDL_RENDERER_PRESENTVSYNC = synchronisation
 }
+GameNs::Bullet* SDLNs::SDLFactory::createBullet(std::string bulletPath, int xPos, int yPos) {
+    return new SDLBullet(m_renderer,bulletPath,xPos,yPos);
+}
+GameNs::Timer* SDLNs::SDLFactory::createTimer() {
+    return new SDLTimer();
+}
 
 /***
  * Method that returns private member renderer
@@ -96,7 +103,7 @@ void SDLNs::SDLFactory::initialise(int windowWidth, int windowHeight){
             } else
             {
                 //initialise PNG loading
-                int imgFlags = IMG_INIT_PNG;
+                int imgFlags = IMG_INIT_PNG | IMG_INIT_JPG;
                 if(!(IMG_Init(imgFlags) & imgFlags))
                 {
                     SDL_Log("Failed to initialise SDL_image: %s",IMG_GetError());
@@ -104,22 +111,9 @@ void SDLNs::SDLFactory::initialise(int windowWidth, int windowHeight){
                     m_IsRunning = false;
                 } else
                 {
-                    //initialise JPG loading
-                    int imgFlags_JPG = IMG_INIT_JPG;
-                    if(!(IMG_Init(imgFlags_JPG) & imgFlags_JPG))
-                    {
-                        SDL_Log("Failed to initialise SDL_image: %s",IMG_GetError());
-                        printf("Failed to initialise SDL_image: %s",IMG_GetError());
-                        m_IsRunning = false;
-                    } else
-                    {
-                        m_IsRunning = true;
-                    }
+                    m_IsRunning = true;
                 }
-
             }
-
-
         }
 
     }
