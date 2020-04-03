@@ -2,6 +2,10 @@
 // Created by cliff on 08/03/2020.
 //
 
+/**
+ * Game class
+ * Method to run game
+ */
 #ifndef PROJECT_GAME_H
 #define PROJECT_GAME_H
 

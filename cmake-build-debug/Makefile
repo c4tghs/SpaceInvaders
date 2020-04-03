@@ -365,6 +365,33 @@ Models/CPP-Files/EnemyShip.cpp.s:
 	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/EnemyShip.cpp.s
 .PHONY : Models/CPP-Files/EnemyShip.cpp.s
 
+Models/CPP-Files/Entity.obj: Models/CPP-Files/Entity.cpp.obj
+
+.PHONY : Models/CPP-Files/Entity.obj
+
+# target to build an object file
+Models/CPP-Files/Entity.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Entity.cpp.obj
+.PHONY : Models/CPP-Files/Entity.cpp.obj
+
+Models/CPP-Files/Entity.i: Models/CPP-Files/Entity.cpp.i
+
+.PHONY : Models/CPP-Files/Entity.i
+
+# target to preprocess a source file
+Models/CPP-Files/Entity.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Entity.cpp.i
+.PHONY : Models/CPP-Files/Entity.cpp.i
+
+Models/CPP-Files/Entity.s: Models/CPP-Files/Entity.cpp.s
+
+.PHONY : Models/CPP-Files/Entity.s
+
+# target to generate assembly for a file
+Models/CPP-Files/Entity.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Entity.cpp.s
+.PHONY : Models/CPP-Files/Entity.cpp.s
+
 Models/CPP-Files/PlayerShip.obj: Models/CPP-Files/PlayerShip.cpp.obj
 
 .PHONY : Models/CPP-Files/PlayerShip.obj
@@ -391,6 +418,33 @@ Models/CPP-Files/PlayerShip.s: Models/CPP-Files/PlayerShip.cpp.s
 Models/CPP-Files/PlayerShip.cpp.s:
 	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/PlayerShip.cpp.s
 .PHONY : Models/CPP-Files/PlayerShip.cpp.s
+
+Models/CPP-Files/Ship.obj: Models/CPP-Files/Ship.cpp.obj
+
+.PHONY : Models/CPP-Files/Ship.obj
+
+# target to build an object file
+Models/CPP-Files/Ship.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Ship.cpp.obj
+.PHONY : Models/CPP-Files/Ship.cpp.obj
+
+Models/CPP-Files/Ship.i: Models/CPP-Files/Ship.cpp.i
+
+.PHONY : Models/CPP-Files/Ship.i
+
+# target to preprocess a source file
+Models/CPP-Files/Ship.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Ship.cpp.i
+.PHONY : Models/CPP-Files/Ship.cpp.i
+
+Models/CPP-Files/Ship.s: Models/CPP-Files/Ship.cpp.s
+
+.PHONY : Models/CPP-Files/Ship.s
+
+# target to generate assembly for a file
+Models/CPP-Files/Ship.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Ship.cpp.s
+.PHONY : Models/CPP-Files/Ship.cpp.s
 
 SDL/CPP-Files/SDLBackground.obj: SDL/CPP-Files/SDLBackground.cpp.obj
 
@@ -617,9 +671,15 @@ help:
 	@echo ... Models/CPP-Files/EnemyShip.obj
 	@echo ... Models/CPP-Files/EnemyShip.i
 	@echo ... Models/CPP-Files/EnemyShip.s
+	@echo ... Models/CPP-Files/Entity.obj
+	@echo ... Models/CPP-Files/Entity.i
+	@echo ... Models/CPP-Files/Entity.s
 	@echo ... Models/CPP-Files/PlayerShip.obj
 	@echo ... Models/CPP-Files/PlayerShip.i
 	@echo ... Models/CPP-Files/PlayerShip.s
+	@echo ... Models/CPP-Files/Ship.obj
+	@echo ... Models/CPP-Files/Ship.i
+	@echo ... Models/CPP-Files/Ship.s
 	@echo ... SDL/CPP-Files/SDLBackground.obj
 	@echo ... SDL/CPP-Files/SDLBackground.i
 	@echo ... SDL/CPP-Files/SDLBackground.s

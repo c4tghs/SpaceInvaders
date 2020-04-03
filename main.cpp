@@ -1,4 +1,3 @@
-#include <iostream>
 
 #include "Factories/AbstractFactory.h"
 #include "Factories/SDLFactory.h"

@@ -4,7 +4,6 @@
 
 #include <iostream>
 #include "SDLFactory.h"
-
 #include "../SDL/Headers/SDLPlayerShip.h"
 #include "../SDL/Headers/SDLEnemyShip.h"
 #include "../SDL/Headers/SDLBackground.h"
@@ -12,32 +11,38 @@
 
 
 /**
- *
+ * Method to create an instance of SDLPlayerShip
  * @param playerShipPath
- * @return
+ * @return instance of Ship
  */
 GameNs::Ship* SDLNs::SDLFactory::createPlayerShip(std::string playerShipPath)
 {
-    return new SDLPlayerShip(m_renderer,m_screenHeight,m_screenWidth,playerShipPath);
+    int shipHeight =m_screenHeight/10;;
+    int xPos =  (m_screenWidth/2)-50;
+    int yPos = m_screenHeight-(shipHeight+10);
+    int shipWidth = m_screenWidth/10;
+    return new SDLPlayerShip(xPos,yPos,shipWidth,shipHeight,m_renderer,playerShipPath);
 }
 /**
  * Method used to create an instance of SDL enemyShip
  * @param enemyShipPath - path to image of enemyShip
  * @param xPos - x postion of ship
  * @param yPos - y position of ship
- * @return - the created instance
+ * @return - instance of Ship
  */
 GameNs::Ship * SDLNs::SDLFactory::createEnemyShip(std::string enemyShipPath, int xPos, int yPos) {
-    return new SDLEnemyShip(m_renderer, m_screenHeight, m_screenWidth, enemyShipPath, xPos, yPos);
+    int shipWidth = m_screenWidth/25;
+    int shipHeight = m_screenHeight/25;
+    return new SDLEnemyShip(m_renderer, enemyShipPath, xPos, yPos,shipWidth,shipHeight);
 }
 
 /**
  * Method used to create an instance of SDL background
- * @return the created instance
+ * @return -  instance of Background
  */
 GameNs::Background* SDLNs::SDLFactory::createBackground()
 {
-    return new SDLBackground(m_renderer,m_screenWidth,m_screenHeight);
+    return new SDLBackground(m_renderer);
 }
 
 /***
@@ -55,9 +60,22 @@ void SDLNs::SDLFactory::createWindow(const char* title, int width, int height) {
 void SDLNs::SDLFactory::createRender() {
     m_renderer = SDL_CreateRenderer(m_window,-1,SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC); //SDL_RENDERER_PRESENTVSYNC = synchronisation
 }
+/**
+ * Method used to create an instance of SDL Bullet
+ * @param bulletPath - path to image of bullet
+ * @param xPos - x position of bullet
+ * @param yPos - y position of bullet
+ * @return - instance of Bullet
+ */
 GameNs::Bullet* SDLNs::SDLFactory::createBullet(std::string bulletPath, int xPos, int yPos) {
-    return new SDLBullet(m_renderer,bulletPath,xPos,yPos);
+    int width = 10;
+    int height = 10;
+    return new SDLBullet(m_renderer,bulletPath,xPos,yPos,width,height);
 }
+/**
+ * Method to create an instance of SDLTimer
+ * @return - instance of Timer
+ */
 GameNs::Timer* SDLNs::SDLFactory::createTimer() {
     return new SDLTimer();
 }
@@ -130,6 +148,7 @@ void SDLNs::SDLFactory::close()
     IMG_Quit();
     SDL_Quit();
     std::cout << "Game cleaned succesfully" << std::endl;
+
 }
 
 /**
@@ -142,7 +161,7 @@ void SDLNs::SDLFactory::render(){
  * Method used to handle events
  * @return True or False
  */
-bool SDLNs::SDLFactory::getEvents()
+bool SDLNs::SDLFactory::getRunningState()
 {
     SDL_Event event;
 
@@ -157,4 +176,5 @@ bool SDLNs::SDLFactory::getEvents()
 
     return m_IsRunning;
 }
+
 

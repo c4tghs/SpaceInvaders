@@ -14,17 +14,13 @@ namespace SDLNs
 {
     class SDLBackground:public GameNs::Background {
     public:
-        SDLBackground(SDL_Renderer* renderer, int screenWidth, int screenHeight);
+        SDLBackground(SDL_Renderer* renderer);
         void render();
         void close();
 
     private:
         SDL_Renderer* m_renderer;
-        SDL_Texture* m_texture;
         GameNs::TextureManager* m_backgroundTexture;
-
-        int m_screenWidth;
-        int m_screenHeight;
     };
 
 }

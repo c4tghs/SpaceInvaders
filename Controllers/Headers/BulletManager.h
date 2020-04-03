@@ -1,6 +1,7 @@
-//
-// Created by cliff on 01/04/2020.
-//
+/**
+ * BulletManager class
+ * Methods to managing a bullet
+ */
 
 #ifndef PROJECT_BULLETMANAGER_H
 #define PROJECT_BULLETMANAGER_H
@@ -25,12 +26,9 @@ namespace GameNs{
     private:
         bool m_bulletFired;
         int m_moveDirection;
-        int m_maxBullets;
         Timer* m_timer;
         Bullet* m_bullet;
         std::string m_bulletPath;
-        int m_height = 10;
-        int m_width = 10;
         int m_screenHeight;
 
     };

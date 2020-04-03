@@ -1,40 +1,43 @@
-//
-// Created by cliff on 23/03/2020.
-//
+/**
+ * CPP file for SDLBullet class
+ */
 
 #include "../Headers/SDLBullet.h"
-SDLNs::SDLBullet::SDLBullet(SDL_Renderer *renderer,std::string bulletPath,int xPos, int yPos)
+/**
+ * Constructor for SDLBullet class
+ * @param renderer
+ * @param bulletPath - path to bullet image
+ * @param xPos - x position of bullet
+ * @param yPos - y position of bullet
+ * @param width - width of bullet
+ * @param height - height of bullet
+ */
+SDLNs::SDLBullet::SDLBullet(SDL_Renderer *renderer,std::string bulletPath,int xPos, int yPos,int width, int height):GameNs::Bullet(xPos,yPos,width,height)
 {
     m_renderer = renderer;
     m_bulletPath = bulletPath;
     GameNs::TextureManager *bulletTexture = new GameNs::TextureManager(m_renderer);
     m_texture  = bulletTexture;
-    m_xPos = xPos;
-    m_yPos = yPos;
     loadMedia();
 }
+/**
+ * Method to render bullet
+ */
 void SDLNs::SDLBullet::render() {
-    SDL_Rect rQuad = {m_xPos,m_yPos,10,10};
+    SDL_Rect rQuad = {getXPosition(),getYPosition(),getWidth(),getHeight()};
     SDL_RenderCopy(m_renderer,m_texture->getTexture(),NULL,&rQuad);
 
 }
+/**
+ * Method to destroy bullet texture
+ */
 void SDLNs::SDLBullet::close() {
     m_texture->free();
 }
 
-int SDLNs::SDLBullet::getXPosition() {
-    return m_xPos;
-}
-int SDLNs::SDLBullet::getYPosition() {
-    return m_yPos;
-}
-void SDLNs::SDLBullet::setXPosition(int x) {
-     m_xPos = x;
-}
-void SDLNs::SDLBullet::setYPosition(int y) {
-     m_yPos = y;
-}
-
+/**
+ * Method to create SDL texture for the bullet
+ */
 void SDLNs::SDLBullet::loadMedia() {
     m_texture->LoadTexture(m_bulletPath,m_renderer);
     if(m_texture->getTexture() == NULL)

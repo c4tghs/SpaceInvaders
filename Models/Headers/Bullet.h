@@ -1,20 +1,19 @@
-//
-// Created by cliff on 23/03/2020.
-//
-
+/**
+ * Bullet class
+ */
 #ifndef PROJECT_BULLET_H
 #define PROJECT_BULLET_H
 
+#include "Entity.h"
+
 namespace GameNs
 {
-    class Bullet {
+    class Bullet:public Entity {
     public:
+        Bullet();
+        Bullet(int xPos, int yPos, int width, int height);
         virtual void close()=0;
         virtual void render()=0;
-        virtual int getXPosition()=0;
-        virtual int getYPosition()=0;
-        virtual void setXPosition(int x)=0;
-        virtual void setYPosition(int y)=0;
     };
 }
 

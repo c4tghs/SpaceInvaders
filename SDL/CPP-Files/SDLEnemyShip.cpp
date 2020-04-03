@@ -4,7 +4,7 @@
 
 #include "../Headers/SDLEnemyShip.h"
 /**
- * Method to initialise an instance of SDLEnemyShip
+ * Constructor for SDlEnemyShip
  * @param renderer
  * @param screenHeight
  * @param screenWidth
@@ -12,15 +12,11 @@
  * @param xPos
  * @param yPos
  */
-SDLNs::SDLEnemyShip::SDLEnemyShip(SDL_Renderer *renderer, int screenHeight, int screenWidth, std::string enemyShipPath,int xPos,int yPos) {
+SDLNs::SDLEnemyShip::SDLEnemyShip(SDL_Renderer *renderer, std::string enemyShipPath,int xPos,int yPos,int width, int height):EnemyShip(
+        xPos,yPos,width,height
+        ) {
     m_renderer = renderer;
     m_enemyShipPath = enemyShipPath;
-    m_screenHeight = screenHeight;
-    m_screenWidth = screenWidth;
-    m_shipHeight = m_screenHeight/25;
-    m_shipWidth = m_screenWidth/25;
-    m_xPos = xPos;
-    m_yPos = yPos;
     GameNs::TextureManager *enemyShipTexture = new GameNs::TextureManager(m_renderer);
     m_enemyShipTexture = enemyShipTexture;
     m_moveDirection = 1;
@@ -28,6 +24,9 @@ SDLNs::SDLEnemyShip::SDLEnemyShip(SDL_Renderer *renderer, int screenHeight, int 
     loadMedia();
 
 }
+/**
+ * Method to create enemyShip texture
+ */
 void SDLNs::SDLEnemyShip::loadMedia() {
     m_enemyShipTexture->LoadTexture(m_enemyShipPath,m_renderer);
     if(m_enemyShipTexture->getTexture() == NULL)
@@ -36,31 +35,32 @@ void SDLNs::SDLEnemyShip::loadMedia() {
     }
 
 }
+/**
+ * Method to set direction enemy
+ * @param direction
+ */
 void SDLNs::SDLEnemyShip::setMoveDirection(int direction) {
     m_moveDirection = direction;
 }
+/**
+ * Method to get the direction enemy is moving
+ * @return - direction,ie -1 for left, 1 for right
+ */
 int SDLNs::SDLEnemyShip::getMoveDirection() {
     return m_moveDirection;
 }
-int SDLNs::SDLEnemyShip::getXPosition()
-{
-    return m_xPos;
-}
-int SDLNs::SDLEnemyShip::getYPosition(){
-    return m_yPos;
-}
-void SDLNs::SDLEnemyShip::setXPosition(int x){
-    m_xPos = x;
-}
-void SDLNs::SDLEnemyShip::setYPosition(int y){
-    m_yPos = y;
-}
+/**
+ * Method to show enemy
+ */
 void SDLNs::SDLEnemyShip::render(){
 
-    SDL_Rect render = {m_xPos,m_yPos,m_shipWidth,m_shipHeight};
+    SDL_Rect render = {getXPosition(),getYPosition(),getWidth(),getHeight()};
     SDL_RenderCopy(m_renderer,m_enemyShipTexture->getTexture(),NULL,&render);
 
 }
+/**
+ * Method to destroy texture of enemy
+ */
 void SDLNs::SDLEnemyShip::close(){
     m_enemyShipTexture->free();
 }

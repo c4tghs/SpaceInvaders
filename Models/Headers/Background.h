@@ -1,7 +1,9 @@
 //
 // Created by cliff on 14/03/2020.
 //
-
+/**
+ * Background class
+ */
 #ifndef PROJECT_BACKGROUND_H
 #define PROJECT_BACKGROUND_H
 

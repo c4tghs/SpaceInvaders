@@ -12,18 +12,11 @@ namespace GameNs
     class PlayerShip: public Ship {
     public:
         PlayerShip();
-
-        virtual int getXPosition()=0;
-        virtual int getYPosition()=0;
-        virtual void setXPosition(int x)=0;
-        virtual void setYPosition(int y)=0;
+        PlayerShip(int xPos, int yPos, int width, int height);
         virtual void render() = 0;
         virtual void close() = 0;
         int getMoveDirection();
         void setMoveDirection(int direction);
-
-
-
     };
 
 }

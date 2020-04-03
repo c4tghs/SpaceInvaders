@@ -7,8 +7,9 @@
 
 
 #include <string>
-#include "SDL.h"
-#include "SDL_image.h"
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
+#include <SDL2/SDL_ttf.h>
 #include "../Models/Headers/Ship.h"
 #include "AbstractFactory.h"
 namespace SDLNs
@@ -28,7 +29,7 @@ namespace SDLNs
         void initialise(int windowWidth, int windowHeight);
         void close();
         void render();
-        bool getEvents();
+        bool getRunningState();
 
     private:
         bool m_IsRunning;

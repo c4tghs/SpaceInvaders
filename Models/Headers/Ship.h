@@ -1,18 +1,21 @@
 //
 // Created by cliff on 04/03/2020.
 //
-
+/**
+ * Ship class
+ */
 #ifndef PROJECT_SHIP_H
 #define PROJECT_SHIP_H
 
+#include "Entity.h"
+
 namespace GameNs
 {
-    class Ship {
+    class Ship:public Entity {
     public:
-        virtual int getXPosition()=0;
-        virtual int getYPosition()=0;
-        virtual void setXPosition(int x)=0;
-        virtual void setYPosition(int y)=0;
+        Ship();
+        Ship(int xPos, int yPos, int width, int height);
+
         virtual void render() = 0;
         virtual void close() = 0;
         virtual int getMoveDirection()=0;

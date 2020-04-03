@@ -53,6 +53,7 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj
  D:/Users/cliff/Documents/C++/Project/Factories/AbstractFactory.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Background.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Bullet.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/Entity.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Ship.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Timer.h
  D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLBullet.h
@@ -108,6 +109,7 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj
  D:/Users/cliff/Documents/C++/Project/Factories/AbstractFactory.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Background.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Bullet.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/Entity.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Ship.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Timer.h
  D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLTimer.h
@@ -166,6 +168,7 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj
  D:/Users/cliff/Documents/C++/Project/Factories/AbstractFactory.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Background.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Bullet.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/Entity.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Ship.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Timer.h
  D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLBullet.h
@@ -224,6 +227,7 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj
  D:/Users/cliff/Documents/C++/Project/Factories/AbstractFactory.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Background.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Bullet.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/Entity.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Ship.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Timer.h
  D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLBullet.h
@@ -295,7 +299,6 @@ CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj
  C:/MinGW/include/SDL2/SDL_gesture.h
  C:/MinGW/include/SDL2/SDL_haptic.h
  C:/MinGW/include/SDL2/SDL_hints.h
- C:/MinGW/include/SDL2/SDL_image.h
  C:/MinGW/include/SDL2/SDL_joystick.h
  C:/MinGW/include/SDL2/SDL_keyboard.h
  C:/MinGW/include/SDL2/SDL_keycode.h
@@ -332,6 +335,7 @@ CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Background.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Bullet.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/EnemyShip.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/Entity.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/PlayerShip.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Ship.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Timer.h
@@ -347,13 +351,23 @@ CMakeFiles/Project.dir/Models/CPP-Files/Background.cpp.obj
 CMakeFiles/Project.dir/Models/CPP-Files/Bullet.cpp.obj
  D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/Bullet.cpp
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Bullet.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/Entity.h
 CMakeFiles/Project.dir/Models/CPP-Files/EnemyShip.cpp.obj
  D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/EnemyShip.cpp
  D:/Users/cliff/Documents/C++/Project/Models/Headers/EnemyShip.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/Entity.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Ship.h
+CMakeFiles/Project.dir/Models/CPP-Files/Entity.cpp.obj
+ D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/Entity.cpp
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/Entity.h
 CMakeFiles/Project.dir/Models/CPP-Files/PlayerShip.cpp.obj
  D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/PlayerShip.cpp
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/Entity.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/PlayerShip.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/Ship.h
+CMakeFiles/Project.dir/Models/CPP-Files/Ship.cpp.obj
+ D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/Ship.cpp
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/Entity.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Ship.h
 CMakeFiles/Project.dir/SDL/CPP-Files/SDLBackground.cpp.obj
  C:/MinGW/include/SDL2/SDL_blendmode.h
@@ -422,6 +436,7 @@ CMakeFiles/Project.dir/SDL/CPP-Files/SDLBullet.cpp.obj
  C:/MinGW/include/SDL2/close_code.h
  D:/Users/cliff/Documents/C++/Project/Controllers/Headers/TextureManager.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Bullet.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/Entity.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Timer.h
  D:/Users/cliff/Documents/C++/Project/SDL/CPP-Files/SDLBullet.cpp
  D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLBullet.h
@@ -474,6 +489,7 @@ CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj
  C:/MinGW/include/SDL2/close_code.h
  D:/Users/cliff/Documents/C++/Project/Controllers/Headers/TextureManager.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/EnemyShip.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/Entity.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Ship.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Timer.h
  D:/Users/cliff/Documents/C++/Project/SDL/CPP-Files/SDLEnemyShip.cpp
@@ -529,6 +545,7 @@ CMakeFiles/Project.dir/SDL/CPP-Files/SDLPlayerShip.cpp.obj
  C:/MinGW/include/SDL2/begin_code.h
  C:/MinGW/include/SDL2/close_code.h
  D:/Users/cliff/Documents/C++/Project/Controllers/Headers/TextureManager.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/Entity.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/PlayerShip.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Ship.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Timer.h
@@ -586,57 +603,12 @@ CMakeFiles/Project.dir/SDL/CPP-Files/SDLTimer.cpp.obj
  D:/Users/cliff/Documents/C++/Project/SDL/CPP-Files/SDLTimer.cpp
  D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLTimer.h
 CMakeFiles/Project.dir/main.cpp.obj
- C:/MinGW/include/SDL2/SDL.h
- C:/MinGW/include/SDL2/SDL_assert.h
- C:/MinGW/include/SDL2/SDL_atomic.h
- C:/MinGW/include/SDL2/SDL_audio.h
- C:/MinGW/include/SDL2/SDL_blendmode.h
- C:/MinGW/include/SDL2/SDL_clipboard.h
- C:/MinGW/include/SDL2/SDL_config.h
- C:/MinGW/include/SDL2/SDL_cpuinfo.h
- C:/MinGW/include/SDL2/SDL_endian.h
- C:/MinGW/include/SDL2/SDL_error.h
- C:/MinGW/include/SDL2/SDL_events.h
- C:/MinGW/include/SDL2/SDL_filesystem.h
- C:/MinGW/include/SDL2/SDL_gamecontroller.h
- C:/MinGW/include/SDL2/SDL_gesture.h
- C:/MinGW/include/SDL2/SDL_haptic.h
- C:/MinGW/include/SDL2/SDL_hints.h
- C:/MinGW/include/SDL2/SDL_image.h
- C:/MinGW/include/SDL2/SDL_joystick.h
- C:/MinGW/include/SDL2/SDL_keyboard.h
- C:/MinGW/include/SDL2/SDL_keycode.h
- C:/MinGW/include/SDL2/SDL_loadso.h
- C:/MinGW/include/SDL2/SDL_log.h
- C:/MinGW/include/SDL2/SDL_main.h
- C:/MinGW/include/SDL2/SDL_messagebox.h
- C:/MinGW/include/SDL2/SDL_mouse.h
- C:/MinGW/include/SDL2/SDL_mutex.h
- C:/MinGW/include/SDL2/SDL_pixels.h
- C:/MinGW/include/SDL2/SDL_platform.h
- C:/MinGW/include/SDL2/SDL_power.h
- C:/MinGW/include/SDL2/SDL_quit.h
- C:/MinGW/include/SDL2/SDL_rect.h
- C:/MinGW/include/SDL2/SDL_render.h
- C:/MinGW/include/SDL2/SDL_rwops.h
- C:/MinGW/include/SDL2/SDL_scancode.h
- C:/MinGW/include/SDL2/SDL_sensor.h
- C:/MinGW/include/SDL2/SDL_shape.h
- C:/MinGW/include/SDL2/SDL_stdinc.h
- C:/MinGW/include/SDL2/SDL_surface.h
- C:/MinGW/include/SDL2/SDL_system.h
- C:/MinGW/include/SDL2/SDL_thread.h
- C:/MinGW/include/SDL2/SDL_timer.h
- C:/MinGW/include/SDL2/SDL_touch.h
- C:/MinGW/include/SDL2/SDL_version.h
- C:/MinGW/include/SDL2/SDL_video.h
- C:/MinGW/include/SDL2/begin_code.h
- C:/MinGW/include/SDL2/close_code.h
  D:/Users/cliff/Documents/C++/Project/Controllers/Headers/Game.h
  D:/Users/cliff/Documents/C++/Project/Factories/AbstractFactory.h
  D:/Users/cliff/Documents/C++/Project/Factories/SDLFactory.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Background.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Bullet.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/Entity.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Ship.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Timer.h
  D:/Users/cliff/Documents/C++/Project/main.cpp

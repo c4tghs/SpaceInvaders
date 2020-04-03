@@ -22,11 +22,11 @@ void GameNs::Game::run() {
     Background *background = m_factory->createBackground();
     PlayerManager* playerManager = new PlayerManager(m_factory,m_playerShipPath,m_playerBulletPath,m_windowHeight,m_windowWidth);
     //Ship* playerShip = m_factory->createPlayerShip(m_playerShipPath);
-    EnemyManager* enemyManager = new EnemyManager(m_factory, m_enemyShipPath, m_windowHeight, m_windowWidth);
+    EnemyManager* enemyManager = new EnemyManager(m_factory, m_enemyShipPath, m_windowWidth);
     enemyManager->createEnemies(50);
     std::vector<Ship *> enemyShips = enemyManager->getEnemies();
 
-    while(m_factory->getEvents())
+    while(m_factory->getRunningState())
     {
         background->render();
         //playerShip->render();

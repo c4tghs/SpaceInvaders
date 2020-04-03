@@ -3,7 +3,14 @@
 //
 
 #include "../Headers/SDLKeyStates.h"
+/**
+ * Constructor for SDLKeyStates
+ */
 SDLNs::SDLKeyStates::SDLKeyStates(){}
+/**
+ * Method to return the pressed key
+ * @return - integer
+ */
 int SDLNs::SDLKeyStates::directions() {
     SDL_Event event;
     SDL_PollEvent(&event);

@@ -1,23 +1,25 @@
-//
-// Created by cliff on 31/03/2020.
-//
+/**
+ * CPP file for EnemyManager class
+ */
 
 #include "../Headers/EnemyManager.h"
+/**
+ * Constructor
+ */
 GameNs::EnemyManager::EnemyManager() {}
 /**
- *
+ *EnemyManager constructor
  * @param AF - abstract factory used to create instances of enemy ships
  * @param enemyShipPath - path to image of enemyShip
+ * @param screenHeight - height of screen
+ * @param screenWidth - width of screen
  */
-GameNs::EnemyManager::EnemyManager(AbstractFactory *AF,std::string enemyShipPath, int screenHeight, int screenWidth)
+GameNs::EnemyManager::EnemyManager(AbstractFactory *AF,std::string enemyShipPath, int screenWidth)
 {
     m_factory = AF;
     m_enemyShipPath = enemyShipPath;
     m_timer = AF->createTimer();
-    m_screenHeight = screenHeight;
     m_screenWidth = screenWidth;
-    m_shipHeight = m_screenHeight/25;
-    m_shipWidth = m_screenWidth/25;
 }
 /**
  * Method used to create enemy instances
@@ -26,7 +28,7 @@ GameNs::EnemyManager::EnemyManager(AbstractFactory *AF,std::string enemyShipPath
 void GameNs::EnemyManager::createEnemies(int number) {
     m_enemyShips.reserve(number);
     int xPos;
-    int yPos = 100;
+    int yPos;
     for(int y =0; y < number/10;y++)
     {
         for(int i=0; i < number; i++)
@@ -79,7 +81,6 @@ void GameNs::EnemyManager::updateEnemies() {
  * Method to move enemies across screen
  */
 void GameNs::EnemyManager::moveEnemies(){
-    // m_xPos += m_timer->getDeltaTime()*m_moveDirection;
     for(int i =0; i < m_enemyShips.size(); i ++){
         m_enemyShips[i]->setXPosition(m_enemyShips[i]->getXPosition()+ m_timer->getDeltaTime()*m_enemyShips[i]->getMoveDirection());
     }
@@ -94,7 +95,7 @@ bool GameNs::EnemyManager::checkEnemyBoundaries() {
         {
             return true;
         }
-        else if(m_enemyShips[i]->getXPosition() > m_screenWidth-m_shipWidth){
+        else if(m_enemyShips[i]->getXPosition() > m_screenWidth-m_enemyShips[i]->getWidth()){
             return true;
         }
     }

@@ -3,7 +3,9 @@
 //
 
 #include "../Headers/SDLTimer.h"
-
+/**
+ * Constructor for SDLTimer
+ */
 SDLNs::SDLTimer::SDLTimer()
 {
     reset();

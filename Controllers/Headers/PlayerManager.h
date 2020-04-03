@@ -2,6 +2,10 @@
 // Created by cliff on 01/04/2020.
 //
 
+/**
+ * PlayerManager class
+ * Methods for managing a player
+ */
 #ifndef PROJECT_PLAYERMANAGER_H
 #define PROJECT_PLAYERMANAGER_H
 
@@ -21,6 +25,7 @@ namespace GameNs{
         void update();
         void close();
         void shoot();
+        //void reload();
 
     private:
         AbstractFactory* m_factory;
@@ -32,10 +37,9 @@ namespace GameNs{
         Ship* m_playerShip;
         int m_screenHeight;
         int m_screenWidth;
-        int m_shipHeight;
-        int m_shipWidth;
-        float m_fireRate;
-        float m_lastFire;
+
+        /*float m_fireRate;
+        float m_lastFire;*/
         Bullet* m_currentBullet;
         std::vector<Bullet*> m_bullets;
     };
