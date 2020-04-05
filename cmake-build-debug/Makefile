@@ -149,6 +149,33 @@ Controllers/CPP-Files/BulletManager.cpp.s:
 	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.s
 .PHONY : Controllers/CPP-Files/BulletManager.cpp.s
 
+Controllers/CPP-Files/CollisionManager.obj: Controllers/CPP-Files/CollisionManager.cpp.obj
+
+.PHONY : Controllers/CPP-Files/CollisionManager.obj
+
+# target to build an object file
+Controllers/CPP-Files/CollisionManager.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.obj
+.PHONY : Controllers/CPP-Files/CollisionManager.cpp.obj
+
+Controllers/CPP-Files/CollisionManager.i: Controllers/CPP-Files/CollisionManager.cpp.i
+
+.PHONY : Controllers/CPP-Files/CollisionManager.i
+
+# target to preprocess a source file
+Controllers/CPP-Files/CollisionManager.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.i
+.PHONY : Controllers/CPP-Files/CollisionManager.cpp.i
+
+Controllers/CPP-Files/CollisionManager.s: Controllers/CPP-Files/CollisionManager.cpp.s
+
+.PHONY : Controllers/CPP-Files/CollisionManager.s
+
+# target to generate assembly for a file
+Controllers/CPP-Files/CollisionManager.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.s
+.PHONY : Controllers/CPP-Files/CollisionManager.cpp.s
+
 Controllers/CPP-Files/EnemyManager.obj: Controllers/CPP-Files/EnemyManager.cpp.obj
 
 .PHONY : Controllers/CPP-Files/EnemyManager.obj
@@ -229,6 +256,33 @@ Controllers/CPP-Files/PlayerManager.s: Controllers/CPP-Files/PlayerManager.cpp.s
 Controllers/CPP-Files/PlayerManager.cpp.s:
 	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.s
 .PHONY : Controllers/CPP-Files/PlayerManager.cpp.s
+
+Controllers/CPP-Files/TextManager.obj: Controllers/CPP-Files/TextManager.cpp.obj
+
+.PHONY : Controllers/CPP-Files/TextManager.obj
+
+# target to build an object file
+Controllers/CPP-Files/TextManager.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/TextManager.cpp.obj
+.PHONY : Controllers/CPP-Files/TextManager.cpp.obj
+
+Controllers/CPP-Files/TextManager.i: Controllers/CPP-Files/TextManager.cpp.i
+
+.PHONY : Controllers/CPP-Files/TextManager.i
+
+# target to preprocess a source file
+Controllers/CPP-Files/TextManager.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/TextManager.cpp.i
+.PHONY : Controllers/CPP-Files/TextManager.cpp.i
+
+Controllers/CPP-Files/TextManager.s: Controllers/CPP-Files/TextManager.cpp.s
+
+.PHONY : Controllers/CPP-Files/TextManager.s
+
+# target to generate assembly for a file
+Controllers/CPP-Files/TextManager.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/TextManager.cpp.s
+.PHONY : Controllers/CPP-Files/TextManager.cpp.s
 
 Controllers/CPP-Files/TextureManager.obj: Controllers/CPP-Files/TextureManager.cpp.obj
 
@@ -419,6 +473,33 @@ Models/CPP-Files/PlayerShip.cpp.s:
 	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/PlayerShip.cpp.s
 .PHONY : Models/CPP-Files/PlayerShip.cpp.s
 
+Models/CPP-Files/Score.obj: Models/CPP-Files/Score.cpp.obj
+
+.PHONY : Models/CPP-Files/Score.obj
+
+# target to build an object file
+Models/CPP-Files/Score.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Score.cpp.obj
+.PHONY : Models/CPP-Files/Score.cpp.obj
+
+Models/CPP-Files/Score.i: Models/CPP-Files/Score.cpp.i
+
+.PHONY : Models/CPP-Files/Score.i
+
+# target to preprocess a source file
+Models/CPP-Files/Score.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Score.cpp.i
+.PHONY : Models/CPP-Files/Score.cpp.i
+
+Models/CPP-Files/Score.s: Models/CPP-Files/Score.cpp.s
+
+.PHONY : Models/CPP-Files/Score.s
+
+# target to generate assembly for a file
+Models/CPP-Files/Score.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Score.cpp.s
+.PHONY : Models/CPP-Files/Score.cpp.s
+
 Models/CPP-Files/Ship.obj: Models/CPP-Files/Ship.cpp.obj
 
 .PHONY : Models/CPP-Files/Ship.obj
@@ -581,6 +662,33 @@ SDL/CPP-Files/SDLPlayerShip.cpp.s:
 	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLPlayerShip.cpp.s
 .PHONY : SDL/CPP-Files/SDLPlayerShip.cpp.s
 
+SDL/CPP-Files/SDLScore.obj: SDL/CPP-Files/SDLScore.cpp.obj
+
+.PHONY : SDL/CPP-Files/SDLScore.obj
+
+# target to build an object file
+SDL/CPP-Files/SDLScore.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLScore.cpp.obj
+.PHONY : SDL/CPP-Files/SDLScore.cpp.obj
+
+SDL/CPP-Files/SDLScore.i: SDL/CPP-Files/SDLScore.cpp.i
+
+.PHONY : SDL/CPP-Files/SDLScore.i
+
+# target to preprocess a source file
+SDL/CPP-Files/SDLScore.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLScore.cpp.i
+.PHONY : SDL/CPP-Files/SDLScore.cpp.i
+
+SDL/CPP-Files/SDLScore.s: SDL/CPP-Files/SDLScore.cpp.s
+
+.PHONY : SDL/CPP-Files/SDLScore.s
+
+# target to generate assembly for a file
+SDL/CPP-Files/SDLScore.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLScore.cpp.s
+.PHONY : SDL/CPP-Files/SDLScore.cpp.s
+
 SDL/CPP-Files/SDLTimer.obj: SDL/CPP-Files/SDLTimer.cpp.obj
 
 .PHONY : SDL/CPP-Files/SDLTimer.obj
@@ -647,6 +755,9 @@ help:
 	@echo ... Controllers/CPP-Files/BulletManager.obj
 	@echo ... Controllers/CPP-Files/BulletManager.i
 	@echo ... Controllers/CPP-Files/BulletManager.s
+	@echo ... Controllers/CPP-Files/CollisionManager.obj
+	@echo ... Controllers/CPP-Files/CollisionManager.i
+	@echo ... Controllers/CPP-Files/CollisionManager.s
 	@echo ... Controllers/CPP-Files/EnemyManager.obj
 	@echo ... Controllers/CPP-Files/EnemyManager.i
 	@echo ... Controllers/CPP-Files/EnemyManager.s
@@ -656,6 +767,9 @@ help:
 	@echo ... Controllers/CPP-Files/PlayerManager.obj
 	@echo ... Controllers/CPP-Files/PlayerManager.i
 	@echo ... Controllers/CPP-Files/PlayerManager.s
+	@echo ... Controllers/CPP-Files/TextManager.obj
+	@echo ... Controllers/CPP-Files/TextManager.i
+	@echo ... Controllers/CPP-Files/TextManager.s
 	@echo ... Controllers/CPP-Files/TextureManager.obj
 	@echo ... Controllers/CPP-Files/TextureManager.i
 	@echo ... Controllers/CPP-Files/TextureManager.s
@@ -677,6 +791,9 @@ help:
 	@echo ... Models/CPP-Files/PlayerShip.obj
 	@echo ... Models/CPP-Files/PlayerShip.i
 	@echo ... Models/CPP-Files/PlayerShip.s
+	@echo ... Models/CPP-Files/Score.obj
+	@echo ... Models/CPP-Files/Score.i
+	@echo ... Models/CPP-Files/Score.s
 	@echo ... Models/CPP-Files/Ship.obj
 	@echo ... Models/CPP-Files/Ship.i
 	@echo ... Models/CPP-Files/Ship.s
@@ -695,6 +812,9 @@ help:
 	@echo ... SDL/CPP-Files/SDLPlayerShip.obj
 	@echo ... SDL/CPP-Files/SDLPlayerShip.i
 	@echo ... SDL/CPP-Files/SDLPlayerShip.s
+	@echo ... SDL/CPP-Files/SDLScore.obj
+	@echo ... SDL/CPP-Files/SDLScore.i
+	@echo ... SDL/CPP-Files/SDLScore.s
 	@echo ... SDL/CPP-Files/SDLTimer.obj
 	@echo ... SDL/CPP-Files/SDLTimer.i
 	@echo ... SDL/CPP-Files/SDLTimer.s

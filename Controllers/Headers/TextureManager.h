@@ -3,7 +3,7 @@
 // Created by cliff on 08/03/2020.
 //
 
-#include <SDL_render.h>
+#include <SDL2/SDL_render.h>
 #include <string>
 namespace GameNs
 {
@@ -19,7 +19,7 @@ namespace GameNs
 
     private:
         SDL_Renderer* m_renderer;
-        SDL_Texture* m_texture;
+        SDL_Texture* m_texture=NULL;
     };
 }
 

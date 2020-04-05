@@ -30,27 +30,35 @@ GameNs::PlayerManager::PlayerManager(GameNs::AbstractFactory *AF,std::string pla
     //reserve
     m_bullets.reserve(10);
     //create 10 bullets
-    for(int i =0; i<10;i++)
-    {
-        m_bullets.emplace_back(m_factory->createBullet(m_bulletPath,m_playerShip->getXPosition(),m_playerShip->getYPosition()));
-    }
-    //initialise Bullet bulletManager
-    bulletManager = new BulletManager(m_bullets[0],m_bulletPath,m_timer,m_screenHeight);
-
+    createBullets();
+    m_currentBullet = m_bullets[0];
+    //get bulletManager
+    bulletManager = BulletManager::getInstance(m_bullets[0],m_bulletPath,m_timer,m_screenHeight);
+    m_score = AF->createScore();
+    m_score->setScores(0);
 
 }
 /**
  * update method
  */
 void GameNs::PlayerManager::update() {
+    bool collision = false;
     //move player
     playerActions();
     checkPlayerBoundaries();
     //update timer
     m_timer->update();
     bulletManager->update();
+    collision = bulletManager->checkPlayerCollisions();
+    if(collision)
+    {
+        m_score->setScores(m_score->getScores()+1);
+    }
+
+    m_score->render();
     //render player
     m_playerShip->render();
+
 }
 /**
  * Method to check what button used has pressed
@@ -122,5 +130,17 @@ void GameNs::PlayerManager::shoot() {
         m_bullets.erase(m_bullets.begin()+i);
         break; //execute this loop once
     }
+    if(m_bullets.size() == 1)
+    {
+        createBullets();
+    }
     //TODO player score
 }
+
+void GameNs::PlayerManager::createBullets() {
+    for(int i =0; i<10;i++)
+    {
+        m_bullets.emplace_back(m_factory->createBullet(m_bulletPath,m_playerShip->getXPosition(),m_playerShip->getYPosition()));
+    }
+}
+

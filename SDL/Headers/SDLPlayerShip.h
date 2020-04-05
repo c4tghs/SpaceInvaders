@@ -6,7 +6,7 @@
 #define PROJECT_SDLPLAYERSHIP_H
 
 
-#include <SDL_render.h>
+#include <SDL2/SDL_render.h>
 #include "../../Models/Headers/PlayerShip.h"
 #include "SDLKeyStates.h"
 #include "../../Controllers/Headers/TextureManager.h"
@@ -26,6 +26,7 @@ namespace SDLNs
         GameNs::TextureManager *m_playerShipTexture;
         SDL_Renderer* m_renderer;
         std::string m_playerShipPath;
+
 
     };
 }

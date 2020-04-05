@@ -322,6 +322,62 @@ CMakeFiles/Project.dir/Models/CPP-Files/Ship.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/Models/CPP-Files/Ship.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Users\cliff\Documents\C++\Project\Models\CPP-Files\Ship.cpp -o CMakeFiles\Project.dir\Models\CPP-Files\Ship.cpp.s
 
+CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.obj: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.obj: CMakeFiles/Project.dir/includes_CXX.rsp
+CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.obj: ../Controllers/CPP-Files/CollisionManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project.dir\Controllers\CPP-Files\CollisionManager.cpp.obj -c D:\Users\cliff\Documents\C++\Project\Controllers\CPP-Files\CollisionManager.cpp
+
+CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Users\cliff\Documents\C++\Project\Controllers\CPP-Files\CollisionManager.cpp > CMakeFiles\Project.dir\Controllers\CPP-Files\CollisionManager.cpp.i
+
+CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Users\cliff\Documents\C++\Project\Controllers\CPP-Files\CollisionManager.cpp -o CMakeFiles\Project.dir\Controllers\CPP-Files\CollisionManager.cpp.s
+
+CMakeFiles/Project.dir/Models/CPP-Files/Score.cpp.obj: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/Models/CPP-Files/Score.cpp.obj: CMakeFiles/Project.dir/includes_CXX.rsp
+CMakeFiles/Project.dir/Models/CPP-Files/Score.cpp.obj: ../Models/CPP-Files/Score.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/Project.dir/Models/CPP-Files/Score.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project.dir\Models\CPP-Files\Score.cpp.obj -c D:\Users\cliff\Documents\C++\Project\Models\CPP-Files\Score.cpp
+
+CMakeFiles/Project.dir/Models/CPP-Files/Score.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/Models/CPP-Files/Score.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Users\cliff\Documents\C++\Project\Models\CPP-Files\Score.cpp > CMakeFiles\Project.dir\Models\CPP-Files\Score.cpp.i
+
+CMakeFiles/Project.dir/Models/CPP-Files/Score.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/Models/CPP-Files/Score.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Users\cliff\Documents\C++\Project\Models\CPP-Files\Score.cpp -o CMakeFiles\Project.dir\Models\CPP-Files\Score.cpp.s
+
+CMakeFiles/Project.dir/SDL/CPP-Files/SDLScore.cpp.obj: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/SDL/CPP-Files/SDLScore.cpp.obj: CMakeFiles/Project.dir/includes_CXX.rsp
+CMakeFiles/Project.dir/SDL/CPP-Files/SDLScore.cpp.obj: ../SDL/CPP-Files/SDLScore.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/Project.dir/SDL/CPP-Files/SDLScore.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project.dir\SDL\CPP-Files\SDLScore.cpp.obj -c D:\Users\cliff\Documents\C++\Project\SDL\CPP-Files\SDLScore.cpp
+
+CMakeFiles/Project.dir/SDL/CPP-Files/SDLScore.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/SDL/CPP-Files/SDLScore.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Users\cliff\Documents\C++\Project\SDL\CPP-Files\SDLScore.cpp > CMakeFiles\Project.dir\SDL\CPP-Files\SDLScore.cpp.i
+
+CMakeFiles/Project.dir/SDL/CPP-Files/SDLScore.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/SDL/CPP-Files/SDLScore.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Users\cliff\Documents\C++\Project\SDL\CPP-Files\SDLScore.cpp -o CMakeFiles\Project.dir\SDL\CPP-Files\SDLScore.cpp.s
+
+CMakeFiles/Project.dir/Controllers/CPP-Files/TextManager.cpp.obj: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/Controllers/CPP-Files/TextManager.cpp.obj: CMakeFiles/Project.dir/includes_CXX.rsp
+CMakeFiles/Project.dir/Controllers/CPP-Files/TextManager.cpp.obj: ../Controllers/CPP-Files/TextManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/Project.dir/Controllers/CPP-Files/TextManager.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project.dir\Controllers\CPP-Files\TextManager.cpp.obj -c D:\Users\cliff\Documents\C++\Project\Controllers\CPP-Files\TextManager.cpp
+
+CMakeFiles/Project.dir/Controllers/CPP-Files/TextManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/Controllers/CPP-Files/TextManager.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Users\cliff\Documents\C++\Project\Controllers\CPP-Files\TextManager.cpp > CMakeFiles\Project.dir\Controllers\CPP-Files\TextManager.cpp.i
+
+CMakeFiles/Project.dir/Controllers/CPP-Files/TextManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/Controllers/CPP-Files/TextManager.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Users\cliff\Documents\C++\Project\Controllers\CPP-Files\TextManager.cpp -o CMakeFiles\Project.dir\Controllers\CPP-Files\TextManager.cpp.s
+
 # Object files for target Project
 Project_OBJECTS = \
 "CMakeFiles/Project.dir/main.cpp.obj" \
@@ -342,7 +398,11 @@ Project_OBJECTS = \
 "CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj" \
 "CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj" \
 "CMakeFiles/Project.dir/Models/CPP-Files/Entity.cpp.obj" \
-"CMakeFiles/Project.dir/Models/CPP-Files/Ship.cpp.obj"
+"CMakeFiles/Project.dir/Models/CPP-Files/Ship.cpp.obj" \
+"CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.obj" \
+"CMakeFiles/Project.dir/Models/CPP-Files/Score.cpp.obj" \
+"CMakeFiles/Project.dir/SDL/CPP-Files/SDLScore.cpp.obj" \
+"CMakeFiles/Project.dir/Controllers/CPP-Files/TextManager.cpp.obj"
 
 # External object files for target Project
 Project_EXTERNAL_OBJECTS =
@@ -366,12 +426,16 @@ Project.exe: CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj
 Project.exe: CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj
 Project.exe: CMakeFiles/Project.dir/Models/CPP-Files/Entity.cpp.obj
 Project.exe: CMakeFiles/Project.dir/Models/CPP-Files/Ship.cpp.obj
+Project.exe: CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.obj
+Project.exe: CMakeFiles/Project.dir/Models/CPP-Files/Score.cpp.obj
+Project.exe: CMakeFiles/Project.dir/SDL/CPP-Files/SDLScore.cpp.obj
+Project.exe: CMakeFiles/Project.dir/Controllers/CPP-Files/TextManager.cpp.obj
 Project.exe: CMakeFiles/Project.dir/build.make
 Project.exe: C:/MinGW/lib/lib/libSDL2.dll.a
 Project.exe: CMakeFiles/Project.dir/linklibs.rsp
 Project.exe: CMakeFiles/Project.dir/objects1.rsp
 Project.exe: CMakeFiles/Project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable Project.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking CXX executable Project.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Project.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

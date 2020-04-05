@@ -11,6 +11,7 @@
 #include "../Models/Headers/Background.h"
 #include "../Models/Headers/Timer.h"
 #include "../Models/Headers/Bullet.h"
+#include "../Models/Headers/Score.h"
 
 namespace GameNs{
     class AbstractFactory {
@@ -20,6 +21,7 @@ namespace GameNs{
         virtual Background* createBackground()=0;
         virtual Timer* createTimer()=0;
         virtual Bullet* createBullet(std::string bulletPath, int xPos, int yPos)=0;
+        virtual Score* createScore()=0;
         virtual void initialise(int windowWidth, int windowHeight)=0;
         virtual void render()=0;
         virtual void close()=0;

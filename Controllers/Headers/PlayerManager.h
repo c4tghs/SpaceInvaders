@@ -14,6 +14,7 @@
 #include "../../SDL/Headers/SDLKeyStates.h"
 #include "../../SDL/Headers/SDLBullet.h"
 #include "BulletManager.h"
+#include "CollisionManager.h"
 
 namespace GameNs{
     class PlayerManager {
@@ -25,7 +26,7 @@ namespace GameNs{
         void update();
         void close();
         void shoot();
-        //void reload();
+        void createBullets();
 
     private:
         AbstractFactory* m_factory;
@@ -42,6 +43,7 @@ namespace GameNs{
         float m_lastFire;*/
         Bullet* m_currentBullet;
         std::vector<Bullet*> m_bullets;
+        Score* m_score;
     };
 }
 

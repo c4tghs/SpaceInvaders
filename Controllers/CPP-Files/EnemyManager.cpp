@@ -27,17 +27,12 @@ GameNs::EnemyManager::EnemyManager(AbstractFactory *AF,std::string enemyShipPath
  */
 void GameNs::EnemyManager::createEnemies(int number) {
     m_enemyShips.reserve(number);
-    int xPos;
-    int yPos;
-    for(int y =0; y < number/10;y++)
+    for(int y =0; y < number;y++)
     {
-        for(int i=0; i < number; i++)
-        {
-            xPos = ((i % 10) *55) + 10;
-            //xPos = i * 100;
-            yPos = ((i /11) *55)+1;
-            m_enemyShips.emplace_back(m_factory->createEnemyShip(m_enemyShipPath,xPos,yPos));
-        }
+        int xPos = ((y%10)*70)+100;
+        int yPos=((y/10)*50)+70;
+
+        m_enemyShips.emplace_back(m_factory->createEnemyShip(m_enemyShipPath,xPos,yPos));
     }
 }
 /**
@@ -55,11 +50,6 @@ void GameNs::EnemyManager::updateEnemies() {
     moveEnemies();
     //update time
     m_timer->update();
-    for(int i =0; i < m_enemyShips.size(); i ++)
-    {
-        m_enemyShips[i]->render();
-        // TODO check if enemy has reached player
-    }
     if(checkEnemyBoundaries())
     {
         int moveDirection = m_enemyShips[0]->getMoveDirection();
@@ -76,7 +66,13 @@ void GameNs::EnemyManager::updateEnemies() {
             m_enemyShips[y]->setYPosition(m_enemyShips[y]->getYPosition()+10);
         }
     }
-}
+    for(int i =0; i < m_enemyShips.size(); i ++)
+    {
+        m_enemyShips[i]->render();
+        // TODO check if enemy has reached player
+        // TODO check collisions
+    }
+ }
 /**
  * Method to move enemies across screen
  */
@@ -101,3 +97,4 @@ bool GameNs::EnemyManager::checkEnemyBoundaries() {
     }
     return false;
 }
+

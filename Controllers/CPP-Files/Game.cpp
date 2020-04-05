@@ -23,15 +23,15 @@ void GameNs::Game::run() {
     PlayerManager* playerManager = new PlayerManager(m_factory,m_playerShipPath,m_playerBulletPath,m_windowHeight,m_windowWidth);
     //Ship* playerShip = m_factory->createPlayerShip(m_playerShipPath);
     EnemyManager* enemyManager = new EnemyManager(m_factory, m_enemyShipPath, m_windowWidth);
-    enemyManager->createEnemies(50);
+    enemyManager->createEnemies(25);
     std::vector<Ship *> enemyShips = enemyManager->getEnemies();
-
+    BulletManager::getInstance()->setEnemyShip(enemyShips);
     while(m_factory->getRunningState())
     {
         background->render();
-        //playerShip->render();
-        enemyManager->updateEnemies();
         playerManager->update();
+        //set bullet
+        enemyManager->updateEnemies();
         m_factory->render();
     }
     background->close();

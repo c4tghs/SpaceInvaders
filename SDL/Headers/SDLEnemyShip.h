@@ -22,7 +22,7 @@ namespace SDLNs
 
     private:
         void loadMedia();
-
+        SDL_Rect m_rect;
         SDL_Renderer* m_renderer;
         std::string m_enemyShipPath;
         int m_moveDirection;

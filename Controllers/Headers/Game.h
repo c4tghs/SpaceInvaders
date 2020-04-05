@@ -18,13 +18,14 @@ namespace GameNs{
         void run();
 
     private:
+
         AbstractFactory* m_factory;
 
         std::string m_playerShipPath = "../assets/ship.png";
         std::string m_enemyShipPath = "../assets/alien1.png";
         std::string m_playerBulletPath = "../assets/playerBullet.png";
-        int m_windowHeight = 720 ;
-        int m_windowWidth = 1280;
+        const int m_windowHeight = 720 ;
+        const int m_windowWidth = 1280;
     };
 
 }

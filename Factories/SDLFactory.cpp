@@ -8,6 +8,7 @@
 #include "../SDL/Headers/SDLEnemyShip.h"
 #include "../SDL/Headers/SDLBackground.h"
 #include "../SDL/Headers/SDLBullet.h"
+#include "../SDL/Headers/SDLScore.h"
 
 
 /**
@@ -79,6 +80,13 @@ GameNs::Bullet* SDLNs::SDLFactory::createBullet(std::string bulletPath, int xPos
 GameNs::Timer* SDLNs::SDLFactory::createTimer() {
     return new SDLTimer();
 }
+/**
+ * Method to create an instance of SDLScore
+ * @return - instance of Score
+ */
+GameNs::Score *SDLNs::SDLFactory::createScore() {
+    return new SDLScore(m_renderer);
+}
 
 /***
  * Method that returns private member renderer
@@ -100,7 +108,14 @@ void SDLNs::SDLFactory::initialise(int windowWidth, int windowHeight){
     if(SDL_Init(SDL_INIT_VIDEO) !=0 && IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG) !=0)
     {
         SDL_Log("Failed to initialise SDL: %s",SDL_GetError());
-    } else{
+        printf("Failed to initialise SDL: %s",SDL_GetError());
+        exit(1);
+    } else if (TTF_Init() < 0)
+    {
+        printf("Unable to initialise TTF library: %s",SDL_GetError());
+        exit(1);
+    }
+    else{
         //create SDL window
         createWindow("Space invaders", m_screenWidth, m_screenHeight);
 
@@ -176,5 +191,7 @@ bool SDLNs::SDLFactory::getRunningState()
 
     return m_IsRunning;
 }
+
+
 
 

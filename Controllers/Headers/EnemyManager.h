@@ -9,6 +9,8 @@
 
 #include "../../Factories/AbstractFactory.h"
 #include "../../SDL/Headers/SDLTimer.h"
+#include "CollisionManager.h"
+#include "BulletManager.h"
 #include <vector>
 
 namespace GameNs
@@ -22,6 +24,7 @@ namespace GameNs
         void updateEnemies();
         void moveEnemies();
         bool checkEnemyBoundaries();
+
 
     private:
         AbstractFactory* m_factory;

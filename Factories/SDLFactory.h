@@ -23,6 +23,7 @@ namespace SDLNs
         GameNs::Background* createBackground();
         GameNs::Bullet* createBullet(std::string bulletPath, int xPos, int yPos);
         GameNs::Timer* createTimer();
+        GameNs::Score* createScore();
         void createWindow(const char* title,int width, int height);
         void createRender();
         SDL_Renderer* getRenderer();

@@ -33,6 +33,7 @@ void SDLNs::SDLPlayerShip::loadMedia() {
     m_playerShipTexture->LoadTexture(m_playerShipPath,m_renderer);
     if(m_playerShipTexture->getTexture() == NULL){
         printf("Something went wrong loading texture %S",SDL_GetError());
+        exit(1);
     }
 }
 /**
@@ -40,8 +41,8 @@ void SDLNs::SDLPlayerShip::loadMedia() {
  */
 void SDLNs::SDLPlayerShip::render() {
 
-    SDL_Rect render = {getXPosition(),getYPosition(),getWidth(),getHeight()};
-    SDL_RenderCopy(m_renderer,m_playerShipTexture->getTexture(),NULL,&render);
+    SDL_Rect rect = {getXPosition(), getYPosition(), getWidth(), getHeight()};
+    SDL_RenderCopy(m_renderer,m_playerShipTexture->getTexture(),NULL,&rect);
 }
 /**
  * Method to destroy player texture

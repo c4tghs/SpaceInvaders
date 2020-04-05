@@ -4,6 +4,25 @@
 
 #include "../Headers/BulletManager.h"
 #include "../../SDL/Headers/SDLBullet.h"
+
+//static member
+GameNs::BulletManager* GameNs::BulletManager::m_instance =0;
+
+GameNs::BulletManager* GameNs::BulletManager::getInstance() {
+    if(m_instance ==0)
+    {
+        m_instance = new BulletManager();
+    }
+    return m_instance;
+}
+GameNs::BulletManager* GameNs::BulletManager::getInstance(Bullet *bullet, std::string bulletPath, Timer *timer, int screenHeight)  {
+    if(m_instance ==0)
+    {
+        m_instance = new BulletManager(bullet,bulletPath,timer,screenHeight);
+    }
+    return m_instance;
+}
+
 /**
  * Constructor
  */
@@ -21,6 +40,7 @@ GameNs::BulletManager::BulletManager(Bullet* bullet,std::string bulletPath,Timer
     m_bulletPath = bulletPath;
     m_bulletFired = false;
     m_screenHeight = screenHeight;
+    m_collisionManager = CollisionManager::getInstance();
 }
 /**
  * Update method
@@ -35,7 +55,8 @@ void GameNs::BulletManager::update() {
     moveBullet();
     checkBulletBounds();
     m_bullet->render();
-    //TODO collision detection
+    //checkPlayerCollisions();
+
 }
 /**
  * Method to move bullet
@@ -83,4 +104,28 @@ void GameNs::BulletManager::setBullet(Bullet* bullet){
 void GameNs::BulletManager::setBulletFired(bool isFired) {
     m_bulletFired = isFired;
 }
+
+bool GameNs::BulletManager::checkPlayerCollisions() {
+    for(int i=0; i<m_enemyShips.size();i++)
+    {
+        if(CollisionManager::checkCollision(m_bullet,m_enemyShips[i]->getXPosition(),m_enemyShips[i]->getYPosition(),m_enemyShips[i]->getWidth(),m_enemyShips[i]->getHeight()))
+        {
+            m_enemyShips[i]->close();
+            m_enemyShips.erase(m_enemyShips.begin()+i);
+            setBulletFired(false);
+            //set bullet position to 0 after collision
+            //otherwise it keeps moving
+            m_bullet->setYPosition(0);
+            m_bullet->close();
+            printf("The size is now %d\n",m_enemyShips.size());
+            return true;
+        }
+    }
+    return false;
+}
+void GameNs::BulletManager::setEnemyShip(std::vector<Ship *> enemyShips) {
+    m_enemyShips = enemyShips;
+}
+
+
 

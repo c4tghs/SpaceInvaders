@@ -55,6 +55,7 @@ int SDLNs::SDLEnemyShip::getMoveDirection() {
 void SDLNs::SDLEnemyShip::render(){
 
     SDL_Rect render = {getXPosition(),getYPosition(),getWidth(),getHeight()};
+    m_rect = render;
     SDL_RenderCopy(m_renderer,m_enemyShipTexture->getTexture(),NULL,&render);
 
 }
@@ -62,5 +63,9 @@ void SDLNs::SDLEnemyShip::render(){
  * Method to destroy texture of enemy
  */
 void SDLNs::SDLEnemyShip::close(){
+    m_rect.h = 0;
+    m_rect.w=0;
+    m_rect.x=0;
+    m_rect.y=0;
     m_enemyShipTexture->free();
 }

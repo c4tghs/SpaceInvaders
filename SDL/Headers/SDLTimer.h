@@ -6,7 +6,7 @@
 #define PROJECT_SDLTIMER_H
 
 
-#include "SDL.h"
+#include "SDL2/SDL.h"
 #include "../../Models/Headers/Timer.h"
 
 namespace SDLNs
