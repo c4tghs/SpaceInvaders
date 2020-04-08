@@ -15,7 +15,7 @@ void SDLNs::SDLScore::render() {
      std::string score = std::to_string(getScores());
     m_texture->loadTexture("Score:   "+score);
     SDL_Rect rect = {0, 0, 70, 70};
-    SDL_RenderCopy(m_renderer,m_texture->getTexture(),NULL,&rect);
+    SDL_RenderCopy(m_renderer,m_texture->getTexture(),nullptr,&rect);
 }
 
 void SDLNs::SDLScore::close() {

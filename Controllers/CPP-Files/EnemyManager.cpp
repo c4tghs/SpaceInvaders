@@ -3,6 +3,8 @@
  */
 
 #include "../Headers/EnemyManager.h"
+
+#include <utility>
 /**
  * Constructor
  */
@@ -17,9 +19,14 @@ GameNs::EnemyManager::EnemyManager() {}
 GameNs::EnemyManager::EnemyManager(AbstractFactory *AF,std::string enemyShipPath, int screenWidth)
 {
     m_factory = AF;
-    m_enemyShipPath = enemyShipPath;
+    m_enemyShipPath = std::move(enemyShipPath);
     m_timer = AF->createTimer();
     m_screenWidth = screenWidth;
+    //get current time and add random between 1 and 3 to it
+    m_nextMissile = m_timer->getTime()+std::rand()% 3 + 1;
+    //create 50 bullets
+    m_bullets.reserve(50);
+    createBullets();
 }
 /**
  * Method used to create enemy instances
@@ -59,26 +66,28 @@ void GameNs::EnemyManager::updateEnemies() {
         } else{
             moveDirection = 1;
         }
-        for(int y =0; y < m_enemyShips.size(); y ++)
+        for(auto & m_enemyShip : m_enemyShips)
         {
-            m_enemyShips[y]->setMoveDirection(moveDirection);
-            m_enemyShips[y]->setXPosition(m_enemyShips[y]->getXPosition());
-            m_enemyShips[y]->setYPosition(m_enemyShips[y]->getYPosition()+10);
+            m_enemyShip->setMoveDirection(moveDirection);
+            m_enemyShip->setXPosition(m_enemyShip->getXPosition());
+            m_enemyShip->setYPosition(m_enemyShip->getYPosition()+10);
         }
     }
-    for(int i =0; i < m_enemyShips.size(); i ++)
+    for(auto & m_enemyShip : m_enemyShips)
     {
-        m_enemyShips[i]->render();
+        m_enemyShip->render();
         // TODO check if enemy has reached player
         // TODO check collisions
     }
+    //allow enemy to shoot
+    enemyShoot();
  }
 /**
  * Method to move enemies across screen
  */
 void GameNs::EnemyManager::moveEnemies(){
-    for(int i =0; i < m_enemyShips.size(); i ++){
-        m_enemyShips[i]->setXPosition(m_enemyShips[i]->getXPosition()+ m_timer->getDeltaTime()*m_enemyShips[i]->getMoveDirection());
+    for(auto & m_enemyShip : m_enemyShips){
+        m_enemyShip->setXPosition(m_enemyShip->getXPosition()+ m_timer->getDeltaTime()*m_enemyShip->getMoveDirection());
     }
 }
 /**
@@ -86,15 +95,48 @@ void GameNs::EnemyManager::moveEnemies(){
  * @return True of False
  */
 bool GameNs::EnemyManager::checkEnemyBoundaries() {
-    for(int i =0; i < m_enemyShips.size(); i ++) {
-        if(m_enemyShips[i]->getXPosition() < 0)
-        {
-            return true;
-        }
-        else if(m_enemyShips[i]->getXPosition() > m_screenWidth-m_enemyShips[i]->getWidth()){
+    for(auto & m_enemyShip : m_enemyShips) {
+        if((m_enemyShip->getXPosition() < 0 ) or (m_enemyShip->getXPosition() > m_screenWidth-m_enemyShip->getWidth())){
             return true;
         }
     }
     return false;
+}
+
+/**
+ * Method that allows an enemy to shoot
+ */
+void GameNs::EnemyManager::enemyShoot() {
+    if(m_timer->getTime() < m_nextMissile)
+    {
+        return;
+    }
+    int randomId = std::rand() % m_enemyShips.size();
+    printf("The generated random id is %d  and amount of ships are %d\n",randomId,m_enemyShips.size());
+    for(int i =0; i < m_bullets.size();i++)
+    {
+        m_bullets[i]->setXPosition(m_enemyShips[randomId]->getXPosition()+20);
+        m_bullets[i]->setYPosition(m_enemyShips[randomId]->getYPosition());
+        if(BulletManager::getInstance()->getEnemyBulletFired())
+        {
+            continue;
+        }
+        BulletManager::getInstance()->setEnemyBulletFired(true);
+        BulletManager::getInstance()->setEnemyBullet(m_bullets[i]);
+        m_bullets.erase(m_bullets.begin()+i);
+        break;
+    }
+    if(m_bullets.size()==1)
+    {
+        createBullets();
+    }
+    m_nextMissile = m_timer->getTime()+ std::rand()%3+1;
+}
+
+void GameNs::EnemyManager::createBullets() {
+    for(int i =0; i<50;i++)
+    {
+        m_bullets.emplace_back(m_factory->createBullet(m_bulletPath,i+50,i+50));
+    }
 }
 

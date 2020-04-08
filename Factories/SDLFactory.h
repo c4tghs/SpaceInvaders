@@ -18,27 +18,26 @@ namespace SDLNs
     public:
         SDLFactory(){};
 
-        GameNs::Ship* createPlayerShip(std::string playerShipPath);
-        GameNs::Ship *createEnemyShip(std::string enemyShipPath, int xPos, int yPos);
-        GameNs::Background* createBackground();
-        GameNs::Bullet* createBullet(std::string bulletPath, int xPos, int yPos);
-        GameNs::Timer* createTimer();
-        GameNs::Score* createScore();
+        GameNs::Ship* createPlayerShip(std::string playerShipPath) override;
+        GameNs::Ship *createEnemyShip(std::string enemyShipPath, int xPos, int yPos) override;
+        GameNs::Background* createBackground() override;
+        GameNs::Bullet* createBullet(std::string bulletPath, int xPos, int yPos) override;
+        GameNs::Timer* createTimer() override;
+        GameNs::Score* createScore() override;
         void createWindow(const char* title,int width, int height);
         void createRender();
-        SDL_Renderer* getRenderer();
-        void initialise(int windowWidth, int windowHeight);
-        void close();
-        void render();
-        bool getRunningState();
+        void initialise(int windowWidth, int windowHeight) override;
+        void close() override;
+        void render() override;
+        bool getRunningState() override;
 
     private:
-        bool m_IsRunning;
-        SDL_Window *m_window;
-        SDL_Renderer *m_renderer;
+        bool m_IsRunning = false;
+        SDL_Window *m_window = nullptr;
+        SDL_Renderer *m_renderer = nullptr;
 
-        int m_screenWidth;
-        int m_screenHeight;
+        int m_screenWidth = 0;
+        int m_screenHeight =0;
     };
 }
 

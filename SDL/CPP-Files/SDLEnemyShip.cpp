@@ -3,6 +3,8 @@
 //
 
 #include "../Headers/SDLEnemyShip.h"
+
+#include <utility>
 /**
  * Constructor for SDlEnemyShip
  * @param renderer
@@ -16,7 +18,7 @@ SDLNs::SDLEnemyShip::SDLEnemyShip(SDL_Renderer *renderer, std::string enemyShipP
         xPos,yPos,width,height
         ) {
     m_renderer = renderer;
-    m_enemyShipPath = enemyShipPath;
+    m_enemyShipPath = std::move(enemyShipPath);
     GameNs::TextureManager *enemyShipTexture = new GameNs::TextureManager(m_renderer);
     m_enemyShipTexture = enemyShipTexture;
     m_moveDirection = 1;
@@ -29,7 +31,7 @@ SDLNs::SDLEnemyShip::SDLEnemyShip(SDL_Renderer *renderer, std::string enemyShipP
  */
 void SDLNs::SDLEnemyShip::loadMedia() {
     m_enemyShipTexture->LoadTexture(m_enemyShipPath,m_renderer);
-    if(m_enemyShipTexture->getTexture() == NULL)
+    if(m_enemyShipTexture->getTexture() == nullptr)
     {
         printf("Something went wrong loading texture %S",SDL_GetError());
     }
@@ -55,17 +57,12 @@ int SDLNs::SDLEnemyShip::getMoveDirection() {
 void SDLNs::SDLEnemyShip::render(){
 
     SDL_Rect render = {getXPosition(),getYPosition(),getWidth(),getHeight()};
-    m_rect = render;
-    SDL_RenderCopy(m_renderer,m_enemyShipTexture->getTexture(),NULL,&render);
+    SDL_RenderCopy(m_renderer,m_enemyShipTexture->getTexture(),nullptr,&render);
 
 }
 /**
  * Method to destroy texture of enemy
  */
 void SDLNs::SDLEnemyShip::close(){
-    m_rect.h = 0;
-    m_rect.w=0;
-    m_rect.x=0;
-    m_rect.y=0;
     m_enemyShipTexture->free();
 }

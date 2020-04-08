@@ -17,11 +17,12 @@ namespace SDLNs
         void update();
         float getDeltaTime();
         void reset();
+        float getTime();
 
     private:
-        float m_deltaTime;
-        unsigned int m_startTicks;
-        unsigned int m_elapsedTicks;
+        float m_deltaTime=0.0f;
+        unsigned int m_startTicks =0;
+        unsigned int m_elapsedTicks=0;
     };
 
 }

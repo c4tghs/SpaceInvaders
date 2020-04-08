@@ -39,3 +39,11 @@ void SDLNs::SDLTimer::update() {
     }
 }
 
+/**
+ * Method that returns current time in seconds
+ * @return
+ */
+float SDLNs::SDLTimer::getTime() {
+    return SDL_GetTicks()/1000.0f;
+}
+

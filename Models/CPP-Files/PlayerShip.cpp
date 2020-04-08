@@ -17,17 +17,4 @@ GameNs::PlayerShip::PlayerShip(){}
  */
 GameNs::PlayerShip::PlayerShip(int xPos, int yPos, int width, int height):Ship(xPos,yPos,width,height) {}
 
-/**
- * Method that returns direction player is moving
- * @return
- */
-int GameNs::PlayerShip::getMoveDirection(){
-    return 1;
-}
-/**
- * Method to set the direction player is moving
- * @param direction - direction, ie 1 for right, -1 for left
- */
-void GameNs::PlayerShip::setMoveDirection(int direction){}
-
 

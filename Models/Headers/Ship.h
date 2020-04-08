@@ -18,8 +18,8 @@ namespace GameNs
 
         virtual void render() = 0;
         virtual void close() = 0;
-        virtual int getMoveDirection()=0;
-        virtual void setMoveDirection(int direction)=0;
+        virtual int getMoveDirection();
+        virtual void setMoveDirection(int direction);
     };
 }
 

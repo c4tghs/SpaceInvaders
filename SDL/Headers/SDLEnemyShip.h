@@ -19,10 +19,10 @@ namespace SDLNs
         void close();
         int getMoveDirection();
         void setMoveDirection(int direction);
+        void loadMedia();
+
 
     private:
-        void loadMedia();
-        SDL_Rect m_rect;
         SDL_Renderer* m_renderer;
         std::string m_enemyShipPath;
         int m_moveDirection;

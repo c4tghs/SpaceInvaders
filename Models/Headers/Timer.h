@@ -15,6 +15,7 @@ namespace GameNs
         virtual float getDeltaTime()=0;
         virtual void update()=0;
         virtual void reset()=0;
+        virtual float getTime()=0;
 
     };
 }

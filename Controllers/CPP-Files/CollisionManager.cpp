@@ -5,14 +5,14 @@
 #include "../Headers/CollisionManager.h"
 
 //static variable
-GameNs::CollisionManager* GameNs::CollisionManager::m_instance = 0;
+GameNs::CollisionManager* GameNs::CollisionManager::m_instance = nullptr;
 
 /**
  * Method that creates instance of CollisionManager
  * @return instance of CollisionManager
  */
 GameNs::CollisionManager* GameNs::CollisionManager::getInstance() {
-    if(m_instance ==0)
+    if(m_instance ==nullptr)
     {
         m_instance = new CollisionManager();
     }
@@ -34,15 +34,10 @@ GameNs::CollisionManager::CollisionManager() {}
  * @return
  */
 bool GameNs::CollisionManager::checkCollision(Bullet * bullet,int xPos, int yPos, int width, int height) {
-
-    if(bullet->getXPosition() < xPos+width &&
-            bullet->getXPosition() + bullet->getWidth() > width &&
-            bullet->getYPosition() < yPos + height &&
-            bullet->getYPosition() + bullet->getHeight() > yPos
-    ){
-        return true;
-    }
-    return false;
+    return xPos + width >= bullet->getXPosition() &&
+           xPos <= bullet->getXPosition() + bullet->getWidth() &&
+           yPos + height >= bullet->getYPosition() &&
+           yPos <= bullet->getYPosition() + bullet->getHeight();
 }
 
 

@@ -14,11 +14,15 @@
 namespace GameNs{
     class Game {
     public:
-        Game(AbstractFactory *AF);
+        static Game* getInstance();
+        static Game* getInstance(AbstractFactory *AF);
+
         void run();
 
     private:
-
+        static Game* m_instance;
+        Game(AbstractFactory *AF);
+        Game();
         AbstractFactory* m_factory;
 
         std::string m_playerShipPath = "../assets/ship.png";

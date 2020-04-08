@@ -9,6 +9,10 @@
 D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/BulletManager.cpp
 ../Headers/BulletManager.h
 D:/Users/cliff/Documents/C++/Project/Controllers/Headers/BulletManager.h
+utility
+-
+iostream
+-
 ../../SDL/Headers/SDLBullet.h
 D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLBullet.h
 

@@ -14,13 +14,13 @@ namespace GameNs{
         TextManager();
         TextManager(SDL_Renderer* renderer);
         SDL_Texture* getTexture();
-        void loadTexture(std::string text);
+        void loadTexture(const std::string& text);
         void free();
 
     private:
         SDL_Renderer* m_renderer;
-        SDL_Texture* m_texture =NULL;
-        TTF_Font *m_font;
+        SDL_Texture* m_texture = nullptr;
+        TTF_Font *m_font{};
         const char *m_fontFile = "../assets/Fonts/Lato-Regular.ttf";
     };
 }

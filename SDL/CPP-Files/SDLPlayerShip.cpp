@@ -4,6 +4,8 @@
 
 #include "../Headers/SDLPlayerShip.h"
 
+#include <utility>
+
 /**
  * Constructor for SDLPlayerShip
  * @param xPos
@@ -19,7 +21,7 @@ SDLNs::SDLPlayerShip::SDLPlayerShip(int xPos, int yPos, int width, int height,SD
         xPos,yPos,width,height)
 {
     m_renderer = renderer;
-    m_playerShipPath = playerShipPath;
+    m_playerShipPath = std::move(playerShipPath);
 
     GameNs::TextureManager *playerShipTexture = new GameNs::TextureManager(m_renderer);
     m_playerShipTexture = playerShipTexture;
@@ -31,7 +33,7 @@ SDLNs::SDLPlayerShip::SDLPlayerShip(int xPos, int yPos, int width, int height,SD
  */
 void SDLNs::SDLPlayerShip::loadMedia() {
     m_playerShipTexture->LoadTexture(m_playerShipPath,m_renderer);
-    if(m_playerShipTexture->getTexture() == NULL){
+    if(m_playerShipTexture->getTexture() == nullptr){
         printf("Something went wrong loading texture %S",SDL_GetError());
         exit(1);
     }
@@ -42,7 +44,7 @@ void SDLNs::SDLPlayerShip::loadMedia() {
 void SDLNs::SDLPlayerShip::render() {
 
     SDL_Rect rect = {getXPosition(), getYPosition(), getWidth(), getHeight()};
-    SDL_RenderCopy(m_renderer,m_playerShipTexture->getTexture(),NULL,&rect);
+    SDL_RenderCopy(m_renderer,m_playerShipTexture->getTexture(),nullptr,&rect);
 }
 /**
  * Method to destroy player texture

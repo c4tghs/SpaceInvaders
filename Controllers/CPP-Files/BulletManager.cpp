@@ -3,22 +3,25 @@
  */
 
 #include "../Headers/BulletManager.h"
+
+#include <utility>
+#include <iostream>
 #include "../../SDL/Headers/SDLBullet.h"
 
 //static member
-GameNs::BulletManager* GameNs::BulletManager::m_instance =0;
+GameNs::BulletManager* GameNs::BulletManager::m_instance =nullptr;
 
 GameNs::BulletManager* GameNs::BulletManager::getInstance() {
-    if(m_instance ==0)
+    if(m_instance == nullptr)
     {
         m_instance = new BulletManager();
     }
     return m_instance;
 }
-GameNs::BulletManager* GameNs::BulletManager::getInstance(Bullet *bullet, std::string bulletPath, Timer *timer, int screenHeight)  {
-    if(m_instance ==0)
+GameNs::BulletManager* GameNs::BulletManager::getInstance(Bullet *bullet, Timer *timer, int screenHeight)  {
+    if(m_instance ==nullptr)
     {
-        m_instance = new BulletManager(bullet,bulletPath,timer,screenHeight);
+        m_instance = new BulletManager(bullet, timer, screenHeight);
     }
     return m_instance;
 }
@@ -34,13 +37,12 @@ GameNs::BulletManager::BulletManager() {}
  * @param timer - timer
  * @param screenHeight - height of the screen
  */
-GameNs::BulletManager::BulletManager(Bullet* bullet,std::string bulletPath,Timer* timer, int screenHeight) {
-    m_bullet = bullet;
+GameNs::BulletManager::BulletManager(Bullet *bullet, Timer *timer, int screenHeight) {
+    m_playerBullet = bullet;
     m_timer = timer;
-    m_bulletPath = bulletPath;
-    m_bulletFired = false;
+    m_playerFired = false;
     m_screenHeight = screenHeight;
-    m_collisionManager = CollisionManager::getInstance();
+    CollisionManager::getInstance();
 }
 /**
  * Update method
@@ -48,83 +50,108 @@ GameNs::BulletManager::BulletManager(Bullet* bullet,std::string bulletPath,Timer
 void GameNs::BulletManager::update() {
     //check if bullet has been fired
     //get out of function if it has not been fired
-    if(!m_bulletFired)
+    if(m_playerFired)
     {
-        return;
+        m_playerBullet->render();
     }
-    moveBullet();
-    checkBulletBounds();
-    m_bullet->render();
-    //checkPlayerCollisions();
+    if(m_enemyFired)
+    {
+        m_enemyBullet->render();
+    }
+    if(m_playerFired or m_enemyFired)
+    {
+        moveBullet();
+        checkBulletBounds();
+    }
+
 
 }
 /**
  * Method to move bullet
  */
 void GameNs::BulletManager::moveBullet() {
+    //-1 because bullet is moving up
     //change y position of bullet using time
-    m_bullet->setYPosition(m_bullet->getYPosition() + m_timer->getDeltaTime() * m_moveDirection*5);
+    m_playerBullet->setYPosition(m_playerBullet->getYPosition() + m_timer->getDeltaTime() * -1 * 5);
+    if(m_enemyFired)
+    {
+        m_enemyBullet->setYPosition(m_enemyBullet->getYPosition() + m_timer->getDeltaTime() * 1 * 5);
+    }
+
 }
 /**
  * Method to check bullet boundaries
  */
 void GameNs::BulletManager::checkBulletBounds() {
     //check if bullet has moved out of visible area
-    if(m_bullet->getYPosition() < - m_bullet->getHeight() || m_bullet->getYPosition() > (m_screenHeight + m_bullet->getHeight()))
+    if(m_playerBullet->getYPosition() < - m_playerBullet->getHeight() || m_playerBullet->getYPosition() > (m_screenHeight + m_playerBullet->getHeight()))
     {
-        setBulletFired(false);
+        setPlayerBulletFired(false);
     }
+    if(m_enemyFired)
+    {
+        if (m_enemyBullet->getYPosition() < -m_enemyBullet->getHeight() ||
+            m_enemyBullet->getYPosition() > (m_screenHeight + m_enemyBullet->getHeight())) {
+            setEnemyBulletFired(false);
+        }
+    }
+
 }
-/**
- * Method to set direction of bullet
- * @param direction - direction of bullet, ie up (-1) or down (1)
- */
-void GameNs::BulletManager::setMoveDirection(int direction)
-{
-    m_moveDirection = direction;
-}
+
 /**
  * Return if bullet has been fired
  * @return - true or false
  */
-bool GameNs::BulletManager::getBulletFired() {
-    return m_bulletFired;
+bool GameNs::BulletManager::getPlayerBulletFired() {
+    return m_playerFired;
 }
 /**
  * Method to set bullet
  * @param bullet - the bullet to use
  */
-void GameNs::BulletManager::setBullet(Bullet* bullet){
-    m_bullet = bullet;
+void GameNs::BulletManager::setPlayerBullet(Bullet* bullet){
+    m_playerBullet = bullet;
 }
 /**
  * Method to set the state of bulletFired
  * @param isFired - state of bulletFired
  */
-void GameNs::BulletManager::setBulletFired(bool isFired) {
-    m_bulletFired = isFired;
+void GameNs::BulletManager::setPlayerBulletFired(bool isFired) {
+    m_playerFired = isFired;
 }
 
 bool GameNs::BulletManager::checkPlayerCollisions() {
     for(int i=0; i<m_enemyShips.size();i++)
     {
-        if(CollisionManager::checkCollision(m_bullet,m_enemyShips[i]->getXPosition(),m_enemyShips[i]->getYPosition(),m_enemyShips[i]->getWidth(),m_enemyShips[i]->getHeight()))
+        if(CollisionManager::checkCollision(m_playerBullet, m_enemyShips[i]->getXPosition(), m_enemyShips[i]->getYPosition(), m_enemyShips[i]->getWidth(), m_enemyShips[i]->getHeight()))
         {
             m_enemyShips[i]->close();
             m_enemyShips.erase(m_enemyShips.begin()+i);
-            setBulletFired(false);
+            setPlayerBulletFired(false);
             //set bullet position to 0 after collision
             //otherwise it keeps moving
-            m_bullet->setYPosition(0);
-            m_bullet->close();
-            printf("The size is now %d\n",m_enemyShips.size());
+            m_playerBullet->setYPosition(0);
+            m_playerBullet->close();
+
             return true;
         }
     }
     return false;
 }
-void GameNs::BulletManager::setEnemyShip(std::vector<Ship *> enemyShips) {
+void GameNs::BulletManager::setEnemyShip(std::vector<Ship *> &enemyShips) {
     m_enemyShips = enemyShips;
+}
+
+void GameNs::BulletManager::setEnemyBullet(GameNs::Bullet *bullet) {
+    m_enemyBullet = bullet;
+}
+
+void GameNs::BulletManager::setEnemyBulletFired(bool isFired) {
+    m_enemyFired = isFired;
+}
+
+bool GameNs::BulletManager::getEnemyBulletFired() {
+    return m_enemyFired;
 }
 
 

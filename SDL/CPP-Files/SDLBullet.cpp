@@ -3,6 +3,8 @@
  */
 
 #include "../Headers/SDLBullet.h"
+
+#include <utility>
 /**
  * Constructor for SDLBullet class
  * @param renderer
@@ -15,7 +17,7 @@
 SDLNs::SDLBullet::SDLBullet(SDL_Renderer *renderer,std::string bulletPath,int xPos, int yPos,int width, int height):GameNs::Bullet(xPos,yPos,width,height)
 {
     m_renderer = renderer;
-    m_bulletPath = bulletPath;
+    m_bulletPath = std::move(bulletPath);
     GameNs::TextureManager *bulletTexture = new GameNs::TextureManager(m_renderer);
     m_texture  = bulletTexture;
     loadMedia();
@@ -25,7 +27,7 @@ SDLNs::SDLBullet::SDLBullet(SDL_Renderer *renderer,std::string bulletPath,int xP
  */
 void SDLNs::SDLBullet::render() {
     SDL_Rect rQuad = {getXPosition(),getYPosition(),getWidth(),getHeight()};
-    SDL_RenderCopy(m_renderer,m_texture->getTexture(),NULL,&rQuad);
+    SDL_RenderCopy(m_renderer,m_texture->getTexture(),nullptr,&rQuad);
 
 }
 /**
@@ -40,7 +42,7 @@ void SDLNs::SDLBullet::close() {
  */
 void SDLNs::SDLBullet::loadMedia() {
     m_texture->LoadTexture(m_bulletPath,m_renderer);
-    if(m_texture->getTexture() == NULL)
+    if(m_texture->getTexture() == nullptr)
     {
         printf("Something went wrong loading texture %s",SDL_GetError());
     }

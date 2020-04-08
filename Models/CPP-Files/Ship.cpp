@@ -14,3 +14,9 @@ GameNs::Ship::Ship() {}
  */
 GameNs::Ship::Ship(int xPos, int yPos, int width, int height):Entity(xPos,yPos,width,height) {
 }
+
+int GameNs::Ship::getMoveDirection() {
+    return 0;
+}
+
+void GameNs::Ship::setMoveDirection(int direction) {}

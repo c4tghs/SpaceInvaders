@@ -88,14 +88,6 @@ GameNs::Score *SDLNs::SDLFactory::createScore() {
     return new SDLScore(m_renderer);
 }
 
-/***
- * Method that returns private member renderer
- * @return private SDL_Renderer
- */
-SDL_Renderer* SDLNs::SDLFactory::getRenderer()
-{
-    return m_renderer;
-}
 /**
  * Method to initialise parameters ie, window, render etc.
  * @param windowWidth - width of the window
@@ -107,7 +99,6 @@ void SDLNs::SDLFactory::initialise(int windowWidth, int windowHeight){
     //check if SDL was initialised succesfully
     if(SDL_Init(SDL_INIT_VIDEO) !=0 && IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG) !=0)
     {
-        SDL_Log("Failed to initialise SDL: %s",SDL_GetError());
         printf("Failed to initialise SDL: %s",SDL_GetError());
         exit(1);
     } else if (TTF_Init() < 0)
@@ -122,7 +113,7 @@ void SDLNs::SDLFactory::initialise(int windowWidth, int windowHeight){
         //check if window was created successfully
         if(m_window == NULL)
         {
-            SDL_Log("Failed to create Window: %s",SDL_GetError());
+            printf("Failed to create Window: %s",SDL_GetError());
         } else
         {
             //create renderer
@@ -131,7 +122,7 @@ void SDLNs::SDLFactory::initialise(int windowWidth, int windowHeight){
             //check if renderer was created succesfully
             if(m_renderer == NULL)
             {
-                SDL_Log("Failed to create Renderer: %s",SDL_GetError());
+                printf("Failed to create Renderer: %s",SDL_GetError());
                 m_IsRunning = false;
             } else
             {
@@ -139,7 +130,6 @@ void SDLNs::SDLFactory::initialise(int windowWidth, int windowHeight){
                 int imgFlags = IMG_INIT_PNG | IMG_INIT_JPG;
                 if(!(IMG_Init(imgFlags) & imgFlags))
                 {
-                    SDL_Log("Failed to initialise SDL_image: %s",IMG_GetError());
                     printf("Failed to initialise SDL_image: %s",IMG_GetError());
                     m_IsRunning = false;
                 } else
@@ -159,10 +149,11 @@ void SDLNs::SDLFactory::initialise(int windowWidth, int windowHeight){
 void SDLNs::SDLFactory::close()
 {
     SDL_DestroyWindow(m_window);
-    //SDL_DestroyRenderer(m_renderer);
+    SDL_DestroyRenderer(m_renderer);
     IMG_Quit();
+    TTF_Quit();
     SDL_Quit();
-    std::cout << "Game cleaned succesfully" << std::endl;
+    std::cout << "Game cleaned successfully" << std::endl;
 
 }
 
@@ -185,7 +176,6 @@ bool SDLNs::SDLFactory::getRunningState()
         if(event.type == SDL_QUIT)
         {
             m_IsRunning = false;
-            close();
         }
     }
 

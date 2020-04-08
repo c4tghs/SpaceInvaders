@@ -15,7 +15,7 @@ int SDLNs::SDLKeyStates::directions() {
     SDL_Event event;
     SDL_PollEvent(&event);
 
-  const  Uint8* keystate = SDL_GetKeyboardState(NULL);
+  const  Uint8* keystate = SDL_GetKeyboardState(nullptr);
   if(keystate[SDL_SCANCODE_LEFT])
   {
       return 1;

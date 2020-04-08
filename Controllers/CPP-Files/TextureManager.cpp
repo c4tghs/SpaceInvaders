@@ -28,10 +28,10 @@ GameNs::TextureManager::TextureManager(SDL_Renderer *renderer){
  * @param filename - path to image
  * @param ren - renderer
  */
-void GameNs::TextureManager::LoadTexture(std::string filename, SDL_Renderer *ren) {
+void GameNs::TextureManager::LoadTexture(const std::string& filename, SDL_Renderer *ren) {
     SDL_Surface* surface = IMG_Load(filename.c_str());
     SDL_Texture* tex;
-    if(surface == NULL)
+    if(surface == nullptr)
     {
         SDL_Log("Failed to create surface: %s",SDL_GetError());
         printf("Failed to load surface: %s",SDL_GetError());
@@ -44,7 +44,7 @@ void GameNs::TextureManager::LoadTexture(std::string filename, SDL_Renderer *ren
 
         //Create texture from surface pixels
         tex = SDL_CreateTextureFromSurface(ren, surface);
-        if(tex == NULL)
+        if(tex == nullptr)
         {
             SDL_Log("Failed to create texture: %s",SDL_GetError());
             printf("Failed to create texture: %s",SDL_GetError());
@@ -72,10 +72,10 @@ SDL_Texture* GameNs::TextureManager::getTexture(){
  * Method to destroy texture
  */
 void GameNs::TextureManager::free() {
-    if(m_texture != NULL)
+    if(m_texture != nullptr)
     {
         SDL_DestroyTexture(m_texture);
-        m_texture = NULL;
+        m_texture = nullptr;
     }
 }
 

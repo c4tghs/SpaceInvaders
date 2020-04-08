@@ -7,6 +7,12 @@
 #define PROJECT_ENEMYMANAGER_H
 
 
+/**
+ * TODO add method to set and get enemy type
+ *
+ */
+
+
 #include "../../Factories/AbstractFactory.h"
 #include "../../SDL/Headers/SDLTimer.h"
 #include "CollisionManager.h"
@@ -24,6 +30,8 @@ namespace GameNs
         void updateEnemies();
         void moveEnemies();
         bool checkEnemyBoundaries();
+        void enemyShoot();
+        void createBullets();
 
 
     private:
@@ -32,6 +40,9 @@ namespace GameNs
         std::string m_enemyShipPath;
         Timer *m_timer;
         int m_screenWidth;
+        float m_nextMissile;
+        std::string m_bulletPath = "../assets/bullet.jpeg";
+        std::vector<Bullet*> m_bullets;
     };
 }
 

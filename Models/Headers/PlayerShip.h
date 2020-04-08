@@ -15,8 +15,6 @@ namespace GameNs
         PlayerShip(int xPos, int yPos, int width, int height);
         virtual void render() = 0;
         virtual void close() = 0;
-        int getMoveDirection();
-        void setMoveDirection(int direction);
     };
 
 }

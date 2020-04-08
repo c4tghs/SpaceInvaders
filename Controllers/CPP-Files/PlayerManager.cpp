@@ -4,6 +4,8 @@
 
 #include "../Headers/PlayerManager.h"
 
+#include <utility>
+
 /**
  * Method to create instance of PlayerManager
  */
@@ -20,8 +22,8 @@ GameNs::PlayerManager::PlayerManager() {}
 GameNs::PlayerManager::PlayerManager(GameNs::AbstractFactory *AF,std::string playerShipPath,std::string bulletPath,int screenHeight, int screenWidth){
     m_factory = AF;
     m_timer = AF->createTimer();
-    m_playerShipPath = playerShipPath;
-    m_bulletPath = bulletPath;
+    m_playerShipPath = std::move(playerShipPath);
+    m_bulletPath = std::move(bulletPath);
     //create playerShip;
     m_playerShip  = AF->createPlayerShip(m_playerShipPath);
     m_screenHeight = screenHeight;
@@ -31,10 +33,11 @@ GameNs::PlayerManager::PlayerManager(GameNs::AbstractFactory *AF,std::string pla
     m_bullets.reserve(10);
     //create 10 bullets
     createBullets();
-    m_currentBullet = m_bullets[0];
     //get bulletManager
-    bulletManager = BulletManager::getInstance(m_bullets[0],m_bulletPath,m_timer,m_screenHeight);
+    bulletManager = BulletManager::getInstance(m_bullets[0],m_timer,m_screenHeight);
+    //create user score
     m_score = AF->createScore();
+    //
     m_score->setScores(0);
 
 }
@@ -42,7 +45,7 @@ GameNs::PlayerManager::PlayerManager(GameNs::AbstractFactory *AF,std::string pla
  * update method
  */
 void GameNs::PlayerManager::update() {
-    bool collision = false;
+    bool collision;
     //move player
     playerActions();
     checkPlayerBoundaries();
@@ -78,6 +81,8 @@ void GameNs::PlayerManager::playerActions() {
             break;
         case 3:
             shoot();
+        default:
+            break;
     }
 }
 /**
@@ -98,9 +103,9 @@ void GameNs::PlayerManager::checkPlayerBoundaries() {
  * Method to destory player texture
  */
 void GameNs::PlayerManager::close() {
-    for(int i =0; i < m_bullets.size();i++)
+    for(auto & m_bullet : m_bullets)
     {
-        m_bullets[i]->close();
+        m_bullet->close();
     }
     m_playerShip->close();
 
@@ -110,22 +115,21 @@ void GameNs::PlayerManager::close() {
  */
 void GameNs::PlayerManager::shoot() {
     //if(m_timer->)
-    if(bulletManager->getBulletFired())
+    if(bulletManager->getPlayerBulletFired())
     {
         return;
     }
     for(int i =0; i < m_bullets.size();i++)
     {
 
-        m_bullets[i]->setXPosition(m_playerShip->getXPosition());
+        m_bullets[i]->setXPosition(m_playerShip->getXPosition()+60);
         m_bullets[i]->setYPosition(m_playerShip->getYPosition());
-        if(bulletManager->getBulletFired())
+        if(bulletManager->getPlayerBulletFired())
         {
             continue;
         }
-        bulletManager->setBullet(m_bullets[i]);
-        bulletManager->setMoveDirection(-1);
-        bulletManager->setBulletFired(true);
+        bulletManager->setPlayerBullet(m_bullets[i]);
+        bulletManager->setPlayerBulletFired(true);
         //remove one bullet from vector
         m_bullets.erase(m_bullets.begin()+i);
         break; //execute this loop once

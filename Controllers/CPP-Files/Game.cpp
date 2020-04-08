@@ -7,8 +7,33 @@
 #include "../Headers/EnemyManager.h"
 #include "../Headers/PlayerManager.h"
 
+//static variable
+GameNs::Game* GameNs::Game::m_instance = nullptr;
+
+GameNs::Game* GameNs::Game::getInstance() {
+    if(m_instance == nullptr)
+    {
+        m_instance = new Game();
+    }
+    return m_instance;
+}
+GameNs::Game* GameNs::Game::getInstance(AbstractFactory *AF) {
+    if(m_instance == nullptr)
+    {
+        m_instance = new Game(AF);
+    }
+    return m_instance;
+}
+
 /**
- * Method to initialise the Game class
+ * Constructor
+ */
+GameNs::Game::Game() {
+
+}
+
+/**
+ * Constructor
  * @param AF - abstract factory to create instances of objects
  */
 GameNs::Game::Game(AbstractFactory *AF) {
@@ -21,25 +46,24 @@ void GameNs::Game::run() {
     m_factory->initialise(m_windowWidth,m_windowHeight);
     Background *background = m_factory->createBackground();
     PlayerManager* playerManager = new PlayerManager(m_factory,m_playerShipPath,m_playerBulletPath,m_windowHeight,m_windowWidth);
-    //Ship* playerShip = m_factory->createPlayerShip(m_playerShipPath);
     EnemyManager* enemyManager = new EnemyManager(m_factory, m_enemyShipPath, m_windowWidth);
-    enemyManager->createEnemies(25);
+    enemyManager->createEnemies(30);
     std::vector<Ship *> enemyShips = enemyManager->getEnemies();
     BulletManager::getInstance()->setEnemyShip(enemyShips);
     while(m_factory->getRunningState())
     {
         background->render();
         playerManager->update();
-        //set bullet
         enemyManager->updateEnemies();
         m_factory->render();
     }
     background->close();
     playerManager->close();
-    //playerShip->close();
-    for(int i =0; i < enemyShips.size(); i ++)
+    for(auto & enemyShip : enemyShips)
     {
-        enemyShips[i]->close();
+        enemyShip->close();
     }
     m_factory->close();
 }
+
+

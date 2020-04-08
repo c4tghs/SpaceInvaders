@@ -30,26 +30,26 @@ SDL_Texture* GameNs::TextManager::getTexture() {
  * @param filename - the text to display
  * @param ren
  */
-void GameNs::TextManager::loadTexture(std::string text) {
+void GameNs::TextManager::loadTexture(const std::string& text) {
     SDL_Texture *texture;
     SDL_Surface *surface;
     SDL_Color color = {255,255,255};
     m_font = TTF_OpenFont(m_fontFile,20);
-    if(m_font==NULL)
+    if(m_font==nullptr)
     {
         printf("Failed to load font. Error: %s",SDL_GetError());
         exit(1);
     } else{
         //create surface
         surface = TTF_RenderText_Solid(m_font,text.c_str(),color);
-        if(surface==NULL)
+        if(surface==nullptr)
         {
             printf("Failed create surface. Error: %s",SDL_GetError());
             exit(1);
         } else{
             //create texture
             texture = SDL_CreateTextureFromSurface(m_renderer,surface);
-            if(texture ==NULL)
+            if(texture ==nullptr)
             {
                 printf("Failed to create texture. Error: %s",SDL_GetError());
                 exit(1);
@@ -64,10 +64,10 @@ void GameNs::TextManager::loadTexture(std::string text) {
 }
 
 void GameNs::TextManager::free() {
-    if(m_texture != NULL)
+    if(m_texture != nullptr)
     {
         SDL_DestroyTexture(m_texture);
-        m_texture = NULL;
+        m_texture = nullptr;
     }
 }
 

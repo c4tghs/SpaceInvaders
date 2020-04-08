@@ -4,9 +4,11 @@
 #include "Controllers/Headers/Game.h"
 
 int main(int argc, char *argv[]) {
-
+    //create SDL factory
     GameNs::AbstractFactory *AF = new SDLNs::SDLFactory();
-    GameNs::Game *g = new GameNs::Game(AF);
+    //initialise game class
+    GameNs::Game *g = GameNs::Game::getInstance(AF);
+    //run game
     g->run();
 
     return 0;

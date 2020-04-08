@@ -34,14 +34,11 @@ namespace GameNs{
         std::string m_bulletPath;
         Timer *m_timer;
         BulletManager *bulletManager;
-        SDLNs::SDLKeyStates* m_keyStates;
+        SDLNs::SDLKeyStates* m_keyStates = nullptr;
         Ship* m_playerShip;
         int m_screenHeight;
         int m_screenWidth;
 
-        /*float m_fireRate;
-        float m_lastFire;*/
-        Bullet* m_currentBullet;
         std::vector<Bullet*> m_bullets;
         Score* m_score;
     };
