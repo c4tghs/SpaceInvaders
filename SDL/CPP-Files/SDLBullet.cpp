@@ -5,6 +5,8 @@
 #include "../Headers/SDLBullet.h"
 
 #include <utility>
+#include <iostream>
+
 /**
  * Constructor for SDLBullet class
  * @param renderer
@@ -44,6 +46,7 @@ void SDLNs::SDLBullet::loadMedia() {
     m_texture->LoadTexture(m_bulletPath,m_renderer);
     if(m_texture->getTexture() == nullptr)
     {
-        printf("Something went wrong loading texture %s",SDL_GetError());
+        std::cout << "Something went wrong loading texture: "<< SDL_GetError()<< std::endl;
+        exit(1);
     }
 }

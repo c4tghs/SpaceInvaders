@@ -18,7 +18,7 @@ namespace SDLNs
 
         private:
             SDL_Renderer* m_renderer;
-            GameNs::TextManager* m_texture;
+            GameNs::TextManager* m_textTexture;
 
     };
 }

@@ -28,6 +28,7 @@ namespace GameNs{
         void shoot();
         void createBullets();
 
+
     private:
         AbstractFactory* m_factory;
         std::string m_playerShipPath;
@@ -41,6 +42,7 @@ namespace GameNs{
 
         std::vector<Bullet*> m_bullets;
         Score* m_score;
+        PlayerLife* m_playerLife;
     };
 }
 

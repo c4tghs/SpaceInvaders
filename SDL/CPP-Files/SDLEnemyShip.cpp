@@ -5,6 +5,8 @@
 #include "../Headers/SDLEnemyShip.h"
 
 #include <utility>
+#include <iostream>
+
 /**
  * Constructor for SDlEnemyShip
  * @param renderer
@@ -33,7 +35,8 @@ void SDLNs::SDLEnemyShip::loadMedia() {
     m_enemyShipTexture->LoadTexture(m_enemyShipPath,m_renderer);
     if(m_enemyShipTexture->getTexture() == nullptr)
     {
-        printf("Something went wrong loading texture %S",SDL_GetError());
+        std::cout << "Something went wrong loading texture: "<< SDL_GetError()<< std::endl;
+        exit(1);
     }
 
 }

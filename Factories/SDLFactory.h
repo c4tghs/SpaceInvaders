@@ -24,6 +24,7 @@ namespace SDLNs
         GameNs::Bullet* createBullet(std::string bulletPath, int xPos, int yPos) override;
         GameNs::Timer* createTimer() override;
         GameNs::Score* createScore() override;
+        GameNs::PlayerLife* createPlayerLife();
         void createWindow(const char* title,int width, int height);
         void createRender();
         void initialise(int windowWidth, int windowHeight) override;

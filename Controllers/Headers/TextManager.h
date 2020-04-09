@@ -18,9 +18,9 @@ namespace GameNs{
         void free();
 
     private:
-        SDL_Renderer* m_renderer;
+        SDL_Renderer* m_renderer= nullptr;
         SDL_Texture* m_texture = nullptr;
-        TTF_Font *m_font{};
+        TTF_Font *m_font= nullptr;
         const char *m_fontFile = "../assets/Fonts/Lato-Regular.ttf";
     };
 }

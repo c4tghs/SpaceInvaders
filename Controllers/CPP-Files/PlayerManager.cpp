@@ -5,6 +5,7 @@
 #include "../Headers/PlayerManager.h"
 
 #include <utility>
+#include <iostream>
 
 /**
  * Method to create instance of PlayerManager
@@ -34,11 +35,13 @@ GameNs::PlayerManager::PlayerManager(GameNs::AbstractFactory *AF,std::string pla
     //create 10 bullets
     createBullets();
     //get bulletManager
-    bulletManager = BulletManager::getInstance(m_bullets[0],m_timer,m_screenHeight);
+    bulletManager = BulletManager::getInstance(m_timer, m_screenHeight);
     //create user score
     m_score = AF->createScore();
-    //
+    //set player score to 0
     m_score->setScores(0);
+    //create player life
+    m_playerLife = AF->createPlayerLife();
 
 }
 /**
@@ -48,20 +51,23 @@ void GameNs::PlayerManager::update() {
     bool collision;
     //move player
     playerActions();
-    checkPlayerBoundaries();
     //update timer
     m_timer->update();
     bulletManager->update();
+    //check if player bullet has collided with enemy
     collision = bulletManager->checkPlayerCollisions();
     if(collision)
     {
         m_score->setScores(m_score->getScores()+1);
     }
-
+    checkPlayerBoundaries();
+    //render player score
     m_score->render();
+    //render player life
+    m_playerLife->render();
     //render player
     m_playerShip->render();
-
+    bulletManager->setPlayerBulletCollision(false);
 }
 /**
  * Method to check what button used has pressed
@@ -86,7 +92,7 @@ void GameNs::PlayerManager::playerActions() {
     }
 }
 /**
- * Method used to check player boundaries
+ * Method used to check player boundaries and collision with enemy bullet
  */
 void GameNs::PlayerManager::checkPlayerBoundaries() {
     if(m_playerShip->getXPosition() < 0)
@@ -96,6 +102,16 @@ void GameNs::PlayerManager::checkPlayerBoundaries() {
     else if(m_playerShip->getXPosition() > m_screenWidth - m_playerShip->getWidth())
     {
         m_playerShip->setXPosition(m_screenWidth - m_playerShip->getWidth());
+
+    }
+    if(bulletManager->getEnemyBulletFired())
+    {
+        if(CollisionManager::checkCollision(BulletManager::getInstance()->getEnemyBullet(), m_playerShip->getXPosition(), m_playerShip->getYPosition(), m_playerShip->getWidth(), m_playerShip->getHeight()))
+        {
+            m_playerLife->setPlayerLife(m_playerLife->getPlayerLife()-1);
+            BulletManager::getInstance()->setEnemyBulletFired(false);
+
+        }
 
     }
 }
@@ -126,7 +142,7 @@ void GameNs::PlayerManager::shoot() {
         m_bullets[i]->setYPosition(m_playerShip->getYPosition());
         if(bulletManager->getPlayerBulletFired())
         {
-            continue;
+            break;
         }
         bulletManager->setPlayerBullet(m_bullets[i]);
         bulletManager->setPlayerBulletFired(true);
@@ -138,7 +154,6 @@ void GameNs::PlayerManager::shoot() {
     {
         createBullets();
     }
-    //TODO player score
 }
 
 void GameNs::PlayerManager::createBullets() {

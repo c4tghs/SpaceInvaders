@@ -12,6 +12,7 @@
 #include "../Models/Headers/Timer.h"
 #include "../Models/Headers/Bullet.h"
 #include "../Models/Headers/Score.h"
+#include "../Models/Headers/PlayerLife.h"
 
 namespace GameNs{
     class AbstractFactory {
@@ -22,6 +23,7 @@ namespace GameNs{
         virtual Timer* createTimer()=0;
         virtual Bullet* createBullet(std::string bulletPath, int xPos, int yPos)=0;
         virtual Score* createScore()=0;
+        virtual PlayerLife* createPlayerLife()=0;
         virtual void initialise(int windowWidth, int windowHeight)=0;
         virtual void render()=0;
         virtual void close()=0;

@@ -18,7 +18,7 @@ namespace GameNs
         void free();
 
     private:
-        SDL_Renderer* m_renderer;
+        SDL_Renderer* m_renderer= nullptr;
         SDL_Texture* m_texture= nullptr;
     };
 }

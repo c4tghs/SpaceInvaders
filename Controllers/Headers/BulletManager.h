@@ -15,7 +15,7 @@ namespace GameNs{
     class BulletManager {
     public:
         static BulletManager* getInstance();
-        static BulletManager* getInstance(Bullet* bullet,Timer* timer,int screenHeight);
+        static BulletManager *getInstance(Timer *timer, int screenHeight);
         void update();
         void moveBullet();
         void setPlayerBullet(Bullet* bullet);
@@ -26,21 +26,22 @@ namespace GameNs{
         void setPlayerBulletFired(bool isFired);
         void setEnemyBulletFired(bool isFired);
         bool checkPlayerCollisions();
-        void setEnemyShip(std::vector<Ship *> &enemyShips);
-
+        void setPlayerBulletCollision(bool collided);
+        Bullet* getPlayerBullet();
+        Bullet* getEnemyBullet();
 
     private:
         static BulletManager* m_instance;
         BulletManager();
-        BulletManager(Bullet *bullet, Timer *timer, int screenHeight);
-
+        BulletManager(Timer *timer, int screenHeight);
+        bool m_playerBulletCollided= false;
         bool m_playerFired = false;
         bool m_enemyFired = false;
         Timer* m_timer= nullptr;
         Bullet* m_playerBullet = nullptr;
         Bullet* m_enemyBullet = nullptr;
         int m_screenHeight = 0;
-        std::vector<Ship *> m_enemyShips;
+
 
 
     };

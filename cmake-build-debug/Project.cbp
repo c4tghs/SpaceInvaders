@@ -145,6 +145,9 @@
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/Entity.cpp">
 			<Option target="Project"/>
 		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/PlayerLife.cpp">
+			<Option target="Project"/>
+		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/PlayerShip.cpp">
 			<Option target="Project"/>
 		</Unit>
@@ -164,6 +167,9 @@
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/Headers/Entity.h">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/Headers/PlayerLife.h">
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/Headers/PlayerShip.h">
@@ -190,6 +196,9 @@
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/SDL/CPP-Files/SDLKeyStates.cpp">
 			<Option target="Project"/>
 		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/SDL/CPP-Files/SDLPlayerLife.cpp">
+			<Option target="Project"/>
+		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/SDL/CPP-Files/SDLPlayerShip.cpp">
 			<Option target="Project"/>
 		</Unit>
@@ -209,6 +218,9 @@
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLKeyStates.h">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLPlayerLife.h">
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLPlayerShip.h">

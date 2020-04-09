@@ -26,13 +26,12 @@ namespace GameNs
         EnemyManager();
         EnemyManager(AbstractFactory* AF,std::string enemyShipPath, int screenWidth);
         void createEnemies(int number);
-        std::vector<Ship *> getEnemies();
         void updateEnemies();
         void moveEnemies();
         bool checkEnemyBoundaries();
         void enemyShoot();
         void createBullets();
-
+        void close();
 
     private:
         AbstractFactory* m_factory;

@@ -446,6 +446,33 @@ Models/CPP-Files/Entity.cpp.s:
 	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Entity.cpp.s
 .PHONY : Models/CPP-Files/Entity.cpp.s
 
+Models/CPP-Files/PlayerLife.obj: Models/CPP-Files/PlayerLife.cpp.obj
+
+.PHONY : Models/CPP-Files/PlayerLife.obj
+
+# target to build an object file
+Models/CPP-Files/PlayerLife.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/PlayerLife.cpp.obj
+.PHONY : Models/CPP-Files/PlayerLife.cpp.obj
+
+Models/CPP-Files/PlayerLife.i: Models/CPP-Files/PlayerLife.cpp.i
+
+.PHONY : Models/CPP-Files/PlayerLife.i
+
+# target to preprocess a source file
+Models/CPP-Files/PlayerLife.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/PlayerLife.cpp.i
+.PHONY : Models/CPP-Files/PlayerLife.cpp.i
+
+Models/CPP-Files/PlayerLife.s: Models/CPP-Files/PlayerLife.cpp.s
+
+.PHONY : Models/CPP-Files/PlayerLife.s
+
+# target to generate assembly for a file
+Models/CPP-Files/PlayerLife.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/PlayerLife.cpp.s
+.PHONY : Models/CPP-Files/PlayerLife.cpp.s
+
 Models/CPP-Files/PlayerShip.obj: Models/CPP-Files/PlayerShip.cpp.obj
 
 .PHONY : Models/CPP-Files/PlayerShip.obj
@@ -635,6 +662,33 @@ SDL/CPP-Files/SDLKeyStates.cpp.s:
 	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLKeyStates.cpp.s
 .PHONY : SDL/CPP-Files/SDLKeyStates.cpp.s
 
+SDL/CPP-Files/SDLPlayerLife.obj: SDL/CPP-Files/SDLPlayerLife.cpp.obj
+
+.PHONY : SDL/CPP-Files/SDLPlayerLife.obj
+
+# target to build an object file
+SDL/CPP-Files/SDLPlayerLife.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLPlayerLife.cpp.obj
+.PHONY : SDL/CPP-Files/SDLPlayerLife.cpp.obj
+
+SDL/CPP-Files/SDLPlayerLife.i: SDL/CPP-Files/SDLPlayerLife.cpp.i
+
+.PHONY : SDL/CPP-Files/SDLPlayerLife.i
+
+# target to preprocess a source file
+SDL/CPP-Files/SDLPlayerLife.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLPlayerLife.cpp.i
+.PHONY : SDL/CPP-Files/SDLPlayerLife.cpp.i
+
+SDL/CPP-Files/SDLPlayerLife.s: SDL/CPP-Files/SDLPlayerLife.cpp.s
+
+.PHONY : SDL/CPP-Files/SDLPlayerLife.s
+
+# target to generate assembly for a file
+SDL/CPP-Files/SDLPlayerLife.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLPlayerLife.cpp.s
+.PHONY : SDL/CPP-Files/SDLPlayerLife.cpp.s
+
 SDL/CPP-Files/SDLPlayerShip.obj: SDL/CPP-Files/SDLPlayerShip.cpp.obj
 
 .PHONY : SDL/CPP-Files/SDLPlayerShip.obj
@@ -788,6 +842,9 @@ help:
 	@echo ... Models/CPP-Files/Entity.obj
 	@echo ... Models/CPP-Files/Entity.i
 	@echo ... Models/CPP-Files/Entity.s
+	@echo ... Models/CPP-Files/PlayerLife.obj
+	@echo ... Models/CPP-Files/PlayerLife.i
+	@echo ... Models/CPP-Files/PlayerLife.s
 	@echo ... Models/CPP-Files/PlayerShip.obj
 	@echo ... Models/CPP-Files/PlayerShip.i
 	@echo ... Models/CPP-Files/PlayerShip.s
@@ -809,6 +866,9 @@ help:
 	@echo ... SDL/CPP-Files/SDLKeyStates.obj
 	@echo ... SDL/CPP-Files/SDLKeyStates.i
 	@echo ... SDL/CPP-Files/SDLKeyStates.s
+	@echo ... SDL/CPP-Files/SDLPlayerLife.obj
+	@echo ... SDL/CPP-Files/SDLPlayerLife.i
+	@echo ... SDL/CPP-Files/SDLPlayerLife.s
 	@echo ... SDL/CPP-Files/SDLPlayerShip.obj
 	@echo ... SDL/CPP-Files/SDLPlayerShip.i
 	@echo ... SDL/CPP-Files/SDLPlayerShip.s

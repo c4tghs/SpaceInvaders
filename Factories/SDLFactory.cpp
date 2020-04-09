@@ -9,6 +9,7 @@
 #include "../SDL/Headers/SDLBackground.h"
 #include "../SDL/Headers/SDLBullet.h"
 #include "../SDL/Headers/SDLScore.h"
+#include "../SDL/Headers/SDLPlayerLife.h"
 
 
 /**
@@ -18,7 +19,7 @@
  */
 GameNs::Ship* SDLNs::SDLFactory::createPlayerShip(std::string playerShipPath)
 {
-    int shipHeight =m_screenHeight/10;;
+    int shipHeight =m_screenHeight/10;
     int xPos =  (m_screenWidth/2)-50;
     int yPos = m_screenHeight-(shipHeight+10);
     int shipWidth = m_screenWidth/10;
@@ -87,6 +88,13 @@ GameNs::Timer* SDLNs::SDLFactory::createTimer() {
 GameNs::Score *SDLNs::SDLFactory::createScore() {
     return new SDLScore(m_renderer);
 }
+/**
+ * Method to create an instance of SDLPlayerLife
+ * @return
+ */
+GameNs::PlayerLife *SDLNs::SDLFactory::createPlayerLife() {
+    return new SDLPlayerLife(m_renderer,m_screenWidth);
+}
 
 /**
  * Method to initialise parameters ie, window, render etc.
@@ -99,11 +107,11 @@ void SDLNs::SDLFactory::initialise(int windowWidth, int windowHeight){
     //check if SDL was initialised succesfully
     if(SDL_Init(SDL_INIT_VIDEO) !=0 && IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG) !=0)
     {
-        printf("Failed to initialise SDL: %s",SDL_GetError());
+        std::cout << "Failed to initialise SDL: "<< SDL_GetError() << std::endl;
         exit(1);
     } else if (TTF_Init() < 0)
     {
-        printf("Unable to initialise TTF library: %s",SDL_GetError());
+        std::cout << "Unable to initialise TTF library: "<< SDL_GetError() << std::endl;
         exit(1);
     }
     else{
@@ -111,18 +119,18 @@ void SDLNs::SDLFactory::initialise(int windowWidth, int windowHeight){
         createWindow("Space invaders", m_screenWidth, m_screenHeight);
 
         //check if window was created successfully
-        if(m_window == NULL)
+        if(m_window == nullptr)
         {
-            printf("Failed to create Window: %s",SDL_GetError());
+            std::cout << "Failed to create Window: "<< SDL_GetError() << std::endl;
         } else
         {
             //create renderer
             createRender();
 
             //check if renderer was created succesfully
-            if(m_renderer == NULL)
+            if(m_renderer == nullptr)
             {
-                printf("Failed to create Renderer: %s",SDL_GetError());
+                std::cout << "Failed to create Renderer: "<< SDL_GetError() << std::endl;
                 m_IsRunning = false;
             } else
             {
@@ -130,7 +138,7 @@ void SDLNs::SDLFactory::initialise(int windowWidth, int windowHeight){
                 int imgFlags = IMG_INIT_PNG | IMG_INIT_JPG;
                 if(!(IMG_Init(imgFlags) & imgFlags))
                 {
-                    printf("Failed to initialise SDL_image: %s",IMG_GetError());
+                    std::cout << "Failed to initialise SDL_image: "<< IMG_GetError() << std::endl;
                     m_IsRunning = false;
                 } else
                 {
@@ -181,6 +189,8 @@ bool SDLNs::SDLFactory::getRunningState()
 
     return m_IsRunning;
 }
+
+
 
 
 

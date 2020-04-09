@@ -2,6 +2,7 @@
  * CPP for TextureManager class
  */
 #include <SDL2/SDL_image.h>
+#include <iostream>
 #include "../Headers/TextureManager.h"
 
 /**
@@ -33,8 +34,7 @@ void GameNs::TextureManager::LoadTexture(const std::string& filename, SDL_Render
     SDL_Texture* tex;
     if(surface == nullptr)
     {
-        SDL_Log("Failed to create surface: %s",SDL_GetError());
-        printf("Failed to load surface: %s",SDL_GetError());
+        std::cout << "Failed to load surface. Error: " << SDL_GetError() << std::endl;
         exit(1);
     }
     else
@@ -46,14 +46,12 @@ void GameNs::TextureManager::LoadTexture(const std::string& filename, SDL_Render
         tex = SDL_CreateTextureFromSurface(ren, surface);
         if(tex == nullptr)
         {
-            SDL_Log("Failed to create texture: %s",SDL_GetError());
-            printf("Failed to create texture: %s",SDL_GetError());
+            std::cout << "Failed to create texture. Error: " << SDL_GetError() << std::endl;
             exit(1);
         } else
         {
             m_texture = tex;
         }
-
         //remove old loaded surface
         SDL_FreeSurface(surface);
     }

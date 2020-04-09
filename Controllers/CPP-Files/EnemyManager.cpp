@@ -5,6 +5,8 @@
 #include "../Headers/EnemyManager.h"
 
 #include <utility>
+#include <iostream>
+
 /**
  * Constructor
  */
@@ -27,6 +29,9 @@ GameNs::EnemyManager::EnemyManager(AbstractFactory *AF,std::string enemyShipPath
     //create 50 bullets
     m_bullets.reserve(50);
     createBullets();
+    //create enemies
+    createEnemies(30);
+
 }
 /**
  * Method used to create enemy instances
@@ -42,14 +47,7 @@ void GameNs::EnemyManager::createEnemies(int number) {
         m_enemyShips.emplace_back(m_factory->createEnemyShip(m_enemyShipPath,xPos,yPos));
     }
 }
-/**
- * Method that returns private member enemyships
- * @return vector containing enemy instances
- */
-std::vector<GameNs::Ship *> GameNs::EnemyManager::getEnemies()
-{
-    return m_enemyShips;
-}
+
 /**
  * Method to update enemies, ie direction, rendering
  */
@@ -59,25 +57,43 @@ void GameNs::EnemyManager::updateEnemies() {
     m_timer->update();
     if(checkEnemyBoundaries())
     {
-        int moveDirection = m_enemyShips[0]->getMoveDirection();
-        if(moveDirection==1)
-        {
-            moveDirection = -1;
-        } else{
-            moveDirection = 1;
-        }
         for(auto & m_enemyShip : m_enemyShips)
         {
-            m_enemyShip->setMoveDirection(moveDirection);
-            m_enemyShip->setXPosition(m_enemyShip->getXPosition());
-            m_enemyShip->setYPosition(m_enemyShip->getYPosition()+10);
-        }
+            int moveDirection = m_enemyShip->getMoveDirection();
+            if(moveDirection==1)
+            {
+                moveDirection = -1;
+            } else{
+                moveDirection = 1;
+            }
+
+                m_enemyShip->setMoveDirection(moveDirection);
+                m_enemyShip->setXPosition(m_enemyShip->getXPosition());
+                m_enemyShip->setYPosition(m_enemyShip->getYPosition()+10);
+            }
     }
+    int i = 0;
     for(auto & m_enemyShip : m_enemyShips)
     {
-        m_enemyShip->render();
+
         // TODO check if enemy has reached player
-        // TODO check collisions
+        //check collision with player bullet
+        if(BulletManager::getInstance()->getPlayerBulletFired())
+        {
+            if(CollisionManager::checkCollision(BulletManager::getInstance()->getPlayerBullet(), m_enemyShip->getXPosition(), m_enemyShip->getYPosition(), m_enemyShip->getWidth(), m_enemyShip->getHeight()))
+            {
+                //close enemy ship
+                m_enemyShip->close();
+                //remove ship from vector
+                m_enemyShips.erase(m_enemyShips.begin()+i);
+                BulletManager::getInstance()->setPlayerBulletFired(false);
+                BulletManager::getInstance()->setPlayerBulletCollision(true);
+                return; //execute once
+            }
+        }
+
+        i++;
+        m_enemyShip->render();
     }
     //allow enemy to shoot
     enemyShoot();
@@ -96,7 +112,7 @@ void GameNs::EnemyManager::moveEnemies(){
  */
 bool GameNs::EnemyManager::checkEnemyBoundaries() {
     for(auto & m_enemyShip : m_enemyShips) {
-        if((m_enemyShip->getXPosition() < 0 ) or (m_enemyShip->getXPosition() > m_screenWidth-m_enemyShip->getWidth())){
+        if((m_enemyShip->getXPosition() <= 0 ) or (m_enemyShip->getXPosition() >= m_screenWidth-m_enemyShip->getWidth())){
             return true;
         }
     }
@@ -111,15 +127,16 @@ void GameNs::EnemyManager::enemyShoot() {
     {
         return;
     }
+    //generate random number -> enemy to select
     int randomId = std::rand() % m_enemyShips.size();
-    printf("The generated random id is %d  and amount of ships are %d\n",randomId,m_enemyShips.size());
+
     for(int i =0; i < m_bullets.size();i++)
     {
         m_bullets[i]->setXPosition(m_enemyShips[randomId]->getXPosition()+20);
         m_bullets[i]->setYPosition(m_enemyShips[randomId]->getYPosition());
         if(BulletManager::getInstance()->getEnemyBulletFired())
         {
-            continue;
+            break;
         }
         BulletManager::getInstance()->setEnemyBulletFired(true);
         BulletManager::getInstance()->setEnemyBullet(m_bullets[i]);
@@ -139,4 +156,14 @@ void GameNs::EnemyManager::createBullets() {
         m_bullets.emplace_back(m_factory->createBullet(m_bulletPath,i+50,i+50));
     }
 }
+
+void GameNs::EnemyManager::close() {
+    for(auto & enemyShip : m_enemyShips)
+    {
+        enemyShip->close();
+    }
+}
+
+
+
 

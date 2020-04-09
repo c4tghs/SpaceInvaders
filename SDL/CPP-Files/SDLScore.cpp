@@ -8,16 +8,16 @@
 SDLNs::SDLScore::SDLScore(SDL_Renderer *renderer) {
     m_renderer= renderer;
     GameNs::TextManager* textManager = new GameNs::TextManager(m_renderer);
-    m_texture = textManager;
+    m_textTexture = textManager;
 }
 void SDLNs::SDLScore::render() {
     //create texture
-     std::string score = std::to_string(getScores());
-    m_texture->loadTexture("Score:   "+score);
+    std::string score = std::to_string(getScores());
+    m_textTexture->loadTexture("Score:   " + score);
     SDL_Rect rect = {0, 0, 70, 70};
-    SDL_RenderCopy(m_renderer,m_texture->getTexture(),nullptr,&rect);
+    SDL_RenderCopy(m_renderer, m_textTexture->getTexture(), nullptr, &rect);
 }
 
 void SDLNs::SDLScore::close() {
-    m_texture->free();
+    m_textTexture->free();
 }

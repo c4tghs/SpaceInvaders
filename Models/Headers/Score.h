@@ -13,7 +13,7 @@ namespace GameNs{
         void setScores(int scores);
         virtual void render()=0;
     private:
-        int m_score;
+        int m_score=0;
     };
 }
 

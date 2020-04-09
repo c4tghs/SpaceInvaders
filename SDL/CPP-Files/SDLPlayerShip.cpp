@@ -5,6 +5,7 @@
 #include "../Headers/SDLPlayerShip.h"
 
 #include <utility>
+#include <iostream>
 
 /**
  * Constructor for SDLPlayerShip
@@ -34,7 +35,7 @@ SDLNs::SDLPlayerShip::SDLPlayerShip(int xPos, int yPos, int width, int height,SD
 void SDLNs::SDLPlayerShip::loadMedia() {
     m_playerShipTexture->LoadTexture(m_playerShipPath,m_renderer);
     if(m_playerShipTexture->getTexture() == nullptr){
-        printf("Something went wrong loading texture %S",SDL_GetError());
+        std::cout << "Something went wrong loading texture: "<< SDL_GetError()<< std::endl;
         exit(1);
     }
 }
