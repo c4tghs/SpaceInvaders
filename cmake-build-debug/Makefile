@@ -527,33 +527,6 @@ Models/CPP-Files/Score.cpp.s:
 	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Score.cpp.s
 .PHONY : Models/CPP-Files/Score.cpp.s
 
-Models/CPP-Files/Ship.obj: Models/CPP-Files/Ship.cpp.obj
-
-.PHONY : Models/CPP-Files/Ship.obj
-
-# target to build an object file
-Models/CPP-Files/Ship.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Ship.cpp.obj
-.PHONY : Models/CPP-Files/Ship.cpp.obj
-
-Models/CPP-Files/Ship.i: Models/CPP-Files/Ship.cpp.i
-
-.PHONY : Models/CPP-Files/Ship.i
-
-# target to preprocess a source file
-Models/CPP-Files/Ship.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Ship.cpp.i
-.PHONY : Models/CPP-Files/Ship.cpp.i
-
-Models/CPP-Files/Ship.s: Models/CPP-Files/Ship.cpp.s
-
-.PHONY : Models/CPP-Files/Ship.s
-
-# target to generate assembly for a file
-Models/CPP-Files/Ship.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Ship.cpp.s
-.PHONY : Models/CPP-Files/Ship.cpp.s
-
 SDL/CPP-Files/SDLBackground.obj: SDL/CPP-Files/SDLBackground.cpp.obj
 
 .PHONY : SDL/CPP-Files/SDLBackground.obj
@@ -851,9 +824,6 @@ help:
 	@echo ... Models/CPP-Files/Score.obj
 	@echo ... Models/CPP-Files/Score.i
 	@echo ... Models/CPP-Files/Score.s
-	@echo ... Models/CPP-Files/Ship.obj
-	@echo ... Models/CPP-Files/Ship.i
-	@echo ... Models/CPP-Files/Ship.s
 	@echo ... SDL/CPP-Files/SDLBackground.obj
 	@echo ... SDL/CPP-Files/SDLBackground.i
 	@echo ... SDL/CPP-Files/SDLBackground.s

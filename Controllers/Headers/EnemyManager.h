@@ -18,6 +18,7 @@
 #include "CollisionManager.h"
 #include "BulletManager.h"
 #include <vector>
+#include <random>
 
 namespace GameNs
 {
@@ -32,16 +33,18 @@ namespace GameNs
         void enemyShoot();
         void createBullets();
         void close();
+        static int randomNumber(int lowerBound=0, int higherBound=3);
 
     private:
         AbstractFactory* m_factory;
-        std::vector<Ship *> m_enemyShips;
+        std::vector<EnemyShip *> m_enemyShips;
         std::string m_enemyShipPath;
         Timer *m_timer;
         int m_screenWidth;
         float m_nextMissile;
         std::string m_bulletPath = "../assets/bullet.jpeg";
         std::vector<Bullet*> m_bullets;
+        static std::random_device m_rd;
     };
 }
 

@@ -10,7 +10,6 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_ttf.h>
-#include "../Models/Headers/Ship.h"
 #include "AbstractFactory.h"
 namespace SDLNs
 {
@@ -18,8 +17,8 @@ namespace SDLNs
     public:
         SDLFactory(){};
 
-        GameNs::Ship* createPlayerShip(std::string playerShipPath) override;
-        GameNs::Ship *createEnemyShip(std::string enemyShipPath, int xPos, int yPos) override;
+        GameNs::PlayerShip* createPlayerShip(std::string playerShipPath) override;
+        GameNs::EnemyShip *createEnemyShip(std::string enemyShipPath, int xPos, int yPos) override;
         GameNs::Background* createBackground() override;
         GameNs::Bullet* createBullet(std::string bulletPath, int xPos, int yPos) override;
         GameNs::Timer* createTimer() override;

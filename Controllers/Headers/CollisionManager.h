@@ -6,7 +6,6 @@
 #define PROJECT_COLLISIONMANAGER_H
 
 #include <vector>
-#include "../../Models/Headers/Ship.h"
 #include "../../Models/Headers/Bullet.h"
 
 namespace GameNs

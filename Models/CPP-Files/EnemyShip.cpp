@@ -14,4 +14,4 @@ GameNs::EnemyShip::EnemyShip() {}
  * @param width - width of ship
  * @param height - height of ship
  */
-GameNs::EnemyShip::EnemyShip(int xPos, int yPos, int width, int height):Ship(xPos,yPos,width,height) {}
+GameNs::EnemyShip::EnemyShip(int xPos, int yPos, int width, int height):Entity(xPos,yPos,width,height) {}

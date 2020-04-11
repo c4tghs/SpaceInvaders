@@ -154,9 +154,6 @@
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/Score.cpp">
 			<Option target="Project"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/Ship.cpp">
-			<Option target="Project"/>
-		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/Headers/Background.h">
 			<Option target="Project"/>
 		</Unit>
@@ -176,9 +173,6 @@
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/Headers/Score.h">
-			<Option target="Project"/>
-		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/Headers/Ship.h">
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/Headers/Timer.h">

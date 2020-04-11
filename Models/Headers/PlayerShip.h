@@ -6,10 +6,11 @@
 #define PROJECT_PLAYERSHIP_H
 
 
-#include "Ship.h"
+#include "Entity.h"
+
 namespace GameNs
 {
-    class PlayerShip: public Ship {
+    class PlayerShip: public Entity {
     public:
         PlayerShip();
         PlayerShip(int xPos, int yPos, int width, int height);

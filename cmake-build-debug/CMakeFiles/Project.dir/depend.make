@@ -7,10 +7,11 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../Controlle
 CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../Factories/AbstractFactory.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../Models/Headers/Background.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../Models/Headers/Bullet.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../Models/Headers/EnemyShip.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../Models/Headers/Entity.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../Models/Headers/PlayerLife.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../Models/Headers/PlayerShip.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../Models/Headers/Score.h
-CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../Models/Headers/Ship.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../Models/Headers/Timer.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../SDL/Headers/SDLTimer.h
 
@@ -18,7 +19,6 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.obj: ../Contro
 CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.obj: ../Controllers/Headers/CollisionManager.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.obj: ../Models/Headers/Bullet.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.obj: ../Models/Headers/Entity.h
-CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.obj: ../Models/Headers/Ship.h
 
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Controllers/CPP-Files/EnemyManager.cpp
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Controllers/Headers/BulletManager.h
@@ -27,10 +27,11 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Controller
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Factories/AbstractFactory.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Models/Headers/Background.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Models/Headers/Bullet.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Models/Headers/EnemyShip.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Models/Headers/Entity.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Models/Headers/PlayerLife.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Models/Headers/PlayerShip.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Models/Headers/Score.h
-CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Models/Headers/Ship.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Models/Headers/Timer.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../SDL/Headers/SDLTimer.h
 
@@ -44,10 +45,11 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Controllers/Header
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Factories/AbstractFactory.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Models/Headers/Background.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Models/Headers/Bullet.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Models/Headers/EnemyShip.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Models/Headers/Entity.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Models/Headers/PlayerLife.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Models/Headers/PlayerShip.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Models/Headers/Score.h
-CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Models/Headers/Ship.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Models/Headers/Timer.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../SDL/Headers/SDLBullet.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../SDL/Headers/SDLKeyStates.h
@@ -61,10 +63,11 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Controlle
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Factories/AbstractFactory.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Models/Headers/Background.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Models/Headers/Bullet.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Models/Headers/EnemyShip.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Models/Headers/Entity.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Models/Headers/PlayerLife.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Models/Headers/PlayerShip.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Models/Headers/Score.h
-CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Models/Headers/Ship.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Models/Headers/Timer.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../SDL/Headers/SDLBullet.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../SDL/Headers/SDLKeyStates.h
@@ -102,7 +105,6 @@ CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: ../Models/Headers/Entity.h
 CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: ../Models/Headers/PlayerLife.h
 CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: ../Models/Headers/PlayerShip.h
 CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: ../Models/Headers/Score.h
-CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: ../Models/Headers/Ship.h
 CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: ../Models/Headers/Timer.h
 CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: ../SDL/Headers/SDLBackground.h
 CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: ../SDL/Headers/SDLBullet.h
@@ -123,7 +125,6 @@ CMakeFiles/Project.dir/Models/CPP-Files/Bullet.cpp.obj: ../Models/Headers/Entity
 CMakeFiles/Project.dir/Models/CPP-Files/EnemyShip.cpp.obj: ../Models/CPP-Files/EnemyShip.cpp
 CMakeFiles/Project.dir/Models/CPP-Files/EnemyShip.cpp.obj: ../Models/Headers/EnemyShip.h
 CMakeFiles/Project.dir/Models/CPP-Files/EnemyShip.cpp.obj: ../Models/Headers/Entity.h
-CMakeFiles/Project.dir/Models/CPP-Files/EnemyShip.cpp.obj: ../Models/Headers/Ship.h
 
 CMakeFiles/Project.dir/Models/CPP-Files/Entity.cpp.obj: ../Models/CPP-Files/Entity.cpp
 CMakeFiles/Project.dir/Models/CPP-Files/Entity.cpp.obj: ../Models/Headers/Entity.h
@@ -134,14 +135,9 @@ CMakeFiles/Project.dir/Models/CPP-Files/PlayerLife.cpp.obj: ../Models/Headers/Pl
 CMakeFiles/Project.dir/Models/CPP-Files/PlayerShip.cpp.obj: ../Models/CPP-Files/PlayerShip.cpp
 CMakeFiles/Project.dir/Models/CPP-Files/PlayerShip.cpp.obj: ../Models/Headers/Entity.h
 CMakeFiles/Project.dir/Models/CPP-Files/PlayerShip.cpp.obj: ../Models/Headers/PlayerShip.h
-CMakeFiles/Project.dir/Models/CPP-Files/PlayerShip.cpp.obj: ../Models/Headers/Ship.h
 
 CMakeFiles/Project.dir/Models/CPP-Files/Score.cpp.obj: ../Models/CPP-Files/Score.cpp
 CMakeFiles/Project.dir/Models/CPP-Files/Score.cpp.obj: ../Models/Headers/Score.h
-
-CMakeFiles/Project.dir/Models/CPP-Files/Ship.cpp.obj: ../Models/CPP-Files/Ship.cpp
-CMakeFiles/Project.dir/Models/CPP-Files/Ship.cpp.obj: ../Models/Headers/Entity.h
-CMakeFiles/Project.dir/Models/CPP-Files/Ship.cpp.obj: ../Models/Headers/Ship.h
 
 CMakeFiles/Project.dir/SDL/CPP-Files/SDLBackground.cpp.obj: ../Controllers/Headers/TextureManager.h
 CMakeFiles/Project.dir/SDL/CPP-Files/SDLBackground.cpp.obj: ../Models/Headers/Background.h
@@ -173,7 +169,6 @@ CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj: C:/MinGW/include/SDL2
 CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj: ../Controllers/Headers/TextureManager.h
 CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj: ../Models/Headers/EnemyShip.h
 CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj: ../Models/Headers/Entity.h
-CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj: ../Models/Headers/Ship.h
 CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj: ../Models/Headers/Timer.h
 CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj: ../SDL/CPP-Files/SDLEnemyShip.cpp
 CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj: ../SDL/Headers/SDLEnemyShip.h
@@ -190,7 +185,6 @@ CMakeFiles/Project.dir/SDL/CPP-Files/SDLPlayerLife.cpp.obj: ../SDL/Headers/SDLPl
 CMakeFiles/Project.dir/SDL/CPP-Files/SDLPlayerShip.cpp.obj: ../Controllers/Headers/TextureManager.h
 CMakeFiles/Project.dir/SDL/CPP-Files/SDLPlayerShip.cpp.obj: ../Models/Headers/Entity.h
 CMakeFiles/Project.dir/SDL/CPP-Files/SDLPlayerShip.cpp.obj: ../Models/Headers/PlayerShip.h
-CMakeFiles/Project.dir/SDL/CPP-Files/SDLPlayerShip.cpp.obj: ../Models/Headers/Ship.h
 CMakeFiles/Project.dir/SDL/CPP-Files/SDLPlayerShip.cpp.obj: ../Models/Headers/Timer.h
 CMakeFiles/Project.dir/SDL/CPP-Files/SDLPlayerShip.cpp.obj: ../SDL/CPP-Files/SDLPlayerShip.cpp
 CMakeFiles/Project.dir/SDL/CPP-Files/SDLPlayerShip.cpp.obj: ../SDL/Headers/SDLKeyStates.h
@@ -211,10 +205,11 @@ CMakeFiles/Project.dir/main.cpp.obj: ../Factories/AbstractFactory.h
 CMakeFiles/Project.dir/main.cpp.obj: ../Factories/SDLFactory.h
 CMakeFiles/Project.dir/main.cpp.obj: ../Models/Headers/Background.h
 CMakeFiles/Project.dir/main.cpp.obj: ../Models/Headers/Bullet.h
+CMakeFiles/Project.dir/main.cpp.obj: ../Models/Headers/EnemyShip.h
 CMakeFiles/Project.dir/main.cpp.obj: ../Models/Headers/Entity.h
 CMakeFiles/Project.dir/main.cpp.obj: ../Models/Headers/PlayerLife.h
+CMakeFiles/Project.dir/main.cpp.obj: ../Models/Headers/PlayerShip.h
 CMakeFiles/Project.dir/main.cpp.obj: ../Models/Headers/Score.h
-CMakeFiles/Project.dir/main.cpp.obj: ../Models/Headers/Ship.h
 CMakeFiles/Project.dir/main.cpp.obj: ../Models/Headers/Timer.h
 CMakeFiles/Project.dir/main.cpp.obj: ../main.cpp
 

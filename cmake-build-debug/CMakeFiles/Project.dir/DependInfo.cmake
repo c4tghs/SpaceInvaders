@@ -19,7 +19,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/PlayerLife.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Models/CPP-Files/PlayerLife.cpp.obj"
   "D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/PlayerShip.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Models/CPP-Files/PlayerShip.cpp.obj"
   "D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/Score.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Models/CPP-Files/Score.cpp.obj"
-  "D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/Ship.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Models/CPP-Files/Ship.cpp.obj"
   "D:/Users/cliff/Documents/C++/Project/SDL/CPP-Files/SDLBackground.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/SDL/CPP-Files/SDLBackground.cpp.obj"
   "D:/Users/cliff/Documents/C++/Project/SDL/CPP-Files/SDLBullet.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/SDL/CPP-Files/SDLBullet.cpp.obj"
   "D:/Users/cliff/Documents/C++/Project/SDL/CPP-Files/SDLEnemyShip.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj"

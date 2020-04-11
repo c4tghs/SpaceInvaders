@@ -14,7 +14,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Project.dir/Models/CPP-Files/PlayerLife.cpp.obj"
   "CMakeFiles/Project.dir/Models/CPP-Files/PlayerShip.cpp.obj"
   "CMakeFiles/Project.dir/Models/CPP-Files/Score.cpp.obj"
-  "CMakeFiles/Project.dir/Models/CPP-Files/Ship.cpp.obj"
   "CMakeFiles/Project.dir/SDL/CPP-Files/SDLBackground.cpp.obj"
   "CMakeFiles/Project.dir/SDL/CPP-Files/SDLBullet.cpp.obj"
   "CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj"

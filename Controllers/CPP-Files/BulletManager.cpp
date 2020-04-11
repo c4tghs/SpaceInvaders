@@ -81,7 +81,7 @@ void GameNs::BulletManager::moveBullet() {
     //change y position of bullet using time
     if(m_enemyFired)
     {
-        m_enemyBullet->setYPosition(m_enemyBullet->getYPosition() + m_timer->getDeltaTime() * 1 * 5);
+        m_enemyBullet->setYPosition(m_enemyBullet->getYPosition() + m_timer->getDeltaTime() * 1 * 10);
     }
 
 }

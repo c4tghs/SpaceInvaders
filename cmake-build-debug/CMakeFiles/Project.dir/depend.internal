@@ -8,10 +8,11 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj
  D:/Users/cliff/Documents/C++/Project/Factories/AbstractFactory.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Background.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Bullet.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/EnemyShip.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Entity.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/PlayerLife.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/PlayerShip.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Score.h
- D:/Users/cliff/Documents/C++/Project/Models/Headers/Ship.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Timer.h
  D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLTimer.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.obj
@@ -19,7 +20,6 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.obj
  D:/Users/cliff/Documents/C++/Project/Controllers/Headers/CollisionManager.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Bullet.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Entity.h
- D:/Users/cliff/Documents/C++/Project/Models/Headers/Ship.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj
  D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/EnemyManager.cpp
  D:/Users/cliff/Documents/C++/Project/Controllers/Headers/BulletManager.h
@@ -28,10 +28,11 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj
  D:/Users/cliff/Documents/C++/Project/Factories/AbstractFactory.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Background.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Bullet.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/EnemyShip.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Entity.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/PlayerLife.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/PlayerShip.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Score.h
- D:/Users/cliff/Documents/C++/Project/Models/Headers/Ship.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Timer.h
  D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLTimer.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj
@@ -45,10 +46,11 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj
  D:/Users/cliff/Documents/C++/Project/Factories/AbstractFactory.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Background.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Bullet.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/EnemyShip.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Entity.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/PlayerLife.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/PlayerShip.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Score.h
- D:/Users/cliff/Documents/C++/Project/Models/Headers/Ship.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Timer.h
  D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLBullet.h
  D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLKeyStates.h
@@ -62,10 +64,11 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj
  D:/Users/cliff/Documents/C++/Project/Factories/AbstractFactory.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Background.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Bullet.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/EnemyShip.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Entity.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/PlayerLife.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/PlayerShip.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Score.h
- D:/Users/cliff/Documents/C++/Project/Models/Headers/Ship.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Timer.h
  D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLBullet.h
  D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLKeyStates.h
@@ -103,7 +106,6 @@ CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj
  D:/Users/cliff/Documents/C++/Project/Models/Headers/PlayerLife.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/PlayerShip.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Score.h
- D:/Users/cliff/Documents/C++/Project/Models/Headers/Ship.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Timer.h
  D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLBackground.h
  D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLBullet.h
@@ -124,7 +126,6 @@ CMakeFiles/Project.dir/Models/CPP-Files/EnemyShip.cpp.obj
  D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/EnemyShip.cpp
  D:/Users/cliff/Documents/C++/Project/Models/Headers/EnemyShip.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Entity.h
- D:/Users/cliff/Documents/C++/Project/Models/Headers/Ship.h
 CMakeFiles/Project.dir/Models/CPP-Files/Entity.cpp.obj
  D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/Entity.cpp
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Entity.h
@@ -135,14 +136,9 @@ CMakeFiles/Project.dir/Models/CPP-Files/PlayerShip.cpp.obj
  D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/PlayerShip.cpp
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Entity.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/PlayerShip.h
- D:/Users/cliff/Documents/C++/Project/Models/Headers/Ship.h
 CMakeFiles/Project.dir/Models/CPP-Files/Score.cpp.obj
  D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/Score.cpp
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Score.h
-CMakeFiles/Project.dir/Models/CPP-Files/Ship.cpp.obj
- D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/Ship.cpp
- D:/Users/cliff/Documents/C++/Project/Models/Headers/Entity.h
- D:/Users/cliff/Documents/C++/Project/Models/Headers/Ship.h
 CMakeFiles/Project.dir/SDL/CPP-Files/SDLBackground.cpp.obj
  D:/Users/cliff/Documents/C++/Project/Controllers/Headers/TextureManager.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Background.h
@@ -174,7 +170,6 @@ CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj
  D:/Users/cliff/Documents/C++/Project/Controllers/Headers/TextureManager.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/EnemyShip.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Entity.h
- D:/Users/cliff/Documents/C++/Project/Models/Headers/Ship.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Timer.h
  D:/Users/cliff/Documents/C++/Project/SDL/CPP-Files/SDLEnemyShip.cpp
  D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLEnemyShip.h
@@ -191,7 +186,6 @@ CMakeFiles/Project.dir/SDL/CPP-Files/SDLPlayerShip.cpp.obj
  D:/Users/cliff/Documents/C++/Project/Controllers/Headers/TextureManager.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Entity.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/PlayerShip.h
- D:/Users/cliff/Documents/C++/Project/Models/Headers/Ship.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Timer.h
  D:/Users/cliff/Documents/C++/Project/SDL/CPP-Files/SDLPlayerShip.cpp
  D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLKeyStates.h
@@ -212,9 +206,10 @@ CMakeFiles/Project.dir/main.cpp.obj
  D:/Users/cliff/Documents/C++/Project/Factories/SDLFactory.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Background.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Bullet.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/EnemyShip.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Entity.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/PlayerLife.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/PlayerShip.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Score.h
- D:/Users/cliff/Documents/C++/Project/Models/Headers/Ship.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Timer.h
  D:/Users/cliff/Documents/C++/Project/main.cpp

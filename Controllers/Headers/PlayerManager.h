@@ -36,9 +36,10 @@ namespace GameNs{
         Timer *m_timer;
         BulletManager *bulletManager;
         SDLNs::SDLKeyStates* m_keyStates = nullptr;
-        Ship* m_playerShip;
+        PlayerShip* m_playerShip;
         int m_screenHeight;
         int m_screenWidth;
+        int m_playerStartPosX=0;
 
         std::vector<Bullet*> m_bullets;
         Score* m_score;

@@ -15,9 +15,9 @@
 /**
  * Method to create an instance of SDLPlayerShip
  * @param playerShipPath
- * @return instance of Ship
+ * @return instance of PlayerShip
  */
-GameNs::Ship* SDLNs::SDLFactory::createPlayerShip(std::string playerShipPath)
+GameNs::PlayerShip* SDLNs::SDLFactory::createPlayerShip(std::string playerShipPath)
 {
     int shipHeight =m_screenHeight/10;
     int xPos =  (m_screenWidth/2)-50;
@@ -30,9 +30,9 @@ GameNs::Ship* SDLNs::SDLFactory::createPlayerShip(std::string playerShipPath)
  * @param enemyShipPath - path to image of enemyShip
  * @param xPos - x postion of ship
  * @param yPos - y position of ship
- * @return - instance of Ship
+ * @return - instance of EnemyShip
  */
-GameNs::Ship * SDLNs::SDLFactory::createEnemyShip(std::string enemyShipPath, int xPos, int yPos) {
+GameNs::EnemyShip * SDLNs::SDLFactory::createEnemyShip(std::string enemyShipPath, int xPos, int yPos) {
     int shipWidth = m_screenWidth/25;
     int shipHeight = m_screenHeight/25;
     return new SDLEnemyShip(m_renderer, enemyShipPath, xPos, yPos,shipWidth,shipHeight);

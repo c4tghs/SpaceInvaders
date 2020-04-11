@@ -29,7 +29,8 @@ GameNs::PlayerManager::PlayerManager(GameNs::AbstractFactory *AF,std::string pla
     m_playerShip  = AF->createPlayerShip(m_playerShipPath);
     m_screenHeight = screenHeight;
     m_screenWidth = screenWidth;
-
+    //get player starting position
+    m_playerStartPosX = m_playerShip->getXPosition();
     //reserve
     m_bullets.reserve(10);
     //create 10 bullets
@@ -109,6 +110,7 @@ void GameNs::PlayerManager::checkPlayerBoundaries() {
         if(CollisionManager::checkCollision(BulletManager::getInstance()->getEnemyBullet(), m_playerShip->getXPosition(), m_playerShip->getYPosition(), m_playerShip->getWidth(), m_playerShip->getHeight()))
         {
             m_playerLife->setPlayerLife(m_playerLife->getPlayerLife()-1);
+            //m_playerShip->setXPosition(m_playerStartPosX);
             BulletManager::getInstance()->setEnemyBulletFired(false);
 
         }

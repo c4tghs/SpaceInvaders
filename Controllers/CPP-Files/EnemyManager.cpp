@@ -7,6 +7,9 @@
 #include <utility>
 #include <iostream>
 
+//seed random number generator
+std::random_device GameNs::EnemyManager::m_rd;
+
 /**
  * Constructor
  */
@@ -25,9 +28,11 @@ GameNs::EnemyManager::EnemyManager(AbstractFactory *AF,std::string enemyShipPath
     m_timer = AF->createTimer();
     m_screenWidth = screenWidth;
     //get current time and add random between 1 and 3 to it
-    m_nextMissile = m_timer->getTime()+std::rand()% 3 + 1;
+
+
+    m_nextMissile = m_timer->getTime()+ randomNumber(0, 0);
     //create 50 bullets
-    m_bullets.reserve(50);
+    m_bullets.reserve(100);
     createBullets();
     //create enemies
     createEnemies(30);
@@ -63,13 +68,13 @@ void GameNs::EnemyManager::updateEnemies() {
             if(moveDirection==1)
             {
                 moveDirection = -1;
-            } else{
+            }
+            else{
                 moveDirection = 1;
             }
-
-                m_enemyShip->setMoveDirection(moveDirection);
-                m_enemyShip->setXPosition(m_enemyShip->getXPosition());
-                m_enemyShip->setYPosition(m_enemyShip->getYPosition()+10);
+            m_enemyShip->setMoveDirection(moveDirection);
+            m_enemyShip->setXPosition(m_enemyShip->getXPosition());
+            m_enemyShip->setYPosition(m_enemyShip->getYPosition()+10);
             }
     }
     int i = 0;
@@ -123,14 +128,14 @@ bool GameNs::EnemyManager::checkEnemyBoundaries() {
  * Method that allows an enemy to shoot
  */
 void GameNs::EnemyManager::enemyShoot() {
-    if(m_timer->getTime() < m_nextMissile)
+    if(m_timer->getTime() < m_nextMissile/2)
     {
         return;
     }
     //generate random number -> enemy to select
-    int randomId = std::rand() % m_enemyShips.size();
+    int randomId = randomNumber(0,m_enemyShips.size());
 
-    for(int i =0; i < m_bullets.size();i++)
+    for(int i =0; i < m_bullets.size();)
     {
         m_bullets[i]->setXPosition(m_enemyShips[randomId]->getXPosition()+20);
         m_bullets[i]->setYPosition(m_enemyShips[randomId]->getYPosition());
@@ -147,7 +152,7 @@ void GameNs::EnemyManager::enemyShoot() {
     {
         createBullets();
     }
-    m_nextMissile = m_timer->getTime()+ std::rand()%3+1;
+    m_nextMissile = m_timer->getTime()+ randomNumber(0, 0);
 }
 
 void GameNs::EnemyManager::createBullets() {
@@ -162,6 +167,15 @@ void GameNs::EnemyManager::close() {
     {
         enemyShip->close();
     }
+}
+/**
+ * Method to generate random number
+ * @return - the generated random number
+ */
+int GameNs::EnemyManager::randomNumber(int lowerBound, int higherBound) {
+    std::mt19937 mt(m_rd());
+    std::uniform_real_distribution<double> m_dist(lowerBound,higherBound);
+    return m_dist(mt);
 }
 
 

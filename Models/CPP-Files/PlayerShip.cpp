@@ -15,6 +15,6 @@ GameNs::PlayerShip::PlayerShip(){}
  * @param width - width of ship
  * @param height - height of ship
  */
-GameNs::PlayerShip::PlayerShip(int xPos, int yPos, int width, int height):Ship(xPos,yPos,width,height) {}
+GameNs::PlayerShip::PlayerShip(int xPos, int yPos, int width, int height):Entity(xPos,yPos,width,height) {}
 
 
