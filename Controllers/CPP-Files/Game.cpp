@@ -46,7 +46,7 @@ void GameNs::Game::run() {
     m_factory->initialise(m_windowWidth,m_windowHeight);
     Background *background = m_factory->createBackground();
     PlayerManager* playerManager = new PlayerManager(m_factory,m_playerShipPath,m_playerBulletPath,m_windowHeight,m_windowWidth);
-    EnemyManager* enemyManager = new EnemyManager(m_factory, m_enemyShipPath, m_windowWidth);
+    EnemyManager* enemyManager = new EnemyManager(m_factory, m_windowWidth);
 
     while(m_factory->getRunningState())
     {

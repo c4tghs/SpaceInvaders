@@ -26,7 +26,7 @@ namespace GameNs{
         AbstractFactory* m_factory;
 
         std::string m_playerShipPath = "../assets/ship.png";
-        std::string m_enemyShipPath = "../assets/alien1.png";
+        std::string m_enemyShipPath = "../assets/octopus.png";
         std::string m_playerBulletPath = "../assets/playerBullet.png";
         const int m_windowHeight = 720 ;
         const int m_windowWidth = 1280;

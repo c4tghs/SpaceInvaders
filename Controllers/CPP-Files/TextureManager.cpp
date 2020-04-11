@@ -11,12 +11,7 @@
 GameNs::TextureManager::TextureManager(){
 
 }
-/**
- * Destructor
- */
-GameNs::TextureManager::~TextureManager() {
-    free();
-}
+
 /**
  * Constructor
  * @param renderer

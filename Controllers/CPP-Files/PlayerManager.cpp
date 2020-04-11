@@ -37,10 +37,6 @@ GameNs::PlayerManager::PlayerManager(GameNs::AbstractFactory *AF,std::string pla
     createBullets();
     //get bulletManager
     bulletManager = BulletManager::getInstance(m_timer, m_screenHeight);
-    //create user score
-    m_score = AF->createScore();
-    //set player score to 0
-    m_score->setScores(0);
     //create player life
     m_playerLife = AF->createPlayerLife();
 
@@ -57,13 +53,7 @@ void GameNs::PlayerManager::update() {
     bulletManager->update();
     //check if player bullet has collided with enemy
     collision = bulletManager->checkPlayerCollisions();
-    if(collision)
-    {
-        m_score->setScores(m_score->getScores()+1);
-    }
     checkPlayerBoundaries();
-    //render player score
-    m_score->render();
     //render player life
     m_playerLife->render();
     //render player

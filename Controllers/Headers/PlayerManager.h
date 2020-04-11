@@ -42,7 +42,7 @@ namespace GameNs{
         int m_playerStartPosX=0;
 
         std::vector<Bullet*> m_bullets;
-        Score* m_score;
+        //Score* m_score;
         PlayerLife* m_playerLife;
     };
 }

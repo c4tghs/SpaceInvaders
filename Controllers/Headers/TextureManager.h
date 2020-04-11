@@ -11,7 +11,6 @@ namespace GameNs
     public:
 
         TextureManager();
-        ~TextureManager();
         TextureManager(SDL_Renderer *renderer);
         SDL_Texture* getTexture();
         void LoadTexture(const std::string& filename, SDL_Renderer *ren);

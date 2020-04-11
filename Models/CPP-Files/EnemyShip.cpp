@@ -15,3 +15,11 @@ GameNs::EnemyShip::EnemyShip() {}
  * @param height - height of ship
  */
 GameNs::EnemyShip::EnemyShip(int xPos, int yPos, int width, int height):Entity(xPos,yPos,width,height) {}
+
+void GameNs::EnemyShip::setEnemyType(GameNs::EnemyType type) {
+    m_enemyType = type;
+}
+
+GameNs::EnemyType GameNs::EnemyShip::getEnemyType() {
+    return m_enemyType;
+}

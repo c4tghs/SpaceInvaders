@@ -21,10 +21,9 @@ GameNs::EnemyManager::EnemyManager() {}
  * @param screenHeight - height of screen
  * @param screenWidth - width of screen
  */
-GameNs::EnemyManager::EnemyManager(AbstractFactory *AF,std::string enemyShipPath, int screenWidth)
+GameNs::EnemyManager::EnemyManager(AbstractFactory *AF, int screenWidth)
 {
     m_factory = AF;
-    m_enemyShipPath = std::move(enemyShipPath);
     m_timer = AF->createTimer();
     m_screenWidth = screenWidth;
     //get current time and add random between 1 and 3 to it
@@ -36,6 +35,11 @@ GameNs::EnemyManager::EnemyManager(AbstractFactory *AF,std::string enemyShipPath
     createBullets();
     //create enemies
     createEnemies(30);
+
+    //create player score
+    m_score = AF->createScore();
+    //set player score to 0
+    m_score->setScores(0);
 
 }
 /**
@@ -49,7 +53,24 @@ void GameNs::EnemyManager::createEnemies(int number) {
         int xPos = ((y%10)*70)+100;
         int yPos=((y/10)*50)+70;
 
-        m_enemyShips.emplace_back(m_factory->createEnemyShip(m_enemyShipPath,xPos,yPos));
+        //m_enemyShips.emplace_back(m_factory->createEnemyShip(m_enemyShipOctopusPath, xPos, yPos));
+        if(y < 10)
+        {
+            m_enemyShips.emplace_back(m_factory->createEnemyShip(m_enemyShipOctopusPath, xPos, yPos));
+            //set enemy type
+            m_enemyShips[y]->setEnemyType(Octopus);
+        } else if (y >= 10 && y < 20)
+        {
+            m_enemyShips.emplace_back(m_factory->createEnemyShip(m_enemyShipCrabPath, xPos, yPos));
+            //set enemy type
+            m_enemyShips[y]->setEnemyType(Crab);
+        } else
+        {
+            m_enemyShips.emplace_back(m_factory->createEnemyShip(m_enemyShipSquidPath, xPos, yPos));
+            //set enemy type
+            m_enemyShips[y]->setEnemyType(Squid);
+        }
+
     }
 }
 
@@ -87,8 +108,29 @@ void GameNs::EnemyManager::updateEnemies() {
         {
             if(CollisionManager::checkCollision(BulletManager::getInstance()->getPlayerBullet(), m_enemyShip->getXPosition(), m_enemyShip->getYPosition(), m_enemyShip->getWidth(), m_enemyShip->getHeight()))
             {
+                //player score
+                switch (m_enemyShip->getEnemyType())
+                {
+                    //octopus
+                    case 0:
+                        m_score->setScores(m_score->getScores()+5);
+                        break;
+                        //crab
+                    case 1:
+                        m_score->setScores(m_score->getScores()+3);
+                        break;
+                        //squid
+                    case 2:
+                        m_score->setScores(m_score->getScores()+1);
+                        break;
+                    default:
+                        std::cout << "Type not recoqnised" << std::endl;
+
+                }
                 //close enemy ship
                 m_enemyShip->close();
+
+
                 //remove ship from vector
                 m_enemyShips.erase(m_enemyShips.begin()+i);
                 BulletManager::getInstance()->setPlayerBulletFired(false);
@@ -102,6 +144,8 @@ void GameNs::EnemyManager::updateEnemies() {
     }
     //allow enemy to shoot
     enemyShoot();
+    //show player score
+    m_score->render();
  }
 /**
  * Method to move enemies across screen
@@ -129,6 +173,10 @@ bool GameNs::EnemyManager::checkEnemyBoundaries() {
  */
 void GameNs::EnemyManager::enemyShoot() {
     if(m_timer->getTime() < m_nextMissile/2)
+    {
+        return;
+    }
+    if(m_enemyShips.size() == 0)
     {
         return;
     }

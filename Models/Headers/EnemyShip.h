@@ -9,6 +9,8 @@
 #include "Entity.h"
 namespace GameNs
 {
+    enum EnemyType{Octopus,Crab,Squid};
+
     class EnemyShip: public Entity {
     public:
         EnemyShip();
@@ -17,6 +19,11 @@ namespace GameNs
         virtual void close() = 0;
         virtual int getMoveDirection()=0;
         virtual void setMoveDirection(int direction)=0;
+        void setEnemyType(EnemyType type);
+        EnemyType getEnemyType();
+
+    private:
+        EnemyType  m_enemyType;
     };
 }
 
