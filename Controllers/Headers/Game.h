@@ -11,6 +11,9 @@
 
 
 #include "../../Factories/AbstractFactory.h"
+#include "PlayerManager.h"
+#include "EnemyManager.h"
+
 namespace GameNs{
     class Game {
     public:
@@ -18,18 +21,19 @@ namespace GameNs{
         static Game* getInstance(AbstractFactory *AF);
 
         void run();
+        void initialise();
 
     private:
         static Game* m_instance;
         Game(AbstractFactory *AF);
         Game();
+        Timer* m_timer;
+        PlayerManager* m_playerManager = nullptr;
+        EnemyManager* m_enemyManager  = nullptr;
+        BulletManager* m_bulletManager = nullptr;
         AbstractFactory* m_factory;
-
-        std::string m_playerShipPath = "../assets/ship.png";
-        std::string m_enemyShipPath = "../assets/octopus.png";
-        std::string m_playerBulletPath = "../assets/playerBullet.png";
-        const int m_windowHeight = 720 ;
-        const int m_windowWidth = 1280;
+        const int m_screenHeight = 720 ;
+        const int m_screenWidth = 1280;
     };
 
 }

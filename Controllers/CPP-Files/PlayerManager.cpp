@@ -20,13 +20,14 @@ GameNs::PlayerManager::PlayerManager() {}
  * @param screenHeight - screen height
  * @param screenWidth - screen width
  */
-GameNs::PlayerManager::PlayerManager(GameNs::AbstractFactory *AF,std::string playerShipPath,std::string bulletPath,int screenHeight, int screenWidth){
+GameNs::PlayerManager::PlayerManager(GameNs::AbstractFactory *AF, int screenHeight, int screenWidth,
+                                     BulletManager *bulletManager,
+                                     Timer *timer) {
     m_factory = AF;
-    m_timer = AF->createTimer();
-    m_playerShipPath = std::move(playerShipPath);
-    m_bulletPath = std::move(bulletPath);
+    //create timer
+    m_timer = timer;
     //create playerShip;
-    m_playerShip  = AF->createPlayerShip(m_playerShipPath);
+    m_playerShip  = m_factory->createPlayerShip(m_playerShipPath);
     m_screenHeight = screenHeight;
     m_screenWidth = screenWidth;
     //get player starting position
@@ -35,30 +36,24 @@ GameNs::PlayerManager::PlayerManager(GameNs::AbstractFactory *AF,std::string pla
     m_bullets.reserve(10);
     //create 10 bullets
     createBullets();
-    //get bulletManager
-    bulletManager = BulletManager::getInstance(m_timer, m_screenHeight);
+    //get m_bulletManager
+    m_bulletManager = bulletManager;
     //create player life
-    m_playerLife = AF->createPlayerLife();
-
+    m_playerLife = m_factory->createPlayerLife();
 }
 /**
  * update method
  */
 void GameNs::PlayerManager::update() {
-    bool collision;
     //move player
     playerActions();
     //update timer
     m_timer->update();
-    bulletManager->update();
-    //check if player bullet has collided with enemy
-    collision = bulletManager->checkPlayerCollisions();
     checkPlayerBoundaries();
     //render player life
     m_playerLife->render();
     //render player
     m_playerShip->render();
-    bulletManager->setPlayerBulletCollision(false);
 }
 /**
  * Method to check what button used has pressed
@@ -95,20 +90,20 @@ void GameNs::PlayerManager::checkPlayerBoundaries() {
         m_playerShip->setXPosition(m_screenWidth - m_playerShip->getWidth());
 
     }
-    if(bulletManager->getEnemyBulletFired())
+    if(m_bulletManager->getEnemyBulletFired())
     {
-        if(CollisionManager::checkCollision(BulletManager::getInstance()->getEnemyBullet(), m_playerShip->getXPosition(), m_playerShip->getYPosition(), m_playerShip->getWidth(), m_playerShip->getHeight()))
+        if(CollisionManager::checkCollision(m_bulletManager->getEnemyBullet(), m_playerShip->getXPosition(), m_playerShip->getYPosition(), m_playerShip->getWidth(), m_playerShip->getHeight()))
         {
             m_playerLife->setPlayerLife(m_playerLife->getPlayerLife()-1);
             //m_playerShip->setXPosition(m_playerStartPosX);
-            BulletManager::getInstance()->setEnemyBulletFired(false);
+            m_bulletManager->setEnemyBulletFired(false);
 
         }
 
     }
 }
 /**
- * Method to destory player texture
+ * Method to destroy player texture
  */
 void GameNs::PlayerManager::close() {
     for(auto & m_bullet : m_bullets)
@@ -123,21 +118,20 @@ void GameNs::PlayerManager::close() {
  */
 void GameNs::PlayerManager::shoot() {
     //if(m_timer->)
-    if(bulletManager->getPlayerBulletFired())
+    if(m_bulletManager->getPlayerBulletFired())
     {
         return;
     }
     for(int i =0; i < m_bullets.size();i++)
     {
-
         m_bullets[i]->setXPosition(m_playerShip->getXPosition()+60);
         m_bullets[i]->setYPosition(m_playerShip->getYPosition());
-        if(bulletManager->getPlayerBulletFired())
+        if(m_bulletManager->getPlayerBulletFired())
         {
             break;
         }
-        bulletManager->setPlayerBullet(m_bullets[i]);
-        bulletManager->setPlayerBulletFired(true);
+        m_bulletManager->setPlayerBullet(m_bullets[i]);
+        m_bulletManager->setPlayerBulletFired(true);
         //remove one bullet from vector
         m_bullets.erase(m_bullets.begin()+i);
         break; //execute this loop once
@@ -148,6 +142,9 @@ void GameNs::PlayerManager::shoot() {
     }
 }
 
+/**
+ * Method to create bullets
+ */
 void GameNs::PlayerManager::createBullets() {
     for(int i =0; i<10;i++)
     {

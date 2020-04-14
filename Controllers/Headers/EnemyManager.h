@@ -25,7 +25,8 @@ namespace GameNs
     class EnemyManager {
     public:
         EnemyManager();
-        EnemyManager(AbstractFactory *AF, int screenWidth);
+        EnemyManager(AbstractFactory *AF, int screenWidth, int screenHeight, BulletManager *bulletManager,
+                     Timer *timer);
         void createEnemies(int number);
         void updateEnemies();
         void moveEnemies();
@@ -39,8 +40,12 @@ namespace GameNs
         AbstractFactory* m_factory;
         std::vector<EnemyShip *> m_enemyShips;
         Timer *m_timer;
-        int m_screenWidth;
-        float m_nextMissile;
+        BulletManager* m_bulletManager= nullptr;
+        int m_screenWidth=0;
+        int m_screenHeight=0;
+        int m_playerYPos=0;
+        float m_nextMissile=0;
+        bool m_playerReached = false;
         std::string m_enemyShipOctopusPath = "../assets/octopus.png";
         std::string m_enemyShipCrabPath = "../assets/crab.png";
         std::string m_enemyShipSquidPath = "../assets/squid.png";

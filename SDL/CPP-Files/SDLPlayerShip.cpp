@@ -33,12 +33,14 @@ SDLNs::SDLPlayerShip::SDLPlayerShip(int xPos, int yPos, int width, int height,SD
  * Method to create texture for player
  */
 void SDLNs::SDLPlayerShip::loadMedia() {
-    m_playerShipTexture->LoadTexture(m_playerShipPath,m_renderer);
+    m_playerShipTexture->LoadTexture(m_playerShipPath);
     if(m_playerShipTexture->getTexture() == nullptr){
         std::cout << "Something went wrong loading texture: "<< SDL_GetError()<< std::endl;
         exit(1);
     }
+
 }
+
 /**
  * Method to show player
  */

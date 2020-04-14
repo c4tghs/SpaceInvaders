@@ -20,7 +20,6 @@ namespace SDLNs
 
     private:
         SDL_Renderer* m_renderer;
-        GameNs::TextureManager* m_backgroundTexture;
     };
 
 }

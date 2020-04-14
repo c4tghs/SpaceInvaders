@@ -4,9 +4,6 @@
 
 #include "../Headers/EnemyManager.h"
 
-#include <utility>
-#include <iostream>
-
 //seed random number generator
 std::random_device GameNs::EnemyManager::m_rd;
 
@@ -21,14 +18,16 @@ GameNs::EnemyManager::EnemyManager() {}
  * @param screenHeight - height of screen
  * @param screenWidth - width of screen
  */
-GameNs::EnemyManager::EnemyManager(AbstractFactory *AF, int screenWidth)
+GameNs::EnemyManager::EnemyManager(AbstractFactory *AF, int screenWidth, int screenHeight, BulletManager *bulletManager,
+                                   Timer *timer)
 {
     m_factory = AF;
-    m_timer = AF->createTimer();
+    m_timer =timer;
     m_screenWidth = screenWidth;
+    m_screenHeight = screenHeight;
+    m_bulletManager = bulletManager;
+    m_playerYPos = m_screenHeight-((m_screenHeight/10)+10);
     //get current time and add random between 1 and 3 to it
-
-
     m_nextMissile = m_timer->getTime()+ randomNumber(0, 0);
     //create 50 bullets
     m_bullets.reserve(100);
@@ -53,7 +52,6 @@ void GameNs::EnemyManager::createEnemies(int number) {
         int xPos = ((y%10)*70)+100;
         int yPos=((y/10)*50)+70;
 
-        //m_enemyShips.emplace_back(m_factory->createEnemyShip(m_enemyShipOctopusPath, xPos, yPos));
         if(y < 10)
         {
             m_enemyShips.emplace_back(m_factory->createEnemyShip(m_enemyShipOctopusPath, xPos, yPos));
@@ -96,45 +94,36 @@ void GameNs::EnemyManager::updateEnemies() {
             m_enemyShip->setMoveDirection(moveDirection);
             m_enemyShip->setXPosition(m_enemyShip->getXPosition());
             m_enemyShip->setYPosition(m_enemyShip->getYPosition()+10);
-            }
+        }
     }
     int i = 0;
     for(auto & m_enemyShip : m_enemyShips)
     {
-
-        // TODO check if enemy has reached player
         //check collision with player bullet
-        if(BulletManager::getInstance()->getPlayerBulletFired())
+        if(m_bulletManager->getPlayerBulletFired())
         {
-            if(CollisionManager::checkCollision(BulletManager::getInstance()->getPlayerBullet(), m_enemyShip->getXPosition(), m_enemyShip->getYPosition(), m_enemyShip->getWidth(), m_enemyShip->getHeight()))
+            if(CollisionManager::checkCollision(m_bulletManager->getPlayerBullet(), m_enemyShip->getXPosition(), m_enemyShip->getYPosition(), m_enemyShip->getWidth(), m_enemyShip->getHeight()))
             {
                 //player score
-                switch (m_enemyShip->getEnemyType())
+                if(m_enemyShip->getEnemyType() == EnemyType::Squid)
                 {
-                    //octopus
-                    case 0:
-                        m_score->setScores(m_score->getScores()+5);
-                        break;
-                        //crab
-                    case 1:
-                        m_score->setScores(m_score->getScores()+3);
-                        break;
-                        //squid
-                    case 2:
-                        m_score->setScores(m_score->getScores()+1);
-                        break;
-                    default:
-                        std::cout << "Type not recoqnised" << std::endl;
-
+                    m_score->setScores(m_score->getScores()+1);
+                } else if (m_enemyShip->getEnemyType() == EnemyType::Crab)
+                {
+                    m_score->setScores(m_score->getScores()+3);
                 }
-                //close enemy ship
-                m_enemyShip->close();
+                else if(m_enemyShip->getEnemyType() == EnemyType::Octopus)
+                {
+                    m_score->setScores(m_score->getScores()+5);
+                }
 
+                //close enemy ship, ie destory texture
+                m_enemyShip->close();
 
                 //remove ship from vector
                 m_enemyShips.erase(m_enemyShips.begin()+i);
-                BulletManager::getInstance()->setPlayerBulletFired(false);
-                BulletManager::getInstance()->setPlayerBulletCollision(true);
+                m_bulletManager->setPlayerBulletFired(false);
+                m_bulletManager->setPlayerBulletCollision(true);
                 return; //execute once
             }
         }
@@ -176,7 +165,7 @@ void GameNs::EnemyManager::enemyShoot() {
     {
         return;
     }
-    if(m_enemyShips.size() == 0)
+    if(m_enemyShips.empty())
     {
         return;
     }
@@ -187,12 +176,12 @@ void GameNs::EnemyManager::enemyShoot() {
     {
         m_bullets[i]->setXPosition(m_enemyShips[randomId]->getXPosition()+20);
         m_bullets[i]->setYPosition(m_enemyShips[randomId]->getYPosition());
-        if(BulletManager::getInstance()->getEnemyBulletFired())
+        if(m_bulletManager->getEnemyBulletFired())
         {
             break;
         }
-        BulletManager::getInstance()->setEnemyBulletFired(true);
-        BulletManager::getInstance()->setEnemyBullet(m_bullets[i]);
+        m_bulletManager->setEnemyBulletFired(true);
+        m_bulletManager->setEnemyBullet(m_bullets[i]);
         m_bullets.erase(m_bullets.begin()+i);
         break;
     }

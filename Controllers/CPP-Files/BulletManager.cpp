@@ -6,9 +6,9 @@
 #include <iostream>
 
 //static member
-GameNs::BulletManager* GameNs::BulletManager::m_instance =nullptr;
+//GameNs::BulletManager* GameNs::BulletManager::m_instance =nullptr;
 
-GameNs::BulletManager* GameNs::BulletManager::getInstance() {
+/*GameNs::BulletManager* GameNs::BulletManager::getInstance() {
     if(m_instance == nullptr)
     {
         m_instance = new BulletManager();
@@ -21,7 +21,7 @@ GameNs::BulletManager * GameNs::BulletManager::getInstance(Timer *timer, int scr
         m_instance = new BulletManager(timer, screenHeight);
     }
     return m_instance;
-}
+}*/
 
 /**
  * Constructor
@@ -65,6 +65,7 @@ void GameNs::BulletManager::update() {
         m_playerBullet->setYPosition(0);
         m_playerBullet->close();
     }
+    setPlayerBulletCollision(false);
 
 }
 /**

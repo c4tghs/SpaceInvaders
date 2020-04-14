@@ -122,6 +122,33 @@ Project/fast:
 	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/build
 .PHONY : Project/fast
 
+Controllers/CPP-Files/BonusManager.obj: Controllers/CPP-Files/BonusManager.cpp.obj
+
+.PHONY : Controllers/CPP-Files/BonusManager.obj
+
+# target to build an object file
+Controllers/CPP-Files/BonusManager.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.obj
+.PHONY : Controllers/CPP-Files/BonusManager.cpp.obj
+
+Controllers/CPP-Files/BonusManager.i: Controllers/CPP-Files/BonusManager.cpp.i
+
+.PHONY : Controllers/CPP-Files/BonusManager.i
+
+# target to preprocess a source file
+Controllers/CPP-Files/BonusManager.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.i
+.PHONY : Controllers/CPP-Files/BonusManager.cpp.i
+
+Controllers/CPP-Files/BonusManager.s: Controllers/CPP-Files/BonusManager.cpp.s
+
+.PHONY : Controllers/CPP-Files/BonusManager.s
+
+# target to generate assembly for a file
+Controllers/CPP-Files/BonusManager.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.s
+.PHONY : Controllers/CPP-Files/BonusManager.cpp.s
+
 Controllers/CPP-Files/BulletManager.obj: Controllers/CPP-Files/BulletManager.cpp.obj
 
 .PHONY : Controllers/CPP-Files/BulletManager.obj
@@ -779,6 +806,9 @@ help:
 	@echo ... Project
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Controllers/CPP-Files/BonusManager.obj
+	@echo ... Controllers/CPP-Files/BonusManager.i
+	@echo ... Controllers/CPP-Files/BonusManager.s
 	@echo ... Controllers/CPP-Files/BulletManager.obj
 	@echo ... Controllers/CPP-Files/BulletManager.i
 	@echo ... Controllers/CPP-Files/BulletManager.s

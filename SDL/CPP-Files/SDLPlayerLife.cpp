@@ -25,7 +25,7 @@ SDLNs::SDLPlayerLife::SDLPlayerLife(SDL_Renderer *renderer, int screenWidth) {
  */
 void SDLNs::SDLPlayerLife::render() {
     std::string life = std::to_string(getPlayerLife());
-    m_textTexture->loadTexture("Lives:   " + life);
+    m_textTexture->loadTexture("Lives:   " + life, 20);
     SDL_Rect rect = {m_screenWidth-100, 0, 60, 60};
     SDL_RenderCopy(m_renderer, m_textTexture->getTexture(), nullptr, &rect);
 }

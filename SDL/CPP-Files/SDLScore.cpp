@@ -13,7 +13,7 @@ SDLNs::SDLScore::SDLScore(SDL_Renderer *renderer) {
 void SDLNs::SDLScore::render() {
     //create texture
     std::string score = std::to_string(getScores());
-    m_textTexture->loadTexture("Score:   " + score);
+    m_textTexture->loadTexture("Score:   " + score, 25);
     SDL_Rect rect = {0, 0, 70, 70};
     SDL_RenderCopy(m_renderer, m_textTexture->getTexture(), nullptr, &rect);
 }

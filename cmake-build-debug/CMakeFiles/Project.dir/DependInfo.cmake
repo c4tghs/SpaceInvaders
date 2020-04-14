@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/BonusManager.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.obj"
   "D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/BulletManager.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj"
   "D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/CollisionManager.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.obj"
   "D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/EnemyManager.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj"

@@ -31,18 +31,19 @@ SDL_Texture* GameNs::TextManager::getTexture() {
  * @param filename - the text to display
  * @param ren
  */
-void GameNs::TextManager::loadTexture(const std::string& text) {
+void GameNs::TextManager::loadTexture(const std::string &text, int textSize) {
     SDL_Texture *texture;
     SDL_Surface *surface;
     SDL_Color color = {255,255,255};
-    m_font = TTF_OpenFont(m_fontFile,20);
+    m_font = TTF_OpenFont(m_fontFile,textSize);
+    TTF_SetFontStyle(m_font,1);
     if(m_font==nullptr)
     {
         std::cout << "Failed to load font. Error: " << SDL_GetError() << std::endl;
         exit(1);
     } else{
         //create surface
-        surface = TTF_RenderText_Solid(m_font,text.c_str(),color);
+        surface = TTF_RenderText_Blended(m_font,text.c_str(),color);
         if(surface==nullptr)
         {
             std::cout << "Failed to create surface. Error: " << SDL_GetError() << std::endl;
@@ -71,5 +72,6 @@ void GameNs::TextManager::free() {
         m_texture = nullptr;
     }
 }
+
 
 

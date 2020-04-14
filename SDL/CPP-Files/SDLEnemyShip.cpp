@@ -32,7 +32,7 @@ SDLNs::SDLEnemyShip::SDLEnemyShip(SDL_Renderer *renderer, std::string enemyShipP
  * Method to create enemyShip texture
  */
 void SDLNs::SDLEnemyShip::loadMedia() {
-    m_enemyShipTexture->LoadTexture(m_enemyShipPath,m_renderer);
+    m_enemyShipTexture->LoadTexture(m_enemyShipPath);
     if(m_enemyShipTexture->getTexture() == nullptr)
     {
         std::cout << "Something went wrong loading texture: "<< SDL_GetError()<< std::endl;

@@ -24,7 +24,7 @@ GameNs::TextureManager::TextureManager(SDL_Renderer *renderer){
  * @param filename - path to image
  * @param ren - renderer
  */
-void GameNs::TextureManager::LoadTexture(const std::string& filename, SDL_Renderer *ren) {
+void GameNs::TextureManager::LoadTexture(const std::string &filename) {
     SDL_Surface* surface = IMG_Load(filename.c_str());
     SDL_Texture* tex;
     if(surface == nullptr)
@@ -38,7 +38,7 @@ void GameNs::TextureManager::LoadTexture(const std::string& filename, SDL_Render
         SDL_SetColorKey(surface,SDL_TRUE, SDL_MapRGB(surface->format,0,0,0));
 
         //Create texture from surface pixels
-        tex = SDL_CreateTextureFromSurface(ren, surface);
+        tex = SDL_CreateTextureFromSurface(m_renderer, surface);
         if(tex == nullptr)
         {
             std::cout << "Failed to create texture. Error: " << SDL_GetError() << std::endl;
@@ -46,7 +46,10 @@ void GameNs::TextureManager::LoadTexture(const std::string& filename, SDL_Render
         } else
         {
             m_texture = tex;
+            m_width = surface->w;
+            m_height = surface->h;
         }
+
         //remove old loaded surface
         SDL_FreeSurface(surface);
     }
@@ -71,4 +74,13 @@ void GameNs::TextureManager::free() {
         m_texture = nullptr;
     }
 }
+
+int GameNs::TextureManager::getWidth() {
+    return m_width;
+}
+
+int GameNs::TextureManager::getHeight() {
+    return m_height;
+}
+
 

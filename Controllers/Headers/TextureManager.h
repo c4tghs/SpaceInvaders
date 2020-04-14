@@ -13,10 +13,14 @@ namespace GameNs
         TextureManager();
         TextureManager(SDL_Renderer *renderer);
         SDL_Texture* getTexture();
-        void LoadTexture(const std::string& filename, SDL_Renderer *ren);
+        void LoadTexture(const std::string &filename);
         void free();
+        int getWidth();
+        int getHeight();
 
     private:
+        int m_width;
+        int m_height;
         SDL_Renderer* m_renderer= nullptr;
         SDL_Texture* m_texture= nullptr;
     };

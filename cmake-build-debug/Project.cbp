@@ -82,6 +82,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/BonusManager.cpp">
+			<Option target="Project"/>
+		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/BulletManager.cpp">
 			<Option target="Project"/>
 		</Unit>
@@ -101,6 +104,9 @@
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/TextureManager.cpp">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/Headers/BonusManager.h">
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/Headers/BulletManager.h">

@@ -43,7 +43,7 @@ void SDLNs::SDLBullet::close() {
  * Method to create SDL texture for the bullet
  */
 void SDLNs::SDLBullet::loadMedia() {
-    m_texture->LoadTexture(m_bulletPath,m_renderer);
+    m_texture->LoadTexture(m_bulletPath);
     if(m_texture->getTexture() == nullptr)
     {
         std::cout << "Something went wrong loading texture: "<< SDL_GetError()<< std::endl;

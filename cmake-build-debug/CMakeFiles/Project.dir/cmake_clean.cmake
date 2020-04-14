@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.obj"
   "CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj"
   "CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.obj"
   "CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj"

@@ -11,8 +11,6 @@
 SDLNs::SDLBackground::SDLBackground(SDL_Renderer* renderer)
 {
     m_renderer = renderer;
-    //create texture
-    m_backgroundTexture = new GameNs::TextureManager(renderer);
 }
 /**
  * Method to show background
@@ -28,5 +26,6 @@ void SDLNs::SDLBackground::render() {
  * Method to destroy background texture
  */
 void SDLNs::SDLBackground::close() {
-    m_backgroundTexture->free();
+    //m_backgroundTexture->free();
+
 }
