@@ -63,3 +63,18 @@ void GameNs::Entity::setXPosition(int xPos) {
 void GameNs::Entity::setYPosition(int yPos) {
     m_yPos = yPos;
 }
+
+/**
+ * Method that sets the height of entity
+ * @param height
+ */
+void GameNs::Entity::setHeight(int height) {
+    m_height = height;
+}
+/**
+ * Method that sets the width of entity
+ * @param width
+ */
+void GameNs::Entity::setWidth(int width) {
+    m_width = width;
+}

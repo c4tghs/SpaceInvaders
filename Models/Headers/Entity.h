@@ -16,6 +16,8 @@ namespace GameNs{
         int getYPosition() const;
         int getWidth() const;
         int getHeight() const;
+        void setHeight(int height);
+        void setWidth(int width);
 
     private:
         int m_xPos;

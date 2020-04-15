@@ -3,25 +3,6 @@
  */
 
 #include "../Headers/BulletManager.h"
-#include <iostream>
-
-//static member
-//GameNs::BulletManager* GameNs::BulletManager::m_instance =nullptr;
-
-/*GameNs::BulletManager* GameNs::BulletManager::getInstance() {
-    if(m_instance == nullptr)
-    {
-        m_instance = new BulletManager();
-    }
-    return m_instance;
-}
-GameNs::BulletManager * GameNs::BulletManager::getInstance(Timer *timer, int screenHeight) {
-    if(m_instance ==nullptr)
-    {
-        m_instance = new BulletManager(timer, screenHeight);
-    }
-    return m_instance;
-}*/
 
 /**
  * Constructor
@@ -38,7 +19,6 @@ GameNs::BulletManager::BulletManager(Timer *timer, int screenHeight) {
     m_timer = timer;
     m_playerFired = false;
     m_screenHeight = screenHeight;
-    CollisionManager::getInstance();
 }
 /**
  * Update method
@@ -146,22 +126,39 @@ void GameNs::BulletManager::setEnemyBullet(GameNs::Bullet *bullet) {
     m_enemyBullet = bullet;
 }
 
+/**
+ * Method to set if enemy has fired a bullet
+ * @param isFired - if bullet is fired
+ */
 void GameNs::BulletManager::setEnemyBulletFired(bool isFired) {
     m_enemyFired = isFired;
 }
 
+/**
+ * Method to check if enemey has fired a bullet
+ * @return true of false
+ */
 bool GameNs::BulletManager::getEnemyBulletFired() {
     return m_enemyFired;
 }
-
+/**
+ * Method to get current player bullet
+ * @return - bullet
+ */
 GameNs::Bullet *GameNs::BulletManager::getPlayerBullet() {
     return m_playerBullet;
 }
-
+/**
+ * Method to set if bullet bullet has collided with enemy
+ * @param collided
+ */
 void GameNs::BulletManager::setPlayerBulletCollision(bool collided) {
     m_playerBulletCollided = collided;
 }
-
+/**
+ * Method to get current enemy bullet
+ * @return - bullet
+ */
 GameNs::Bullet *GameNs::BulletManager::getEnemyBullet() {
     return m_enemyBullet;
 }

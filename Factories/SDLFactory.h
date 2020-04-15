@@ -20,16 +20,17 @@ namespace SDLNs
         GameNs::PlayerShip* createPlayerShip(std::string playerShipPath) override;
         GameNs::EnemyShip *createEnemyShip(std::string enemyShipPath, int xPos, int yPos) override;
         GameNs::Background* createBackground() override;
-        GameNs::Bullet* createBullet(std::string bulletPath, int xPos, int yPos) override;
+        GameNs::Bullet *createBullet(std::string bulletPath, int xPos, int yPos, int width, int height) override;
         GameNs::Timer* createTimer() override;
         GameNs::Score* createScore() override;
-        GameNs::PlayerLife* createPlayerLife();
-        void createWindow(const char* title,int width, int height);
-        void createRender();
+        GameNs::PlayerLife* createPlayerLife() override;
+        GameNs::Bonus* createBonus(std::string bonusImagePath, int xPos, int yPos, int width, int height) override;
         void initialise(int windowWidth, int windowHeight) override;
         void close() override;
         void render() override;
         bool getRunningState() override;
+        void createWindow(const char* title,int width, int height);
+        void createRender();
 
     private:
         bool m_IsRunning = false;

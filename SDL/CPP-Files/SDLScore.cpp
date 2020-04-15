@@ -7,8 +7,7 @@
 
 SDLNs::SDLScore::SDLScore(SDL_Renderer *renderer) {
     m_renderer= renderer;
-    GameNs::TextManager* textManager = new GameNs::TextManager(m_renderer);
-    m_textTexture = textManager;
+    m_textTexture = new GameNs::TextManager(m_renderer);
 }
 void SDLNs::SDLScore::render() {
     //create texture

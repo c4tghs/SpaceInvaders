@@ -10,6 +10,7 @@
 #include "../SDL/Headers/SDLBullet.h"
 #include "../SDL/Headers/SDLScore.h"
 #include "../SDL/Headers/SDLPlayerLife.h"
+#include "../SDL/Headers/SDLBonus.h"
 
 
 /**
@@ -69,9 +70,7 @@ void SDLNs::SDLFactory::createRender() {
  * @param yPos - y position of bullet
  * @return - instance of Bullet
  */
-GameNs::Bullet* SDLNs::SDLFactory::createBullet(std::string bulletPath, int xPos, int yPos) {
-    int width = 10;
-    int height = 10;
+GameNs::Bullet * SDLNs::SDLFactory::createBullet(std::string bulletPath, int xPos, int yPos, int width, int height) {
     return new SDLBullet(m_renderer,bulletPath,xPos,yPos,width,height);
 }
 /**
@@ -90,12 +89,23 @@ GameNs::Score *SDLNs::SDLFactory::createScore() {
 }
 /**
  * Method to create an instance of SDLPlayerLife
- * @return
+ * @return - instance of
  */
 GameNs::PlayerLife *SDLNs::SDLFactory::createPlayerLife() {
     return new SDLPlayerLife(m_renderer,m_screenWidth);
 }
-
+/**
+ * Method to create an instance of SDLBonus
+ * @param bonusImagePath - path to bonus image
+ * @param xPos - x position of bonus
+ * @param yPos - y position of bonus
+ * @param width - width of bonus
+ * @param height - height of bonus
+ * @return - Bonus instance
+ */
+GameNs::Bonus *SDLNs::SDLFactory::createBonus(std::string bonusImagePath, int xPos, int yPos, int width, int height) {
+    return new SDLBonus(m_renderer,xPos,yPos,width,height,bonusImagePath);
+}
 /**
  * Method to initialise parameters ie, window, render etc.
  * @param windowWidth - width of the window
@@ -189,6 +199,8 @@ bool SDLNs::SDLFactory::getRunningState()
 
     return m_IsRunning;
 }
+
+
 
 
 

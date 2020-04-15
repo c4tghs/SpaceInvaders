@@ -3,9 +3,8 @@
  */
 
 #include "../Headers/EnemyManager.h"
+#include "../../Models/Headers/RandomNumber.h"
 
-//seed random number generator
-std::random_device GameNs::EnemyManager::m_rd;
 
 /**
  * Constructor
@@ -19,7 +18,8 @@ GameNs::EnemyManager::EnemyManager() {}
  * @param screenWidth - width of screen
  */
 GameNs::EnemyManager::EnemyManager(AbstractFactory *AF, int screenWidth, int screenHeight, BulletManager *bulletManager,
-                                   Timer *timer)
+                                   Timer *timer,
+                                   Score *score)
 {
     m_factory = AF;
     m_timer =timer;
@@ -28,7 +28,7 @@ GameNs::EnemyManager::EnemyManager(AbstractFactory *AF, int screenWidth, int scr
     m_bulletManager = bulletManager;
     m_playerYPos = m_screenHeight-((m_screenHeight/10)+10);
     //get current time and add random between 1 and 3 to it
-    m_nextMissile = m_timer->getTime()+ randomNumber(0, 0);
+    m_nextMissile = m_timer->getTime()+ GameNs::RandomNumber::getInstance()->getRandomNumber(0,3);
     //create 50 bullets
     m_bullets.reserve(100);
     createBullets();
@@ -36,10 +36,7 @@ GameNs::EnemyManager::EnemyManager(AbstractFactory *AF, int screenWidth, int scr
     createEnemies(30);
 
     //create player score
-    m_score = AF->createScore();
-    //set player score to 0
-    m_score->setScores(0);
-
+    m_score = score;
 }
 /**
  * Method used to create enemy instances
@@ -102,7 +99,9 @@ void GameNs::EnemyManager::updateEnemies() {
         //check collision with player bullet
         if(m_bulletManager->getPlayerBulletFired())
         {
-            if(CollisionManager::checkCollision(m_bulletManager->getPlayerBullet(), m_enemyShip->getXPosition(), m_enemyShip->getYPosition(), m_enemyShip->getWidth(), m_enemyShip->getHeight()))
+            if(CollisionManager::checkBulletCollision(m_bulletManager->getPlayerBullet(), m_enemyShip->getXPosition(),
+                                                      m_enemyShip->getYPosition(), m_enemyShip->getWidth(),
+                                                      m_enemyShip->getHeight()))
             {
                 //player score
                 if(m_enemyShip->getEnemyType() == EnemyType::Squid)
@@ -117,7 +116,7 @@ void GameNs::EnemyManager::updateEnemies() {
                     m_score->setScores(m_score->getScores()+5);
                 }
 
-                //close enemy ship, ie destory texture
+                //close enemy ship, ie destroy texture
                 m_enemyShip->close();
 
                 //remove ship from vector
@@ -133,8 +132,6 @@ void GameNs::EnemyManager::updateEnemies() {
     }
     //allow enemy to shoot
     enemyShoot();
-    //show player score
-    m_score->render();
  }
 /**
  * Method to move enemies across screen
@@ -170,7 +167,7 @@ void GameNs::EnemyManager::enemyShoot() {
         return;
     }
     //generate random number -> enemy to select
-    int randomId = randomNumber(0,m_enemyShips.size());
+    int randomId = GameNs::RandomNumber::getInstance()->getRandomNumber(0,m_enemyShips.size());
 
     for(int i =0; i < m_bullets.size();)
     {
@@ -189,13 +186,13 @@ void GameNs::EnemyManager::enemyShoot() {
     {
         createBullets();
     }
-    m_nextMissile = m_timer->getTime()+ randomNumber(0, 0);
+    m_nextMissile = m_timer->getTime()+ GameNs::RandomNumber::getInstance()->getRandomNumber(0,3);
 }
 
 void GameNs::EnemyManager::createBullets() {
     for(int i =0; i<50;i++)
     {
-        m_bullets.emplace_back(m_factory->createBullet(m_bulletPath,i+50,i+50));
+        m_bullets.emplace_back(m_factory->createBullet(m_bulletPath, i + 50, i + 50, 10, 10));
     }
 }
 
@@ -204,15 +201,6 @@ void GameNs::EnemyManager::close() {
     {
         enemyShip->close();
     }
-}
-/**
- * Method to generate random number
- * @return - the generated random number
- */
-int GameNs::EnemyManager::randomNumber(int lowerBound, int higherBound) {
-    std::mt19937 mt(m_rd());
-    std::uniform_real_distribution<double> m_dist(lowerBound,higherBound);
-    return m_dist(mt);
 }
 
 

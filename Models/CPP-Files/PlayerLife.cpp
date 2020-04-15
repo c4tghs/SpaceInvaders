@@ -7,7 +7,9 @@
 /**
  * Constructor
  */
-GameNs::PlayerLife::PlayerLife() {}
+GameNs::PlayerLife::PlayerLife() {
+    m_playerLife = 5;
+}
 
 /**
  * Method that returns playerlife

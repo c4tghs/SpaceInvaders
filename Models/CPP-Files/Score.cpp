@@ -6,7 +6,9 @@
 /**
  * Constructor
  */
-GameNs::Score::Score() {}
+GameNs::Score::Score() {
+    m_score = 0;
+}
 
 /**
  * Method that returns player score

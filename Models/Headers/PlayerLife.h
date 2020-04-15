@@ -15,7 +15,7 @@ namespace GameNs{
             virtual void render()=0;
 
         private:
-            int m_playerLife = 5;
+            int m_playerLife = 0;
     };
 
 }

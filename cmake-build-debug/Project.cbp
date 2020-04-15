@@ -142,6 +142,9 @@
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/Background.cpp">
 			<Option target="Project"/>
 		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/Bonus.cpp">
+			<Option target="Project"/>
+		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/Bullet.cpp">
 			<Option target="Project"/>
 		</Unit>
@@ -157,10 +160,16 @@
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/PlayerShip.cpp">
 			<Option target="Project"/>
 		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/RandomNumber.cpp">
+			<Option target="Project"/>
+		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/Score.cpp">
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/Headers/Background.h">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/Headers/Bonus.h">
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/Headers/Bullet.h">
@@ -178,6 +187,9 @@
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/Headers/PlayerShip.h">
 			<Option target="Project"/>
 		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/Headers/RandomNumber.h">
+			<Option target="Project"/>
+		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Models/Headers/Score.h">
 			<Option target="Project"/>
 		</Unit>
@@ -185,6 +197,9 @@
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/SDL/CPP-Files/SDLBackground.cpp">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/SDL/CPP-Files/SDLBonus.cpp">
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/SDL/CPP-Files/SDLBullet.cpp">
@@ -209,6 +224,9 @@
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLBackground.h">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLBonus.h">
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLBullet.h">

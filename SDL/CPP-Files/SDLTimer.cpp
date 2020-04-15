@@ -8,7 +8,7 @@
  */
 SDLNs::SDLTimer::SDLTimer()
 {
-    reset();
+    SDLTimer::reset();
 }
 /**
  * Method to reset all parameters

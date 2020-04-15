@@ -16,8 +16,7 @@ SDLNs::SDLPlayerLife::SDLPlayerLife() {}
 SDLNs::SDLPlayerLife::SDLPlayerLife(SDL_Renderer *renderer, int screenWidth) {
     m_renderer = renderer;
     m_screenWidth = screenWidth;
-    GameNs::TextManager* textManager = new GameNs::TextManager(m_renderer);
-    m_textTexture = textManager;
+    m_textTexture = new GameNs::TextManager(m_renderer);
 }
 
 /**

@@ -10,9 +10,35 @@
 
 namespace GameNs{
     class BonusManager {
-        BonusManager();
-        BonusManager(AbstractFactory *AF,PlayerManager* playerManager);
-        void update();
+        public:
+            BonusManager();
+            BonusManager(AbstractFactory *AF, PlayerManager *playerManager, PlayerLife *playerLife, Score *score,
+                         Timer *timer,
+                         int screenWidth, int screenHeight);
+            void update();
+            void render();
+            void createBonuses();
+            void moveBonus();
+            void selectBonus();
+            void checkCollisions();
+            void close();
+
+
+        private:
+            Timer* m_timer= nullptr;
+            PlayerShip* m_playerShip= nullptr;
+            std::vector<Bonus *> m_bonuses;
+            AbstractFactory* m_factory;
+            int m_screenWidth=0;
+            int m_screenHeight=0;
+            float m_nextBonus=0.0;
+            bool m_moveBonus = false;
+            int m_randomId=0;
+            PlayerLife* m_playerLife;
+            Score* m_playerSCore;
+            std::string m_bonusLife="../assets/life.jpg";
+            std::string m_bonusSpeed="../assets/speed.jpg";
+            std::string m_bonusPoints="../assets/points.png";
 
     };
 }

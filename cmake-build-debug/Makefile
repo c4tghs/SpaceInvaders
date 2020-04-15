@@ -392,6 +392,33 @@ Models/CPP-Files/Background.cpp.s:
 	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Background.cpp.s
 .PHONY : Models/CPP-Files/Background.cpp.s
 
+Models/CPP-Files/Bonus.obj: Models/CPP-Files/Bonus.cpp.obj
+
+.PHONY : Models/CPP-Files/Bonus.obj
+
+# target to build an object file
+Models/CPP-Files/Bonus.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Bonus.cpp.obj
+.PHONY : Models/CPP-Files/Bonus.cpp.obj
+
+Models/CPP-Files/Bonus.i: Models/CPP-Files/Bonus.cpp.i
+
+.PHONY : Models/CPP-Files/Bonus.i
+
+# target to preprocess a source file
+Models/CPP-Files/Bonus.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Bonus.cpp.i
+.PHONY : Models/CPP-Files/Bonus.cpp.i
+
+Models/CPP-Files/Bonus.s: Models/CPP-Files/Bonus.cpp.s
+
+.PHONY : Models/CPP-Files/Bonus.s
+
+# target to generate assembly for a file
+Models/CPP-Files/Bonus.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Bonus.cpp.s
+.PHONY : Models/CPP-Files/Bonus.cpp.s
+
 Models/CPP-Files/Bullet.obj: Models/CPP-Files/Bullet.cpp.obj
 
 .PHONY : Models/CPP-Files/Bullet.obj
@@ -527,6 +554,33 @@ Models/CPP-Files/PlayerShip.cpp.s:
 	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/PlayerShip.cpp.s
 .PHONY : Models/CPP-Files/PlayerShip.cpp.s
 
+Models/CPP-Files/RandomNumber.obj: Models/CPP-Files/RandomNumber.cpp.obj
+
+.PHONY : Models/CPP-Files/RandomNumber.obj
+
+# target to build an object file
+Models/CPP-Files/RandomNumber.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/RandomNumber.cpp.obj
+.PHONY : Models/CPP-Files/RandomNumber.cpp.obj
+
+Models/CPP-Files/RandomNumber.i: Models/CPP-Files/RandomNumber.cpp.i
+
+.PHONY : Models/CPP-Files/RandomNumber.i
+
+# target to preprocess a source file
+Models/CPP-Files/RandomNumber.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/RandomNumber.cpp.i
+.PHONY : Models/CPP-Files/RandomNumber.cpp.i
+
+Models/CPP-Files/RandomNumber.s: Models/CPP-Files/RandomNumber.cpp.s
+
+.PHONY : Models/CPP-Files/RandomNumber.s
+
+# target to generate assembly for a file
+Models/CPP-Files/RandomNumber.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/RandomNumber.cpp.s
+.PHONY : Models/CPP-Files/RandomNumber.cpp.s
+
 Models/CPP-Files/Score.obj: Models/CPP-Files/Score.cpp.obj
 
 .PHONY : Models/CPP-Files/Score.obj
@@ -580,6 +634,33 @@ SDL/CPP-Files/SDLBackground.s: SDL/CPP-Files/SDLBackground.cpp.s
 SDL/CPP-Files/SDLBackground.cpp.s:
 	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLBackground.cpp.s
 .PHONY : SDL/CPP-Files/SDLBackground.cpp.s
+
+SDL/CPP-Files/SDLBonus.obj: SDL/CPP-Files/SDLBonus.cpp.obj
+
+.PHONY : SDL/CPP-Files/SDLBonus.obj
+
+# target to build an object file
+SDL/CPP-Files/SDLBonus.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLBonus.cpp.obj
+.PHONY : SDL/CPP-Files/SDLBonus.cpp.obj
+
+SDL/CPP-Files/SDLBonus.i: SDL/CPP-Files/SDLBonus.cpp.i
+
+.PHONY : SDL/CPP-Files/SDLBonus.i
+
+# target to preprocess a source file
+SDL/CPP-Files/SDLBonus.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLBonus.cpp.i
+.PHONY : SDL/CPP-Files/SDLBonus.cpp.i
+
+SDL/CPP-Files/SDLBonus.s: SDL/CPP-Files/SDLBonus.cpp.s
+
+.PHONY : SDL/CPP-Files/SDLBonus.s
+
+# target to generate assembly for a file
+SDL/CPP-Files/SDLBonus.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLBonus.cpp.s
+.PHONY : SDL/CPP-Files/SDLBonus.cpp.s
 
 SDL/CPP-Files/SDLBullet.obj: SDL/CPP-Files/SDLBullet.cpp.obj
 
@@ -836,6 +917,9 @@ help:
 	@echo ... Models/CPP-Files/Background.obj
 	@echo ... Models/CPP-Files/Background.i
 	@echo ... Models/CPP-Files/Background.s
+	@echo ... Models/CPP-Files/Bonus.obj
+	@echo ... Models/CPP-Files/Bonus.i
+	@echo ... Models/CPP-Files/Bonus.s
 	@echo ... Models/CPP-Files/Bullet.obj
 	@echo ... Models/CPP-Files/Bullet.i
 	@echo ... Models/CPP-Files/Bullet.s
@@ -851,12 +935,18 @@ help:
 	@echo ... Models/CPP-Files/PlayerShip.obj
 	@echo ... Models/CPP-Files/PlayerShip.i
 	@echo ... Models/CPP-Files/PlayerShip.s
+	@echo ... Models/CPP-Files/RandomNumber.obj
+	@echo ... Models/CPP-Files/RandomNumber.i
+	@echo ... Models/CPP-Files/RandomNumber.s
 	@echo ... Models/CPP-Files/Score.obj
 	@echo ... Models/CPP-Files/Score.i
 	@echo ... Models/CPP-Files/Score.s
 	@echo ... SDL/CPP-Files/SDLBackground.obj
 	@echo ... SDL/CPP-Files/SDLBackground.i
 	@echo ... SDL/CPP-Files/SDLBackground.s
+	@echo ... SDL/CPP-Files/SDLBonus.obj
+	@echo ... SDL/CPP-Files/SDLBonus.i
+	@echo ... SDL/CPP-Files/SDLBonus.s
 	@echo ... SDL/CPP-Files/SDLBullet.obj
 	@echo ... SDL/CPP-Files/SDLBullet.i
 	@echo ... SDL/CPP-Files/SDLBullet.s

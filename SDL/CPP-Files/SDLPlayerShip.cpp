@@ -24,8 +24,7 @@ SDLNs::SDLPlayerShip::SDLPlayerShip(int xPos, int yPos, int width, int height,SD
     m_renderer = renderer;
     m_playerShipPath = std::move(playerShipPath);
 
-    GameNs::TextureManager *playerShipTexture = new GameNs::TextureManager(m_renderer);
-    m_playerShipTexture = playerShipTexture;
+    m_playerShipTexture = new GameNs::TextureManager(m_renderer);
     //create texture
     loadMedia();
 }

@@ -22,7 +22,7 @@ GameNs::PlayerManager::PlayerManager() {}
  */
 GameNs::PlayerManager::PlayerManager(GameNs::AbstractFactory *AF, int screenHeight, int screenWidth,
                                      BulletManager *bulletManager,
-                                     Timer *timer) {
+                                     Timer *timer, PlayerLife *playerLife) {
     m_factory = AF;
     //create timer
     m_timer = timer;
@@ -30,8 +30,6 @@ GameNs::PlayerManager::PlayerManager(GameNs::AbstractFactory *AF, int screenHeig
     m_playerShip  = m_factory->createPlayerShip(m_playerShipPath);
     m_screenHeight = screenHeight;
     m_screenWidth = screenWidth;
-    //get player starting position
-    m_playerStartPosX = m_playerShip->getXPosition();
     //reserve
     m_bullets.reserve(10);
     //create 10 bullets
@@ -39,7 +37,7 @@ GameNs::PlayerManager::PlayerManager(GameNs::AbstractFactory *AF, int screenHeig
     //get m_bulletManager
     m_bulletManager = bulletManager;
     //create player life
-    m_playerLife = m_factory->createPlayerLife();
+    m_playerLife = playerLife;//m_factory->createPlayerLife();
 }
 /**
  * update method
@@ -50,8 +48,6 @@ void GameNs::PlayerManager::update() {
     //update timer
     m_timer->update();
     checkPlayerBoundaries();
-    //render player life
-    m_playerLife->render();
     //render player
     m_playerShip->render();
 }
@@ -64,11 +60,11 @@ void GameNs::PlayerManager::playerActions() {
     switch(direction)
     {
         case 1:
-            xPos = m_playerShip->getXPosition() - m_timer->getDeltaTime() *5;
+            xPos = m_playerShip->getXPosition() - m_timer->getDeltaTime() *m_playerShip->getPlayerSpeed();
             m_playerShip->setXPosition(xPos);
             break;
         case 2:
-            xPos = m_playerShip->getXPosition() + m_timer->getDeltaTime() *5;
+            xPos = m_playerShip->getXPosition() + m_timer->getDeltaTime() *m_playerShip->getPlayerSpeed();
             m_playerShip->setXPosition(xPos);
             break;
         case 3:
@@ -92,7 +88,9 @@ void GameNs::PlayerManager::checkPlayerBoundaries() {
     }
     if(m_bulletManager->getEnemyBulletFired())
     {
-        if(CollisionManager::checkCollision(m_bulletManager->getEnemyBullet(), m_playerShip->getXPosition(), m_playerShip->getYPosition(), m_playerShip->getWidth(), m_playerShip->getHeight()))
+        if(CollisionManager::checkBulletCollision(m_bulletManager->getEnemyBullet(), m_playerShip->getXPosition(),
+                                                  m_playerShip->getYPosition(), m_playerShip->getWidth(),
+                                                  m_playerShip->getHeight()))
         {
             m_playerLife->setPlayerLife(m_playerLife->getPlayerLife()-1);
             //m_playerShip->setXPosition(m_playerStartPosX);
@@ -148,7 +146,16 @@ void GameNs::PlayerManager::shoot() {
 void GameNs::PlayerManager::createBullets() {
     for(int i =0; i<10;i++)
     {
-        m_bullets.emplace_back(m_factory->createBullet(m_bulletPath,m_playerShip->getXPosition(),m_playerShip->getYPosition()));
+        m_bullets.emplace_back(m_factory->createBullet(m_bulletPath, m_playerShip->getXPosition(),
+                m_playerShip->getYPosition(), 25, 25));
     }
 }
+/**
+ * Method that returns playerShip
+ * @return - playerShip
+ */
+GameNs::PlayerShip *GameNs::PlayerManager::getPlayerShip() {
+    return m_playerShip;
+}
+
 

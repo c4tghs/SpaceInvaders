@@ -13,6 +13,7 @@
 #include "../../Factories/AbstractFactory.h"
 #include "PlayerManager.h"
 #include "EnemyManager.h"
+#include "BonusManager.h"
 
 namespace GameNs{
     class Game {
@@ -31,6 +32,9 @@ namespace GameNs{
         PlayerManager* m_playerManager = nullptr;
         EnemyManager* m_enemyManager  = nullptr;
         BulletManager* m_bulletManager = nullptr;
+        BonusManager* m_bonusManager = nullptr;
+        PlayerLife* m_playerLife = nullptr;
+        Score* m_playerScore = nullptr;
         AbstractFactory* m_factory;
         const int m_screenHeight = 720 ;
         const int m_screenWidth = 1280;

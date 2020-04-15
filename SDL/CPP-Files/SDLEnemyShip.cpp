@@ -21,8 +21,7 @@ SDLNs::SDLEnemyShip::SDLEnemyShip(SDL_Renderer *renderer, std::string enemyShipP
         ) {
     m_renderer = renderer;
     m_enemyShipPath = std::move(enemyShipPath);
-    GameNs::TextureManager *enemyShipTexture = new GameNs::TextureManager(m_renderer);
-    m_enemyShipTexture = enemyShipTexture;
+    m_enemyShipTexture = new GameNs::TextureManager(m_renderer);
     m_moveDirection = 1;
     //create texture
     loadMedia();

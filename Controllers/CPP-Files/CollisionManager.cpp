@@ -25,19 +25,32 @@ GameNs::CollisionManager* GameNs::CollisionManager::getInstance() {
 GameNs::CollisionManager::CollisionManager() {}
 
 /**
- * Method to check if there's a collision between a bullet and enemyship
+ * Method to check if there's a collision between a bullet and enemy ship or player ship
  * @param xPos - x position of other object
  * @param yPos - y position of other object
  * @param width - width of other object
  * @param height - height of other object
  * @param bullet - the bullet
- * @return
+ * @return - true or false
  */
-bool GameNs::CollisionManager::checkCollision(Bullet * bullet,int xPos, int yPos, int width, int height) {
+bool GameNs::CollisionManager::checkBulletCollision(Bullet * bullet, int xPos, int yPos, int width, int height) {
     return xPos + width >= bullet->getXPosition() &&
            xPos <= bullet->getXPosition() + bullet->getWidth() &&
            yPos + height >= bullet->getYPosition() &&
            yPos <= bullet->getYPosition() + bullet->getHeight();
+}
+
+/**
+ * Method to check if there's a collision between playerShip and bonus
+ * @param bonus - bonus
+ * @param playerShip - player ship
+ * @return - true or false
+ */
+bool GameNs::CollisionManager::checkBonusCollision(Bonus *bonus, PlayerShip *playerShip) {
+    return bonus->getXPosition()+bonus->getWidth() >= playerShip->getXPosition() &&
+           bonus->getXPosition() <= playerShip->getXPosition() + playerShip->getWidth() &&
+           bonus->getYPosition() + bonus->getHeight() >= playerShip->getYPosition() &&
+           bonus->getYPosition() <= playerShip->getYPosition() + playerShip->getHeight();
 }
 
 

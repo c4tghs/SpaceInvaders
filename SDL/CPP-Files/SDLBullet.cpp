@@ -20,8 +20,7 @@ SDLNs::SDLBullet::SDLBullet(SDL_Renderer *renderer,std::string bulletPath,int xP
 {
     m_renderer = renderer;
     m_bulletPath = std::move(bulletPath);
-    GameNs::TextureManager *bulletTexture = new GameNs::TextureManager(m_renderer);
-    m_texture  = bulletTexture;
+    m_texture = new GameNs::TextureManager(m_renderer);
     loadMedia();
 }
 /**

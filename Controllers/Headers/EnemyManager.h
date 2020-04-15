@@ -25,8 +25,8 @@ namespace GameNs
     class EnemyManager {
     public:
         EnemyManager();
-        EnemyManager(AbstractFactory *AF, int screenWidth, int screenHeight, BulletManager *bulletManager,
-                     Timer *timer);
+        EnemyManager(AbstractFactory *AF, int screenWidth, int screenHeight, BulletManager *bulletManager, Timer *timer,
+                     Score *score);
         void createEnemies(int number);
         void updateEnemies();
         void moveEnemies();
@@ -34,7 +34,6 @@ namespace GameNs
         void enemyShoot();
         void createBullets();
         void close();
-        static int randomNumber(int lowerBound=0, int higherBound=3);
 
     private:
         AbstractFactory* m_factory;
@@ -44,14 +43,13 @@ namespace GameNs
         int m_screenWidth=0;
         int m_screenHeight=0;
         int m_playerYPos=0;
-        float m_nextMissile=0;
+        float m_nextMissile=0.0;
         bool m_playerReached = false;
         std::string m_enemyShipOctopusPath = "../assets/octopus.png";
         std::string m_enemyShipCrabPath = "../assets/crab.png";
         std::string m_enemyShipSquidPath = "../assets/squid.png";
         std::string m_bulletPath = "../assets/bullet.jpeg";
         std::vector<Bullet*> m_bullets;
-        static std::random_device m_rd;
         Score *m_score= nullptr;
     };
 }

@@ -21,31 +21,30 @@ namespace GameNs{
     public:
         PlayerManager();
         PlayerManager(GameNs::AbstractFactory *AF, int screenHeight, int screenWidth, BulletManager *bulletManager,
-                      Timer *timer);
+                      Timer *timer, PlayerLife *playerLife);
         void checkPlayerBoundaries();
         void playerActions();
         void update();
         void close();
         void shoot();
         void createBullets();
+        PlayerShip* getPlayerShip();
+
 
 
     private:
         AbstractFactory* m_factory;
         std::string m_playerShipPath = "../assets/ship.png";
+        std::string m_bulletPath="../assets/laser.png";
         //std::string m_bulletPath="../assets/playerBullet.png";
-        std::string m_bulletPath="../assets/playerBullet.png";
         Timer *m_timer;
         BulletManager *m_bulletManager;
         SDLNs::SDLKeyStates* m_keyStates = nullptr;
         PlayerShip* m_playerShip;
         int m_screenHeight;
         int m_screenWidth;
-        int m_playerStartPosX=0;
-
         std::vector<Bullet*> m_bullets;
-        //Score* m_score;
-        PlayerLife* m_playerLife;
+        PlayerLife* m_playerLife= nullptr;
     };
 }
 
