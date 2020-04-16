@@ -17,6 +17,7 @@ namespace GameNs
         static CollisionManager* getInstance();
         static bool checkBulletCollision(Bullet * bullet, int xPos, int yPos, int width, int height);
         static bool checkBonusCollision(Bonus *bonus, PlayerShip *playerShip);
+        static bool twoBulletsCollision(Bullet* playerBullet, Bullet * enemyBullet);
     private:
         static CollisionManager* m_instance;
         CollisionManager();

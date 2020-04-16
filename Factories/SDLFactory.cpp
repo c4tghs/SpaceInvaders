@@ -114,12 +114,14 @@ GameNs::Bonus *SDLNs::SDLFactory::createBonus(std::string bonusImagePath, int xP
 void SDLNs::SDLFactory::initialise(int windowWidth, int windowHeight){
     m_screenWidth = windowWidth;
     m_screenHeight = windowHeight;
-    //check if SDL was initialised succesfully
+    //check if SDL was initialised successfully
     if(SDL_Init(SDL_INIT_VIDEO) !=0 && IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG) !=0)
     {
         std::cout << "Failed to initialise SDL: "<< SDL_GetError() << std::endl;
         exit(1);
-    } else if (TTF_Init() < 0)
+    }
+    //check if TTF was initialised successfully
+    else if (TTF_Init() < 0)
     {
         std::cout << "Unable to initialise TTF library: "<< SDL_GetError() << std::endl;
         exit(1);
@@ -137,7 +139,7 @@ void SDLNs::SDLFactory::initialise(int windowWidth, int windowHeight){
             //create renderer
             createRender();
 
-            //check if renderer was created succesfully
+            //check if renderer was created successfully
             if(m_renderer == nullptr)
             {
                 std::cout << "Failed to create Renderer: "<< SDL_GetError() << std::endl;

@@ -53,6 +53,19 @@ bool GameNs::CollisionManager::checkBonusCollision(Bonus *bonus, PlayerShip *pla
            bonus->getYPosition() <= playerShip->getYPosition() + playerShip->getHeight();
 }
 
+/**
+ * Method to check collision between player and enemy bullet
+ * @param playerBullet - player's bullet
+ * @param enemyBullet - enemy's bullet
+ * @return - true of false
+ */
+bool GameNs::CollisionManager::twoBulletsCollision(GameNs::Bullet *playerBullet, GameNs::Bullet *enemyBullet) {
+    return playerBullet->getXPosition() + playerBullet->getWidth() >= enemyBullet->getXPosition() &&
+           playerBullet->getXPosition() <= enemyBullet->getXPosition() + enemyBullet->getWidth() &&
+           playerBullet->getYPosition() + playerBullet->getHeight() >= enemyBullet->getYPosition() &&
+           playerBullet->getYPosition() <= enemyBullet->getYPosition() + enemyBullet->getHeight();
+}
+
 
 
 

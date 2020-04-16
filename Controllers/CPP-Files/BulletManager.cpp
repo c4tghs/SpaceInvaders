@@ -45,6 +45,7 @@ void GameNs::BulletManager::update() {
         m_playerBullet->setYPosition(0);
         m_playerBullet->close();
     }
+    bulletCollision();
     setPlayerBulletCollision(false);
 
 }
@@ -62,7 +63,7 @@ void GameNs::BulletManager::moveBullet() {
     //change y position of bullet using time
     if(m_enemyFired)
     {
-        m_enemyBullet->setYPosition(m_enemyBullet->getYPosition() + m_timer->getDeltaTime() * 1 * 10);
+        m_enemyBullet->setYPosition(m_enemyBullet->getYPosition() + m_timer->getDeltaTime() * 1 * 5);
     }
 
 }
@@ -161,6 +162,19 @@ void GameNs::BulletManager::setPlayerBulletCollision(bool collided) {
  */
 GameNs::Bullet *GameNs::BulletManager::getEnemyBullet() {
     return m_enemyBullet;
+}
+/**
+ * Method to check collision between player and enemy bullet
+ */
+void GameNs::BulletManager::bulletCollision() {
+    if(m_playerFired and m_enemyFired)
+    {
+        if(CollisionManager::getInstance()->twoBulletsCollision(m_playerBullet,m_enemyBullet))
+        {
+            m_playerBullet->setYPosition(0);
+            m_enemyBullet->setYPosition(m_screenHeight+5);
+        }
+    }
 }
 
 

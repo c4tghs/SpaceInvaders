@@ -29,6 +29,7 @@ namespace GameNs{
         void setEnemyBulletFired(bool isFired);
         bool checkPlayerCollisions();
         void setPlayerBulletCollision(bool collided);
+        void bulletCollision();
         Bullet* getPlayerBullet();
         Bullet* getEnemyBullet();
 
