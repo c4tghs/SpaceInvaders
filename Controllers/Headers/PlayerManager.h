@@ -20,10 +20,10 @@ namespace GameNs{
     class PlayerManager {
     public:
         PlayerManager();
-        PlayerManager(GameNs::AbstractFactory *AF, int screenHeight, int screenWidth, BulletManager *bulletManager,
-                      Timer *timer, PlayerLife *playerLife);
+        PlayerManager(GameNs::AbstractFactory* AF, int screenHeight, int screenWidth, BulletManager* bulletManager,
+                      Timer* timer, PlayerLife* playerLife);
         void checkPlayerBoundaries();
-        void playerActions();
+        void movePlayer();
         void update();
         void close();
         void shoot();
@@ -33,16 +33,15 @@ namespace GameNs{
 
 
     private:
-        AbstractFactory* m_factory;
+        AbstractFactory* m_factory=nullptr;
         std::string m_playerShipPath = "../assets/ship.png";
         std::string m_bulletPath="../assets/laser.png";
-        //std::string m_bulletPath="../assets/playerBullet.png";
-        Timer *m_timer;
-        BulletManager *m_bulletManager;
+        Timer* m_timer=nullptr;
+        BulletManager* m_bulletManager=nullptr;
         SDLNs::SDLKeyStates* m_keyStates = nullptr;
-        PlayerShip* m_playerShip;
-        int m_screenHeight;
-        int m_screenWidth;
+        PlayerShip* m_playerShip=nullptr;
+        int m_screenHeight=0;
+        int m_screenWidth=0;
         std::vector<Bullet*> m_bullets;
         PlayerLife* m_playerLife= nullptr;
     };

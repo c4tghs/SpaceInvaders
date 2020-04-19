@@ -18,7 +18,7 @@
  * @param screenWidth
  * @param playerShipPath
  */
-SDLNs::SDLPlayerShip::SDLPlayerShip(int xPos, int yPos, int width, int height,SDL_Renderer *renderer,std::string playerShipPath):PlayerShip(
+SDLNs::SDLPlayerShip::SDLPlayerShip(int xPos, int yPos, int width, int height,SDL_Renderer* renderer,std::string playerShipPath):PlayerShip(
         xPos,yPos,width,height)
 {
     m_renderer = renderer;
@@ -44,7 +44,7 @@ void SDLNs::SDLPlayerShip::loadMedia() {
  * Method to show player
  */
 void SDLNs::SDLPlayerShip::render() {
-
+    //Create rectangular area
     SDL_Rect rect = {getXPosition(), getYPosition(), getWidth(), getHeight()};
     SDL_RenderCopy(m_renderer,m_playerShipTexture->getTexture(),nullptr,&rect);
 }
@@ -52,5 +52,5 @@ void SDLNs::SDLPlayerShip::render() {
  * Method to destroy player texture
  */
 void SDLNs::SDLPlayerShip::close() {
- m_playerShipTexture->free();
+    m_playerShipTexture->free();
 }

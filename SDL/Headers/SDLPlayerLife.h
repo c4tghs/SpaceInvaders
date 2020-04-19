@@ -12,7 +12,7 @@ namespace SDLNs{
 class SDLPlayerLife:public GameNs::PlayerLife {
     public:
         SDLPlayerLife();
-        SDLPlayerLife(SDL_Renderer *renderer, int screenWidth);
+        SDLPlayerLife(SDL_Renderer* renderer, int screenWidth);
         void render();
         void close();
 

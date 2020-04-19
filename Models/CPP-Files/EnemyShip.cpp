@@ -16,10 +16,18 @@ GameNs::EnemyShip::EnemyShip() {}
  */
 GameNs::EnemyShip::EnemyShip(int xPos, int yPos, int width, int height):Entity(xPos,yPos,width,height) {}
 
+/**
+ * Method that sets an enemy's type
+ * @param type - enemy type
+ */
 void GameNs::EnemyShip::setEnemyType(GameNs::EnemyType type) {
     m_enemyType = type;
 }
 
+/**
+ * Method that returns an enemy's type
+ * @return - EnemyType
+ */
 GameNs::EnemyType GameNs::EnemyShip::getEnemyType() {
     return m_enemyType;
 }

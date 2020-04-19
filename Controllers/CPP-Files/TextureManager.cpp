@@ -16,7 +16,7 @@ GameNs::TextureManager::TextureManager(){
  * Constructor
  * @param renderer
  */
-GameNs::TextureManager::TextureManager(SDL_Renderer *renderer){
+GameNs::TextureManager::TextureManager(SDL_Renderer* renderer){
     m_renderer = renderer;
 }
 /**
@@ -27,21 +27,25 @@ GameNs::TextureManager::TextureManager(SDL_Renderer *renderer){
 void GameNs::TextureManager::LoadTexture(const std::string &filename) {
     SDL_Surface* surface = IMG_Load(filename.c_str());
     SDL_Texture* tex;
+
+    //Check if surface was created successfully.
     if(surface == nullptr)
     {
-        std::cout << "Failed to load surface. Error: " << SDL_GetError() << std::endl;
+        std::cerr << "Failed to load surface. Error: " << SDL_GetError() << std::endl;
         exit(1);
     }
     else
     {
-        //color image for transparency
+        //Color image for transparency
         SDL_SetColorKey(surface,SDL_TRUE, SDL_MapRGB(surface->format,0,0,0));
 
         //Create texture from surface pixels
         tex = SDL_CreateTextureFromSurface(m_renderer, surface);
+
+        //Check if texture was created successfully.
         if(tex == nullptr)
         {
-            std::cout << "Failed to create texture. Error: " << SDL_GetError() << std::endl;
+            std::cerr << "Failed to create texture. Error: " << SDL_GetError() << std::endl;
             exit(1);
         } else
         {
@@ -50,7 +54,7 @@ void GameNs::TextureManager::LoadTexture(const std::string &filename) {
             m_height = surface->h;
         }
 
-        //remove old loaded surface
+        //Free surface
         SDL_FreeSurface(surface);
     }
 

@@ -15,7 +15,7 @@ GameNs::Game* GameNs::Game::getInstance() {
     }
     return m_instance;
 }
-GameNs::Game* GameNs::Game::getInstance(AbstractFactory *AF) {
+GameNs::Game* GameNs::Game::getInstance(AbstractFactory* AF) {
     if(m_instance == nullptr)
     {
         m_instance = new Game(AF);
@@ -34,7 +34,7 @@ GameNs::Game::Game() {
  * Constructor
  * @param AF - abstract factory to create instances of objects
  */
-GameNs::Game::Game(AbstractFactory *AF) {
+GameNs::Game::Game(AbstractFactory* AF) {
     m_factory = AF;
     m_timer = m_factory->createTimer();
 }
@@ -42,23 +42,25 @@ GameNs::Game::Game(AbstractFactory *AF) {
  * Method that holds the game's main loop
  */
 void GameNs::Game::run() {
+    //Initialise SDL factory, ie create window, renderer etc.
     m_factory->initialise(m_screenWidth, m_screenHeight);
+    //Create background
     Background *background = m_factory->createBackground();
-    //create player score
+    //Create player score
     m_playerScore = m_factory->createScore();
-    //create player life
+    //Create player life
     m_playerLife = m_factory->createPlayerLife();
-    //create bullet manager
+    //Create bullet manager
     m_bulletManager = new BulletManager(m_timer, m_screenHeight);
-    //create player manager
+    //Create player manager
     m_playerManager = new PlayerManager(m_factory, m_screenHeight, m_screenWidth, m_bulletManager, m_timer, m_playerLife);
-    //create enemy manager
+    //Create enemy manager
     m_enemyManager = new EnemyManager(m_factory, m_screenWidth, m_screenHeight, m_bulletManager, m_timer, m_playerScore);
-    //create bonusManager
+    //Create bonusManager
     m_bonusManager = new BonusManager(m_factory, m_playerManager, m_playerLife, m_playerScore, m_timer, m_screenWidth,
                                       m_screenHeight);
 
-    //game loop for updating
+    //Game loop for updating.
     while(m_factory->getRunningState())
     {
         background->render();
@@ -77,12 +79,6 @@ void GameNs::Game::run() {
     m_bonusManager->close();
     m_playerLife->close();
     m_factory->close();
-}
-/**
- * Method to initialise game objects
- */
-void GameNs::Game::initialise() {
-
 }
 
 

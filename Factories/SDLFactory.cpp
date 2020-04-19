@@ -114,43 +114,49 @@ GameNs::Bonus *SDLNs::SDLFactory::createBonus(std::string bonusImagePath, int xP
 void SDLNs::SDLFactory::initialise(int windowWidth, int windowHeight){
     m_screenWidth = windowWidth;
     m_screenHeight = windowHeight;
-    //check if SDL was initialised successfully
+    //Check if SDL was initialised successfully
     if(SDL_Init(SDL_INIT_VIDEO) !=0 && IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG) !=0)
     {
-        std::cout << "Failed to initialise SDL: "<< SDL_GetError() << std::endl;
-        exit(1);
+        std::cerr << "Failed to initialise SDL: "<< SDL_GetError() << std::endl;
+        m_IsRunning = false;
+        //exit(1);
     }
-    //check if TTF was initialised successfully
+    //Check if TTF was initialised successfully
     else if (TTF_Init() < 0)
     {
-        std::cout << "Unable to initialise TTF library: "<< SDL_GetError() << std::endl;
-        exit(1);
+        std::cerr << "Unable to initialise TTF library: "<< TTF_GetError() << std::endl;
+        m_IsRunning = false;
+        //exit(1);
     }
-    else{
-        //create SDL window
+    else
+    {
+        //Create SDL window
         createWindow("Space invaders", m_screenWidth, m_screenHeight);
 
-        //check if window was created successfully
+        //Check if window was created successfully
         if(m_window == nullptr)
         {
-            std::cout << "Failed to create Window: "<< SDL_GetError() << std::endl;
-        } else
+            std::cerr << "Failed to create Window." << std::endl;
+            m_IsRunning = false;
+        }
+        else
         {
-            //create renderer
+            //Create renderer
             createRender();
 
-            //check if renderer was created successfully
+            //Check if renderer was created successfully
             if(m_renderer == nullptr)
             {
-                std::cout << "Failed to create Renderer: "<< SDL_GetError() << std::endl;
+                std::cerr << "Failed to create Renderer."<< std::endl;
                 m_IsRunning = false;
-            } else
+            }
+            else
             {
-                //initialise PNG loading
+                //Initialise PNG, JPG loading
                 int imgFlags = IMG_INIT_PNG | IMG_INIT_JPG;
                 if(!(IMG_Init(imgFlags) & imgFlags))
                 {
-                    std::cout << "Failed to initialise SDL_image: "<< IMG_GetError() << std::endl;
+                    std::cerr << "Failed to initialise SDL_image: "<< IMG_GetError() << std::endl;
                     m_IsRunning = false;
                 } else
                 {
@@ -173,7 +179,7 @@ void SDLNs::SDLFactory::close()
     IMG_Quit();
     TTF_Quit();
     SDL_Quit();
-    std::cout << "Game cleaned successfully" << std::endl;
+    std::cerr << "Game cleaned successfully" << std::endl;
 
 }
 

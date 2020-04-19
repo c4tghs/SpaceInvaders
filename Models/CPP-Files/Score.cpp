@@ -20,7 +20,7 @@ int GameNs::Score::getScores() {
 
 /**
  * Method that sets the player's score
- * @param scores - the plauer's current score
+ * @param scores - the player's current score
  */
 void GameNs::Score::setScores(int scores) {
     m_score = scores;

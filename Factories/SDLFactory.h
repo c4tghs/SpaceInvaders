@@ -34,8 +34,8 @@ namespace SDLNs
 
     private:
         bool m_IsRunning = false;
-        SDL_Window *m_window = nullptr;
-        SDL_Renderer *m_renderer = nullptr;
+        SDL_Window* m_window = nullptr;
+        SDL_Renderer* m_renderer = nullptr;
 
         int m_screenWidth = 0;
         int m_screenHeight =0;

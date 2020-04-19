@@ -12,13 +12,13 @@ namespace SDLNs
 {
     class SDLScore: public GameNs::Score {
         public:
-            SDLScore(SDL_Renderer *renderer);
+            SDLScore(SDL_Renderer* renderer);
             void render();
             void close();
 
         private:
-            SDL_Renderer* m_renderer;
-            GameNs::TextManager* m_textTexture;
+            SDL_Renderer* m_renderer = nullptr;
+            GameNs::TextManager* m_textTexture = nullptr;
 
     };
 }

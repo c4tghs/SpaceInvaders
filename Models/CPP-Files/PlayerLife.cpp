@@ -12,7 +12,7 @@ GameNs::PlayerLife::PlayerLife() {
 }
 
 /**
- * Method that returns playerlife
+ * Method that returns player life
  * @return player life
  */
 int GameNs::PlayerLife::getPlayerLife() {

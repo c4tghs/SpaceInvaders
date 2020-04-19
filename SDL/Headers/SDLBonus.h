@@ -10,7 +10,7 @@ namespace SDLNs{
     class SDLBonus: public GameNs::Bonus {
         public:
             SDLBonus();
-            SDLBonus(SDL_Renderer *renderer, int xPos, int yPos, int width, int height, std::string imagePath);
+            SDLBonus(SDL_Renderer* renderer, int xPos, int yPos, int width, int height, std::string imagePath);
             void render();
             void close();
             void loadMedia();

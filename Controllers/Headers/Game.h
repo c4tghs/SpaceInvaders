@@ -22,22 +22,21 @@ namespace GameNs{
         static Game* getInstance(AbstractFactory *AF);
 
         void run();
-        void initialise();
 
     private:
         static Game* m_instance;
         Game(AbstractFactory *AF);
         Game();
-        Timer* m_timer;
+        Timer* m_timer=nullptr;
         PlayerManager* m_playerManager = nullptr;
         EnemyManager* m_enemyManager  = nullptr;
         BulletManager* m_bulletManager = nullptr;
         BonusManager* m_bonusManager = nullptr;
         PlayerLife* m_playerLife = nullptr;
         Score* m_playerScore = nullptr;
-        AbstractFactory* m_factory;
+        AbstractFactory* m_factory = nullptr;
         const int m_screenHeight = 720 ;
-        const int m_screenWidth = 1280;
+        const int m_screenWidth = 940;
     };
 
 }

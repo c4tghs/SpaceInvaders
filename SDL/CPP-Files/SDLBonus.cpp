@@ -12,7 +12,8 @@ SDLNs::SDLBonus::SDLBonus() {}
  * Constructor
  * @param renderer
  */
-SDLNs::SDLBonus::SDLBonus(SDL_Renderer *renderer, int xPos, int yPos, int width, int height, std::string imagePath) {
+SDLNs::SDLBonus::SDLBonus(SDL_Renderer* renderer, int xPos, int yPos, int width, int height, std::string imagePath)
+{
     m_renderer = renderer;
     m_bonusTexture = new GameNs::TextureManager(m_renderer);
     setXPosition(xPos);
@@ -27,7 +28,9 @@ SDLNs::SDLBonus::SDLBonus(SDL_Renderer *renderer, int xPos, int yPos, int width,
 /**
  * Method to render the bonus
  */
-void SDLNs::SDLBonus::render() {
+void SDLNs::SDLBonus::render()
+{
+    //Create rectangular area
     SDL_Rect rect = {getXPosition(),getYPosition(),getWidth(),getHeight()};
     SDL_RenderCopy(m_renderer,m_bonusTexture->getTexture(), nullptr,&rect);
 }
@@ -35,13 +38,15 @@ void SDLNs::SDLBonus::render() {
 /**
  * Method to destroy bonus texture
  */
-void SDLNs::SDLBonus::close() {
+void SDLNs::SDLBonus::close()
+{
     m_bonusTexture->free();
 }
 /**
  * Method to create bonus texture
  */
-void SDLNs::SDLBonus::loadMedia() {
+void SDLNs::SDLBonus::loadMedia()
+{
     m_bonusTexture->LoadTexture(m_bonusImagePath);
     if(m_bonusTexture->getTexture() == nullptr){
         std::cout << "Something went wrong loading texture: "<< SDL_GetError()<< std::endl;

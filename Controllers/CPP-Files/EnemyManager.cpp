@@ -27,15 +27,14 @@ GameNs::EnemyManager::EnemyManager(AbstractFactory *AF, int screenWidth, int scr
     m_screenHeight = screenHeight;
     m_bulletManager = bulletManager;
     m_playerYPos = m_screenHeight-((m_screenHeight/10)+10);
-    //get current time and add random between 1 and 3 to it
+    //Get current time and add random between 0 and 3 to it
     m_nextMissile = m_timer->getTime()+ GameNs::RandomNumber::getInstance()->getRandomNumber(0,3);
-    //create 50 bullets
+    //Reserve memory for 100 bullets.
     m_bullets.reserve(100);
+    //Create bullets
     createBullets();
-    //create enemies
+    //Create enemies
     createEnemies(30);
-
-    //create player score
     m_score = score;
 }
 /**
@@ -43,27 +42,28 @@ GameNs::EnemyManager::EnemyManager(AbstractFactory *AF, int screenWidth, int scr
  * @param number - number of enemy instances to create
  */
 void GameNs::EnemyManager::createEnemies(int number) {
+    //Reserve memory for requested amount of enemies
     m_enemyShips.reserve(number);
-    for(int y =0; y < number;y++)
+    for(int i =0; i < number; i++)
     {
-        int xPos = ((y%10)*70)+100;
-        int yPos=((y/10)*50)+70;
-
-        if(y < 10)
+        int xPos = ((i % 10) * 70) + 100;
+        int yPos= ((i / 10) * 50) + 70;
+        //Create enemy and add it to vector.
+        if(i < 10)
         {
             m_enemyShips.emplace_back(m_factory->createEnemyShip(m_enemyShipOctopusPath, xPos, yPos));
-            //set enemy type
-            m_enemyShips[y]->setEnemyType(Octopus);
-        } else if (y >= 10 && y < 20)
+            //Set enemy type.
+            m_enemyShips[i]->setEnemyType(Octopus);
+        } else if (i >= 10 && i < 20)
         {
             m_enemyShips.emplace_back(m_factory->createEnemyShip(m_enemyShipCrabPath, xPos, yPos));
-            //set enemy type
-            m_enemyShips[y]->setEnemyType(Crab);
+            //Set enemy type.
+            m_enemyShips[i]->setEnemyType(Crab);
         } else
         {
             m_enemyShips.emplace_back(m_factory->createEnemyShip(m_enemyShipSquidPath, xPos, yPos));
-            //set enemy type
-            m_enemyShips[y]->setEnemyType(Squid);
+            //Set enemy type.
+            m_enemyShips[i]->setEnemyType(Squid);
         }
 
     }
@@ -73,9 +73,11 @@ void GameNs::EnemyManager::createEnemies(int number) {
  * Method to update enemies, ie direction, rendering
  */
 void GameNs::EnemyManager::updateEnemies() {
+    //Move enemies.
     moveEnemies();
-    //update time
+    //Update time
     m_timer->update();
+    //If an enemy has reached boundary, ie width of screen or 0, change direction.
     if(checkEnemyBoundaries())
     {
         for(auto & m_enemyShip : m_enemyShips)
@@ -85,29 +87,32 @@ void GameNs::EnemyManager::updateEnemies() {
             {
                 moveDirection = -1;
             }
-            else{
+            else
+            {
                 moveDirection = 1;
             }
             m_enemyShip->setMoveDirection(moveDirection);
             m_enemyShip->setXPosition(m_enemyShip->getXPosition());
+            //Move enemy down.
             m_enemyShip->setYPosition(m_enemyShip->getYPosition()+10);
         }
     }
     int i = 0;
     for(auto & m_enemyShip : m_enemyShips)
     {
-        //check collision with player bullet
-        if(m_bulletManager->getPlayerBulletFired())
+        //Check collision with player bullet
+        if(m_bulletManager->isPlayerBulletFired())
         {
             if(CollisionManager::checkBulletCollision(m_bulletManager->getPlayerBullet(), m_enemyShip->getXPosition(),
                                                       m_enemyShip->getYPosition(), m_enemyShip->getWidth(),
                                                       m_enemyShip->getHeight()))
             {
-                //player score
+                //Set player score.
                 if(m_enemyShip->getEnemyType() == EnemyType::Squid)
                 {
                     m_score->setScores(m_score->getScores()+1);
-                } else if (m_enemyShip->getEnemyType() == EnemyType::Crab)
+                }
+                else if (m_enemyShip->getEnemyType() == EnemyType::Crab)
                 {
                     m_score->setScores(m_score->getScores()+3);
                 }
@@ -116,21 +121,22 @@ void GameNs::EnemyManager::updateEnemies() {
                     m_score->setScores(m_score->getScores()+5);
                 }
 
-                //close enemy ship, ie destroy texture
+                //Close enemy ship, ie destroy texture
                 m_enemyShip->close();
 
-                //remove ship from vector
+                //Remove ship from vector
                 m_enemyShips.erase(m_enemyShips.begin()+i);
                 m_bulletManager->setPlayerBulletFired(false);
                 m_bulletManager->setPlayerBulletCollision(true);
-                return; //execute once
+                //Execute once
+                return;
             }
         }
 
         i++;
         m_enemyShip->render();
     }
-    //allow enemy to shoot
+    //Allow enemy to shoot
     enemyShoot();
  }
 /**
@@ -158,44 +164,45 @@ bool GameNs::EnemyManager::checkEnemyBoundaries() {
  * Method that allows an enemy to shoot
  */
 void GameNs::EnemyManager::enemyShoot() {
-    if(m_timer->getTime() < m_nextMissile/2)
+    //Get out of function if it's not time for enemy to shoot.
+    //Get out of function if there're no enemy ships left.
+    //Get out of function if an enemy has already fired.
+    if(m_timer->getTime() < m_nextMissile/2 or m_enemyShips.empty() or m_bulletManager->isEnemyBulletFired())
     {
         return;
     }
-    if(m_enemyShips.empty())
-    {
-        return;
-    }
-    //generate random number -> enemy to select
+
+    //Generate random number -> enemy to select
     int randomId = GameNs::RandomNumber::getInstance()->getRandomNumber(0,m_enemyShips.size());
 
-    for(int i =0; i < m_bullets.size();)
-    {
-        m_bullets[i]->setXPosition(m_enemyShips[randomId]->getXPosition()+20);
-        m_bullets[i]->setYPosition(m_enemyShips[randomId]->getYPosition());
-        if(m_bulletManager->getEnemyBulletFired())
-        {
-            break;
-        }
-        m_bulletManager->setEnemyBulletFired(true);
-        m_bulletManager->setEnemyBullet(m_bullets[i]);
-        m_bullets.erase(m_bullets.begin()+i);
-        break;
-    }
-    if(m_bullets.size()==1)
+    //Set initial position of bullet.
+    m_bullets[0]->setXPosition(m_enemyShips[randomId]->getXPosition()+20);
+    m_bullets[0]->setYPosition(m_enemyShips[randomId]->getYPosition());
+    m_bulletManager->setEnemyBulletFired(true);
+    //Set enemy bullet.
+    m_bulletManager->setEnemyBullet(m_bullets[0]);
+    m_bullets.erase(m_bullets.begin());
+
+    //Create bullets if there're no more bullets left.
+    if(m_bullets.empty())
     {
         createBullets();
     }
+    //Set time for next bullet.
     m_nextMissile = m_timer->getTime()+ GameNs::RandomNumber::getInstance()->getRandomNumber(0,3);
 }
-
+/**
+ * Method to create bullets
+ */
 void GameNs::EnemyManager::createBullets() {
     for(int i =0; i<50;i++)
     {
         m_bullets.emplace_back(m_factory->createBullet(m_bulletPath, i + 50, i + 50, 10, 10));
     }
 }
-
+/**
+ * Method to destroy enemy ship textures
+ */
 void GameNs::EnemyManager::close() {
     for(auto & enemyShip : m_enemyShips)
     {

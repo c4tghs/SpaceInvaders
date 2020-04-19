@@ -25,8 +25,8 @@ namespace GameNs
     class EnemyManager {
     public:
         EnemyManager();
-        EnemyManager(AbstractFactory *AF, int screenWidth, int screenHeight, BulletManager *bulletManager, Timer *timer,
-                     Score *score);
+        EnemyManager(AbstractFactory* AF, int screenWidth, int screenHeight, BulletManager* bulletManager, Timer* timer,
+                     Score* score);
         void createEnemies(int number);
         void updateEnemies();
         void moveEnemies();
@@ -36,9 +36,9 @@ namespace GameNs
         void close();
 
     private:
-        AbstractFactory* m_factory;
+        AbstractFactory* m_factory=nullptr;
         std::vector<EnemyShip *> m_enemyShips;
-        Timer *m_timer;
+        Timer* m_timer=nullptr;
         BulletManager* m_bulletManager= nullptr;
         int m_screenWidth=0;
         int m_screenHeight=0;
@@ -50,7 +50,7 @@ namespace GameNs
         std::string m_enemyShipSquidPath = "../assets/squid.png";
         std::string m_bulletPath = "../assets/bullet.jpeg";
         std::vector<Bullet*> m_bullets;
-        Score *m_score= nullptr;
+        Score* m_score= nullptr;
     };
 }
 

@@ -14,7 +14,7 @@ GameNs::TextManager::TextManager() {}
  * Constructor
  * @param renderer - the renderer
  */
-GameNs::TextManager::TextManager(SDL_Renderer *renderer) {
+GameNs::TextManager::TextManager(SDL_Renderer* renderer) {
     m_renderer = renderer;
 }
 
@@ -28,46 +28,61 @@ SDL_Texture* GameNs::TextManager::getTexture() {
 
 /**
  * Method to create text texture from font
- * @param filename - the text to display
- * @param ren
+ * @param text - the text to display
+ * @param textSize - the size of the text
  */
-void GameNs::TextManager::loadTexture(const std::string &text, int textSize) {
+void GameNs::TextManager::loadTexture(const std::string& text, int textSize) {
     SDL_Texture *texture;
     SDL_Surface *surface;
     SDL_Color color = {255,255,255};
+    //Create Font
     m_font = TTF_OpenFont(m_fontFile,textSize);
+    //Set style
     TTF_SetFontStyle(m_font,1);
+
+    //Check if font was created successfully.
     if(m_font==nullptr)
     {
-        std::cout << "Failed to load font. Error: " << SDL_GetError() << std::endl;
+        std::cerr << "Failed to load font. Error: " << SDL_GetError() << std::endl;
         exit(1);
-    } else{
-        //create surface
+    }
+    else
+    {
+        //Create surface.
         surface = TTF_RenderText_Blended(m_font,text.c_str(),color);
+        //Check if surface was created successfully.
         if(surface==nullptr)
         {
-            std::cout << "Failed to create surface. Error: " << SDL_GetError() << std::endl;
+            std::cerr << "Failed to create surface. Error: " << SDL_GetError() << std::endl;
             exit(1);
-        } else{
-            //create texture
+        }
+        else
+        {
+            //Create texture.
             texture = SDL_CreateTextureFromSurface(m_renderer,surface);
+            //Check if texture was created successfully.
             if(texture ==nullptr)
             {
-                std::cout << "Failed to create texture. Error: " << SDL_GetError() << std::endl;
+                std::cerr << "Failed to create texture. Error: " << SDL_GetError() << std::endl;
                 exit(1);
-            } else
+            }
+            else
             {
                 m_texture = texture;
             }
         }
-        //free surface
+        //Free surface.
         SDL_FreeSurface(surface);
     }
 }
 
+/**
+ * Method to destroy the created texture
+ */
 void GameNs::TextManager::free() {
     if(m_texture != nullptr)
     {
+        //Destroy texture.
         SDL_DestroyTexture(m_texture);
         m_texture = nullptr;
     }

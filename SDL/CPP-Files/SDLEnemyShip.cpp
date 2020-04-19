@@ -16,9 +16,9 @@
  * @param xPos
  * @param yPos
  */
-SDLNs::SDLEnemyShip::SDLEnemyShip(SDL_Renderer *renderer, std::string enemyShipPath,int xPos,int yPos,int width, int height):EnemyShip(
-        xPos,yPos,width,height
-        ) {
+SDLNs::SDLEnemyShip::SDLEnemyShip(SDL_Renderer* renderer, std::string enemyShipPath,int xPos,int yPos,int width, int height):EnemyShip(
+        xPos,yPos,width,height)
+{
     m_renderer = renderer;
     m_enemyShipPath = std::move(enemyShipPath);
     m_enemyShipTexture = new GameNs::TextureManager(m_renderer);
@@ -57,9 +57,9 @@ int SDLNs::SDLEnemyShip::getMoveDirection() {
  * Method to show enemy
  */
 void SDLNs::SDLEnemyShip::render(){
-
-    SDL_Rect render = {getXPosition(),getYPosition(),getWidth(),getHeight()};
-    SDL_RenderCopy(m_renderer,m_enemyShipTexture->getTexture(),nullptr,&render);
+    //Create rectangular area
+    SDL_Rect rect = {getXPosition(), getYPosition(), getWidth(), getHeight()};
+    SDL_RenderCopy(m_renderer,m_enemyShipTexture->getTexture(),nullptr,&rect);
 
 }
 /**

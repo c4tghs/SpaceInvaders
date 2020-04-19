@@ -14,14 +14,14 @@ namespace SDLNs
 {
     class SDLBullet: public GameNs::Bullet {
     public:
-        SDLBullet(SDL_Renderer *renderer,std::string bulletPath, int xPos, int yPos, int width, int height);
+        SDLBullet(SDL_Renderer* renderer,std::string bulletPath, int xPos, int yPos, int width, int height);
         void render();
         void loadMedia();
         void close();
 
     private:
-        GameNs::TextureManager* m_texture;
-        SDL_Renderer* m_renderer;
+        GameNs::TextureManager* m_texture = nullptr;
+        SDL_Renderer* m_renderer= nullptr;
         std::string m_bulletPath;
     };
 }

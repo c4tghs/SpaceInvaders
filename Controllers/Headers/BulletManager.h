@@ -14,22 +14,20 @@
 namespace GameNs{
     class BulletManager {
     public:
-        /*static BulletManager* getInstance();
-        static BulletManager *getInstance(Timer *timer, int screenHeight);*/
         BulletManager();
-        BulletManager(Timer *timer, int screenHeight);
+        BulletManager(Timer* timer, int screenHeight);
         void update();
         void moveBullet();
         void setPlayerBullet(Bullet* bullet);
         void setEnemyBullet(Bullet* bullet);
         void checkBulletBounds();
-        bool getPlayerBulletFired();
-        bool getEnemyBulletFired();
+        bool isPlayerBulletFired();
+        bool isEnemyBulletFired();
         void setPlayerBulletFired(bool isFired);
         void setEnemyBulletFired(bool isFired);
         bool checkPlayerCollisions();
-        void setPlayerBulletCollision(bool collided);
-        void bulletCollision();
+        void setPlayerBulletCollision(bool isCollided);
+        void bulletsCollision();
         Bullet* getPlayerBullet();
         Bullet* getEnemyBullet();
 

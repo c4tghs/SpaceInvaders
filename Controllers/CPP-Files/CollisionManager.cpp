@@ -33,7 +33,7 @@ GameNs::CollisionManager::CollisionManager() {}
  * @param bullet - the bullet
  * @return - true or false
  */
-bool GameNs::CollisionManager::checkBulletCollision(Bullet * bullet, int xPos, int yPos, int width, int height) {
+bool GameNs::CollisionManager::checkBulletCollision(Bullet* bullet, int xPos, int yPos, int width, int height) {
     return xPos + width >= bullet->getXPosition() &&
            xPos <= bullet->getXPosition() + bullet->getWidth() &&
            yPos + height >= bullet->getYPosition() &&
@@ -46,7 +46,7 @@ bool GameNs::CollisionManager::checkBulletCollision(Bullet * bullet, int xPos, i
  * @param playerShip - player ship
  * @return - true or false
  */
-bool GameNs::CollisionManager::checkBonusCollision(Bonus *bonus, PlayerShip *playerShip) {
+bool GameNs::CollisionManager::checkBonusCollision(Bonus* bonus, PlayerShip* playerShip) {
     return bonus->getXPosition()+bonus->getWidth() >= playerShip->getXPosition() &&
            bonus->getXPosition() <= playerShip->getXPosition() + playerShip->getWidth() &&
            bonus->getYPosition() + bonus->getHeight() >= playerShip->getYPosition() &&
@@ -59,7 +59,7 @@ bool GameNs::CollisionManager::checkBonusCollision(Bonus *bonus, PlayerShip *pla
  * @param enemyBullet - enemy's bullet
  * @return - true of false
  */
-bool GameNs::CollisionManager::twoBulletsCollision(GameNs::Bullet *playerBullet, GameNs::Bullet *enemyBullet) {
+bool GameNs::CollisionManager::twoBulletsCollision(GameNs::Bullet* playerBullet, GameNs::Bullet* enemyBullet) {
     return playerBullet->getXPosition() + playerBullet->getWidth() >= enemyBullet->getXPosition() &&
            playerBullet->getXPosition() <= enemyBullet->getXPosition() + enemyBullet->getWidth() &&
            playerBullet->getYPosition() + playerBullet->getHeight() >= enemyBullet->getYPosition() &&

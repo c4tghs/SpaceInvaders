@@ -9,6 +9,7 @@
 
 namespace GameNs{
     enum BonusType{SPEED,LIFE, POINTS};
+
     class Bonus:public Entity {
         public:
             Bonus();

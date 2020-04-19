@@ -11,7 +11,7 @@ namespace GameNs{
     class RandomNumber {
     public:
         static RandomNumber* getInstance();
-        int getRandomNumber(int lowerBound, int higherBound);
+        static int getRandomNumber(int lowerBound, int higherBound);
     private:
         static RandomNumber* m_instance;
         RandomNumber();

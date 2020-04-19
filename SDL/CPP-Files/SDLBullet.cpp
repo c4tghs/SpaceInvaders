@@ -16,7 +16,7 @@
  * @param width - width of bullet
  * @param height - height of bullet
  */
-SDLNs::SDLBullet::SDLBullet(SDL_Renderer *renderer,std::string bulletPath,int xPos, int yPos,int width, int height):GameNs::Bullet(xPos,yPos,width,height)
+SDLNs::SDLBullet::SDLBullet(SDL_Renderer* renderer,std::string bulletPath,int xPos, int yPos,int width, int height):GameNs::Bullet(xPos,yPos,width,height)
 {
     m_renderer = renderer;
     m_bulletPath = std::move(bulletPath);
@@ -27,8 +27,9 @@ SDLNs::SDLBullet::SDLBullet(SDL_Renderer *renderer,std::string bulletPath,int xP
  * Method to render bullet
  */
 void SDLNs::SDLBullet::render() {
-    SDL_Rect rQuad = {getXPosition(),getYPosition(),getWidth(),getHeight()};
-    SDL_RenderCopy(m_renderer,m_texture->getTexture(),nullptr,&rQuad);
+    //Create rectangular area
+    SDL_Rect rect = {getXPosition(), getYPosition(), getWidth(), getHeight()};
+    SDL_RenderCopy(m_renderer,m_texture->getTexture(),nullptr,&rect);
 
 }
 /**
