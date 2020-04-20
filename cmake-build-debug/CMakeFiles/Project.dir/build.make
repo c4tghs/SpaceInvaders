@@ -308,19 +308,19 @@ CMakeFiles/Project.dir/Models/CPP-Files/Entity.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/Models/CPP-Files/Entity.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Users\cliff\Documents\C++\Project\Models\CPP-Files\Entity.cpp -o CMakeFiles\Project.dir\Models\CPP-Files\Entity.cpp.s
 
-CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.obj: CMakeFiles/Project.dir/flags.make
-CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.obj: CMakeFiles/Project.dir/includes_CXX.rsp
-CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.obj: ../Controllers/CPP-Files/CollisionManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project.dir\Controllers\CPP-Files\CollisionManager.cpp.obj -c D:\Users\cliff\Documents\C++\Project\Controllers\CPP-Files\CollisionManager.cpp
+CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionDetector.cpp.obj: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionDetector.cpp.obj: CMakeFiles/Project.dir/includes_CXX.rsp
+CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionDetector.cpp.obj: ../Controllers/CPP-Files/CollisionDetector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionDetector.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project.dir\Controllers\CPP-Files\CollisionDetector.cpp.obj -c D:\Users\cliff\Documents\C++\Project\Controllers\CPP-Files\CollisionDetector.cpp
 
-CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Users\cliff\Documents\C++\Project\Controllers\CPP-Files\CollisionManager.cpp > CMakeFiles\Project.dir\Controllers\CPP-Files\CollisionManager.cpp.i
+CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionDetector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionDetector.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Users\cliff\Documents\C++\Project\Controllers\CPP-Files\CollisionDetector.cpp > CMakeFiles\Project.dir\Controllers\CPP-Files\CollisionDetector.cpp.i
 
-CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Users\cliff\Documents\C++\Project\Controllers\CPP-Files\CollisionManager.cpp -o CMakeFiles\Project.dir\Controllers\CPP-Files\CollisionManager.cpp.s
+CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionDetector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionDetector.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Users\cliff\Documents\C++\Project\Controllers\CPP-Files\CollisionDetector.cpp -o CMakeFiles\Project.dir\Controllers\CPP-Files\CollisionDetector.cpp.s
 
 CMakeFiles/Project.dir/Models/CPP-Files/Score.cpp.obj: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/Models/CPP-Files/Score.cpp.obj: CMakeFiles/Project.dir/includes_CXX.rsp
@@ -468,7 +468,7 @@ Project_OBJECTS = \
 "CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj" \
 "CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj" \
 "CMakeFiles/Project.dir/Models/CPP-Files/Entity.cpp.obj" \
-"CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.obj" \
+"CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionDetector.cpp.obj" \
 "CMakeFiles/Project.dir/Models/CPP-Files/Score.cpp.obj" \
 "CMakeFiles/Project.dir/SDL/CPP-Files/SDLScore.cpp.obj" \
 "CMakeFiles/Project.dir/Controllers/CPP-Files/TextManager.cpp.obj" \
@@ -500,7 +500,7 @@ Project.exe: CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj
 Project.exe: CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj
 Project.exe: CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj
 Project.exe: CMakeFiles/Project.dir/Models/CPP-Files/Entity.cpp.obj
-Project.exe: CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.obj
+Project.exe: CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionDetector.cpp.obj
 Project.exe: CMakeFiles/Project.dir/Models/CPP-Files/Score.cpp.obj
 Project.exe: CMakeFiles/Project.dir/SDL/CPP-Files/SDLScore.cpp.obj
 Project.exe: CMakeFiles/Project.dir/Controllers/CPP-Files/TextManager.cpp.obj

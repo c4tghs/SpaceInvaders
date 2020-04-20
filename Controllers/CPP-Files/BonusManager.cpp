@@ -10,9 +10,10 @@
  * @param AF - abstract factory
  * @param playerManager - player manager
  */
-GameNs::BonusManager::BonusManager(AbstractFactory* AF, PlayerManager* playerManager, PlayerLife* playerLife,
-                                   Score* score, Timer* timer,
-                                   int screenWidth, int screenHeight) {
+GameNs::BonusManager::BonusManager(AbstractFactory *AF, PlayerManager *playerManager, PlayerLife *playerLife,
+                                   Score *score,
+                                   CollisionDetector *collisionDetector, Timer *timer, int screenWidth,
+                                   int screenHeight) {
     m_timer = timer;
     m_playerShip = playerManager->getPlayerShip();
     m_factory = AF;
@@ -20,6 +21,7 @@ GameNs::BonusManager::BonusManager(AbstractFactory* AF, PlayerManager* playerMan
     m_screenHeight = screenHeight;
     m_playerLife = playerLife;
     m_playerSCore = score;
+    m_collisionDetector = collisionDetector;
 
     //Create bonuses.
     createBonuses();
@@ -121,7 +123,7 @@ void GameNs::BonusManager::selectBonus() {
 void GameNs::BonusManager::checkCollisions() {
     BonusType bonusType;
     //If there's collision between bonus and player ship:
-    if(CollisionManager::getInstance()->checkBonusCollision(m_bonuses[m_randomId],m_playerShip))
+    if(m_collisionDetector->checkBonusCollision(m_bonuses[m_randomId], m_playerShip))
     {
         //Set Y position of bonus -> move out visible area
         m_bonuses[m_randomId]->setYPosition(m_screenHeight+10);

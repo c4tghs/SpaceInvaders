@@ -10,6 +10,7 @@ int main(int argc, char *argv[]) {
     GameNs::Game *g = GameNs::Game::getInstance(AF);
     //run game
     g->run();
-
+    //deallocate memory
+    delete(AF);
     return 0;
 }

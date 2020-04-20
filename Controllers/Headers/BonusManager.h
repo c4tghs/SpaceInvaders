@@ -12,9 +12,8 @@ namespace GameNs{
     class BonusManager {
         public:
             BonusManager();
-            BonusManager(AbstractFactory* AF, PlayerManager* playerManager, PlayerLife* playerLife, Score* score,
-                         Timer* timer,
-                         int screenWidth, int screenHeight);
+            BonusManager(AbstractFactory *AF, PlayerManager *playerManager, PlayerLife *playerLife, Score *score,
+                         CollisionDetector *collisionDetector, Timer *timer, int screenWidth, int screenHeight);
             void update();
             void render();
             void createBonuses();
@@ -36,6 +35,7 @@ namespace GameNs{
             int m_randomId=0;
             PlayerLife* m_playerLife=nullptr;
             Score* m_playerSCore=nullptr;
+            CollisionDetector* m_collisionDetector= nullptr;
             std::string m_bonusLife="../assets/life.jpg";
             std::string m_bonusSpeed="../assets/speed.jpg";
             std::string m_bonusPoints="../assets/points.png";

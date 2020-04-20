@@ -88,7 +88,7 @@
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/BulletManager.cpp">
 			<Option target="Project"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/CollisionManager.cpp">
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/CollisionDetector.cpp">
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/EnemyManager.cpp">
@@ -112,7 +112,7 @@
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/Headers/BulletManager.h">
 			<Option target="Project"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/Headers/CollisionManager.h">
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/Headers/CollisionDetector.h">
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/Headers/EnemyManager.h">

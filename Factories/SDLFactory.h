@@ -28,12 +28,12 @@ namespace SDLNs
         void initialise(int windowWidth, int windowHeight) override;
         void close() override;
         void render() override;
-        bool getRunningState() override;
+        bool isRunning() override;
         void createWindow(const char* title,int width, int height);
         void createRender();
 
     private:
-        bool m_IsRunning = false;
+        bool m_isRunning = false;
         SDL_Window* m_window = nullptr;
         SDL_Renderer* m_renderer = nullptr;
 

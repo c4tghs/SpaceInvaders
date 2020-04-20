@@ -17,15 +17,16 @@ GameNs::PlayerManager::PlayerManager() {}
  * @param screenHeight - screen height
  * @param screenWidth - screen width
  */
-GameNs::PlayerManager::PlayerManager(GameNs::AbstractFactory* AF, int screenHeight, int screenWidth,
-                                     BulletManager* bulletManager,
-                                     Timer* timer, PlayerLife* playerLife) {
+GameNs::PlayerManager::PlayerManager(GameNs::AbstractFactory *AF, int screenHeight, int screenWidth,
+                                     BulletManager *bulletManager,
+                                     Timer *timer, PlayerLife *playerLife, CollisionDetector *collisionDetector) {
     m_factory = AF;
     m_timer = timer;
     m_bulletManager = bulletManager;
     m_playerLife = playerLife;
     m_screenHeight = screenHeight;
     m_screenWidth = screenWidth;
+    m_collisionDetector = collisionDetector;
 
     //Create playerShip;
     m_playerShip  = m_factory->createPlayerShip(m_playerShipPath);
@@ -89,9 +90,9 @@ void GameNs::PlayerManager::checkPlayerBoundaries() {
     //Check collision with enemy bullet, if an enemy bullet has been fired.
     if(m_bulletManager->isEnemyBulletFired())
     {
-        if(CollisionManager::checkBulletCollision(m_bulletManager->getEnemyBullet(), m_playerShip->getXPosition(),
-                                                  m_playerShip->getYPosition(), m_playerShip->getWidth(),
-                                                  m_playerShip->getHeight()))
+        if(m_collisionDetector->checkBulletCollision(m_bulletManager->getEnemyBullet(), m_playerShip->getXPosition(),
+                                                   m_playerShip->getYPosition(), m_playerShip->getWidth(),
+                                                   m_playerShip->getHeight()))
         {
             m_playerLife->setPlayerLife(m_playerLife->getPlayerLife()-1);
             m_bulletManager->setEnemyBulletFired(false);

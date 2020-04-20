@@ -118,14 +118,14 @@ void SDLNs::SDLFactory::initialise(int windowWidth, int windowHeight){
     if(SDL_Init(SDL_INIT_VIDEO) !=0 && IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG) !=0)
     {
         std::cerr << "Failed to initialise SDL: "<< SDL_GetError() << std::endl;
-        m_IsRunning = false;
+        m_isRunning = false;
         //exit(1);
     }
     //Check if TTF was initialised successfully
     else if (TTF_Init() < 0)
     {
         std::cerr << "Unable to initialise TTF library: "<< TTF_GetError() << std::endl;
-        m_IsRunning = false;
+        m_isRunning = false;
         //exit(1);
     }
     else
@@ -137,7 +137,7 @@ void SDLNs::SDLFactory::initialise(int windowWidth, int windowHeight){
         if(m_window == nullptr)
         {
             std::cerr << "Failed to create Window." << std::endl;
-            m_IsRunning = false;
+            m_isRunning = false;
         }
         else
         {
@@ -148,7 +148,7 @@ void SDLNs::SDLFactory::initialise(int windowWidth, int windowHeight){
             if(m_renderer == nullptr)
             {
                 std::cerr << "Failed to create Renderer."<< std::endl;
-                m_IsRunning = false;
+                m_isRunning = false;
             }
             else
             {
@@ -157,10 +157,10 @@ void SDLNs::SDLFactory::initialise(int windowWidth, int windowHeight){
                 if(!(IMG_Init(imgFlags) & imgFlags))
                 {
                     std::cerr << "Failed to initialise SDL_image: "<< IMG_GetError() << std::endl;
-                    m_IsRunning = false;
+                    m_isRunning = false;
                 } else
                 {
-                    m_IsRunning = true;
+                    m_isRunning = true;
                 }
             }
         }
@@ -193,7 +193,7 @@ void SDLNs::SDLFactory::render(){
  * Method used to handle events
  * @return True or False
  */
-bool SDLNs::SDLFactory::getRunningState()
+bool SDLNs::SDLFactory::isRunning()
 {
     SDL_Event event;
 
@@ -201,11 +201,11 @@ bool SDLNs::SDLFactory::getRunningState()
     {
         if(event.type == SDL_QUIT)
         {
-            m_IsRunning = false;
+            m_isRunning = false;
         }
     }
 
-    return m_IsRunning;
+    return m_isRunning;
 }
 
 

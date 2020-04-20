@@ -14,14 +14,14 @@
 #include "../../SDL/Headers/SDLKeyStates.h"
 #include "../../SDL/Headers/SDLBullet.h"
 #include "BulletManager.h"
-#include "CollisionManager.h"
+#include "CollisionDetector.h"
 
 namespace GameNs{
     class PlayerManager {
     public:
         PlayerManager();
-        PlayerManager(GameNs::AbstractFactory* AF, int screenHeight, int screenWidth, BulletManager* bulletManager,
-                      Timer* timer, PlayerLife* playerLife);
+        PlayerManager(GameNs::AbstractFactory *AF, int screenHeight, int screenWidth, BulletManager *bulletManager,
+                      Timer *timer, PlayerLife *playerLife, CollisionDetector *collisionDetector);
         void checkPlayerBoundaries();
         void movePlayer();
         void update();
@@ -40,6 +40,7 @@ namespace GameNs{
         BulletManager* m_bulletManager=nullptr;
         SDLNs::SDLKeyStates* m_keyStates = nullptr;
         PlayerShip* m_playerShip=nullptr;
+        CollisionDetector* m_collisionDetector= nullptr;
         int m_screenHeight=0;
         int m_screenWidth=0;
         std::vector<Bullet*> m_bullets;

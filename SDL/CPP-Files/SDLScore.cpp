@@ -27,4 +27,6 @@ void SDLNs::SDLScore::render() {
  */
 void SDLNs::SDLScore::close() {
     m_textTexture->free();
+    //Deallocate memory
+    delete(m_textTexture);
 }

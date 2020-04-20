@@ -176,32 +176,32 @@ Controllers/CPP-Files/BulletManager.cpp.s:
 	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.s
 .PHONY : Controllers/CPP-Files/BulletManager.cpp.s
 
-Controllers/CPP-Files/CollisionManager.obj: Controllers/CPP-Files/CollisionManager.cpp.obj
+Controllers/CPP-Files/CollisionDetector.obj: Controllers/CPP-Files/CollisionDetector.cpp.obj
 
-.PHONY : Controllers/CPP-Files/CollisionManager.obj
+.PHONY : Controllers/CPP-Files/CollisionDetector.obj
 
 # target to build an object file
-Controllers/CPP-Files/CollisionManager.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.obj
-.PHONY : Controllers/CPP-Files/CollisionManager.cpp.obj
+Controllers/CPP-Files/CollisionDetector.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionDetector.cpp.obj
+.PHONY : Controllers/CPP-Files/CollisionDetector.cpp.obj
 
-Controllers/CPP-Files/CollisionManager.i: Controllers/CPP-Files/CollisionManager.cpp.i
+Controllers/CPP-Files/CollisionDetector.i: Controllers/CPP-Files/CollisionDetector.cpp.i
 
-.PHONY : Controllers/CPP-Files/CollisionManager.i
+.PHONY : Controllers/CPP-Files/CollisionDetector.i
 
 # target to preprocess a source file
-Controllers/CPP-Files/CollisionManager.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.i
-.PHONY : Controllers/CPP-Files/CollisionManager.cpp.i
+Controllers/CPP-Files/CollisionDetector.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionDetector.cpp.i
+.PHONY : Controllers/CPP-Files/CollisionDetector.cpp.i
 
-Controllers/CPP-Files/CollisionManager.s: Controllers/CPP-Files/CollisionManager.cpp.s
+Controllers/CPP-Files/CollisionDetector.s: Controllers/CPP-Files/CollisionDetector.cpp.s
 
-.PHONY : Controllers/CPP-Files/CollisionManager.s
+.PHONY : Controllers/CPP-Files/CollisionDetector.s
 
 # target to generate assembly for a file
-Controllers/CPP-Files/CollisionManager.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.s
-.PHONY : Controllers/CPP-Files/CollisionManager.cpp.s
+Controllers/CPP-Files/CollisionDetector.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionDetector.cpp.s
+.PHONY : Controllers/CPP-Files/CollisionDetector.cpp.s
 
 Controllers/CPP-Files/EnemyManager.obj: Controllers/CPP-Files/EnemyManager.cpp.obj
 
@@ -893,9 +893,9 @@ help:
 	@echo ... Controllers/CPP-Files/BulletManager.obj
 	@echo ... Controllers/CPP-Files/BulletManager.i
 	@echo ... Controllers/CPP-Files/BulletManager.s
-	@echo ... Controllers/CPP-Files/CollisionManager.obj
-	@echo ... Controllers/CPP-Files/CollisionManager.i
-	@echo ... Controllers/CPP-Files/CollisionManager.s
+	@echo ... Controllers/CPP-Files/CollisionDetector.obj
+	@echo ... Controllers/CPP-Files/CollisionDetector.i
+	@echo ... Controllers/CPP-Files/CollisionDetector.s
 	@echo ... Controllers/CPP-Files/EnemyManager.obj
 	@echo ... Controllers/CPP-Files/EnemyManager.i
 	@echo ... Controllers/CPP-Files/EnemyManager.s

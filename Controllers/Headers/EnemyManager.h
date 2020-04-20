@@ -7,15 +7,9 @@
 #define PROJECT_ENEMYMANAGER_H
 
 
-/**
- * TODO add method to set and get enemy type
- *
- */
-
-
 #include "../../Factories/AbstractFactory.h"
 #include "../../SDL/Headers/SDLTimer.h"
-#include "CollisionManager.h"
+#include "CollisionDetector.h"
 #include "BulletManager.h"
 #include <vector>
 #include <random>
@@ -25,8 +19,8 @@ namespace GameNs
     class EnemyManager {
     public:
         EnemyManager();
-        EnemyManager(AbstractFactory* AF, int screenWidth, int screenHeight, BulletManager* bulletManager, Timer* timer,
-                     Score* score);
+        EnemyManager(AbstractFactory *AF, int screenWidth, int screenHeight, BulletManager *bulletManager, Timer *timer,
+                     Score *score, CollisionDetector *collisionDetector);
         void createEnemies(int number);
         void updateEnemies();
         void moveEnemies();
@@ -40,6 +34,7 @@ namespace GameNs
         std::vector<EnemyShip *> m_enemyShips;
         Timer* m_timer=nullptr;
         BulletManager* m_bulletManager= nullptr;
+        CollisionDetector* m_collisionDetector= nullptr;
         int m_screenWidth=0;
         int m_screenHeight=0;
         int m_playerYPos=0;

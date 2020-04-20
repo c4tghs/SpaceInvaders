@@ -35,6 +35,8 @@ void SDLNs::SDLPlayerLife::render() {
  */
 void SDLNs::SDLPlayerLife::close() {
     m_textTexture->free();
+    //Deallocate memory
+    delete(m_textTexture);
 }
 
 

@@ -30,7 +30,7 @@ namespace GameNs{
         virtual void initialise(int windowWidth, int windowHeight)=0;
         virtual void render()=0;
         virtual void close()=0;
-        virtual bool getRunningState()=0;
+        virtual bool isRunning()=0;
     };
 }
 

@@ -26,9 +26,7 @@ GameNs::Game* GameNs::Game::getInstance(AbstractFactory* AF) {
 /**
  * Constructor
  */
-GameNs::Game::Game() {
-
-}
+GameNs::Game::Game() {}
 
 /**
  * Constructor
@@ -37,6 +35,7 @@ GameNs::Game::Game() {
 GameNs::Game::Game(AbstractFactory* AF) {
     m_factory = AF;
     m_timer = m_factory->createTimer();
+    m_collisionDetector = new CollisionDetector();
 }
 /**
  * Method that holds the game's main loop
@@ -51,17 +50,20 @@ void GameNs::Game::run() {
     //Create player life
     m_playerLife = m_factory->createPlayerLife();
     //Create bullet manager
-    m_bulletManager = new BulletManager(m_timer, m_screenHeight);
+    m_bulletManager = new BulletManager(m_timer, m_collisionDetector, m_screenHeight);
     //Create player manager
-    m_playerManager = new PlayerManager(m_factory, m_screenHeight, m_screenWidth, m_bulletManager, m_timer, m_playerLife);
+    m_playerManager = new PlayerManager(m_factory, m_screenHeight, m_screenWidth, m_bulletManager, m_timer,
+                                        m_playerLife, nullptr);
     //Create enemy manager
-    m_enemyManager = new EnemyManager(m_factory, m_screenWidth, m_screenHeight, m_bulletManager, m_timer, m_playerScore);
-    //Create bonusManager
-    m_bonusManager = new BonusManager(m_factory, m_playerManager, m_playerLife, m_playerScore, m_timer, m_screenWidth,
+    m_enemyManager = new EnemyManager(m_factory, m_screenWidth, m_screenHeight, m_bulletManager, m_timer, m_playerScore,
+                                      m_collisionDetector);
+    //Create bonus manager
+    m_bonusManager = new BonusManager(m_factory, m_playerManager, m_playerLife, m_playerScore, m_collisionDetector, m_timer,
+                                      m_screenWidth,
                                       m_screenHeight);
 
     //Game loop for updating.
-    while(m_factory->getRunningState())
+    while(m_factory->isRunning())
     {
         background->render();
         m_playerManager->update();
@@ -79,6 +81,12 @@ void GameNs::Game::run() {
     m_bonusManager->close();
     m_playerLife->close();
     m_factory->close();
+
+    //Deallocate memory
+    delete(m_bulletManager);
+    delete(m_playerManager);
+    delete(m_enemyManager);
+    delete(m_bonusManager);
 }
 
 

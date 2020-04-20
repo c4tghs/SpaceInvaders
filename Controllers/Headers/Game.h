@@ -34,6 +34,7 @@ namespace GameNs{
         BonusManager* m_bonusManager = nullptr;
         PlayerLife* m_playerLife = nullptr;
         Score* m_playerScore = nullptr;
+        CollisionDetector* m_collisionDetector= nullptr;
         AbstractFactory* m_factory = nullptr;
         const int m_screenHeight = 720 ;
         const int m_screenWidth = 940;

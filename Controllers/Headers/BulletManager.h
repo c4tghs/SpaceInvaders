@@ -9,13 +9,13 @@
 #include <vector>
 #include "../../Factories/AbstractFactory.h"
 #include "../../SDL/Headers/SDLTimer.h"
-#include "CollisionManager.h"
+#include "CollisionDetector.h"
 
 namespace GameNs{
     class BulletManager {
     public:
         BulletManager();
-        BulletManager(Timer* timer, int screenHeight);
+        BulletManager(Timer *timer, CollisionDetector *collisionDetector, int screenHeight);
         void update();
         void moveBullet();
         void setPlayerBullet(Bullet* bullet);
@@ -38,6 +38,7 @@ namespace GameNs{
         Timer* m_timer= nullptr;
         Bullet* m_playerBullet = nullptr;
         Bullet* m_enemyBullet = nullptr;
+        CollisionDetector* m_collisionDetector= nullptr;
         int m_screenHeight = 0;
 
 

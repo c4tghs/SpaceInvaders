@@ -15,8 +15,9 @@ GameNs::BulletManager::BulletManager() {}
  * @param timer - timer
  * @param screenHeight - height of the screen
  */
-GameNs::BulletManager::BulletManager(Timer* timer, int screenHeight) {
+GameNs::BulletManager::BulletManager(Timer *timer, CollisionDetector *collisionDetector, int screenHeight) {
     m_timer = timer;
+    m_collisionDetector = collisionDetector;
     m_playerFired = false;
     m_screenHeight = screenHeight;
 }
@@ -172,7 +173,7 @@ void GameNs::BulletManager::bulletsCollision() {
     if(m_playerFired and m_enemyFired)
     {
 
-        if(CollisionManager::getInstance()->twoBulletsCollision(m_playerBullet,m_enemyBullet))
+        if(m_collisionDetector->twoBulletsCollision(m_playerBullet, m_enemyBullet))
         {
             m_playerBullet->setYPosition(0);
             m_enemyBullet->setYPosition(m_screenHeight+5);

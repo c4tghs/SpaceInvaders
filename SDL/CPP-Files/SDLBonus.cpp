@@ -41,6 +41,8 @@ void SDLNs::SDLBonus::render()
 void SDLNs::SDLBonus::close()
 {
     m_bonusTexture->free();
+    //Deallocate memory
+    delete(m_bonusTexture);
 }
 /**
  * Method to create bonus texture
@@ -53,3 +55,5 @@ void SDLNs::SDLBonus::loadMedia()
         exit(1);
     }
 }
+
+

@@ -37,6 +37,8 @@ void SDLNs::SDLBullet::render() {
  */
 void SDLNs::SDLBullet::close() {
     m_texture->free();
+    //Deallocate memory
+    delete(m_texture);
 }
 
 /**

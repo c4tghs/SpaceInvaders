@@ -4,7 +4,7 @@
 CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.obj: ../Controllers/CPP-Files/BonusManager.cpp
 CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.obj: ../Controllers/Headers/BonusManager.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.obj: ../Controllers/Headers/BulletManager.h
-CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.obj: ../Controllers/Headers/CollisionManager.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.obj: ../Controllers/Headers/CollisionDetector.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.obj: ../Controllers/Headers/PlayerManager.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.obj: ../Controllers/Headers/TextureManager.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.obj: ../Factories/AbstractFactory.h
@@ -24,7 +24,7 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.obj: ../SDL/Header
 
 CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../Controllers/CPP-Files/BulletManager.cpp
 CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../Controllers/Headers/BulletManager.h
-CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../Controllers/Headers/CollisionManager.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../Controllers/Headers/CollisionDetector.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../Factories/AbstractFactory.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../Models/Headers/Background.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../Models/Headers/Bonus.h
@@ -37,16 +37,16 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../Models/He
 CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../Models/Headers/Timer.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../SDL/Headers/SDLTimer.h
 
-CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.obj: ../Controllers/CPP-Files/CollisionManager.cpp
-CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.obj: ../Controllers/Headers/CollisionManager.h
-CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.obj: ../Models/Headers/Bonus.h
-CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.obj: ../Models/Headers/Bullet.h
-CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.obj: ../Models/Headers/Entity.h
-CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionManager.cpp.obj: ../Models/Headers/PlayerShip.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionDetector.cpp.obj: ../Controllers/CPP-Files/CollisionDetector.cpp
+CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionDetector.cpp.obj: ../Controllers/Headers/CollisionDetector.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionDetector.cpp.obj: ../Models/Headers/Bonus.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionDetector.cpp.obj: ../Models/Headers/Bullet.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionDetector.cpp.obj: ../Models/Headers/Entity.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionDetector.cpp.obj: ../Models/Headers/PlayerShip.h
 
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Controllers/CPP-Files/EnemyManager.cpp
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Controllers/Headers/BulletManager.h
-CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Controllers/Headers/CollisionManager.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Controllers/Headers/CollisionDetector.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Controllers/Headers/EnemyManager.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Factories/AbstractFactory.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Models/Headers/Background.h
@@ -64,7 +64,7 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../SDL/Header
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Controllers/CPP-Files/Game.cpp
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Controllers/Headers/BonusManager.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Controllers/Headers/BulletManager.h
-CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Controllers/Headers/CollisionManager.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Controllers/Headers/CollisionDetector.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Controllers/Headers/EnemyManager.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Controllers/Headers/Game.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Controllers/Headers/PlayerManager.h
@@ -85,7 +85,7 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../SDL/Headers/SDLTim
 
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Controllers/CPP-Files/PlayerManager.cpp
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Controllers/Headers/BulletManager.h
-CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Controllers/Headers/CollisionManager.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Controllers/Headers/CollisionDetector.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Controllers/Headers/PlayerManager.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Controllers/Headers/TextureManager.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Factories/AbstractFactory.h
@@ -246,7 +246,7 @@ CMakeFiles/Project.dir/SDL/CPP-Files/SDLTimer.cpp.obj: ../SDL/Headers/SDLTimer.h
 
 CMakeFiles/Project.dir/main.cpp.obj: ../Controllers/Headers/BonusManager.h
 CMakeFiles/Project.dir/main.cpp.obj: ../Controllers/Headers/BulletManager.h
-CMakeFiles/Project.dir/main.cpp.obj: ../Controllers/Headers/CollisionManager.h
+CMakeFiles/Project.dir/main.cpp.obj: ../Controllers/Headers/CollisionDetector.h
 CMakeFiles/Project.dir/main.cpp.obj: ../Controllers/Headers/EnemyManager.h
 CMakeFiles/Project.dir/main.cpp.obj: ../Controllers/Headers/Game.h
 CMakeFiles/Project.dir/main.cpp.obj: ../Controllers/Headers/PlayerManager.h

@@ -67,4 +67,6 @@ void SDLNs::SDLEnemyShip::render(){
  */
 void SDLNs::SDLEnemyShip::close(){
     m_enemyShipTexture->free();
+    //Deallocate memory
+    delete(m_enemyShipTexture);
 }

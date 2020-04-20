@@ -19,13 +19,14 @@ GameNs::EnemyManager::EnemyManager() {}
  */
 GameNs::EnemyManager::EnemyManager(AbstractFactory *AF, int screenWidth, int screenHeight, BulletManager *bulletManager,
                                    Timer *timer,
-                                   Score *score)
+                                   Score *score, CollisionDetector *collisionDetector)
 {
     m_factory = AF;
     m_timer =timer;
     m_screenWidth = screenWidth;
     m_screenHeight = screenHeight;
     m_bulletManager = bulletManager;
+    m_collisionDetector = collisionDetector;
     m_playerYPos = m_screenHeight-((m_screenHeight/10)+10);
     //Get current time and add random between 0 and 3 to it
     m_nextMissile = m_timer->getTime()+ GameNs::RandomNumber::getInstance()->getRandomNumber(0,3);
@@ -103,9 +104,9 @@ void GameNs::EnemyManager::updateEnemies() {
         //Check collision with player bullet
         if(m_bulletManager->isPlayerBulletFired())
         {
-            if(CollisionManager::checkBulletCollision(m_bulletManager->getPlayerBullet(), m_enemyShip->getXPosition(),
-                                                      m_enemyShip->getYPosition(), m_enemyShip->getWidth(),
-                                                      m_enemyShip->getHeight()))
+            if(m_collisionDetector->checkBulletCollision(m_bulletManager->getPlayerBullet(), m_enemyShip->getXPosition(),
+                                                       m_enemyShip->getYPosition(), m_enemyShip->getWidth(),
+                                                       m_enemyShip->getHeight()))
             {
                 //Set player score.
                 if(m_enemyShip->getEnemyType() == EnemyType::Squid)
