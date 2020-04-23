@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.obj"
   "CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj"
   "CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionDetector.cpp.obj"
+  "CMakeFiles/Project.dir/Controllers/CPP-Files/ConfigHandler.cpp.obj"
   "CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj"
   "CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj"
   "CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj"

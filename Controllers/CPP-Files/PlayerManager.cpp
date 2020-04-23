@@ -2,7 +2,9 @@
  * CPP file of PlayerManager class
  */
 
+#include <iostream>
 #include "../Headers/PlayerManager.h"
+#include "../Headers/ConfigHandler.h"
 
 /**
  * Method to create instance of PlayerManager
@@ -17,25 +19,34 @@ GameNs::PlayerManager::PlayerManager() {}
  * @param screenHeight - screen height
  * @param screenWidth - screen width
  */
-GameNs::PlayerManager::PlayerManager(GameNs::AbstractFactory *AF, int screenHeight, int screenWidth,
-                                     BulletManager *bulletManager,
-                                     Timer *timer, PlayerLife *playerLife, CollisionDetector *collisionDetector) {
+GameNs::PlayerManager::PlayerManager(GameNs::AbstractFactory *AF, BulletManager *bulletManager, Timer *timer,
+                                     CollisionDetector *collisionDetector, ConfigHandler *configHandler) {
     m_factory = AF;
     m_timer = timer;
     m_bulletManager = bulletManager;
-    m_playerLife = playerLife;
-    m_screenHeight = screenHeight;
-    m_screenWidth = screenWidth;
+    m_playerLife = m_factory->createPlayerLife();;//playerLife;
+    m_screenHeight = configHandler->getScreenHeight();
+    m_screenWidth =  configHandler->getScreenWidth();
     m_collisionDetector = collisionDetector;
 
     //Create playerShip;
     m_playerShip  = m_factory->createPlayerShip(m_playerShipPath);
-
+    m_playerShip->setPlayerSpeed(configHandler->getPlayerSpeed());
     //Reserve memory for 10 bullets
     m_bullets.reserve(10);
 
     //Create 10 bullets
     createBullets();
+}
+/**
+ * Destructor
+ */
+GameNs::PlayerManager::~PlayerManager() {
+    for(auto & m_bullet : m_bullets)
+    {
+        m_bullet->close();
+    }
+    m_playerShip->close();
 }
 /**
  * update method
@@ -48,6 +59,8 @@ void GameNs::PlayerManager::update() {
     checkPlayerBoundaries();
     //Render player
     m_playerShip->render();
+    //Render player life
+    m_playerLife->render();
 }
 /**
  * Method to check what button has pressed and chnage position of player ship
@@ -59,12 +72,12 @@ void GameNs::PlayerManager::movePlayer() {
     {
         case 1:
             //Move player ship left
-            xPos = m_playerShip->getXPosition() - m_timer->getDeltaTime() *m_playerShip->getPlayerSpeed();
+            xPos = m_playerShip->getXPosition() - m_timer->getDeltaTime() * m_playerShip->getPlayerSpeed();
             m_playerShip->setXPosition(xPos);
             break;
         case 2:
             //Move player ship right
-            xPos = m_playerShip->getXPosition() + m_timer->getDeltaTime() *m_playerShip->getPlayerSpeed();
+            xPos = m_playerShip->getXPosition() + m_timer->getDeltaTime() * m_playerShip->getPlayerSpeed();
             m_playerShip->setXPosition(xPos);
             break;
         case 3:
@@ -100,17 +113,7 @@ void GameNs::PlayerManager::checkPlayerBoundaries() {
         }
     }
 }
-/**
- * Method to destroy player texture and bullets
- */
-void GameNs::PlayerManager::close() {
-    for(auto & m_bullet : m_bullets)
-    {
-        m_bullet->close();
-    }
-    m_playerShip->close();
 
-}
 /**
  * Method that allows a player to shoot
  */
@@ -153,6 +156,10 @@ void GameNs::PlayerManager::createBullets() {
  */
 GameNs::PlayerShip *GameNs::PlayerManager::getPlayerShip() {
     return m_playerShip;
+}
+
+GameNs::PlayerLife *GameNs::PlayerManager::getPlayerLife() {
+    return m_playerLife;
 }
 
 

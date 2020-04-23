@@ -268,6 +268,9 @@ SDL2_RUNTIME_LIBRARY:FILEPATH=C:/MinGW/bin/bin/SDL2.dll
 //Path to a library.
 SDL2_SDLMAIN_LIBRARY:FILEPATH=C:/MinGW/lib/lib/libSDL2main.a
 
+//The directory containing a CMake configuration file for nlohmann_json.
+nlohmann_json_DIR:PATH=nlohmann_json_DIR-NOTFOUND
+
 
 ########################
 # INTERNAL cache entries

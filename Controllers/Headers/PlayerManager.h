@@ -15,19 +15,21 @@
 #include "../../SDL/Headers/SDLBullet.h"
 #include "BulletManager.h"
 #include "CollisionDetector.h"
+#include "ConfigHandler.h"
 
 namespace GameNs{
     class PlayerManager {
     public:
         PlayerManager();
-        PlayerManager(GameNs::AbstractFactory *AF, int screenHeight, int screenWidth, BulletManager *bulletManager,
-                      Timer *timer, PlayerLife *playerLife, CollisionDetector *collisionDetector);
+        PlayerManager(GameNs::AbstractFactory *AF, BulletManager *bulletManager, Timer *timer,
+                      CollisionDetector *collisionDetector, ConfigHandler *configHandler);
+        ~PlayerManager();
         void checkPlayerBoundaries();
         void movePlayer();
         void update();
-        void close();
         void shoot();
         void createBullets();
+        PlayerLife* getPlayerLife();
         PlayerShip* getPlayerShip();
 
 

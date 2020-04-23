@@ -5,6 +5,8 @@
 #ifndef PROJECT_SDLFACTORY_H
 #define PROJECT_SDLFACTORY_H
 
+#define SCREEN_HEIGHT 720
+#define SCREEN_WIDTH 940
 
 #include <string>
 #include <SDL2/SDL.h>
@@ -15,8 +17,8 @@ namespace SDLNs
 {
     class SDLFactory:public GameNs::AbstractFactory {
     public:
-        SDLFactory(){};
-
+        SDLFactory();
+        ~SDLFactory()override ;
         GameNs::PlayerShip* createPlayerShip(std::string playerShipPath) override;
         GameNs::EnemyShip *createEnemyShip(std::string enemyShipPath, int xPos, int yPos) override;
         GameNs::Background* createBackground() override;
@@ -25,7 +27,6 @@ namespace SDLNs
         GameNs::Score* createScore() override;
         GameNs::PlayerLife* createPlayerLife() override;
         GameNs::Bonus* createBonus(std::string bonusImagePath, int xPos, int yPos, int width, int height) override;
-        void initialise(int windowWidth, int windowHeight) override;
         void close() override;
         void render() override;
         bool isRunning() override;

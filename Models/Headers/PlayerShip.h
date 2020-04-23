@@ -16,11 +16,11 @@ namespace GameNs
         PlayerShip(int xPos, int yPos, int width, int height);
         virtual void render() = 0;
         virtual void close() = 0;
-        void setPlayerSpeed(float speed);
-        float getPlayerSpeed();
+        void setPlayerSpeed(int speed);
+        int getPlayerSpeed();
 
     private:
-        float m_playerSpeed=5.0f;
+        int m_playerSpeed=0;
     };
 
 }

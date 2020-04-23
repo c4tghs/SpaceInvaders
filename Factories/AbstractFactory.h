@@ -27,10 +27,10 @@ namespace GameNs{
         virtual Score* createScore()=0;
         virtual PlayerLife* createPlayerLife()=0;
         virtual Bonus* createBonus(std::string bonusImagePath, int xPos, int yPos, int width, int height)=0;
-        virtual void initialise(int windowWidth, int windowHeight)=0;
         virtual void render()=0;
         virtual void close()=0;
         virtual bool isRunning()=0;
+        virtual ~AbstractFactory(){};
     };
 }
 

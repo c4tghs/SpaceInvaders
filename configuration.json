@@ -1,0 +1,12 @@
+{
+	"configuration":
+	{
+		"SCREENWIDTH":940,
+		"SCREENHEIGHT":720,
+		"ENEMYSPEED":1,
+		"BONUSSPEED":5,
+		"BULLETSPEED":5,
+		"LIVES":5,
+		"PLAYERSPEED":5
+	}
+}

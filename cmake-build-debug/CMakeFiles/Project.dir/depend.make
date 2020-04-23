@@ -5,6 +5,7 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.obj: ../Controller
 CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.obj: ../Controllers/Headers/BonusManager.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.obj: ../Controllers/Headers/BulletManager.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.obj: ../Controllers/Headers/CollisionDetector.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.obj: ../Controllers/Headers/ConfigHandler.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.obj: ../Controllers/Headers/PlayerManager.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.obj: ../Controllers/Headers/TextureManager.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.obj: ../Factories/AbstractFactory.h
@@ -21,10 +22,12 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.obj: ../Models/Hea
 CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.obj: ../SDL/Headers/SDLBullet.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.obj: ../SDL/Headers/SDLKeyStates.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.obj: ../SDL/Headers/SDLTimer.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.obj: ../nlohmann/json.hpp
 
 CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../Controllers/CPP-Files/BulletManager.cpp
 CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../Controllers/Headers/BulletManager.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../Controllers/Headers/CollisionDetector.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../Controllers/Headers/ConfigHandler.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../Factories/AbstractFactory.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../Models/Headers/Background.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../Models/Headers/Bonus.h
@@ -36,6 +39,7 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../Models/He
 CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../Models/Headers/Score.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../Models/Headers/Timer.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../SDL/Headers/SDLTimer.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj: ../nlohmann/json.hpp
 
 CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionDetector.cpp.obj: ../Controllers/CPP-Files/CollisionDetector.cpp
 CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionDetector.cpp.obj: ../Controllers/Headers/CollisionDetector.h
@@ -44,9 +48,14 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionDetector.cpp.obj: ../Model
 CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionDetector.cpp.obj: ../Models/Headers/Entity.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionDetector.cpp.obj: ../Models/Headers/PlayerShip.h
 
+CMakeFiles/Project.dir/Controllers/CPP-Files/ConfigHandler.cpp.obj: ../Controllers/CPP-Files/ConfigHandler.cpp
+CMakeFiles/Project.dir/Controllers/CPP-Files/ConfigHandler.cpp.obj: ../Controllers/Headers/ConfigHandler.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/ConfigHandler.cpp.obj: ../nlohmann/json.hpp
+
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Controllers/CPP-Files/EnemyManager.cpp
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Controllers/Headers/BulletManager.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Controllers/Headers/CollisionDetector.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Controllers/Headers/ConfigHandler.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Controllers/Headers/EnemyManager.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Factories/AbstractFactory.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Models/Headers/Background.h
@@ -60,11 +69,13 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Models/Hea
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Models/Headers/Score.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Models/Headers/Timer.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../SDL/Headers/SDLTimer.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../nlohmann/json.hpp
 
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Controllers/CPP-Files/Game.cpp
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Controllers/Headers/BonusManager.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Controllers/Headers/BulletManager.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Controllers/Headers/CollisionDetector.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Controllers/Headers/ConfigHandler.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Controllers/Headers/EnemyManager.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Controllers/Headers/Game.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Controllers/Headers/PlayerManager.h
@@ -82,10 +93,12 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Models/Headers/Tim
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../SDL/Headers/SDLBullet.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../SDL/Headers/SDLKeyStates.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../SDL/Headers/SDLTimer.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../nlohmann/json.hpp
 
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Controllers/CPP-Files/PlayerManager.cpp
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Controllers/Headers/BulletManager.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Controllers/Headers/CollisionDetector.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Controllers/Headers/ConfigHandler.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Controllers/Headers/PlayerManager.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Controllers/Headers/TextureManager.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Factories/AbstractFactory.h
@@ -101,6 +114,7 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Models/He
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../SDL/Headers/SDLBullet.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../SDL/Headers/SDLKeyStates.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../SDL/Headers/SDLTimer.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../nlohmann/json.hpp
 
 CMakeFiles/Project.dir/Controllers/CPP-Files/TextManager.cpp.obj: ../Controllers/CPP-Files/TextManager.cpp
 CMakeFiles/Project.dir/Controllers/CPP-Files/TextManager.cpp.obj: ../Controllers/Headers/TextManager.h
@@ -247,6 +261,7 @@ CMakeFiles/Project.dir/SDL/CPP-Files/SDLTimer.cpp.obj: ../SDL/Headers/SDLTimer.h
 CMakeFiles/Project.dir/main.cpp.obj: ../Controllers/Headers/BonusManager.h
 CMakeFiles/Project.dir/main.cpp.obj: ../Controllers/Headers/BulletManager.h
 CMakeFiles/Project.dir/main.cpp.obj: ../Controllers/Headers/CollisionDetector.h
+CMakeFiles/Project.dir/main.cpp.obj: ../Controllers/Headers/ConfigHandler.h
 CMakeFiles/Project.dir/main.cpp.obj: ../Controllers/Headers/EnemyManager.h
 CMakeFiles/Project.dir/main.cpp.obj: ../Controllers/Headers/Game.h
 CMakeFiles/Project.dir/main.cpp.obj: ../Controllers/Headers/PlayerManager.h
@@ -266,4 +281,5 @@ CMakeFiles/Project.dir/main.cpp.obj: ../SDL/Headers/SDLBullet.h
 CMakeFiles/Project.dir/main.cpp.obj: ../SDL/Headers/SDLKeyStates.h
 CMakeFiles/Project.dir/main.cpp.obj: ../SDL/Headers/SDLTimer.h
 CMakeFiles/Project.dir/main.cpp.obj: ../main.cpp
+CMakeFiles/Project.dir/main.cpp.obj: ../nlohmann/json.hpp
 

@@ -91,6 +91,9 @@
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/CollisionDetector.cpp">
 			<Option target="Project"/>
 		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/ConfigHandler.cpp">
+			<Option target="Project"/>
+		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/EnemyManager.cpp">
 			<Option target="Project"/>
 		</Unit>
@@ -113,6 +116,9 @@
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/Headers/CollisionDetector.h">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/Headers/ConfigHandler.h">
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/Headers/EnemyManager.h">

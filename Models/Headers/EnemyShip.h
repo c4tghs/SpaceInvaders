@@ -20,10 +20,13 @@ namespace GameNs
         virtual int getMoveDirection()=0;
         virtual void setMoveDirection(int direction)=0;
         void setEnemyType(EnemyType type);
+        void setEnemySpeed(int speed);
+        int getEnemySpeed();
         EnemyType getEnemyType();
 
     private:
-        EnemyType  m_enemyType;
+        EnemyType  m_enemyType= Squid;
+        int m_enemySpeed=0;
     };
 }
 

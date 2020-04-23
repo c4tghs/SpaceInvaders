@@ -203,6 +203,33 @@ Controllers/CPP-Files/CollisionDetector.cpp.s:
 	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionDetector.cpp.s
 .PHONY : Controllers/CPP-Files/CollisionDetector.cpp.s
 
+Controllers/CPP-Files/ConfigHandler.obj: Controllers/CPP-Files/ConfigHandler.cpp.obj
+
+.PHONY : Controllers/CPP-Files/ConfigHandler.obj
+
+# target to build an object file
+Controllers/CPP-Files/ConfigHandler.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/ConfigHandler.cpp.obj
+.PHONY : Controllers/CPP-Files/ConfigHandler.cpp.obj
+
+Controllers/CPP-Files/ConfigHandler.i: Controllers/CPP-Files/ConfigHandler.cpp.i
+
+.PHONY : Controllers/CPP-Files/ConfigHandler.i
+
+# target to preprocess a source file
+Controllers/CPP-Files/ConfigHandler.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/ConfigHandler.cpp.i
+.PHONY : Controllers/CPP-Files/ConfigHandler.cpp.i
+
+Controllers/CPP-Files/ConfigHandler.s: Controllers/CPP-Files/ConfigHandler.cpp.s
+
+.PHONY : Controllers/CPP-Files/ConfigHandler.s
+
+# target to generate assembly for a file
+Controllers/CPP-Files/ConfigHandler.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/ConfigHandler.cpp.s
+.PHONY : Controllers/CPP-Files/ConfigHandler.cpp.s
+
 Controllers/CPP-Files/EnemyManager.obj: Controllers/CPP-Files/EnemyManager.cpp.obj
 
 .PHONY : Controllers/CPP-Files/EnemyManager.obj
@@ -896,6 +923,9 @@ help:
 	@echo ... Controllers/CPP-Files/CollisionDetector.obj
 	@echo ... Controllers/CPP-Files/CollisionDetector.i
 	@echo ... Controllers/CPP-Files/CollisionDetector.s
+	@echo ... Controllers/CPP-Files/ConfigHandler.obj
+	@echo ... Controllers/CPP-Files/ConfigHandler.i
+	@echo ... Controllers/CPP-Files/ConfigHandler.s
 	@echo ... Controllers/CPP-Files/EnemyManager.obj
 	@echo ... Controllers/CPP-Files/EnemyManager.i
 	@echo ... Controllers/CPP-Files/EnemyManager.s

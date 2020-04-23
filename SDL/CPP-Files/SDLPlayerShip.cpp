@@ -53,6 +53,4 @@ void SDLNs::SDLPlayerShip::render() {
  */
 void SDLNs::SDLPlayerShip::close() {
     m_playerShipTexture->free();
-    //Deallocate memory
-    delete(m_playerShipTexture);
 }

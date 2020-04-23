@@ -15,12 +15,12 @@ namespace SDLNs
     public:
         SDLTimer();
         void update();
-        float getDeltaTime();
+        double getDeltaTime();
         void reset();
         float getTime();
 
     private:
-        float m_deltaTime=0.0f;
+        double m_deltaTime=0.0f;
         unsigned int m_startTicks =0;
         unsigned int m_elapsedTicks=0;
     };

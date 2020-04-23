@@ -20,7 +20,7 @@ GameNs::PlayerShip::PlayerShip(int xPos, int yPos, int width, int height):Entity
  * Method that returns the players speed
  * @return player's speed
  */
-float GameNs::PlayerShip::getPlayerSpeed() {
+int GameNs::PlayerShip::getPlayerSpeed() {
     return m_playerSpeed;
 }
 
@@ -28,7 +28,7 @@ float GameNs::PlayerShip::getPlayerSpeed() {
  * Method that sets player speed
  * @param speed
  */
-void GameNs::PlayerShip::setPlayerSpeed(float speed) {
+void GameNs::PlayerShip::setPlayerSpeed(int speed) {
     m_playerSpeed = speed;
 }
 

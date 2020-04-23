@@ -15,11 +15,13 @@ GameNs::BulletManager::BulletManager() {}
  * @param timer - timer
  * @param screenHeight - height of the screen
  */
-GameNs::BulletManager::BulletManager(Timer *timer, CollisionDetector *collisionDetector, int screenHeight) {
+GameNs::BulletManager::BulletManager(Timer *timer, CollisionDetector *collisionDetector, ConfigHandler *configHandler) {
     m_timer = timer;
     m_collisionDetector = collisionDetector;
     m_playerFired = false;
-    m_screenHeight = screenHeight;
+    m_configHandler = configHandler;
+    m_screenHeight = m_configHandler->getScreenWidth();
+    m_bulletSpeed = m_configHandler->getBulletSpeed();
 }
 /**
  * Update method
@@ -58,13 +60,13 @@ void GameNs::BulletManager::moveBullet() {
     //Change y position of bullet using time.
     if(m_playerFired)
     {
-        m_playerBullet->setYPosition(m_playerBullet->getYPosition() + m_timer->getDeltaTime() * -1 * 5);
+        m_playerBullet->setYPosition(m_playerBullet->getYPosition() + m_timer->getDeltaTime() * -1 * m_bulletSpeed);
     }
     //1 because bullet is moving down.
     //Change y position of bullet using time
     if(m_enemyFired)
     {
-        m_enemyBullet->setYPosition(m_enemyBullet->getYPosition() + m_timer->getDeltaTime() * 1 * 5);
+        m_enemyBullet->setYPosition(m_enemyBullet->getYPosition() + m_timer->getDeltaTime() * 1 * m_bulletSpeed);
     }
 
 }
@@ -92,14 +94,14 @@ void GameNs::BulletManager::checkBulletBounds() {
 }
 
 /**
- * Method to check if player bullet has been fired
- * @return - true or false
+ * Method that returns state of playerBullet, ie if it has been fired
+ * @return boolean
  */
 bool GameNs::BulletManager::isPlayerBulletFired() {
     return m_playerFired;
 }
 /**
- * Method to set bullet
+ * Method to set player bullet
  * @param bullet - the bullet to use
  */
 void GameNs::BulletManager::setPlayerBullet(Bullet* bullet){
@@ -111,14 +113,6 @@ void GameNs::BulletManager::setPlayerBullet(Bullet* bullet){
  */
 void GameNs::BulletManager::setPlayerBulletFired(bool isFired) {
     m_playerFired = isFired;
-}
-
-/**
- * Method that to check if player bullet has collided with an enemy
- * @return true or false
- */
-bool GameNs::BulletManager::checkPlayerCollisions() {
-    return m_playerBulletCollided;
 }
 
 /**

@@ -22,16 +22,16 @@ void SDLNs::SDLTimer::reset() {
  * Method that returns private member variable
  * @return m_deltaTime
  */
-float SDLNs::SDLTimer::getDeltaTime() {
+double SDLNs::SDLTimer::getDeltaTime() {
     return m_deltaTime;
 }
 /**
  * Method to update parameters
  */
 void SDLNs::SDLTimer::update() {
-    //elapsedTicks is the time between reset and current time;
+    //ElapsedTicks is the time between reset and current time;
     m_elapsedTicks = SDL_GetTicks() - m_startTicks;
-    //divide by 1000 to get time in seconds
+    //Divide by 1000 to get time in seconds
     m_deltaTime  = m_elapsedTicks/1000.0;
     if(m_deltaTime > TARGET_DELTATIME)
     {
@@ -46,4 +46,5 @@ void SDLNs::SDLTimer::update() {
 float SDLNs::SDLTimer::getTime() {
     return SDL_GetTicks()/1000.0f;
 }
+
 

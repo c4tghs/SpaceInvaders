@@ -20,7 +20,7 @@ namespace GameNs{
             void setBonusType(BonusType bonusType);
 
         private:
-            BonusType m_bonusType;
+            BonusType m_bonusType=POINTS;
     };
 
 }

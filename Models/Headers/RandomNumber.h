@@ -10,10 +10,10 @@
 namespace GameNs{
     class RandomNumber {
     public:
-        static RandomNumber* getInstance();
-        static int getRandomNumber(int lowerBound, int higherBound);
+        static RandomNumber& getInstance();
+        double getRandomDouble(int lowerBound, int higherBound);
+        int getRandomInt(int lowerBound, int higherBound);
     private:
-        static RandomNumber* m_instance;
         RandomNumber();
         static std::random_device m_rd;
     };

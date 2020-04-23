@@ -2,6 +2,7 @@
 // Created by cliff on 14/04/2020.
 //
 
+#include <iostream>
 #include "../Headers/BonusManager.h"
 #include "../../Models/Headers/RandomNumber.h"
 
@@ -10,24 +11,34 @@
  * @param AF - abstract factory
  * @param playerManager - player manager
  */
-GameNs::BonusManager::BonusManager(AbstractFactory *AF, PlayerManager *playerManager, PlayerLife *playerLife,
-                                   Score *score,
-                                   CollisionDetector *collisionDetector, Timer *timer, int screenWidth,
-                                   int screenHeight) {
+GameNs::BonusManager::BonusManager(AbstractFactory *AF, PlayerManager *playerManager, Score *score,
+                                   CollisionDetector *collisionDetector,Timer *timer, ConfigHandler *configHandler) {
     m_timer = timer;
     m_playerShip = playerManager->getPlayerShip();
     m_factory = AF;
-    m_screenWidth = screenWidth;
-    m_screenHeight = screenHeight;
-    m_playerLife = playerLife;
+    m_configHandler=configHandler;
+    m_screenWidth = configHandler->getScreenWidth();
+    m_screenHeight = configHandler->getScreenHeight();
+    m_playerLife = playerManager->getPlayerLife();
     m_playerSCore = score;
     m_collisionDetector = collisionDetector;
+    m_bonusSpeed = configHandler->getBonusSpeed();
 
     //Create bonuses.
     createBonuses();
 
     //Set time for next bonus.
-    m_nextBonus = m_timer->getTime()+ GameNs::RandomNumber::getInstance()->getRandomNumber(1,10);
+    m_nextBonus = m_timer->getTime()+ GameNs::RandomNumber::getInstance().getRandomDouble(1, 10);
+}
+
+/**
+ * Destructor
+ */
+GameNs::BonusManager::~BonusManager() {
+    for(auto &bonus:m_bonuses)
+    {
+        bonus->close();
+    }
 }
 
 /**
@@ -70,19 +81,19 @@ void GameNs::BonusManager::createBonuses() {
     for(int i=0; i < 10; i++)
     {
         //Get random type.
-        type = BonusType(GameNs::RandomNumber::getInstance()->getRandomNumber(0,3));
+        type = BonusType(GameNs::RandomNumber::getInstance().getRandomDouble(0, 3));
         if(type== BonusType::POINTS)
         {
-            filePath = m_bonusPoints;
+            filePath = m_pathBonusPoints;
         } else if (type== BonusType::LIFE)
         {
-            filePath = m_bonusLife;
+            filePath = m_pathBonusLife;
         } else if (type== BonusType::SPEED)
         {
-            filePath = m_bonusSpeed;
+            filePath = m_pathBonusSpeed;
         }
         //Random x position for bonus
-        xPos = GameNs::RandomNumber::getInstance()->getRandomNumber(0,m_screenWidth);
+        xPos = GameNs::RandomNumber::getInstance().getRandomDouble(0, m_screenWidth);
         //Create bonus and add it to vector.
         m_bonuses.emplace_back(m_factory->createBonus(filePath,xPos,-50,width,height));
         //Set type for the created bonus.
@@ -106,16 +117,16 @@ void GameNs::BonusManager::render() {
  */
 void GameNs::BonusManager::moveBonus() {
     //Set Y position of bonus using time.
-    m_bonuses[m_randomId]->setYPosition(m_bonuses[m_randomId]->getYPosition()+m_timer->getDeltaTime()*5);
+    m_bonuses[m_randomId]->setYPosition(m_bonuses[m_randomId]->getYPosition()+m_timer->getDeltaTime()*m_bonusSpeed);
 }
 /**
  * Method to select random bonus and set next bonus' time
  */
 void GameNs::BonusManager::selectBonus() {
     //Get random number between 0 en size of bonus vector.
-    m_randomId = GameNs::RandomNumber::getInstance()->getRandomNumber(0,m_bonuses.size());
+    m_randomId = GameNs::RandomNumber::getInstance().getRandomDouble(0, m_bonuses.size());
     //Set next bonus time.
-    m_nextBonus = m_timer->getTime()+ GameNs::RandomNumber::getInstance()->getRandomNumber(1,10);
+    m_nextBonus = m_timer->getTime()+ GameNs::RandomNumber::getInstance().getRandomDouble(1, 10);
 }
 /**
  * Method to check collisions
@@ -133,7 +144,7 @@ void GameNs::BonusManager::checkCollisions() {
         //Change player speed, add life, change player score.
         if(bonusType == BonusType::SPEED)
         {
-            m_playerShip->setPlayerSpeed(m_playerShip->getPlayerSpeed()+0.5);
+            m_playerShip->setPlayerSpeed(m_playerShip->getPlayerSpeed()+1);
         } else if (bonusType == BonusType::LIFE)
         {
             m_playerLife->setPlayerLife(m_playerLife->getPlayerLife()+1);
@@ -145,12 +156,3 @@ void GameNs::BonusManager::checkCollisions() {
     }
 }
 
-/**
- * Method to destroy bonus textures
- */
-void GameNs::BonusManager::close() {
-    for(auto &bonus:m_bonuses)
-    {
-        bonus->close();
-    }
-}

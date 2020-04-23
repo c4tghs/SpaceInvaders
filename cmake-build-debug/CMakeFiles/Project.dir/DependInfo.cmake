@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/BonusManager.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.obj"
   "D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/BulletManager.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj"
   "D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/CollisionDetector.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionDetector.cpp.obj"
+  "D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/ConfigHandler.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Controllers/CPP-Files/ConfigHandler.cpp.obj"
   "D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/EnemyManager.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj"
   "D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/Game.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj"
   "D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/PlayerManager.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj"

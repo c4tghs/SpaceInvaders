@@ -31,3 +31,19 @@ void GameNs::EnemyShip::setEnemyType(GameNs::EnemyType type) {
 GameNs::EnemyType GameNs::EnemyShip::getEnemyType() {
     return m_enemyType;
 }
+
+/**
+ * Method to set enemy speed
+ * @param speed - enemy speed
+ */
+void GameNs::EnemyShip::setEnemySpeed(int speed) {
+    m_enemySpeed = speed;
+}
+
+/**
+ * Method to return enemy speed
+ * @return - enemy speed
+ */
+int GameNs::EnemyShip::getEnemySpeed() {
+    return m_enemySpeed;
+}

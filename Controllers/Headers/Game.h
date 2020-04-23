@@ -14,30 +14,32 @@
 #include "PlayerManager.h"
 #include "EnemyManager.h"
 #include "BonusManager.h"
+#include "ConfigHandler.h"
 
 namespace GameNs{
     class Game {
     public:
         static Game* getInstance();
         static Game* getInstance(AbstractFactory *AF);
-
         void run();
+        ~Game();
 
     private:
         static Game* m_instance;
         Game(AbstractFactory *AF);
         Game();
+
         Timer* m_timer=nullptr;
         PlayerManager* m_playerManager = nullptr;
         EnemyManager* m_enemyManager  = nullptr;
         BulletManager* m_bulletManager = nullptr;
         BonusManager* m_bonusManager = nullptr;
-        PlayerLife* m_playerLife = nullptr;
         Score* m_playerScore = nullptr;
         CollisionDetector* m_collisionDetector= nullptr;
         AbstractFactory* m_factory = nullptr;
-        const int m_screenHeight = 720 ;
-        const int m_screenWidth = 940;
+        ConfigHandler* m_configHandler= nullptr;
+        int m_screenHeight = 0;
+        int m_screenWidth = 0;
     };
 
 }

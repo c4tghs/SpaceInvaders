@@ -12,15 +12,15 @@ namespace GameNs{
     class BonusManager {
         public:
             BonusManager();
-            BonusManager(AbstractFactory *AF, PlayerManager *playerManager, PlayerLife *playerLife, Score *score,
-                         CollisionDetector *collisionDetector, Timer *timer, int screenWidth, int screenHeight);
+            BonusManager(AbstractFactory *AF, PlayerManager *playerManager, Score *score,
+                         CollisionDetector *collisionDetector,Timer *timer, ConfigHandler *configHandler);
+            ~BonusManager();
             void update();
             void render();
             void createBonuses();
             void moveBonus();
             void selectBonus();
             void checkCollisions();
-            void close();
 
 
         private:
@@ -32,13 +32,15 @@ namespace GameNs{
             int m_screenHeight=0;
             float m_nextBonus=0.0;
             bool m_moveBonus = false;
+            int m_bonusSpeed=0;
             int m_randomId=0;
             PlayerLife* m_playerLife=nullptr;
             Score* m_playerSCore=nullptr;
             CollisionDetector* m_collisionDetector= nullptr;
-            std::string m_bonusLife="../assets/life.jpg";
-            std::string m_bonusSpeed="../assets/speed.jpg";
-            std::string m_bonusPoints="../assets/points.png";
+            ConfigHandler* m_configHandler= nullptr;
+            std::string m_pathBonusLife="../assets/life.jpg";
+            std::string m_pathBonusSpeed="../assets/speed.jpg";
+            std::string m_pathBonusPoints="../assets/points.png";
 
     };
 }

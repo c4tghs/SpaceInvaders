@@ -11,6 +11,7 @@
 #include "../../SDL/Headers/SDLTimer.h"
 #include "CollisionDetector.h"
 #include "BulletManager.h"
+#include "ConfigHandler.h"
 #include <vector>
 #include <random>
 
@@ -19,15 +20,15 @@ namespace GameNs
     class EnemyManager {
     public:
         EnemyManager();
-        EnemyManager(AbstractFactory *AF, int screenWidth, int screenHeight, BulletManager *bulletManager, Timer *timer,
-                     Score *score, CollisionDetector *collisionDetector);
+        EnemyManager(AbstractFactory *AF, BulletManager *bulletManager, Timer *timer, Score *score,
+                     CollisionDetector *collisionDetector, ConfigHandler *configHandler);
+        ~EnemyManager();
         void createEnemies(int number);
-        void updateEnemies();
+        void update();
         void moveEnemies();
         bool checkEnemyBoundaries();
         void enemyShoot();
         void createBullets();
-        void close();
 
     private:
         AbstractFactory* m_factory=nullptr;
@@ -35,11 +36,10 @@ namespace GameNs
         Timer* m_timer=nullptr;
         BulletManager* m_bulletManager= nullptr;
         CollisionDetector* m_collisionDetector= nullptr;
+        ConfigHandler* m_configHandler= nullptr;
         int m_screenWidth=0;
         int m_screenHeight=0;
-        int m_playerYPos=0;
-        float m_nextMissile=0.0;
-        bool m_playerReached = false;
+        double m_nextMissile=0.0;
         std::string m_enemyShipOctopusPath = "../assets/octopus.png";
         std::string m_enemyShipCrabPath = "../assets/crab.png";
         std::string m_enemyShipSquidPath = "../assets/squid.png";

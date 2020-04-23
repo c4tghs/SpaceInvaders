@@ -4,10 +4,8 @@
 
 #include "../Headers/RandomNumber.h"
 
-//seed random number generator
+//seed for random number generator
 std::random_device GameNs::RandomNumber::m_rd;
-//static member
-GameNs::RandomNumber* GameNs::RandomNumber::m_instance = nullptr;
 
 /**
  * Constructor
@@ -18,11 +16,8 @@ GameNs::RandomNumber::RandomNumber() {}
  * Method that creates and returns instance of RandomNumber or returns instance of RandomNumber
  * @return instance of RandomNumber
  */
-GameNs::RandomNumber *GameNs::RandomNumber::getInstance() {
-    if(m_instance== nullptr)
-    {
-        return m_instance = new RandomNumber();
-    }
+GameNs::RandomNumber& GameNs::RandomNumber::getInstance() {
+    static RandomNumber m_instance;
     return m_instance;
 }
 /**
@@ -31,8 +26,17 @@ GameNs::RandomNumber *GameNs::RandomNumber::getInstance() {
  * @param higherBound - upper limit of range
  * @return - generated number
  */
-int GameNs::RandomNumber::getRandomNumber(int lowerBound, int higherBound) {
+double GameNs::RandomNumber::getRandomDouble(int lowerBound, int higherBound) {
     std::mt19937 mt(m_rd());
     std::uniform_real_distribution<double> m_dist(lowerBound,higherBound);
     return m_dist(mt);
 }
+
+int GameNs::RandomNumber::getRandomInt(int lowerBound, int higherBound) {
+    std::mt19937 mt(m_rd());
+    //HigherBound -1 because otherwise it is included
+    std::uniform_int_distribution<int> m_dist(lowerBound,higherBound-1);
+    return m_dist(mt);
+}
+
+

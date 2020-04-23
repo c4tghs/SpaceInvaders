@@ -10,12 +10,13 @@
 #include "../../Factories/AbstractFactory.h"
 #include "../../SDL/Headers/SDLTimer.h"
 #include "CollisionDetector.h"
+#include "ConfigHandler.h"
 
 namespace GameNs{
     class BulletManager {
     public:
         BulletManager();
-        BulletManager(Timer *timer, CollisionDetector *collisionDetector, int screenHeight);
+        BulletManager(Timer *timer, CollisionDetector *collisionDetector, ConfigHandler *configHandler);
         void update();
         void moveBullet();
         void setPlayerBullet(Bullet* bullet);
@@ -25,7 +26,7 @@ namespace GameNs{
         bool isEnemyBulletFired();
         void setPlayerBulletFired(bool isFired);
         void setEnemyBulletFired(bool isFired);
-        bool checkPlayerCollisions();
+
         void setPlayerBulletCollision(bool isCollided);
         void bulletsCollision();
         Bullet* getPlayerBullet();
@@ -38,7 +39,9 @@ namespace GameNs{
         Timer* m_timer= nullptr;
         Bullet* m_playerBullet = nullptr;
         Bullet* m_enemyBullet = nullptr;
+        ConfigHandler* m_configHandler= nullptr;
         CollisionDetector* m_collisionDetector= nullptr;
+        int m_bulletSpeed=0;
         int m_screenHeight = 0;
 
 
