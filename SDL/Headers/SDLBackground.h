@@ -5,8 +5,8 @@
 #ifndef PROJECT_SDLBACKGROUND_H
 #define PROJECT_SDLBACKGROUND_H
 
-
-#include <SDL2/SDL_render.h>
+#include <SDL2/SDL.h>
+//#include <SDL2/SDL_render.h>
 #include "../../Controllers/Headers/TextureManager.h"
 #include "../../Models/Headers/Background.h"
 
@@ -19,7 +19,10 @@ namespace SDLNs
         void close();
 
     private:
-        SDL_Renderer* m_renderer;
+        int frame=0;
+        SDL_Renderer* m_renderer= nullptr;
+        GameNs::TextureManager* m_textureManager= nullptr;
+        std::string sprite = "../assets/invader_sprites.png";
     };
 
 }

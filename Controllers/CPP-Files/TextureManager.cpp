@@ -24,7 +24,7 @@ GameNs::TextureManager::TextureManager(SDL_Renderer* renderer){
  * @param filename - path to image
  * @param ren - renderer
  */
-void GameNs::TextureManager::LoadTexture(const std::string &filename) {
+void GameNs::TextureManager::loadTexture(const std::string &filename) {
     SDL_Surface* surface = IMG_Load(filename.c_str());
     SDL_Texture* tex;
 

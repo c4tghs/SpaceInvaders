@@ -49,7 +49,7 @@ void SDLNs::SDLBonus::close()
  */
 void SDLNs::SDLBonus::loadMedia()
 {
-    m_bonusTexture->LoadTexture(m_bonusImagePath);
+    m_bonusTexture->loadTexture(m_bonusImagePath);
     if(m_bonusTexture->getTexture() == nullptr){
         std::cout << "Something went wrong loading texture: "<< SDL_GetError()<< std::endl;
         exit(1);

@@ -3,6 +3,7 @@
  */
 
 #include "../Headers/SDLBackground.h"
+#define SPRITES_FRAMES 2
 /**
  * Constructor for SDLBackground
  * @param renderer - the renderer
@@ -11,6 +12,9 @@
 SDLNs::SDLBackground::SDLBackground(SDL_Renderer* renderer)
 {
     m_renderer = renderer;
+    m_textureManager = new GameNs::TextureManager(m_renderer);
+    m_textureManager->loadTexture(sprite);
+
 }
 /**
  * Method to show background
@@ -18,7 +22,7 @@ SDLNs::SDLBackground::SDLBackground(SDL_Renderer* renderer)
 void SDLNs::SDLBackground::render() {
     //Clear renderer before adding things
     SDL_RenderClear(m_renderer);
-    //Set background color
+
     SDL_SetRenderDrawColor(m_renderer,0,0,0,255);
 
 }

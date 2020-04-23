@@ -6,7 +6,7 @@
 
 #include <utility>
 #include <iostream>
-
+#define SPRITES_FRAMES 2
 /**
  * Constructor for SDlEnemyShip
  * @param renderer
@@ -31,7 +31,7 @@ SDLNs::SDLEnemyShip::SDLEnemyShip(SDL_Renderer* renderer, std::string enemyShipP
  * Method to create enemyShip texture
  */
 void SDLNs::SDLEnemyShip::loadMedia() {
-    m_enemyShipTexture->LoadTexture(m_enemyShipPath);
+    m_enemyShipTexture->loadTexture(m_enemyShipPath);
     if(m_enemyShipTexture->getTexture() == nullptr)
     {
         std::cout << "Something went wrong loading texture: "<< SDL_GetError()<< std::endl;
@@ -58,8 +58,16 @@ int SDLNs::SDLEnemyShip::getMoveDirection() {
  */
 void SDLNs::SDLEnemyShip::render(){
     //Create rectangular area
+    SDL_Rect spriteClips[SPRITES_FRAMES];
+    spriteClips[0] = {257,35,45,35};
+    spriteClips[1] = {315,35,45,35};
+    Uint32 ticks = SDL_GetTicks();
+    Uint32 seconds = ticks/1000;
+    Uint32 sprite = seconds%SPRITES_FRAMES;
+    SDL_Rect currentRect = spriteClips[sprite];
     SDL_Rect rect = {getXPosition(), getYPosition(), getWidth(), getHeight()};
-    SDL_RenderCopy(m_renderer,m_enemyShipTexture->getTexture(),nullptr,&rect);
+    SDL_RenderCopy(m_renderer,m_enemyShipTexture->getTexture(),&currentRect,&rect);
+
 
 }
 /**

@@ -21,7 +21,6 @@ namespace SDLNs
         void setMoveDirection(int direction);
         void loadMedia();
 
-
     private:
         SDL_Renderer* m_renderer = nullptr;
         std::string m_enemyShipPath;
