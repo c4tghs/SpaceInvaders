@@ -9,9 +9,9 @@ namespace GameNs{
     class PlayerLife {
         public:
             PlayerLife();
+            virtual ~PlayerLife();
             int getPlayerLife();
             void setPlayerLife(int life);
-            virtual void close()=0;
             virtual void render()=0;
 
         private:

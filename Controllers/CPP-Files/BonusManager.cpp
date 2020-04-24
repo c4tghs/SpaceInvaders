@@ -11,8 +11,9 @@
  * @param AF - abstract factory
  * @param playerManager - player manager
  */
-GameNs::BonusManager::BonusManager(AbstractFactory *AF, PlayerManager *playerManager, Score *score,
-                                   CollisionDetector *collisionDetector,Timer *timer, ConfigHandler *configHandler) {
+GameNs::BonusManager::BonusManager(AbstractFactory *AF, Timer *timer, CollisionDetector *collisionDetector,
+                                   ConfigHandler *configHandler,
+                                   PlayerManager *playerManager, Score *score) {
     m_timer = timer;
     m_playerShip = playerManager->getPlayerShip();
     m_factory = AF;
@@ -37,7 +38,7 @@ GameNs::BonusManager::BonusManager(AbstractFactory *AF, PlayerManager *playerMan
 GameNs::BonusManager::~BonusManager() {
     for(auto &bonus:m_bonuses)
     {
-        bonus->close();
+        delete bonus;
     }
 }
 

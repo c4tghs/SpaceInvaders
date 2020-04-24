@@ -24,7 +24,7 @@ GameNs::RandomNumber& GameNs::RandomNumber::getInstance() {
  * Method that returns a random number between a range
  * @param lowerBound - lower limit of range
  * @param higherBound - upper limit of range
- * @return - generated number
+ * @return - double representing the generated number
  */
 double GameNs::RandomNumber::getRandomDouble(int lowerBound, int higherBound) {
     std::mt19937 mt(m_rd());
@@ -32,6 +32,12 @@ double GameNs::RandomNumber::getRandomDouble(int lowerBound, int higherBound) {
     return m_dist(mt);
 }
 
+/**
+ * Method that returns a random number between a range
+ * @param lowerBound - lower limit of range
+ * @param higherBound - upper limit of range
+ * @return - integer representing the generated number
+ */
 int GameNs::RandomNumber::getRandomInt(int lowerBound, int higherBound) {
     std::mt19937 mt(m_rd());
     //HigherBound -1 because otherwise it is included

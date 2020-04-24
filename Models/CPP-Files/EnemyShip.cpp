@@ -17,6 +17,11 @@ GameNs::EnemyShip::EnemyShip() {}
 GameNs::EnemyShip::EnemyShip(int xPos, int yPos, int width, int height):Entity(xPos,yPos,width,height) {}
 
 /**
+ * Destructor
+ */
+GameNs::EnemyShip::~EnemyShip(){}
+
+/**
  * Method that sets an enemy's type
  * @param type - enemy type
  */

@@ -12,6 +12,8 @@ namespace GameNs
 {
     class Timer {
     public:
+        Timer(){};
+        virtual ~Timer(){};
         virtual double getDeltaTime()=0;
         virtual void update()=0;
         virtual void reset()=0;

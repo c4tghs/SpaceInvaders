@@ -11,6 +11,11 @@ GameNs::Score::Score() {
 }
 
 /**
+ * Destructor
+ */
+GameNs::Score::~Score() {}
+
+/**
  * Method that returns player score
  * @return - the score
  */

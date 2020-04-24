@@ -12,8 +12,8 @@ namespace GameNs
     class Background {
     public:
         Background();
+        virtual ~Background();
         virtual void render()=0;
-        virtual void close()=0;
     };
 }
 

@@ -13,8 +13,8 @@ class SDLPlayerLife:public GameNs::PlayerLife {
     public:
         SDLPlayerLife();
         SDLPlayerLife(SDL_Renderer* renderer, int screenWidth);
+        ~SDLPlayerLife();
         void render();
-        void close();
 
     private:
         GameNs::TextManager* m_textTexture = nullptr;

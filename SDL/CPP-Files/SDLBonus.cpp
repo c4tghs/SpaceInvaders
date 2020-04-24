@@ -25,6 +25,14 @@ SDLNs::SDLBonus::SDLBonus(SDL_Renderer* renderer, int xPos, int yPos, int width,
     //create texture
     loadMedia();
 }
+
+/**
+ * Destructor
+ */
+SDLNs::SDLBonus::~SDLBonus() {
+    m_bonusTexture->free();
+}
+
 /**
  * Method to render the bonus
  */
@@ -35,15 +43,6 @@ void SDLNs::SDLBonus::render()
     SDL_RenderCopy(m_renderer,m_bonusTexture->getTexture(), nullptr,&rect);
 }
 
-/**
- * Method to destroy bonus texture
- */
-void SDLNs::SDLBonus::close()
-{
-    m_bonusTexture->free();
-    //Deallocate memory
-    delete(m_bonusTexture);
-}
 /**
  * Method to create bonus texture
  */

@@ -10,7 +10,10 @@
 GameNs::PlayerLife::PlayerLife() {
     m_playerLife = 5;
 }
-
+/**
+ * Destructor
+ */
+GameNs::PlayerLife::~PlayerLife(){}
 /**
  * Method that returns player life
  * @return player life

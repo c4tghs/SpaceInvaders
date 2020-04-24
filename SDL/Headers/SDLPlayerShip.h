@@ -17,8 +17,8 @@ namespace SDLNs
     class SDLPlayerShip: public GameNs::PlayerShip {
     public:
         SDLPlayerShip(int xPos, int yPos, int width, int height,SDL_Renderer* renderer,std::string playerShipPath);
+        ~SDLPlayerShip();
         void render();
-        void close();
         void loadMedia();
 
     private:

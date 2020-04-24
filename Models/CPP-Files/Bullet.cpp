@@ -15,3 +15,7 @@ GameNs::Bullet::Bullet() {}
  * @param height - height of bullet
  */
 GameNs::Bullet::Bullet(int xPos, int yPos, int width, int height):GameNs::Entity(xPos,yPos,width,height) {}
+/**
+ * Destructor
+ */
+GameNs::Bullet::~Bullet() {}

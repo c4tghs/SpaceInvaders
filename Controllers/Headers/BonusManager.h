@@ -12,8 +12,8 @@ namespace GameNs{
     class BonusManager {
         public:
             BonusManager();
-            BonusManager(AbstractFactory *AF, PlayerManager *playerManager, Score *score,
-                         CollisionDetector *collisionDetector,Timer *timer, ConfigHandler *configHandler);
+            BonusManager(AbstractFactory *AF, Timer *timer, CollisionDetector *collisionDetector,
+                         ConfigHandler *configHandler,PlayerManager *playerManager, Score *score);
             ~BonusManager();
             void update();
             void render();

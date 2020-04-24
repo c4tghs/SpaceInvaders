@@ -14,8 +14,8 @@ namespace GameNs
     public:
         PlayerShip();
         PlayerShip(int xPos, int yPos, int width, int height);
+        virtual ~PlayerShip();
         virtual void render() = 0;
-        virtual void close() = 0;
         void setPlayerSpeed(int speed);
         int getPlayerSpeed();
 

@@ -14,6 +14,7 @@ namespace SDLNs
     class SDLTimer: public GameNs::Timer{
     public:
         SDLTimer();
+        ~SDLTimer();
         void update();
         double getDeltaTime();
         void reset();

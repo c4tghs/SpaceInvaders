@@ -28,6 +28,15 @@ SDLNs::SDLPlayerShip::SDLPlayerShip(int xPos, int yPos, int width, int height,SD
     //create texture
     loadMedia();
 }
+
+/**
+ * Destructor
+ */
+SDLNs::SDLPlayerShip::~SDLPlayerShip()
+{
+    m_playerShipTexture->free();
+}
+
 /**
  * Method to create texture for player
  */
@@ -47,10 +56,4 @@ void SDLNs::SDLPlayerShip::render() {
     //Create rectangular area
     SDL_Rect rect = {getXPosition(), getYPosition(), getWidth(), getHeight()};
     SDL_RenderCopy(m_renderer,m_playerShipTexture->getTexture(),nullptr,&rect);
-}
-/**
- * Method to destroy player texture
- */
-void SDLNs::SDLPlayerShip::close() {
-    m_playerShipTexture->free();
 }

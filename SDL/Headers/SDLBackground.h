@@ -15,14 +15,11 @@ namespace SDLNs
     class SDLBackground:public GameNs::Background {
     public:
         SDLBackground(SDL_Renderer* renderer);
+        ~SDLBackground();
         void render();
-        void close();
 
     private:
-        int frame=0;
         SDL_Renderer* m_renderer= nullptr;
-        GameNs::TextureManager* m_textureManager= nullptr;
-        std::string sprite = "../assets/invader_sprites.png";
     };
 
 }

@@ -16,8 +16,8 @@ namespace SDLNs
     public:
         SDLEnemyShip(SDL_Renderer *renderer, GameNs::Timer *timer, std::string enemyShipPath, int xPos, int yPos,
                      int width, int height);
+        ~SDLEnemyShip();
         void render();
-        void close();
         void setRect(SDL_Rect rects[]);
         int getMoveDirection();
         void setMoveDirection(int direction);

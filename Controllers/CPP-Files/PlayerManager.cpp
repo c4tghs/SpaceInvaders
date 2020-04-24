@@ -19,12 +19,12 @@ GameNs::PlayerManager::PlayerManager() {}
  * @param screenHeight - screen height
  * @param screenWidth - screen width
  */
-GameNs::PlayerManager::PlayerManager(GameNs::AbstractFactory *AF, BulletManager *bulletManager, Timer *timer,
-                                     CollisionDetector *collisionDetector, ConfigHandler *configHandler) {
+GameNs::PlayerManager::PlayerManager(GameNs::AbstractFactory *AF, Timer *timer, CollisionDetector *collisionDetector,
+                                     ConfigHandler *configHandler, BulletManager *bulletManager) {
     m_factory = AF;
     m_timer = timer;
     m_bulletManager = bulletManager;
-    m_playerLife = m_factory->createPlayerLife();;//playerLife;
+    m_playerLife = m_factory->createPlayerLife();
     m_screenHeight = configHandler->getScreenHeight();
     m_screenWidth =  configHandler->getScreenWidth();
     m_collisionDetector = collisionDetector;
@@ -44,9 +44,10 @@ GameNs::PlayerManager::PlayerManager(GameNs::AbstractFactory *AF, BulletManager 
 GameNs::PlayerManager::~PlayerManager() {
     for(auto & m_bullet : m_bullets)
     {
-        m_bullet->close();
+        delete m_bullet;
     }
-    m_playerShip->close();
+    delete m_playerLife;
+    delete m_playerShip;
 }
 /**
  * update method

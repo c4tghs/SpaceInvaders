@@ -19,8 +19,9 @@ GameNs::EnemyManager::EnemyManager() {}
  * @param screenHeight - height of screen
  * @param screenWidth - width of screen
  */
-GameNs::EnemyManager::EnemyManager(AbstractFactory *AF, BulletManager *bulletManager, Timer *timer, Score *score,
-                                   CollisionDetector *collisionDetector, ConfigHandler *configHandler)
+GameNs::EnemyManager::EnemyManager(AbstractFactory *AF, Timer *timer, CollisionDetector *collisionDetector,
+                                   ConfigHandler *configHandler,
+                                   BulletManager *bulletManager, Score *score)
 {
     m_factory = AF;
     m_timer =timer;
@@ -42,7 +43,7 @@ GameNs::EnemyManager::EnemyManager(AbstractFactory *AF, BulletManager *bulletMan
 GameNs::EnemyManager::~EnemyManager() {
     for(auto & enemyShip : m_enemyShips)
     {
-        enemyShip->close();
+        delete enemyShip;
     }
 }
 
@@ -67,8 +68,10 @@ void GameNs::EnemyManager::createEnemies(int number) {
             m_enemyShips[i]->setEnemySpeed(m_configHandler->getEnemySpeed());
             //Sprite rectangular area octopus
             SDL_Rect spriteClips[SPRITES_FRAMES];
-            spriteClips[0] = {257,35,45,35};
-            spriteClips[1] = {315,35,45,35};
+            //Closed
+            spriteClips[0] = {315,35,45,35};
+            //Open
+            spriteClips[1] = {257,35,45,35};
             m_enemyShips[i]->setRect(spriteClips);
         }
         else if (i >= 10 && i < 20)
@@ -93,8 +96,8 @@ void GameNs::EnemyManager::createEnemies(int number) {
             m_enemyShips[i]->setEnemySpeed(m_configHandler->getEnemySpeed());
             //Sprite rectangular area octopus
             SDL_Rect spriteClips[SPRITES_FRAMES];
-            spriteClips[0] = {6,35,30,35};
-            spriteClips[1] = {64,35,30,35};
+            spriteClips[0] = {64,35,30,35};
+            spriteClips[1] = {6,35,30,35};
             m_enemyShips[i]->setRect(spriteClips);
         }
 
@@ -153,7 +156,8 @@ void GameNs::EnemyManager::update() {
                 }
 
                 //Close enemy ship, ie destroy texture
-                m_enemyShip->close();
+                delete m_enemyShip;
+                //m_enemyShip->close();
 
                 //Remove ship from vector
                 m_enemyShips.erase(m_enemyShips.begin()+i);

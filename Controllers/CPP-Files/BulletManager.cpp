@@ -46,7 +46,6 @@ void GameNs::BulletManager::update() {
     if(m_playerBulletCollided)
     {
         m_playerBullet->setYPosition(0);
-        m_playerBullet->close();
     }
     bulletsCollision();
     setPlayerBulletCollision(false);

@@ -15,9 +15,10 @@ namespace SDLNs
     class SDLBullet: public GameNs::Bullet {
     public:
         SDLBullet(SDL_Renderer* renderer,std::string bulletPath, int xPos, int yPos, int width, int height);
+        ~SDLBullet();
         void render();
         void loadMedia();
-        void close();
+
 
     private:
         GameNs::TextureManager* m_texture = nullptr;

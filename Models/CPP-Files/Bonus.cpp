@@ -15,6 +15,11 @@ GameNs::Bonus::Bonus(int xPos, int yPos, int width, int height, BonusType bonusT
     setBonusType(bonusType);
 }
 /**
+ * Destructor
+ */
+GameNs::Bonus::~Bonus() {}
+
+/**
  * Constructor
  */
 GameNs::Bonus::Bonus() {}

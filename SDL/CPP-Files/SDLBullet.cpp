@@ -23,6 +23,12 @@ SDLNs::SDLBullet::SDLBullet(SDL_Renderer* renderer,std::string bulletPath,int xP
     m_texture = new GameNs::TextureManager(m_renderer);
     loadMedia();
 }
+
+SDLNs::SDLBullet::~SDLBullet()
+{
+    m_texture->free();
+}
+
 /**
  * Method to render bullet
  */
@@ -31,14 +37,6 @@ void SDLNs::SDLBullet::render() {
     SDL_Rect rect = {getXPosition(), getYPosition(), getWidth(), getHeight()};
     SDL_RenderCopy(m_renderer,m_texture->getTexture(),nullptr,&rect);
 
-}
-/**
- * Method to destroy bullet texture
- */
-void SDLNs::SDLBullet::close() {
-    m_texture->free();
-    //Deallocate memory
-    delete(m_texture);
 }
 
 /**

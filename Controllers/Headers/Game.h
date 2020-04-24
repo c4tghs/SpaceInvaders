@@ -19,7 +19,6 @@
 namespace GameNs{
     class Game {
     public:
-        static Game* getInstance();
         static Game* getInstance(AbstractFactory *AF);
         void run();
         ~Game();
@@ -27,8 +26,7 @@ namespace GameNs{
     private:
         static Game* m_instance;
         Game(AbstractFactory *AF);
-        Game();
-
+        Background* m_background= nullptr;
         Timer* m_timer=nullptr;
         PlayerManager* m_playerManager = nullptr;
         EnemyManager* m_enemyManager  = nullptr;

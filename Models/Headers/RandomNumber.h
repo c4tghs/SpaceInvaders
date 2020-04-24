@@ -11,8 +11,8 @@ namespace GameNs{
     class RandomNumber {
     public:
         static RandomNumber& getInstance();
-        double getRandomDouble(int lowerBound, int higherBound);
-        int getRandomInt(int lowerBound, int higherBound);
+        static double getRandomDouble(int lowerBound, int higherBound);
+        static int getRandomInt(int lowerBound, int higherBound);
     private:
         RandomNumber();
         static std::random_device m_rd;

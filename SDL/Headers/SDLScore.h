@@ -13,8 +13,8 @@ namespace SDLNs
     class SDLScore: public GameNs::Score {
         public:
             SDLScore(SDL_Renderer* renderer);
+            ~SDLScore();
             void render();
-            void close();
 
         private:
             SDL_Renderer* m_renderer = nullptr;

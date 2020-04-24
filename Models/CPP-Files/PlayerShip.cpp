@@ -16,6 +16,12 @@ GameNs::PlayerShip::PlayerShip(){}
  * @param height - height of ship
  */
 GameNs::PlayerShip::PlayerShip(int xPos, int yPos, int width, int height):Entity(xPos,yPos,width,height) {}
+
+/**
+ * Destructor
+ */
+GameNs::PlayerShip::~PlayerShip(){}
+
 /**
  * Method that returns the players speed
  * @return player's speed

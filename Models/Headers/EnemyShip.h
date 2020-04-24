@@ -18,8 +18,8 @@ namespace GameNs
     public:
         EnemyShip();
         EnemyShip(int xPos, int yPos, int width, int height);
+        virtual ~EnemyShip();
         virtual void render() = 0;
-        virtual void close() = 0;
         virtual int getMoveDirection()=0;
         virtual void setMoveDirection(int direction)=0;
         virtual void setRect(SDL_Rect rects[])=0;

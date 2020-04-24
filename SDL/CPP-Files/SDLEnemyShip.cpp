@@ -28,6 +28,15 @@ SDLNs::SDLEnemyShip::SDLEnemyShip(SDL_Renderer *renderer, GameNs::Timer *timer, 
     loadMedia();
 
 }
+
+/**
+ * Destructor
+ */
+SDLNs::SDLEnemyShip::~SDLEnemyShip()
+{
+    m_enemyShipTexture->free();
+}
+
 /**
  * Method to create enemyShip texture
  */
@@ -59,21 +68,13 @@ int SDLNs::SDLEnemyShip::getMoveDirection() {
  */
 void SDLNs::SDLEnemyShip::render(){
 
-    Uint32 seconds = m_timer->getTime();
-    Uint32 sprite = seconds%SPRITES_FRAMES;
+    int seconds = m_timer->getTime();
+    int sprite = seconds % SPRITES_FRAMES;
     SDL_Rect currentRect = m_rects[sprite];
     SDL_Rect rect = {getXPosition(), getYPosition(), getWidth(), getHeight()};
     SDL_RenderCopy(m_renderer,m_enemyShipTexture->getTexture(),&currentRect,&rect);
 
 
-}
-/**
- * Method to destroy texture of enemy
- */
-void SDLNs::SDLEnemyShip::close(){
-    m_enemyShipTexture->free();
-    //Deallocate memory
-    delete(m_enemyShipTexture);
 }
 
 void SDLNs::SDLEnemyShip::setRect(SDL_Rect rects[]) {

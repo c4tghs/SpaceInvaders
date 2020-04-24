@@ -9,10 +9,10 @@ namespace GameNs{
     class Score {
     public:
         Score();
+        virtual ~Score();
         int getScores();
         void setScores(int scores);
         virtual void render()=0;
-        virtual void close()=0;
     private:
         int m_score=0;
     };

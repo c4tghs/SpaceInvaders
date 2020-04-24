@@ -11,8 +11,8 @@ namespace SDLNs{
         public:
             SDLBonus();
             SDLBonus(SDL_Renderer* renderer, int xPos, int yPos, int width, int height, std::string imagePath);
+            ~ SDLBonus();
             void render();
-            void close();
             void loadMedia();
 
         private:

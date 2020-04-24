@@ -20,6 +20,14 @@ SDLNs::SDLPlayerLife::SDLPlayerLife(SDL_Renderer* renderer, int screenWidth) {
 }
 
 /**
+ * Destructor
+ */
+SDLNs::SDLPlayerLife::~SDLPlayerLife()
+{
+    m_textTexture->free();
+}
+
+/**
  * Method to render texture
  */
 void SDLNs::SDLPlayerLife::render() {
@@ -30,13 +38,5 @@ void SDLNs::SDLPlayerLife::render() {
     SDL_RenderCopy(m_renderer, m_textTexture->getTexture(), nullptr, &rect);
 }
 
-/**
- * Method to free texture, ie destroy texture
- */
-void SDLNs::SDLPlayerLife::close() {
-    m_textTexture->free();
-    //Deallocate memory
-    delete(m_textTexture);
-}
 
 

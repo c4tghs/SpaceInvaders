@@ -12,7 +12,7 @@ namespace GameNs
     public:
         Bullet();
         Bullet(int xPos, int yPos, int width, int height);
-        virtual void close()=0;
+        virtual ~Bullet();
         virtual void render()=0;
     };
 }

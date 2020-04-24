@@ -21,8 +21,8 @@ namespace GameNs{
     class PlayerManager {
     public:
         PlayerManager();
-        PlayerManager(GameNs::AbstractFactory *AF, BulletManager *bulletManager, Timer *timer,
-                      CollisionDetector *collisionDetector, ConfigHandler *configHandler);
+        PlayerManager(GameNs::AbstractFactory *AF, Timer *timer, CollisionDetector *collisionDetector,
+                      ConfigHandler *configHandler, BulletManager *bulletManager);
         ~PlayerManager();
         void checkPlayerBoundaries();
         void movePlayer();

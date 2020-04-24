@@ -7,3 +7,7 @@
  * Constructor for Background
  */
 GameNs::Background::Background(){}
+/**
+ * Destructor
+ */
+GameNs::Background::~Background(){}

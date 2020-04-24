@@ -20,8 +20,8 @@ namespace GameNs
     class EnemyManager {
     public:
         EnemyManager();
-        EnemyManager(AbstractFactory *AF, BulletManager *bulletManager, Timer *timer, Score *score,
-                     CollisionDetector *collisionDetector, ConfigHandler *configHandler);
+        EnemyManager(AbstractFactory *AF, Timer *timer, CollisionDetector *collisionDetector,
+                     ConfigHandler *configHandler,BulletManager *bulletManager, Score *score);
         ~EnemyManager();
         void createEnemies(int number);
         void update();

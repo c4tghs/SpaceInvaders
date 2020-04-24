@@ -14,8 +14,8 @@ namespace GameNs{
         public:
             Bonus();
             Bonus(int xPos, int yPos, int width, int height, BonusType bonusType);
+            virtual ~Bonus();
             virtual void render()=0;
-            virtual void close()=0;
             BonusType getBonusType();
             void setBonusType(BonusType bonusType);
 

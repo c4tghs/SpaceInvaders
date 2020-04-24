@@ -2,6 +2,7 @@
 // Created by cliff on 05/04/2020.
 //
 
+#include <iostream>
 #include "../Headers/SDLScore.h"
 
 /**
@@ -12,6 +13,11 @@ SDLNs::SDLScore::SDLScore(SDL_Renderer *renderer) {
     m_renderer= renderer;
     m_textTexture = new GameNs::TextManager(m_renderer);
 }
+
+SDLNs::SDLScore::~SDLScore() {
+    m_textTexture->free();
+}
+
 /**
  * Method to render score
  */
@@ -22,11 +28,4 @@ void SDLNs::SDLScore::render() {
     SDL_Rect rect = {0, 0, 70, 70};
     SDL_RenderCopy(m_renderer, m_textTexture->getTexture(), nullptr, &rect);
 }
-/**
- * Method to destroy texture
- */
-void SDLNs::SDLScore::close() {
-    m_textTexture->free();
-    //Deallocate memory
-    delete(m_textTexture);
-}
+

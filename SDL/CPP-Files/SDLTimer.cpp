@@ -10,6 +10,12 @@ SDLNs::SDLTimer::SDLTimer()
 {
     SDLTimer::reset();
 }
+
+/**
+ * Destructor for SDLTimer
+ */
+SDLNs::SDLTimer::~SDLTimer(){}
+
 /**
  * Method to reset all parameters
  */
