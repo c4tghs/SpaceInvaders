@@ -100,10 +100,10 @@ GameNs::PlayerShip* SDLNs::SDLFactory::createPlayerShip(std::string playerShipPa
  * @param yPos - y position of ship
  * @return - instance of EnemyShip
  */
-GameNs::EnemyShip * SDLNs::SDLFactory::createEnemyShip(std::string enemyShipPath, int xPos, int yPos) {
+GameNs::EnemyShip * SDLNs::SDLFactory::createEnemyShip(std::string enemyShipPath, int xPos, int yPos,GameNs::Timer* timer) {
     int shipWidth = m_screenWidth/25;
     int shipHeight = m_screenHeight/25;
-    return new SDLEnemyShip(m_renderer, enemyShipPath, xPos, yPos,shipWidth,shipHeight);
+    return new SDLEnemyShip(m_renderer, timer, enemyShipPath, xPos, yPos, shipWidth, shipHeight);
 }
 
 /**

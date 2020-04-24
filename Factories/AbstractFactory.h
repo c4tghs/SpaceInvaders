@@ -20,7 +20,7 @@ namespace GameNs{
     class AbstractFactory {
     public:
         virtual PlayerShip* createPlayerShip(std::string playerShipPath)=0;
-        virtual EnemyShip *createEnemyShip(std::string enemyShipPath, int xPos, int yPos) =0;
+        virtual EnemyShip *createEnemyShip(std::string enemyShipPath, int xPos, int yPos,GameNs::Timer* timer) =0;
         virtual Background* createBackground()=0;
         virtual Timer* createTimer()=0;
         virtual GameNs::Bullet *createBullet(std::string bulletPath, int xPos, int yPos, int width, int height) =0;

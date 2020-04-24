@@ -20,7 +20,7 @@ namespace SDLNs
         SDLFactory();
         ~SDLFactory()override ;
         GameNs::PlayerShip* createPlayerShip(std::string playerShipPath) override;
-        GameNs::EnemyShip *createEnemyShip(std::string enemyShipPath, int xPos, int yPos) override;
+        GameNs::EnemyShip *createEnemyShip(std::string enemyShipPath, int xPos, int yPos,GameNs::Timer* timer) override;
         GameNs::Background* createBackground() override;
         GameNs::Bullet *createBullet(std::string bulletPath, int xPos, int yPos, int width, int height) override;
         GameNs::Timer* createTimer() override;
@@ -37,7 +37,7 @@ namespace SDLNs
         bool m_isRunning = false;
         SDL_Window* m_window = nullptr;
         SDL_Renderer* m_renderer = nullptr;
-
+        GameNs::Timer* m_timer= nullptr;
         int m_screenWidth = 0;
         int m_screenHeight =0;
     };

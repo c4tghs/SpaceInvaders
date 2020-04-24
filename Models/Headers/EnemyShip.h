@@ -5,8 +5,11 @@
 #ifndef PROJECT_ENEMYSHIP_H
 #define PROJECT_ENEMYSHIP_H
 
-
+#include <SDL2/SDL_rect.h>
 #include "Entity.h"
+
+#define SPRITES_FRAMES 2
+
 namespace GameNs
 {
     enum EnemyType{Octopus,Crab,Squid};
@@ -19,6 +22,7 @@ namespace GameNs
         virtual void close() = 0;
         virtual int getMoveDirection()=0;
         virtual void setMoveDirection(int direction)=0;
+        virtual void setRect(SDL_Rect rects[])=0;
         void setEnemyType(EnemyType type);
         void setEnemySpeed(int speed);
         int getEnemySpeed();

@@ -60,22 +60,42 @@ void GameNs::EnemyManager::createEnemies(int number) {
         //Create enemy and add it to vector.
         if(i < 10)
         {
-            m_enemyShips.emplace_back(m_factory->createEnemyShip(m_enemyShipOctopusPath, xPos, yPos));
+            m_enemyShips.emplace_back(m_factory->createEnemyShip(m_spriteSheet, xPos, yPos,m_timer));
             //Set enemy type.
             m_enemyShips[i]->setEnemyType(Octopus);
+            //Set enemy type
             m_enemyShips[i]->setEnemySpeed(m_configHandler->getEnemySpeed());
-        } else if (i >= 10 && i < 20)
+            //Sprite rectangular area octopus
+            SDL_Rect spriteClips[SPRITES_FRAMES];
+            spriteClips[0] = {257,35,45,35};
+            spriteClips[1] = {315,35,45,35};
+            m_enemyShips[i]->setRect(spriteClips);
+        }
+        else if (i >= 10 && i < 20)
         {
-            m_enemyShips.emplace_back(m_factory->createEnemyShip(m_enemyShipCrabPath, xPos, yPos));
+            m_enemyShips.emplace_back(m_factory->createEnemyShip(m_spriteSheet, xPos, yPos,m_timer));
             //Set enemy type.
             m_enemyShips[i]->setEnemyType(Crab);
+            //Set enemy type
             m_enemyShips[i]->setEnemySpeed(m_configHandler->getEnemySpeed());
-        } else
+            //Sprite rectangular area octopus
+            SDL_Rect spriteClips[SPRITES_FRAMES];
+            spriteClips[0] = {126,35,45,35};
+            spriteClips[1] = {186,35,45,35};
+            m_enemyShips[i]->setRect(spriteClips);
+        }
+        else
         {
-            m_enemyShips.emplace_back(m_factory->createEnemyShip(m_enemyShipSquidPath, xPos, yPos));
+            m_enemyShips.emplace_back(m_factory->createEnemyShip(m_spriteSheet, xPos, yPos,m_timer));
             //Set enemy type.
             m_enemyShips[i]->setEnemyType(Squid);
+            //Set enemy type
             m_enemyShips[i]->setEnemySpeed(m_configHandler->getEnemySpeed());
+            //Sprite rectangular area octopus
+            SDL_Rect spriteClips[SPRITES_FRAMES];
+            spriteClips[0] = {6,35,30,35};
+            spriteClips[1] = {64,35,30,35};
+            m_enemyShips[i]->setRect(spriteClips);
         }
 
     }
