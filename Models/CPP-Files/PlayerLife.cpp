@@ -7,9 +7,7 @@
 /**
  * Constructor
  */
-GameNs::PlayerLife::PlayerLife() {
-    m_playerLife = 5;
-}
+GameNs::PlayerLife::PlayerLife() {}
 /**
  * Destructor
  */

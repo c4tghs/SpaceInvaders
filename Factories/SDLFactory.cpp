@@ -13,8 +13,9 @@
 #include "../SDL/Headers/SDLBonus.h"
 
 SDLNs::SDLFactory::SDLFactory() {
-    m_screenWidth = SCREEN_WIDTH;
-    m_screenHeight=SCREEN_HEIGHT;
+    m_configHandler = new GameNs::ConfigHandler();
+    m_screenWidth = m_configHandler->getScreenWidth();
+    m_screenHeight = m_configHandler->getScreenHeight();
     //Check if SDL was initialised successfully
     if(SDL_Init(SDL_INIT_VIDEO) !=0 && IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG) !=0)
     {
@@ -73,6 +74,7 @@ SDLNs::SDLFactory::SDLFactory() {
  * Destructor
  */
 SDLNs::SDLFactory::~SDLFactory() {
+    delete m_configHandler;
     SDL_DestroyRenderer(m_renderer);
     SDL_DestroyWindow(m_window);
     IMG_Quit();
@@ -87,11 +89,7 @@ SDLNs::SDLFactory::~SDLFactory() {
  */
 GameNs::PlayerShip* SDLNs::SDLFactory::createPlayerShip(std::string playerShipPath)
 {
-    int shipHeight =m_screenHeight/10;
-    int xPos =  (m_screenWidth/2)-50;
-    int yPos = m_screenHeight-(shipHeight+10);
-    int shipWidth = m_screenWidth/10;
-    return new SDLPlayerShip(xPos,yPos,shipWidth,shipHeight,m_renderer,playerShipPath);
+    return new SDLPlayerShip(m_configHandler->getPlayerShipXPos(), m_configHandler->getPlayerShipYPos(), m_configHandler->getPlayerShipWidth(), m_configHandler->getPlayerShipHeight(), m_renderer, playerShipPath);
 }
 /**
  * Method used to create an instance of SDL enemyShip
@@ -101,9 +99,7 @@ GameNs::PlayerShip* SDLNs::SDLFactory::createPlayerShip(std::string playerShipPa
  * @return - instance of EnemyShip
  */
 GameNs::EnemyShip * SDLNs::SDLFactory::createEnemyShip(std::string enemyShipPath, int xPos, int yPos,GameNs::Timer* timer) {
-    int shipWidth = m_screenWidth/25;
-    int shipHeight = m_screenHeight/25;
-    return new SDLEnemyShip(m_renderer, timer, enemyShipPath, xPos, yPos, shipWidth, shipHeight);
+    return new SDLEnemyShip(m_renderer, timer, enemyShipPath, xPos, yPos, m_configHandler->getEnemyShipWidth(), m_configHandler->getEnemyShipHeight());
 }
 
 /**
@@ -175,21 +171,6 @@ GameNs::Bonus *SDLNs::SDLFactory::createBonus(std::string bonusImagePath, int xP
 }
 
 /**
- * Method used to clean everything after user quits the game
- *
- */
-void SDLNs::SDLFactory::close()
-{
-    /*SDL_DestroyWindow(m_window);
-    SDL_DestroyRenderer(m_renderer);
-    IMG_Quit();
-    TTF_Quit();
-    SDL_Quit();
-    std::cerr << "Game cleaned successfully" << std::endl;*/
-
-}
-
-/**
  * Method used to present the renderer
  */
 void SDLNs::SDLFactory::render(){
@@ -212,6 +193,14 @@ bool SDLNs::SDLFactory::isRunning()
     }
 
     return m_isRunning;
+}
+
+/**
+ * Method to set game running state
+ * @param state - state of game
+ */
+void SDLNs::SDLFactory::setRunningState(bool state) {
+    m_isRunning = state;
 }
 
 

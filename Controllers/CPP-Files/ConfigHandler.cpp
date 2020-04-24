@@ -23,6 +23,12 @@ GameNs::ConfigHandler::ConfigHandler() {
         m_bulletSpeed = m_json.find("configuration")->find("BULLETSPEED")->get<int>();
         m_playerLives = m_json.find("configuration")->find("LIVES")->get<int>();
         m_playerSpeed = m_json.find("configuration")->find("PLAYERSPEED")->get<int>();
+        m_playerShipWidth = m_screenWidth / 10;
+        m_playerShipHeight = m_screenHeight / 10;
+        m_playerShipYPos = m_screenHeight-(m_playerShipHeight + 10);
+        m_playerShipXPos = (m_screenWidth/2)-50;
+        m_enemyShipWidth = m_screenWidth/25;
+        m_enemyShipHeight =  m_screenHeight/25;
         i.close();
     }
     else
@@ -86,4 +92,52 @@ int GameNs::ConfigHandler::getBulletSpeed() {
  */
 int GameNs::ConfigHandler::getPlayerLives() {
     return m_playerLives;
+}
+
+/**
+ * Method that returns player ship height
+ * @return integer representing player ship height on screen
+ */
+int GameNs::ConfigHandler::getPlayerShipHeight() {
+    return m_playerShipHeight;
+}
+
+/**
+ * Method that returns player ship width
+ * @return integer representing player ship width on screen
+ */
+int GameNs::ConfigHandler::getPlayerShipWidth() {
+    return m_playerShipWidth;
+}
+
+/**
+ * Method that returns player ship initial y position
+ * @return integer representing player ship y position
+ */
+int GameNs::ConfigHandler::getPlayerShipYPos() {
+    return m_playerShipYPos;
+}
+
+/**
+ * Method that returns player ship initial x position
+ * @return integer representing player ship x position
+ */
+int GameNs::ConfigHandler::getPlayerShipXPos() {
+    return m_playerShipXPos;
+}
+
+/**
+ * Method that returns enemy ship width
+ * @return integer representing enemy ship width on screen
+ */
+int GameNs::ConfigHandler::getEnemyShipWidth() {
+    return m_enemyShipWidth;
+}
+
+/**
+ * Method that returns enemy ship width
+ * @return integer representing enemy ship width on screen
+ */
+int GameNs::ConfigHandler::getEnemyShipHeight() {
+    return m_enemyShipHeight;
 }

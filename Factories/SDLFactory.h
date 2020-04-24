@@ -13,6 +13,8 @@
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_ttf.h>
 #include "AbstractFactory.h"
+#include "../Controllers/Headers/ConfigHandler.h"
+
 namespace SDLNs
 {
     class SDLFactory:public GameNs::AbstractFactory {
@@ -27,17 +29,19 @@ namespace SDLNs
         GameNs::Score* createScore() override;
         GameNs::PlayerLife* createPlayerLife() override;
         GameNs::Bonus* createBonus(std::string bonusImagePath, int xPos, int yPos, int width, int height) override;
-        void close() override;
         void render() override;
         bool isRunning() override;
         void createWindow(const char* title,int width, int height);
         void createRender();
+        void setRunningState(bool state) override;
+
 
     private:
         bool m_isRunning = false;
         SDL_Window* m_window = nullptr;
         SDL_Renderer* m_renderer = nullptr;
         GameNs::Timer* m_timer= nullptr;
+        GameNs::ConfigHandler* m_configHandler = nullptr;
         int m_screenWidth = 0;
         int m_screenHeight =0;
     };

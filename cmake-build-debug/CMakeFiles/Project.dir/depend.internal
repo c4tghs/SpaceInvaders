@@ -137,6 +137,7 @@ CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj
  C:/MinGW/include/SDL2/SDL_video.h
  C:/MinGW/include/SDL2/begin_code.h
  C:/MinGW/include/SDL2/close_code.h
+ D:/Users/cliff/Documents/C++/Project/Controllers/Headers/ConfigHandler.h
  D:/Users/cliff/Documents/C++/Project/Controllers/Headers/TextManager.h
  D:/Users/cliff/Documents/C++/Project/Controllers/Headers/TextureManager.h
  D:/Users/cliff/Documents/C++/Project/Factories/AbstractFactory.h
@@ -160,6 +161,7 @@ CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj
  D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLPlayerShip.h
  D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLScore.h
  D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLTimer.h
+ D:/Users/cliff/Documents/C++/Project/nlohmann/json.hpp
 CMakeFiles/Project.dir/Models/CPP-Files/Background.cpp.obj
  D:/Users/cliff/Documents/C++/Project/Models/CPP-Files/Background.cpp
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Background.h

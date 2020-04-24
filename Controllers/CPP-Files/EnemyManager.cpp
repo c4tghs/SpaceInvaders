@@ -110,8 +110,6 @@ void GameNs::EnemyManager::createEnemies(int number) {
 void GameNs::EnemyManager::update() {
     //Move enemies.
     moveEnemies();
-    //Update time
-    m_timer->update();
     //If an enemy has reached boundary, ie width of screen or 0, change direction.
     if(checkEnemyBoundaries())
     {
@@ -173,6 +171,11 @@ void GameNs::EnemyManager::update() {
     }
     //Allow enemy to shoot
     enemyShoot();
+    //End game if all enemies are dead
+    if(m_enemyShips.empty())
+    {
+        m_factory->setRunningState(false);
+    }
  }
 /**
  * Method to move enemies across screen
@@ -190,6 +193,11 @@ bool GameNs::EnemyManager::checkEnemyBoundaries() {
     for(auto & m_enemyShip : m_enemyShips) {
         if((m_enemyShip->getXPosition() <= 0 ) or (m_enemyShip->getXPosition() >= m_screenWidth-m_enemyShip->getWidth())){
             return true;
+        }
+        //Player has been reached
+        if(m_enemyShip->getYPosition() >= m_configHandler->getPlayerShipYPos())
+        {
+            m_factory->setRunningState(false);
         }
     }
     return false;

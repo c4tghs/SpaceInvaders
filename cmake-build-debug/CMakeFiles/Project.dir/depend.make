@@ -136,6 +136,7 @@ CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: C:/MinGW/include/SDL2/SDL_s
 CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: C:/MinGW/include/SDL2/SDL_video.h
 CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: C:/MinGW/include/SDL2/begin_code.h
 CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: C:/MinGW/include/SDL2/close_code.h
+CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: ../Controllers/Headers/ConfigHandler.h
 CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: ../Controllers/Headers/TextManager.h
 CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: ../Controllers/Headers/TextureManager.h
 CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: ../Factories/AbstractFactory.h
@@ -159,6 +160,7 @@ CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: ../SDL/Headers/SDLPlayerLif
 CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: ../SDL/Headers/SDLPlayerShip.h
 CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: ../SDL/Headers/SDLScore.h
 CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: ../SDL/Headers/SDLTimer.h
+CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: ../nlohmann/json.hpp
 
 CMakeFiles/Project.dir/Models/CPP-Files/Background.cpp.obj: ../Models/CPP-Files/Background.cpp
 CMakeFiles/Project.dir/Models/CPP-Files/Background.cpp.obj: ../Models/Headers/Background.h

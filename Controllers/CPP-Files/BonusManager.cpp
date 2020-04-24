@@ -46,8 +46,6 @@ GameNs::BonusManager::~BonusManager() {
  * Method for updating
  */
 void GameNs::BonusManager::update() {
-    //Update timer.
-    m_timer->update();
     if((m_timer->getTime() >= m_nextBonus) && !m_moveBonus)
     {
         m_moveBonus = true;

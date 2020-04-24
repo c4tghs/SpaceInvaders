@@ -77,6 +77,7 @@ void GameNs::Game::run() {
     //Game loop for updating.
     while(m_factory->isRunning())
     {
+        m_timer->update();
         m_background->render();
         m_playerManager->update();
         m_enemyManager->update();

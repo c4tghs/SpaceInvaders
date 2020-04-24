@@ -28,7 +28,7 @@ GameNs::PlayerManager::PlayerManager(GameNs::AbstractFactory *AF, Timer *timer, 
     m_screenHeight = configHandler->getScreenHeight();
     m_screenWidth =  configHandler->getScreenWidth();
     m_collisionDetector = collisionDetector;
-
+    m_playerLife->setPlayerLife(configHandler->getPlayerLives());
     //Create playerShip;
     m_playerShip  = m_factory->createPlayerShip(m_playerShipPath);
     m_playerShip->setPlayerSpeed(configHandler->getPlayerSpeed());
@@ -55,9 +55,12 @@ GameNs::PlayerManager::~PlayerManager() {
 void GameNs::PlayerManager::update() {
     //Move player
     movePlayer();
-    //Update timer
-    m_timer->update();
     checkPlayerBoundaries();
+    //End game if player has run out of lives
+    if(m_playerLife->getPlayerLife() <=0)
+    {
+        m_factory->setRunningState(false);
+    }
     //Render player
     m_playerShip->render();
     //Render player life

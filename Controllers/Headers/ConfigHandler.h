@@ -21,7 +21,12 @@ namespace GameNs{
             int getBonusSpeed();
             int getBulletSpeed();
             int getPlayerLives();
-
+            int getPlayerShipHeight();
+            int getPlayerShipWidth();
+            int getPlayerShipYPos();
+            int getPlayerShipXPos();
+            int getEnemyShipWidth();
+            int getEnemyShipHeight();
 
         private:
             int m_playerSpeed=0;
@@ -31,7 +36,12 @@ namespace GameNs{
             int m_bonusSpeed=0;
             int m_bulletSpeed=0;
             int m_playerLives=0;
-
+            int m_playerShipHeight=0;
+            int m_playerShipWidth=0;
+            int m_playerShipYPos=0;
+            int m_playerShipXPos=0;
+            int m_enemyShipHeight=0;
+            int m_enemyShipWidth=0;
             std::string m_configFile = "../configuration.json";
             json m_json= nullptr;
 
