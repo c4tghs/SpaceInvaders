@@ -100,6 +100,9 @@
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/Game.cpp">
 			<Option target="Project"/>
 		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/LevelController.cpp">
+			<Option target="Project"/>
+		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/PlayerManager.cpp">
 			<Option target="Project"/>
 		</Unit>
@@ -125,6 +128,9 @@
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/Headers/Game.h">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/Headers/LevelController.h">
 			<Option target="Project"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/C++/Project/Controllers/Headers/PlayerManager.h">

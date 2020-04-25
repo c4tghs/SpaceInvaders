@@ -2,6 +2,7 @@
  * BulletManager class
  * Methods to managing a bullet
  */
+#pragma once
 
 #ifndef PROJECT_BULLETMANAGER_H
 #define PROJECT_BULLETMANAGER_H
@@ -22,10 +23,10 @@ namespace GameNs{
         void setPlayerBullet(Bullet* bullet);
         void setEnemyBullet(Bullet* bullet);
         void checkBulletBounds();
-        bool isPlayerBulletFired();
-        bool isEnemyBulletFired();
-        void setPlayerBulletFired(bool isFired);
-        void setEnemyBulletFired(bool isFired);
+        bool isPlayerBulletInFlight();
+        bool isEnemyBulletInFlight();
+        void setPlayerBulletInFlight(bool inFlight);
+        void setEnemyBulletInFlight(bool isFlight);
 
         void setPlayerBulletCollision(bool isCollided);
         void bulletsCollision();
@@ -34,8 +35,8 @@ namespace GameNs{
 
     private:
         bool m_playerBulletCollided= false;
-        bool m_playerFired = false;
-        bool m_enemyFired = false;
+        bool m_pBulletInFlight = false;
+        bool m_eBulletInFlight = false;
         Timer* m_timer= nullptr;
         Bullet* m_playerBullet = nullptr;
         Bullet* m_enemyBullet = nullptr;

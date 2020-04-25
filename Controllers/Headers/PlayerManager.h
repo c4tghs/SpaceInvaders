@@ -1,7 +1,7 @@
 //
 // Created by cliff on 01/04/2020.
 //
-
+#pragma once
 /**
  * PlayerManager class
  * Methods for managing a player
@@ -36,13 +36,12 @@ namespace GameNs{
 
     private:
         AbstractFactory* m_factory=nullptr;
-        std::string m_playerShipPath = "../assets/ship.png";
-        std::string m_bulletPath="../assets/laser.png";
         Timer* m_timer=nullptr;
         BulletManager* m_bulletManager=nullptr;
         SDLNs::SDLKeyStates* m_keyStates = nullptr;
         PlayerShip* m_playerShip=nullptr;
         CollisionDetector* m_collisionDetector= nullptr;
+        ConfigHandler* m_configHandler= nullptr;
         int m_screenHeight=0;
         int m_screenWidth=0;
         std::vector<Bullet*> m_bullets;

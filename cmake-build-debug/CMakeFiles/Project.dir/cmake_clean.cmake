@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Project.dir/Controllers/CPP-Files/ConfigHandler.cpp.obj"
   "CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj"
   "CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj"
+  "CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.obj"
   "CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj"
   "CMakeFiles/Project.dir/Controllers/CPP-Files/TextManager.cpp.obj"
   "CMakeFiles/Project.dir/Controllers/CPP-Files/TextureManager.cpp.obj"

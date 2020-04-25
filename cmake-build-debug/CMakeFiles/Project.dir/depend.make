@@ -53,10 +53,15 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/ConfigHandler.cpp.obj: ../Controlle
 CMakeFiles/Project.dir/Controllers/CPP-Files/ConfigHandler.cpp.obj: ../nlohmann/json.hpp
 
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Controllers/CPP-Files/EnemyManager.cpp
+CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Controllers/Headers/BonusManager.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Controllers/Headers/BulletManager.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Controllers/Headers/CollisionDetector.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Controllers/Headers/ConfigHandler.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Controllers/Headers/EnemyManager.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Controllers/Headers/Game.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Controllers/Headers/LevelController.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Controllers/Headers/PlayerManager.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Controllers/Headers/TextureManager.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Factories/AbstractFactory.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Models/Headers/Background.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Models/Headers/Bonus.h
@@ -68,6 +73,8 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Models/Hea
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Models/Headers/RandomNumber.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Models/Headers/Score.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../Models/Headers/Timer.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../SDL/Headers/SDLBullet.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../SDL/Headers/SDLKeyStates.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../SDL/Headers/SDLTimer.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj: ../nlohmann/json.hpp
 
@@ -78,6 +85,7 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Controllers/Header
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Controllers/Headers/ConfigHandler.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Controllers/Headers/EnemyManager.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Controllers/Headers/Game.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Controllers/Headers/LevelController.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Controllers/Headers/PlayerManager.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Controllers/Headers/TextureManager.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../Factories/AbstractFactory.h
@@ -94,6 +102,30 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../SDL/Headers/SDLBul
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../SDL/Headers/SDLKeyStates.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../SDL/Headers/SDLTimer.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj: ../nlohmann/json.hpp
+
+CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.obj: ../Controllers/CPP-Files/LevelController.cpp
+CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.obj: ../Controllers/Headers/BonusManager.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.obj: ../Controllers/Headers/BulletManager.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.obj: ../Controllers/Headers/CollisionDetector.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.obj: ../Controllers/Headers/ConfigHandler.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.obj: ../Controllers/Headers/EnemyManager.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.obj: ../Controllers/Headers/LevelController.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.obj: ../Controllers/Headers/PlayerManager.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.obj: ../Controllers/Headers/TextureManager.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.obj: ../Factories/AbstractFactory.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.obj: ../Models/Headers/Background.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.obj: ../Models/Headers/Bonus.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.obj: ../Models/Headers/Bullet.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.obj: ../Models/Headers/EnemyShip.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.obj: ../Models/Headers/Entity.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.obj: ../Models/Headers/PlayerLife.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.obj: ../Models/Headers/PlayerShip.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.obj: ../Models/Headers/Score.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.obj: ../Models/Headers/Timer.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.obj: ../SDL/Headers/SDLBullet.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.obj: ../SDL/Headers/SDLKeyStates.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.obj: ../SDL/Headers/SDLTimer.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.obj: ../nlohmann/json.hpp
 
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Controllers/CPP-Files/PlayerManager.cpp
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Controllers/Headers/BulletManager.h
@@ -266,6 +298,7 @@ CMakeFiles/Project.dir/main.cpp.obj: ../Controllers/Headers/CollisionDetector.h
 CMakeFiles/Project.dir/main.cpp.obj: ../Controllers/Headers/ConfigHandler.h
 CMakeFiles/Project.dir/main.cpp.obj: ../Controllers/Headers/EnemyManager.h
 CMakeFiles/Project.dir/main.cpp.obj: ../Controllers/Headers/Game.h
+CMakeFiles/Project.dir/main.cpp.obj: ../Controllers/Headers/LevelController.h
 CMakeFiles/Project.dir/main.cpp.obj: ../Controllers/Headers/PlayerManager.h
 CMakeFiles/Project.dir/main.cpp.obj: ../Controllers/Headers/TextureManager.h
 CMakeFiles/Project.dir/main.cpp.obj: ../Factories/AbstractFactory.h

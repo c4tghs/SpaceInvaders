@@ -23,7 +23,7 @@ GameNs::BonusManager::BonusManager(AbstractFactory *AF, Timer *timer, CollisionD
     m_playerLife = playerManager->getPlayerLife();
     m_playerSCore = score;
     m_collisionDetector = collisionDetector;
-    m_bonusSpeed = configHandler->getBonusSpeed();
+    m_bonusSpeed = m_configHandler->getBonusSpeed();
 
     //Create bonuses.
     createBonuses();
@@ -83,13 +83,13 @@ void GameNs::BonusManager::createBonuses() {
         type = BonusType(GameNs::RandomNumber::getInstance().getRandomDouble(0, 3));
         if(type== BonusType::POINTS)
         {
-            filePath = m_pathBonusPoints;
+            filePath = m_configHandler->getPathBonusPoints();
         } else if (type== BonusType::LIFE)
         {
-            filePath = m_pathBonusLife;
+            filePath = m_configHandler->getPathBonusLife();
         } else if (type== BonusType::SPEED)
         {
-            filePath = m_pathBonusSpeed;
+            filePath = m_configHandler->getPathBonusSpeed();
         }
         //Random x position for bonus
         xPos = GameNs::RandomNumber::getInstance().getRandomDouble(0, m_screenWidth);

@@ -1,6 +1,7 @@
 //
 // Created by cliff on 14/04/2020.
 //
+#pragma once
 
 #ifndef PROJECT_BONUSMANAGER_H
 #define PROJECT_BONUSMANAGER_H
@@ -38,10 +39,6 @@ namespace GameNs{
             Score* m_playerSCore=nullptr;
             CollisionDetector* m_collisionDetector= nullptr;
             ConfigHandler* m_configHandler= nullptr;
-            std::string m_pathBonusLife="../assets/life.jpg";
-            std::string m_pathBonusSpeed="../assets/speed.jpg";
-            std::string m_pathBonusPoints="../assets/points.png";
-
     };
 }
 

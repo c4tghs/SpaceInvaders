@@ -18,7 +18,7 @@ GameNs::BulletManager::BulletManager() {}
 GameNs::BulletManager::BulletManager(Timer *timer, CollisionDetector *collisionDetector, ConfigHandler *configHandler) {
     m_timer = timer;
     m_collisionDetector = collisionDetector;
-    m_playerFired = false;
+    m_pBulletInFlight = false;
     m_configHandler = configHandler;
     m_screenHeight = m_configHandler->getScreenWidth();
     m_bulletSpeed = m_configHandler->getBulletSpeed();
@@ -29,16 +29,16 @@ GameNs::BulletManager::BulletManager(Timer *timer, CollisionDetector *collisionD
 void GameNs::BulletManager::update() {
     //Check if bullet has been fired
     //If so, render bullet
-    if(m_playerFired)
+    if(m_pBulletInFlight)
     {
         m_playerBullet->render();
     }
-    if(m_enemyFired)
+    if(m_eBulletInFlight)
     {
         m_enemyBullet->render();
     }
     //If enemy or player bullet has been fired, execute the following methods.
-    if(m_playerFired or m_enemyFired)
+    if(m_pBulletInFlight or m_eBulletInFlight)
     {
         moveBullet();
         checkBulletBounds();
@@ -57,13 +57,13 @@ void GameNs::BulletManager::update() {
 void GameNs::BulletManager::moveBullet() {
     //-1 because bullet is moving up.
     //Change y position of bullet using time.
-    if(m_playerFired)
+    if(m_pBulletInFlight)
     {
         m_playerBullet->setYPosition(m_playerBullet->getYPosition() + m_timer->getDeltaTime() * -1 * m_bulletSpeed);
     }
     //1 because bullet is moving down.
     //Change y position of bullet using time
-    if(m_enemyFired)
+    if(m_eBulletInFlight)
     {
         m_enemyBullet->setYPosition(m_enemyBullet->getYPosition() + m_timer->getDeltaTime() * 1 * m_bulletSpeed);
     }
@@ -74,30 +74,30 @@ void GameNs::BulletManager::moveBullet() {
  */
 void GameNs::BulletManager::checkBulletBounds() {
     //Check if bullet has moved out of visible area
-    if(m_playerFired)
+    if(m_pBulletInFlight)
     {
         if(m_playerBullet->getYPosition() < - m_playerBullet->getHeight() || m_playerBullet->getYPosition() > (m_screenHeight + m_playerBullet->getHeight()))
         {
-            setPlayerBulletFired(false);
+            setPlayerBulletInFlight(false);
         }
     }
-    if(m_enemyFired)
+    if(m_eBulletInFlight)
     {
         if (m_enemyBullet->getYPosition() < -m_enemyBullet->getHeight() ||
             m_enemyBullet->getYPosition() > (m_screenHeight + m_enemyBullet->getHeight()))
         {
-            setEnemyBulletFired(false);
+            setEnemyBulletInFlight(false);
         }
     }
 
 }
 
 /**
- * Method that returns state of playerBullet, ie if it has been fired
+ * Method to check if player bullet is in flight
  * @return boolean
  */
-bool GameNs::BulletManager::isPlayerBulletFired() {
-    return m_playerFired;
+bool GameNs::BulletManager::isPlayerBulletInFlight() {
+    return m_pBulletInFlight;
 }
 /**
  * Method to set player bullet
@@ -107,11 +107,11 @@ void GameNs::BulletManager::setPlayerBullet(Bullet* bullet){
     m_playerBullet = bullet;
 }
 /**
- * Method to set if player has fired a bullet
- * @param isFired - state of bulletFired
+ * Method to set whether player bullet is in flight
+ * @param inFlight - state of bulletFired
  */
-void GameNs::BulletManager::setPlayerBulletFired(bool isFired) {
-    m_playerFired = isFired;
+void GameNs::BulletManager::setPlayerBulletInFlight(bool inFlight) {
+    m_pBulletInFlight = inFlight;
 }
 
 /**
@@ -124,18 +124,18 @@ void GameNs::BulletManager::setEnemyBullet(GameNs::Bullet *bullet) {
 
 /**
  * Method to set if enemy has fired a bullet
- * @param isFired - if bullet is fired
+ * @param isFlight - if bullet is fired
  */
-void GameNs::BulletManager::setEnemyBulletFired(bool isFired) {
-    m_enemyFired = isFired;
+void GameNs::BulletManager::setEnemyBulletInFlight(bool isFlight) {
+    m_eBulletInFlight = isFlight;
 }
 
 /**
  * Method to check if enemy has fired a bullet
  * @return true of false
  */
-bool GameNs::BulletManager::isEnemyBulletFired() {
-    return m_enemyFired;
+bool GameNs::BulletManager::isEnemyBulletInFlight() {
+    return m_eBulletInFlight;
 }
 /**
  * Method to get current player bullet
@@ -163,7 +163,7 @@ GameNs::Bullet *GameNs::BulletManager::getEnemyBullet() {
  */
 void GameNs::BulletManager::bulletsCollision() {
     //If both enemy and player bullets are moving or not out of visible area, check for collision
-    if(m_playerFired and m_enemyFired)
+    if(m_pBulletInFlight and m_eBulletInFlight)
     {
 
         if(m_collisionDetector->twoBulletsCollision(m_playerBullet, m_enemyBullet))

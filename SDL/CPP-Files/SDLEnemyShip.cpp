@@ -34,7 +34,7 @@ SDLNs::SDLEnemyShip::SDLEnemyShip(SDL_Renderer *renderer, GameNs::Timer *timer, 
  */
 SDLNs::SDLEnemyShip::~SDLEnemyShip()
 {
-    m_enemyShipTexture->free();
+    delete m_enemyShipTexture;
 }
 
 /**

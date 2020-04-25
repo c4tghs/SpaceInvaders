@@ -15,7 +15,7 @@ SDLNs::SDLScore::SDLScore(SDL_Renderer *renderer) {
 }
 
 SDLNs::SDLScore::~SDLScore() {
-    m_textTexture->free();
+    delete m_textTexture;
 }
 
 /**

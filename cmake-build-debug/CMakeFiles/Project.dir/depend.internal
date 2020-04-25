@@ -54,10 +54,15 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/ConfigHandler.cpp.obj
  D:/Users/cliff/Documents/C++/Project/nlohmann/json.hpp
 CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj
  D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/EnemyManager.cpp
+ D:/Users/cliff/Documents/C++/Project/Controllers/Headers/BonusManager.h
  D:/Users/cliff/Documents/C++/Project/Controllers/Headers/BulletManager.h
  D:/Users/cliff/Documents/C++/Project/Controllers/Headers/CollisionDetector.h
  D:/Users/cliff/Documents/C++/Project/Controllers/Headers/ConfigHandler.h
  D:/Users/cliff/Documents/C++/Project/Controllers/Headers/EnemyManager.h
+ D:/Users/cliff/Documents/C++/Project/Controllers/Headers/Game.h
+ D:/Users/cliff/Documents/C++/Project/Controllers/Headers/LevelController.h
+ D:/Users/cliff/Documents/C++/Project/Controllers/Headers/PlayerManager.h
+ D:/Users/cliff/Documents/C++/Project/Controllers/Headers/TextureManager.h
  D:/Users/cliff/Documents/C++/Project/Factories/AbstractFactory.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Background.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Bonus.h
@@ -69,6 +74,8 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj
  D:/Users/cliff/Documents/C++/Project/Models/Headers/RandomNumber.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Score.h
  D:/Users/cliff/Documents/C++/Project/Models/Headers/Timer.h
+ D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLBullet.h
+ D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLKeyStates.h
  D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLTimer.h
  D:/Users/cliff/Documents/C++/Project/nlohmann/json.hpp
 CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj
@@ -79,6 +86,31 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj
  D:/Users/cliff/Documents/C++/Project/Controllers/Headers/ConfigHandler.h
  D:/Users/cliff/Documents/C++/Project/Controllers/Headers/EnemyManager.h
  D:/Users/cliff/Documents/C++/Project/Controllers/Headers/Game.h
+ D:/Users/cliff/Documents/C++/Project/Controllers/Headers/LevelController.h
+ D:/Users/cliff/Documents/C++/Project/Controllers/Headers/PlayerManager.h
+ D:/Users/cliff/Documents/C++/Project/Controllers/Headers/TextureManager.h
+ D:/Users/cliff/Documents/C++/Project/Factories/AbstractFactory.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/Background.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/Bonus.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/Bullet.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/EnemyShip.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/Entity.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/PlayerLife.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/PlayerShip.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/Score.h
+ D:/Users/cliff/Documents/C++/Project/Models/Headers/Timer.h
+ D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLBullet.h
+ D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLKeyStates.h
+ D:/Users/cliff/Documents/C++/Project/SDL/Headers/SDLTimer.h
+ D:/Users/cliff/Documents/C++/Project/nlohmann/json.hpp
+CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.obj
+ D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/LevelController.cpp
+ D:/Users/cliff/Documents/C++/Project/Controllers/Headers/BonusManager.h
+ D:/Users/cliff/Documents/C++/Project/Controllers/Headers/BulletManager.h
+ D:/Users/cliff/Documents/C++/Project/Controllers/Headers/CollisionDetector.h
+ D:/Users/cliff/Documents/C++/Project/Controllers/Headers/ConfigHandler.h
+ D:/Users/cliff/Documents/C++/Project/Controllers/Headers/EnemyManager.h
+ D:/Users/cliff/Documents/C++/Project/Controllers/Headers/LevelController.h
  D:/Users/cliff/Documents/C++/Project/Controllers/Headers/PlayerManager.h
  D:/Users/cliff/Documents/C++/Project/Controllers/Headers/TextureManager.h
  D:/Users/cliff/Documents/C++/Project/Factories/AbstractFactory.h
@@ -267,6 +299,7 @@ CMakeFiles/Project.dir/main.cpp.obj
  D:/Users/cliff/Documents/C++/Project/Controllers/Headers/ConfigHandler.h
  D:/Users/cliff/Documents/C++/Project/Controllers/Headers/EnemyManager.h
  D:/Users/cliff/Documents/C++/Project/Controllers/Headers/Game.h
+ D:/Users/cliff/Documents/C++/Project/Controllers/Headers/LevelController.h
  D:/Users/cliff/Documents/C++/Project/Controllers/Headers/PlayerManager.h
  D:/Users/cliff/Documents/C++/Project/Controllers/Headers/TextureManager.h
  D:/Users/cliff/Documents/C++/Project/Factories/AbstractFactory.h

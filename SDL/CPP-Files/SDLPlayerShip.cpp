@@ -34,7 +34,7 @@ SDLNs::SDLPlayerShip::SDLPlayerShip(int xPos, int yPos, int width, int height,SD
  */
 SDLNs::SDLPlayerShip::~SDLPlayerShip()
 {
-    m_playerShipTexture->free();
+    delete m_playerShipTexture;
 }
 
 /**

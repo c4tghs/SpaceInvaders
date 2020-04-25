@@ -24,7 +24,7 @@ SDLNs::SDLPlayerLife::SDLPlayerLife(SDL_Renderer* renderer, int screenWidth) {
  */
 SDLNs::SDLPlayerLife::~SDLPlayerLife()
 {
-    m_textTexture->free();
+    delete m_textTexture;
 }
 
 /**

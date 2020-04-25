@@ -284,6 +284,33 @@ Controllers/CPP-Files/Game.cpp.s:
 	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.s
 .PHONY : Controllers/CPP-Files/Game.cpp.s
 
+Controllers/CPP-Files/LevelController.obj: Controllers/CPP-Files/LevelController.cpp.obj
+
+.PHONY : Controllers/CPP-Files/LevelController.obj
+
+# target to build an object file
+Controllers/CPP-Files/LevelController.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.obj
+.PHONY : Controllers/CPP-Files/LevelController.cpp.obj
+
+Controllers/CPP-Files/LevelController.i: Controllers/CPP-Files/LevelController.cpp.i
+
+.PHONY : Controllers/CPP-Files/LevelController.i
+
+# target to preprocess a source file
+Controllers/CPP-Files/LevelController.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.i
+.PHONY : Controllers/CPP-Files/LevelController.cpp.i
+
+Controllers/CPP-Files/LevelController.s: Controllers/CPP-Files/LevelController.cpp.s
+
+.PHONY : Controllers/CPP-Files/LevelController.s
+
+# target to generate assembly for a file
+Controllers/CPP-Files/LevelController.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.s
+.PHONY : Controllers/CPP-Files/LevelController.cpp.s
+
 Controllers/CPP-Files/PlayerManager.obj: Controllers/CPP-Files/PlayerManager.cpp.obj
 
 .PHONY : Controllers/CPP-Files/PlayerManager.obj
@@ -932,6 +959,9 @@ help:
 	@echo ... Controllers/CPP-Files/Game.obj
 	@echo ... Controllers/CPP-Files/Game.i
 	@echo ... Controllers/CPP-Files/Game.s
+	@echo ... Controllers/CPP-Files/LevelController.obj
+	@echo ... Controllers/CPP-Files/LevelController.i
+	@echo ... Controllers/CPP-Files/LevelController.s
 	@echo ... Controllers/CPP-Files/PlayerManager.obj
 	@echo ... Controllers/CPP-Files/PlayerManager.i
 	@echo ... Controllers/CPP-Files/PlayerManager.s

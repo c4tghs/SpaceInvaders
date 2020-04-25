@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/ConfigHandler.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Controllers/CPP-Files/ConfigHandler.cpp.obj"
   "D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/EnemyManager.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj"
   "D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/Game.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj"
+  "D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/LevelController.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.obj"
   "D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/PlayerManager.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj"
   "D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/TextManager.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Controllers/CPP-Files/TextManager.cpp.obj"
   "D:/Users/cliff/Documents/C++/Project/Controllers/CPP-Files/TextureManager.cpp" "D:/Users/cliff/Documents/C++/Project/cmake-build-debug/CMakeFiles/Project.dir/Controllers/CPP-Files/TextureManager.cpp.obj"

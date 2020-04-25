@@ -30,7 +30,7 @@ SDLNs::SDLBonus::SDLBonus(SDL_Renderer* renderer, int xPos, int yPos, int width,
  * Destructor
  */
 SDLNs::SDLBonus::~SDLBonus() {
-    m_bonusTexture->free();
+    delete m_bonusTexture;
 }
 
 /**

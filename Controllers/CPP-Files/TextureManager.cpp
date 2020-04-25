@@ -19,6 +19,11 @@ GameNs::TextureManager::TextureManager(){
 GameNs::TextureManager::TextureManager(SDL_Renderer* renderer){
     m_renderer = renderer;
 }
+
+GameNs::TextureManager::~TextureManager(){
+    SDL_DestroyTexture(m_texture);
+}
+
 /**
  * Method to create a texture from image
  * @param filename - path to image
@@ -66,17 +71,6 @@ void GameNs::TextureManager::loadTexture(const std::string &filename) {
  */
 SDL_Texture* GameNs::TextureManager::getTexture(){
     return m_texture;
-}
-
-/**
- * Method to destroy texture
- */
-void GameNs::TextureManager::free() {
-    if(m_texture != nullptr)
-    {
-        SDL_DestroyTexture(m_texture);
-        m_texture = nullptr;
-    }
 }
 
 int GameNs::TextureManager::getWidth() {

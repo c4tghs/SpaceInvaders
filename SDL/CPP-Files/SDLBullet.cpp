@@ -26,7 +26,7 @@ SDLNs::SDLBullet::SDLBullet(SDL_Renderer* renderer,std::string bulletPath,int xP
 
 SDLNs::SDLBullet::~SDLBullet()
 {
-    m_texture->free();
+    delete m_texture;
 }
 
 /**

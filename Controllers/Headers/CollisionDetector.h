@@ -1,6 +1,7 @@
 //
 // Created by cliff on 04/04/2020.
 //
+#pragma once
 
 #ifndef PROJECT_COLLISIONDETECTOR_H
 #define PROJECT_COLLISIONDETECTOR_H

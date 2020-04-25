@@ -1,12 +1,45 @@
 {
-	"configuration":
+	"start":
 	{
 		"SCREENWIDTH":940,
 		"SCREENHEIGHT":720,
-		"ENEMYSPEED":1,
-		"BONUSSPEED":5,
-		"BULLETSPEED":5,
-		"LIVES":5,
-		"PLAYERSPEED":5
+		"LIVES":5
+	},
+	"images":
+	{
+		"PLAYERSHIP": "../assets/ship.png",
+		"PLAYERBULLET": "../assets/laser.png",
+		"BONUSLIFE": "../assets/life.jpg",
+		"BONUSSPEED": "../assets/speed.jpg",
+		"BONUSPOINTS": "../assets/points.png",
+		"ENEMYSHIP": "../assets/invader_sprites.png",
+		"ENEMYBULLET":"../assets/bullet.jpeg"
+	},
+	"levels":
+	{
+		"one":
+		{
+			"ENEMYSPEED":1,
+			"BULLETSPEED": 6,
+			"PLAYERSPEED":6,
+			"BONUSSPEED":5,
+			"ENEMIES": 30
+		},
+		"two":
+		{
+			"ENEMYSPEED":1,
+			"BULLETSPEED": 6,
+			"PLAYERSPEED":6,
+			"BONUSSPEED":6,
+			"ENEMIES": 40
+		},
+		"three":
+		{
+			"ENEMYSPEED":1,
+			"BULLETSPEED": 7,
+			"PLAYERSPEED": 6,
+			"BONUSSPEED":6,
+			"ENEMIES": 50
+		}
 	}
 }

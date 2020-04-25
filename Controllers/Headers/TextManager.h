@@ -1,6 +1,7 @@
 /**
  * Class to create texts
  */
+#pragma once
 #ifndef PROJECT_TEXTMANAGER_H
 #define PROJECT_TEXTMANAGER_H
 
@@ -13,9 +14,9 @@ namespace GameNs{
     public:
         TextManager();
         TextManager(SDL_Renderer* renderer);
+        ~TextManager();
         SDL_Texture* getTexture();
         void loadTexture(const std::string& text, int textSize);
-        void free();
 
     private:
         SDL_Renderer* m_renderer= nullptr;

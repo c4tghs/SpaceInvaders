@@ -19,6 +19,13 @@ GameNs::TextManager::TextManager(SDL_Renderer* renderer) {
 }
 
 /**
+ * Destructor
+ */
+GameNs::TextManager::~TextManager()
+{
+    SDL_DestroyTexture(m_texture);
+}
+/**
  * Method to return the created texture
  * @return - texture
  */
@@ -37,8 +44,6 @@ void GameNs::TextManager::loadTexture(const std::string& text, int textSize) {
     SDL_Color color = {255,255,255};
     //Create Font
     m_font = TTF_OpenFont(m_fontFile,textSize);
-    //Set style
-    TTF_SetFontStyle(m_font,1);
 
     //Check if font was created successfully.
     if(m_font==nullptr)
@@ -73,18 +78,6 @@ void GameNs::TextManager::loadTexture(const std::string& text, int textSize) {
         }
         //Free surface.
         SDL_FreeSurface(surface);
-    }
-}
-
-/**
- * Method to destroy the created texture
- */
-void GameNs::TextManager::free() {
-    if(m_texture != nullptr)
-    {
-        //Destroy texture.
-        SDL_DestroyTexture(m_texture);
-        m_texture = nullptr;
     }
 }
 

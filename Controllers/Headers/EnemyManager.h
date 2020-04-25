@@ -3,6 +3,8 @@
  * Method for managing enemies
  */
 
+#pragma once
+
 #ifndef PROJECT_ENEMYMANAGER_H
 #define PROJECT_ENEMYMANAGER_H
 
@@ -40,8 +42,6 @@ namespace GameNs
         int m_screenWidth=0;
         int m_screenHeight=0;
         double m_nextMissile=0.0;
-        std::string m_spriteSheet = "../assets/invader_sprites.png";
-        std::string m_bulletPath = "../assets/bullet.jpeg";
         std::vector<Bullet*> m_bullets;
         Score* m_score= nullptr;
     };
