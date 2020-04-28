@@ -13,10 +13,10 @@ namespace GameNs{
     class TextManager {
     public:
         TextManager();
-        TextManager(SDL_Renderer* renderer);
+        TextManager(SDL_Renderer *renderer, int textSize);
         ~TextManager();
         SDL_Texture* getTexture();
-        void loadTexture(const std::string& text, int textSize);
+        void loadTexture(const std::string &text);
 
     private:
         SDL_Renderer* m_renderer= nullptr;

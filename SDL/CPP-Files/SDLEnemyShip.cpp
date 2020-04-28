@@ -16,12 +16,12 @@
  * @param xPos
  * @param yPos
  */
-SDLNs::SDLEnemyShip::SDLEnemyShip(SDL_Renderer *renderer, GameNs::Timer *timer, std::string enemyShipPath, int xPos,
+SDLNs::SDLEnemyShip::SDLEnemyShip(SDL_Renderer* renderer, GameNs::Timer* timer, const char *enemyShipPath, int xPos,
                                   int yPos, int width, int height) : EnemyShip(xPos,yPos,width,height)
 {
     m_renderer = renderer;
     m_timer = timer;
-    m_enemyShipPath = std::move(enemyShipPath);
+    m_enemyShipPath = enemyShipPath;
     m_enemyShipTexture = new GameNs::TextureManager(m_renderer);
     m_moveDirection = 1;
     //create texture

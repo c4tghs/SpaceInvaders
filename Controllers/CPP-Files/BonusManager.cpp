@@ -2,7 +2,6 @@
 // Created by cliff on 14/04/2020.
 //
 
-#include <iostream>
 #include "../Headers/BonusManager.h"
 #include "../../Models/Headers/RandomNumber.h"
 
@@ -12,8 +11,7 @@
  * @param playerManager - player manager
  */
 GameNs::BonusManager::BonusManager(AbstractFactory *AF, Timer *timer, CollisionDetector *collisionDetector,
-                                   ConfigHandler *configHandler,
-                                   PlayerManager *playerManager, Score *score) {
+                                   ConfigHandler *configHandler,PlayerManager *playerManager, Score *score) {
     m_timer = timer;
     m_playerShip = playerManager->getPlayerShip();
     m_factory = AF;
@@ -29,7 +27,7 @@ GameNs::BonusManager::BonusManager(AbstractFactory *AF, Timer *timer, CollisionD
     createBonuses();
 
     //Set time for next bonus.
-    m_nextBonus = m_timer->getTime()+ GameNs::RandomNumber::getInstance().getRandomDouble(1, 10);
+    m_nextBonus = m_timer->getTime()+ GameNs::RandomNumber::getRandomDouble(1, 10);
 }
 
 /**
@@ -38,8 +36,10 @@ GameNs::BonusManager::BonusManager(AbstractFactory *AF, Timer *timer, CollisionD
 GameNs::BonusManager::~BonusManager() {
     for(auto &bonus:m_bonuses)
     {
+        //Deallocate memory
         delete bonus;
     }
+
 }
 
 /**
@@ -71,7 +71,7 @@ void GameNs::BonusManager::createBonuses() {
     //Reserve memory for 10 bonuses.
     m_bonuses.reserve(10);
     BonusType type;
-    std::string filePath;
+    const char* filePath="";
     //Bonus width.
     int width = m_screenWidth/30;
     //Bonus height.
@@ -80,21 +80,24 @@ void GameNs::BonusManager::createBonuses() {
     for(int i=0; i < 10; i++)
     {
         //Get random type.
-        type = BonusType(GameNs::RandomNumber::getInstance().getRandomDouble(0, 3));
+        type = BonusType(GameNs::RandomNumber::getRandomDouble(0, 3));
+
+        //Random x position for bonus
+        xPos = GameNs::RandomNumber::getRandomDouble(0, m_screenWidth);
         if(type== BonusType::POINTS)
         {
-            filePath = m_configHandler->getPathBonusPoints();
+            //Create bonus and add it to vector.
+            m_bonuses.emplace_back(m_factory->createBonus(m_configHandler->getPathBonusPoints().c_str(),xPos,-50,width,height));
         } else if (type== BonusType::LIFE)
         {
-            filePath = m_configHandler->getPathBonusLife();
+            //Create bonus and add it to vector.
+            m_bonuses.emplace_back(m_factory->createBonus(m_configHandler->getPathBonusLife().c_str(),xPos,-50,width,height));
         } else if (type== BonusType::SPEED)
         {
-            filePath = m_configHandler->getPathBonusSpeed();
+            //Create bonus and add it to vector.
+            m_bonuses.emplace_back(m_factory->createBonus(m_configHandler->getPathBonusSpeed().c_str(),xPos,-50,width,height));
         }
-        //Random x position for bonus
-        xPos = GameNs::RandomNumber::getInstance().getRandomDouble(0, m_screenWidth);
-        //Create bonus and add it to vector.
-        m_bonuses.emplace_back(m_factory->createBonus(filePath,xPos,-50,width,height));
+
         //Set type for the created bonus.
         m_bonuses[i]->setBonusType(type);
     }
@@ -116,16 +119,16 @@ void GameNs::BonusManager::render() {
  */
 void GameNs::BonusManager::moveBonus() {
     //Set Y position of bonus using time.
-    m_bonuses[m_randomId]->setYPosition(m_bonuses[m_randomId]->getYPosition()+m_timer->getDeltaTime()*m_bonusSpeed);
+    m_bonuses[m_randomId]->setYPosition(m_bonuses[m_randomId]->getYPosition() + m_timer->getDeltaTime() * m_bonusSpeed);
 }
 /**
  * Method to select random bonus and set next bonus' time
  */
 void GameNs::BonusManager::selectBonus() {
     //Get random number between 0 en size of bonus vector.
-    m_randomId = GameNs::RandomNumber::getInstance().getRandomDouble(0, m_bonuses.size());
+    m_randomId = GameNs::RandomNumber::getRandomInt(0, m_bonuses.size());
     //Set next bonus time.
-    m_nextBonus = m_timer->getTime()+ GameNs::RandomNumber::getInstance().getRandomDouble(1, 10);
+    m_nextBonus = m_timer->getTime()+ GameNs::RandomNumber::getRandomDouble(5, 10);
 }
 /**
  * Method to check collisions
@@ -151,7 +154,6 @@ void GameNs::BonusManager::checkCollisions() {
         {
             m_playerSCore->setScores(m_playerSCore->getScores()+10);
         }
-
     }
 }
 

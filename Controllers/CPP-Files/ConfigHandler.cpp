@@ -4,8 +4,6 @@
 
 #include <fstream>
 #include <iostream>
-#include <direct.h>
-#define GetCurrentDir _getcwd
 #include "../Headers/ConfigHandler.h"
 
 /**
@@ -25,12 +23,11 @@ void GameNs::ConfigHandler::readConfiguration() {
     //If file was opened successfully, extract data
     if(i.good())
     {
-        m_json = json::parse(i);
-
+        //m_json = json::parse(i);
+        i >> m_json;
         setStartParameters();
         setFiles();
         storeParameters();
-
     }
     else
     {
@@ -44,9 +41,9 @@ void GameNs::ConfigHandler::readConfiguration() {
  * Method to set game start parameters
  */
 void GameNs::ConfigHandler::setStartParameters() {
-    m_screenHeight = m_json.find("start")->find("SCREENHEIGHT")->get<int>();
-    m_screenWidth = m_json.find("start")->find("SCREENWIDTH")->get<int>();
-    m_playerLives = m_json.find("start")->find("LIVES")->get<int>();
+    m_screenHeight = m_json["start"]["SCREENHEIGHT"];
+    m_screenWidth = m_json["start"]["SCREENWIDTH"];
+    m_playerLives = m_json["start"]["LIVES"];
 
     m_playerShipWidth = m_screenWidth / 10;
     m_playerShipHeight = m_screenHeight / 10;
@@ -61,24 +58,23 @@ void GameNs::ConfigHandler::setStartParameters() {
  * Method to used to store level parameters in map
  */
 void GameNs::ConfigHandler::storeParameters() {
-    m_levels["one"]["ENEMYSPEED"] = m_json.find("levels")->find("one")->find("ENEMYSPEED")->get<int>();
-    m_levels["one"]["BULLETSPEED"] = m_json.find("levels")->find("one")->find("BULLETSPEED")->get<int>();
-    m_levels["one"]["PLAYERSPEED"] = m_json.find("levels")->find("one")->find("PLAYERSPEED")->get<int>();
-    m_levels["one"]["BONUSSPEED"] = m_json.find("levels")->find("one")->find("BONUSSPEED")->get<int>();
-    m_levels["one"]["ENEMIES"] = m_json.find("levels")->find("one")->find("ENEMIES")->get<int>();
+    m_levels["one"]["ENEMYSPEED"] = m_json["levels"]["one"]["ENEMYSPEED"];
+    m_levels["one"]["BULLETSPEED"] = m_json["levels"]["one"]["BULLETSPEED"];
+    m_levels["one"]["PLAYERSPEED"] = m_json["levels"]["one"]["PLAYERSPEED"];
+    m_levels["one"]["BONUSSPEED"] = m_json["levels"]["one"]["BONUSSPEED"];
+    m_levels["one"]["ENEMIES"] = m_json["levels"]["one"]["ENEMIES"];
 
-    m_levels["two"]["ENEMYSPEED"] = m_json.find("levels")->find("two")->find("ENEMYSPEED")->get<int>();
-    m_levels["two"]["BULLETSPEED"] = m_json.find("levels")->find("two")->find("BULLETSPEED")->get<int>();
-    m_levels["two"]["PLAYERSPEED"] = m_json.find("levels")->find("two")->find("PLAYERSPEED")->get<int>();
-    m_levels["two"]["BONUSSPEED"] = m_json.find("levels")->find("two")->find("BONUSSPEED")->get<int>();
-    m_levels["two"]["ENEMIES"] = m_json.find("levels")->find("two")->find("ENEMIES")->get<int>();
+    m_levels["two"]["ENEMYSPEED"] = m_json["levels"]["two"]["ENEMYSPEED"];
+    m_levels["two"]["BULLETSPEED"] = m_json["levels"]["two"]["BULLETSPEED"];
+    m_levels["two"]["PLAYERSPEED"] = m_json["levels"]["two"]["PLAYERSPEED"];
+    m_levels["two"]["BONUSSPEED"] = m_json["levels"]["two"]["BONUSSPEED"];
+    m_levels["two"]["ENEMIES"] = m_json["levels"]["two"]["ENEMIES"];
 
-
-    m_levels["three"]["ENEMYSPEED"] = m_json.find("levels")->find("three")->find("ENEMYSPEED")->get<int>();
-    m_levels["three"]["BULLETSPEED"] = m_json.find("levels")->find("three")->find("BULLETSPEED")->get<int>();
-    m_levels["three"]["PLAYERSPEED"] = m_json.find("levels")->find("three")->find("PLAYERSPEED")->get<int>();
-    m_levels["three"]["BONUSSPEED"] = m_json.find("levels")->find("three")->find("BONUSSPEED")->get<int>();
-    m_levels["three"]["ENEMIES"] = m_json.find("levels")->find("three")->find("ENEMIES")->get<int>();
+    m_levels["three"]["ENEMYSPEED"] = m_json["levels"]["three"]["ENEMYSPEED"];
+    m_levels["three"]["BULLETSPEED"] = m_json["levels"]["three"]["BULLETSPEED"];
+    m_levels["three"]["PLAYERSPEED"] = m_json["levels"]["three"]["PLAYERSPEED"];
+    m_levels["three"]["BONUSSPEED"] = m_json["levels"]["three"]["BONUSSPEED"];
+    m_levels["three"]["ENEMIES"] = m_json["levels"]["three"]["ENEMIES"];
 
 }
 
@@ -86,13 +82,13 @@ void GameNs::ConfigHandler::storeParameters() {
  * Method to set path of image files
  */
 void GameNs::ConfigHandler::setFiles() {
-    m_pathBonusPoints = m_json.find("images")->find("BONUSPOINTS")->get<std::string>();
-    m_pathBonusSpeed = m_json.find("images")->find("BONUSSPEED")->get<std::string>();
-    m_pathBonusLife = m_json.find("images")->find("BONUSLIFE")->get<std::string>();
-    m_pathPlayerShip = m_json.find("images")->find("PLAYERSHIP")->get<std::string>();
-    m_pathEnemyShip = m_json.find("images")->find("ENEMYSHIP")->get<std::string>();
-    m_pathPlayerBullet = m_json.find("images")->find("PLAYERBULLET")->get<std::string>();
-    m_pathEnemyBullet = m_json.find("images")->find("ENEMYBULLET")->get<std::string>();
+    m_pathBonusPoints = m_json["images"]["BONUSPOINTS"];
+    m_pathBonusSpeed = m_json["images"]["BONUSSPEED"];
+    m_pathBonusLife = m_json["images"]["BONUSLIFE"];
+    m_pathPlayerShip = m_json["images"]["PLAYERSHIP"];
+    m_pathEnemyShip = m_json["images"]["ENEMYSHIP"];
+    m_pathPlayerBullet = m_json["images"]["PLAYERBULLET"];
+    m_pathEnemyBullet = m_json["images"]["ENEMYBULLET"];
 
 }
 

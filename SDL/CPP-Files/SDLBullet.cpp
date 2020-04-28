@@ -16,10 +16,10 @@
  * @param width - width of bullet
  * @param height - height of bullet
  */
-SDLNs::SDLBullet::SDLBullet(SDL_Renderer* renderer,std::string bulletPath,int xPos, int yPos,int width, int height):GameNs::Bullet(xPos,yPos,width,height)
+SDLNs::SDLBullet::SDLBullet(SDL_Renderer* renderer, const char *bulletPath, int xPos, int yPos, int width, int height): GameNs::Bullet(xPos, yPos, width, height)
 {
     m_renderer = renderer;
-    m_bulletPath = std::move(bulletPath);
+    m_bulletPath = bulletPath;
     m_texture = new GameNs::TextureManager(m_renderer);
     loadMedia();
 }

@@ -61,7 +61,7 @@ namespace GameNs{
             int m_enemyShipHeight=0;
             int m_enemyShipWidth=0;
 
-            std::string m_configFile = "../configuration.json";
+            const char* m_configFile = "../configuration.json";
             std::string m_pathBonusLife;
             std::string m_pathBonusSpeed;
             std::string m_pathBonusPoints;

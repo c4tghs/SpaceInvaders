@@ -32,19 +32,23 @@ GameNs::EnemyManager::EnemyManager(AbstractFactory *AF, Timer *timer, CollisionD
     m_collisionDetector = collisionDetector;
     m_configHandler = configHandler;
     //Get current time and add random between 0 and 3 to it
-    m_nextMissile = m_timer->getTime()+ GameNs::RandomNumber::getInstance().getRandomDouble(0, 3);
-    //Reserve memory for 100 bullets.
-    m_bullets.reserve(100);
-    //Create bullets
-    createBullets();
+    m_nextMissile = m_timer->getTime()+ GameNs::RandomNumber::getRandomDouble(0, 3);
+    //Reserve memory for 50 bullets.
+    m_bullets.reserve(50);
     //Create enemies
     createEnemies(m_configHandler->getEnemyAmount());
     m_score = score;
+    //Create bullets
+    createBullets();
 }
 GameNs::EnemyManager::~EnemyManager() {
     for(auto & enemyShip : m_enemyShips)
     {
         delete enemyShip;
+    }
+    for(auto & bullet:m_bullets)
+    {
+        delete bullet;
     }
 }
 
@@ -62,7 +66,7 @@ void GameNs::EnemyManager::createEnemies(int number) {
         //Create enemy and add it to vector.
         if(i < 10)
         {
-            m_enemyShips.emplace_back(m_factory->createEnemyShip(m_configHandler->getPathEnemyShip(), xPos, yPos,m_timer));
+            m_enemyShips.emplace_back(m_factory->createEnemyShip(m_configHandler->getPathEnemyShip().c_str(), xPos, yPos,m_timer));
             //Set enemy type.
             m_enemyShips[i]->setEnemyType(Octopus);
             //Set enemy type
@@ -77,7 +81,7 @@ void GameNs::EnemyManager::createEnemies(int number) {
         }
         else if (i >= 10 && i < 20)
         {
-            m_enemyShips.emplace_back(m_factory->createEnemyShip(m_configHandler->getPathEnemyShip(), xPos, yPos,m_timer));
+            m_enemyShips.emplace_back(m_factory->createEnemyShip(m_configHandler->getPathEnemyShip().c_str(), xPos, yPos,m_timer));
             //Set enemy type.
             m_enemyShips[i]->setEnemyType(Crab);
             //Set enemy type
@@ -90,7 +94,7 @@ void GameNs::EnemyManager::createEnemies(int number) {
         }
         else
         {
-            m_enemyShips.emplace_back(m_factory->createEnemyShip(m_configHandler->getPathEnemyShip(), xPos, yPos,m_timer));
+            m_enemyShips.emplace_back(m_factory->createEnemyShip(m_configHandler->getPathEnemyShip().c_str(), xPos, yPos,m_timer));
             //Set enemy type.
             m_enemyShips[i]->setEnemyType(Squid);
             //Set enemy type
@@ -183,7 +187,7 @@ void GameNs::EnemyManager::update() {
  */
 void GameNs::EnemyManager::moveEnemies(){
     for(auto & m_enemyShip : m_enemyShips){
-        m_enemyShip->setXPosition(m_enemyShip->getXPosition()+ m_timer->getDeltaTime()*m_enemyShip->getMoveDirection()*m_enemyShip->getEnemySpeed());
+        m_enemyShip->setXPosition(m_enemyShip->getXPosition()+ m_timer->getDeltaTime() * m_enemyShip->getMoveDirection() *m_enemyShip->getEnemySpeed());
     }
 }
 /**
@@ -216,31 +220,30 @@ void GameNs::EnemyManager::enemyShoot() {
         return;
     }
     //Generate random number -> enemy to select
-    int randomId = GameNs::RandomNumber::getInstance().getRandomInt(0,m_enemyShips.size());
+    m_randomId = GameNs::RandomNumber::getRandomInt(0,m_enemyShips.size());
 
     //Set initial position of bullet.
-    m_bullets[0]->setXPosition(m_enemyShips[randomId]->getXPosition()+20);
-    m_bullets[0]->setYPosition(m_enemyShips[randomId]->getYPosition());
+    m_bullets[0]->setXPosition(m_enemyShips[m_randomId]->getXPosition()+20);
+    m_bullets[0]->setYPosition(m_enemyShips[m_randomId]->getYPosition());
     m_bulletManager->setEnemyBulletInFlight(true);
     //Set enemy bullet.
     m_bulletManager->setEnemyBullet(m_bullets[0]);
     m_bullets.erase(m_bullets.begin());
 
-    //Create bullets if there're no more bullets left.
+    //Set time for next bullet.
+    m_nextMissile = m_timer->getTime()+ GameNs::RandomNumber::getRandomDouble(0, 3);
     if(m_bullets.empty())
     {
         createBullets();
     }
-    //Set time for next bullet.
-    m_nextMissile = m_timer->getTime()+ GameNs::RandomNumber::getInstance().getRandomDouble(0, 3);
 }
 /**
  * Method to create bullets
  */
 void GameNs::EnemyManager::createBullets() {
-    for(int i =0; i<50;i++)
+    for(int i =0; i<m_enemyShips.size();i++)
     {
-        m_bullets.emplace_back(m_factory->createBullet(m_configHandler->getPathEnemyBullet(), i + 50, i + 50, 10, 10));
+        m_bullets.emplace_back(m_factory->createBullet(m_configHandler->getPathEnemyBullet().c_str(), i + 50, i + 50, 10, 10));
     }
 }
 

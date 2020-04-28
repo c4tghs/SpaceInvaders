@@ -23,7 +23,7 @@ SDLNs::SDLFactory::SDLFactory() {
         m_isRunning = false;
         //exit(1);
     }
-        //Check if TTF was initialised successfully
+    //Check if TTF was initialised successfully
     else if (TTF_Init() < 0)
     {
         std::cerr << "Unable to initialise TTF library: "<< TTF_GetError() << std::endl;
@@ -87,7 +87,7 @@ SDLNs::SDLFactory::~SDLFactory() {
  * @param playerShipPath
  * @return instance of PlayerShip
  */
-GameNs::PlayerShip* SDLNs::SDLFactory::createPlayerShip(std::string playerShipPath)
+GameNs::PlayerShip* SDLNs::SDLFactory::createPlayerShip(const char *playerShipPath)
 {
     return new SDLPlayerShip(m_configHandler->getPlayerShipXPos(), m_configHandler->getPlayerShipYPos(), m_configHandler->getPlayerShipWidth(), m_configHandler->getPlayerShipHeight(), m_renderer, playerShipPath);
 }
@@ -98,7 +98,7 @@ GameNs::PlayerShip* SDLNs::SDLFactory::createPlayerShip(std::string playerShipPa
  * @param yPos - y position of ship
  * @return - instance of EnemyShip
  */
-GameNs::EnemyShip * SDLNs::SDLFactory::createEnemyShip(std::string enemyShipPath, int xPos, int yPos,GameNs::Timer* timer) {
+GameNs::EnemyShip * SDLNs::SDLFactory::createEnemyShip(const char *enemyShipPath, int xPos, int yPos, GameNs::Timer* timer) {
     return new SDLEnemyShip(m_renderer, timer, enemyShipPath, xPos, yPos, m_configHandler->getEnemyShipWidth(), m_configHandler->getEnemyShipHeight());
 }
 
@@ -117,8 +117,8 @@ GameNs::Background* SDLNs::SDLFactory::createBackground()
  * @param width - width of the window
  * @param height - height of the window
  */
-void SDLNs::SDLFactory::createWindow(const char* title, int width, int height) {
-    m_window = SDL_CreateWindow(title,SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,width,height,SDL_WINDOW_SHOWN);
+void SDLNs::SDLFactory::createWindow(const char *title, int width, int height) {
+    m_window = SDL_CreateWindow(title,SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,width,height,SDL_WINDOW_SHOWN| SDL_WINDOW_RESIZABLE);
 }
 /**
  * Method used to create an an instance of SDL renderer
@@ -133,7 +133,7 @@ void SDLNs::SDLFactory::createRender() {
  * @param yPos - y position of bullet
  * @return - instance of Bullet
  */
-GameNs::Bullet * SDLNs::SDLFactory::createBullet(std::string bulletPath, int xPos, int yPos, int width, int height) {
+GameNs::Bullet * SDLNs::SDLFactory::createBullet(const char *bulletPath, int xPos, int yPos, int width, int height) {
     return new SDLBullet(m_renderer,bulletPath,xPos,yPos,width,height);
 }
 /**
@@ -152,7 +152,7 @@ GameNs::Score *SDLNs::SDLFactory::createScore() {
 }
 /**
  * Method to create an instance of SDLPlayerLife
- * @return - instance of
+ * @return - instance of PlayerLife
  */
 GameNs::PlayerLife *SDLNs::SDLFactory::createPlayerLife() {
     return new SDLPlayerLife(m_renderer,m_screenWidth);
@@ -166,7 +166,7 @@ GameNs::PlayerLife *SDLNs::SDLFactory::createPlayerLife() {
  * @param height - height of bonus
  * @return - Bonus instance
  */
-GameNs::Bonus *SDLNs::SDLFactory::createBonus(std::string bonusImagePath, int xPos, int yPos, int width, int height) {
+GameNs::Bonus *SDLNs::SDLFactory::createBonus(const char* bonusImagePath, int xPos, int yPos, int width, int height) {
     return new SDLBonus(m_renderer,xPos,yPos,width,height,bonusImagePath);
 }
 
@@ -186,9 +186,14 @@ bool SDLNs::SDLFactory::isRunning()
 
     while(SDL_PollEvent(&event) !=0)
     {
+        //Press on X
         if(event.type == SDL_QUIT)
         {
             m_isRunning = false;
+        }
+        if(event.type == SDL_WINDOWEVENT_RESIZED)
+        {
+            std::cout << "Window has been resized" << std::endl;
         }
     }
 

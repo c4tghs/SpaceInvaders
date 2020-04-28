@@ -89,16 +89,19 @@ void GameNs::Game::run() {
     {
         if(m_levelCompleted)
         {
-            m_levelCompleted=false;
             m_currentGameLevel = m_currentGameLevel+1;
             m_levelController->setLevel(m_currentGameLevel);
             m_levelController->clean();
             m_levelController->startLevel();
+            m_levelCompleted=false;
         }
-        m_background->render();
-        m_timer->update();
-        m_levelController->update();
-        m_factory->render();
+        if(m_currentGameLevel <=3)
+        {
+            m_background->render();
+            m_timer->update();
+            m_levelController->update();
+            m_factory->render();
+        }
     }
 
 }

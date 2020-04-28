@@ -29,14 +29,15 @@ GameNs::TextureManager::~TextureManager(){
  * @param filename - path to image
  * @param ren - renderer
  */
-void GameNs::TextureManager::loadTexture(const std::string &filename) {
-    SDL_Surface* surface = IMG_Load(filename.c_str());
+void GameNs::TextureManager::loadTexture(const char *filename) {
+    SDL_Surface* surface = IMG_Load(filename);
     SDL_Texture* tex;
 
     //Check if surface was created successfully.
     if(surface == nullptr)
     {
         std::cerr << "Failed to load surface. Error: " << SDL_GetError() << std::endl;
+        std::cerr << "File name is " << filename << std::endl;
         exit(1);
     }
     else

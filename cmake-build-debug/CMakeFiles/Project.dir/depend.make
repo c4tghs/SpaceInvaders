@@ -141,6 +141,7 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Models/He
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Models/Headers/Entity.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Models/Headers/PlayerLife.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Models/Headers/PlayerShip.h
+CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Models/Headers/RandomNumber.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Models/Headers/Score.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../Models/Headers/Timer.h
 CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj: ../SDL/Headers/SDLBullet.h
@@ -154,20 +155,6 @@ CMakeFiles/Project.dir/Controllers/CPP-Files/TextManager.cpp.obj: ../Controllers
 CMakeFiles/Project.dir/Controllers/CPP-Files/TextureManager.cpp.obj: ../Controllers/CPP-Files/TextureManager.cpp
 CMakeFiles/Project.dir/Controllers/CPP-Files/TextureManager.cpp.obj: ../Controllers/Headers/TextureManager.h
 
-CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: C:/MinGW/include/SDL2/SDL_blendmode.h
-CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: C:/MinGW/include/SDL2/SDL_config.h
-CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: C:/MinGW/include/SDL2/SDL_endian.h
-CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: C:/MinGW/include/SDL2/SDL_error.h
-CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: C:/MinGW/include/SDL2/SDL_pixels.h
-CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: C:/MinGW/include/SDL2/SDL_platform.h
-CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: C:/MinGW/include/SDL2/SDL_rect.h
-CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: C:/MinGW/include/SDL2/SDL_render.h
-CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: C:/MinGW/include/SDL2/SDL_rwops.h
-CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: C:/MinGW/include/SDL2/SDL_stdinc.h
-CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: C:/MinGW/include/SDL2/SDL_surface.h
-CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: C:/MinGW/include/SDL2/SDL_video.h
-CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: C:/MinGW/include/SDL2/begin_code.h
-CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: C:/MinGW/include/SDL2/close_code.h
 CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: ../Controllers/Headers/ConfigHandler.h
 CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: ../Controllers/Headers/TextManager.h
 CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj: ../Controllers/Headers/TextureManager.h
@@ -244,20 +231,6 @@ CMakeFiles/Project.dir/SDL/CPP-Files/SDLBullet.cpp.obj: ../SDL/CPP-Files/SDLBull
 CMakeFiles/Project.dir/SDL/CPP-Files/SDLBullet.cpp.obj: ../SDL/Headers/SDLBullet.h
 CMakeFiles/Project.dir/SDL/CPP-Files/SDLBullet.cpp.obj: ../SDL/Headers/SDLTimer.h
 
-CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj: C:/MinGW/include/SDL2/SDL_blendmode.h
-CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj: C:/MinGW/include/SDL2/SDL_config.h
-CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj: C:/MinGW/include/SDL2/SDL_endian.h
-CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj: C:/MinGW/include/SDL2/SDL_error.h
-CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj: C:/MinGW/include/SDL2/SDL_pixels.h
-CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj: C:/MinGW/include/SDL2/SDL_platform.h
-CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj: C:/MinGW/include/SDL2/SDL_rect.h
-CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj: C:/MinGW/include/SDL2/SDL_render.h
-CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj: C:/MinGW/include/SDL2/SDL_rwops.h
-CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj: C:/MinGW/include/SDL2/SDL_stdinc.h
-CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj: C:/MinGW/include/SDL2/SDL_surface.h
-CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj: C:/MinGW/include/SDL2/SDL_video.h
-CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj: C:/MinGW/include/SDL2/begin_code.h
-CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj: C:/MinGW/include/SDL2/close_code.h
 CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj: ../Controllers/Headers/TextureManager.h
 CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj: ../Models/Headers/EnemyShip.h
 CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj: ../Models/Headers/Entity.h

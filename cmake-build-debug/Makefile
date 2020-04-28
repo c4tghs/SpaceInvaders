@@ -47,10 +47,10 @@ RM = "D:\Program Files\JetBrains\CLion 2019.3.3\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Users\cliff\Documents\C++\Project
+CMAKE_SOURCE_DIR = D:\Users\cliff\Documents\C++\SpaceInvader
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Users\cliff\Documents\C++\Project\cmake-build-debug
+CMAKE_BINARY_DIR = D:\Users\cliff\Documents\C++\SpaceInvader\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Users\cliff\Documents\C++\SpaceInvader\cmake-build-debug\CMakeFiles D:\Users\cliff\Documents\C++\SpaceInvader\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Users\cliff\Documents\C++\Project\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Users\cliff\Documents\C++\SpaceInvader\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -110,17 +110,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Project
+# Target rules for targets named SpaceInvaders
 
 # Build rule for target.
-Project: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 Project
-.PHONY : Project
+SpaceInvaders: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 SpaceInvaders
+.PHONY : SpaceInvaders
 
 # fast build rule for target.
-Project/fast:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/build
-.PHONY : Project/fast
+SpaceInvaders/fast:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/build
+.PHONY : SpaceInvaders/fast
 
 Controllers/CPP-Files/BonusManager.obj: Controllers/CPP-Files/BonusManager.cpp.obj
 
@@ -128,7 +128,7 @@ Controllers/CPP-Files/BonusManager.obj: Controllers/CPP-Files/BonusManager.cpp.o
 
 # target to build an object file
 Controllers/CPP-Files/BonusManager.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.obj
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/BonusManager.cpp.obj
 .PHONY : Controllers/CPP-Files/BonusManager.cpp.obj
 
 Controllers/CPP-Files/BonusManager.i: Controllers/CPP-Files/BonusManager.cpp.i
@@ -137,7 +137,7 @@ Controllers/CPP-Files/BonusManager.i: Controllers/CPP-Files/BonusManager.cpp.i
 
 # target to preprocess a source file
 Controllers/CPP-Files/BonusManager.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.i
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/BonusManager.cpp.i
 .PHONY : Controllers/CPP-Files/BonusManager.cpp.i
 
 Controllers/CPP-Files/BonusManager.s: Controllers/CPP-Files/BonusManager.cpp.s
@@ -146,7 +146,7 @@ Controllers/CPP-Files/BonusManager.s: Controllers/CPP-Files/BonusManager.cpp.s
 
 # target to generate assembly for a file
 Controllers/CPP-Files/BonusManager.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/BonusManager.cpp.s
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/BonusManager.cpp.s
 .PHONY : Controllers/CPP-Files/BonusManager.cpp.s
 
 Controllers/CPP-Files/BulletManager.obj: Controllers/CPP-Files/BulletManager.cpp.obj
@@ -155,7 +155,7 @@ Controllers/CPP-Files/BulletManager.obj: Controllers/CPP-Files/BulletManager.cpp
 
 # target to build an object file
 Controllers/CPP-Files/BulletManager.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.obj
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/BulletManager.cpp.obj
 .PHONY : Controllers/CPP-Files/BulletManager.cpp.obj
 
 Controllers/CPP-Files/BulletManager.i: Controllers/CPP-Files/BulletManager.cpp.i
@@ -164,7 +164,7 @@ Controllers/CPP-Files/BulletManager.i: Controllers/CPP-Files/BulletManager.cpp.i
 
 # target to preprocess a source file
 Controllers/CPP-Files/BulletManager.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.i
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/BulletManager.cpp.i
 .PHONY : Controllers/CPP-Files/BulletManager.cpp.i
 
 Controllers/CPP-Files/BulletManager.s: Controllers/CPP-Files/BulletManager.cpp.s
@@ -173,7 +173,7 @@ Controllers/CPP-Files/BulletManager.s: Controllers/CPP-Files/BulletManager.cpp.s
 
 # target to generate assembly for a file
 Controllers/CPP-Files/BulletManager.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/BulletManager.cpp.s
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/BulletManager.cpp.s
 .PHONY : Controllers/CPP-Files/BulletManager.cpp.s
 
 Controllers/CPP-Files/CollisionDetector.obj: Controllers/CPP-Files/CollisionDetector.cpp.obj
@@ -182,7 +182,7 @@ Controllers/CPP-Files/CollisionDetector.obj: Controllers/CPP-Files/CollisionDete
 
 # target to build an object file
 Controllers/CPP-Files/CollisionDetector.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionDetector.cpp.obj
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/CollisionDetector.cpp.obj
 .PHONY : Controllers/CPP-Files/CollisionDetector.cpp.obj
 
 Controllers/CPP-Files/CollisionDetector.i: Controllers/CPP-Files/CollisionDetector.cpp.i
@@ -191,7 +191,7 @@ Controllers/CPP-Files/CollisionDetector.i: Controllers/CPP-Files/CollisionDetect
 
 # target to preprocess a source file
 Controllers/CPP-Files/CollisionDetector.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionDetector.cpp.i
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/CollisionDetector.cpp.i
 .PHONY : Controllers/CPP-Files/CollisionDetector.cpp.i
 
 Controllers/CPP-Files/CollisionDetector.s: Controllers/CPP-Files/CollisionDetector.cpp.s
@@ -200,7 +200,7 @@ Controllers/CPP-Files/CollisionDetector.s: Controllers/CPP-Files/CollisionDetect
 
 # target to generate assembly for a file
 Controllers/CPP-Files/CollisionDetector.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/CollisionDetector.cpp.s
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/CollisionDetector.cpp.s
 .PHONY : Controllers/CPP-Files/CollisionDetector.cpp.s
 
 Controllers/CPP-Files/ConfigHandler.obj: Controllers/CPP-Files/ConfigHandler.cpp.obj
@@ -209,7 +209,7 @@ Controllers/CPP-Files/ConfigHandler.obj: Controllers/CPP-Files/ConfigHandler.cpp
 
 # target to build an object file
 Controllers/CPP-Files/ConfigHandler.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/ConfigHandler.cpp.obj
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/ConfigHandler.cpp.obj
 .PHONY : Controllers/CPP-Files/ConfigHandler.cpp.obj
 
 Controllers/CPP-Files/ConfigHandler.i: Controllers/CPP-Files/ConfigHandler.cpp.i
@@ -218,7 +218,7 @@ Controllers/CPP-Files/ConfigHandler.i: Controllers/CPP-Files/ConfigHandler.cpp.i
 
 # target to preprocess a source file
 Controllers/CPP-Files/ConfigHandler.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/ConfigHandler.cpp.i
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/ConfigHandler.cpp.i
 .PHONY : Controllers/CPP-Files/ConfigHandler.cpp.i
 
 Controllers/CPP-Files/ConfigHandler.s: Controllers/CPP-Files/ConfigHandler.cpp.s
@@ -227,7 +227,7 @@ Controllers/CPP-Files/ConfigHandler.s: Controllers/CPP-Files/ConfigHandler.cpp.s
 
 # target to generate assembly for a file
 Controllers/CPP-Files/ConfigHandler.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/ConfigHandler.cpp.s
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/ConfigHandler.cpp.s
 .PHONY : Controllers/CPP-Files/ConfigHandler.cpp.s
 
 Controllers/CPP-Files/EnemyManager.obj: Controllers/CPP-Files/EnemyManager.cpp.obj
@@ -236,7 +236,7 @@ Controllers/CPP-Files/EnemyManager.obj: Controllers/CPP-Files/EnemyManager.cpp.o
 
 # target to build an object file
 Controllers/CPP-Files/EnemyManager.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.obj
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/EnemyManager.cpp.obj
 .PHONY : Controllers/CPP-Files/EnemyManager.cpp.obj
 
 Controllers/CPP-Files/EnemyManager.i: Controllers/CPP-Files/EnemyManager.cpp.i
@@ -245,7 +245,7 @@ Controllers/CPP-Files/EnemyManager.i: Controllers/CPP-Files/EnemyManager.cpp.i
 
 # target to preprocess a source file
 Controllers/CPP-Files/EnemyManager.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.i
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/EnemyManager.cpp.i
 .PHONY : Controllers/CPP-Files/EnemyManager.cpp.i
 
 Controllers/CPP-Files/EnemyManager.s: Controllers/CPP-Files/EnemyManager.cpp.s
@@ -254,7 +254,7 @@ Controllers/CPP-Files/EnemyManager.s: Controllers/CPP-Files/EnemyManager.cpp.s
 
 # target to generate assembly for a file
 Controllers/CPP-Files/EnemyManager.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/EnemyManager.cpp.s
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/EnemyManager.cpp.s
 .PHONY : Controllers/CPP-Files/EnemyManager.cpp.s
 
 Controllers/CPP-Files/Game.obj: Controllers/CPP-Files/Game.cpp.obj
@@ -263,7 +263,7 @@ Controllers/CPP-Files/Game.obj: Controllers/CPP-Files/Game.cpp.obj
 
 # target to build an object file
 Controllers/CPP-Files/Game.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.obj
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/Game.cpp.obj
 .PHONY : Controllers/CPP-Files/Game.cpp.obj
 
 Controllers/CPP-Files/Game.i: Controllers/CPP-Files/Game.cpp.i
@@ -272,7 +272,7 @@ Controllers/CPP-Files/Game.i: Controllers/CPP-Files/Game.cpp.i
 
 # target to preprocess a source file
 Controllers/CPP-Files/Game.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.i
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/Game.cpp.i
 .PHONY : Controllers/CPP-Files/Game.cpp.i
 
 Controllers/CPP-Files/Game.s: Controllers/CPP-Files/Game.cpp.s
@@ -281,7 +281,7 @@ Controllers/CPP-Files/Game.s: Controllers/CPP-Files/Game.cpp.s
 
 # target to generate assembly for a file
 Controllers/CPP-Files/Game.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/Game.cpp.s
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/Game.cpp.s
 .PHONY : Controllers/CPP-Files/Game.cpp.s
 
 Controllers/CPP-Files/LevelController.obj: Controllers/CPP-Files/LevelController.cpp.obj
@@ -290,7 +290,7 @@ Controllers/CPP-Files/LevelController.obj: Controllers/CPP-Files/LevelController
 
 # target to build an object file
 Controllers/CPP-Files/LevelController.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.obj
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/LevelController.cpp.obj
 .PHONY : Controllers/CPP-Files/LevelController.cpp.obj
 
 Controllers/CPP-Files/LevelController.i: Controllers/CPP-Files/LevelController.cpp.i
@@ -299,7 +299,7 @@ Controllers/CPP-Files/LevelController.i: Controllers/CPP-Files/LevelController.c
 
 # target to preprocess a source file
 Controllers/CPP-Files/LevelController.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.i
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/LevelController.cpp.i
 .PHONY : Controllers/CPP-Files/LevelController.cpp.i
 
 Controllers/CPP-Files/LevelController.s: Controllers/CPP-Files/LevelController.cpp.s
@@ -308,7 +308,7 @@ Controllers/CPP-Files/LevelController.s: Controllers/CPP-Files/LevelController.c
 
 # target to generate assembly for a file
 Controllers/CPP-Files/LevelController.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/LevelController.cpp.s
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/LevelController.cpp.s
 .PHONY : Controllers/CPP-Files/LevelController.cpp.s
 
 Controllers/CPP-Files/PlayerManager.obj: Controllers/CPP-Files/PlayerManager.cpp.obj
@@ -317,7 +317,7 @@ Controllers/CPP-Files/PlayerManager.obj: Controllers/CPP-Files/PlayerManager.cpp
 
 # target to build an object file
 Controllers/CPP-Files/PlayerManager.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.obj
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/PlayerManager.cpp.obj
 .PHONY : Controllers/CPP-Files/PlayerManager.cpp.obj
 
 Controllers/CPP-Files/PlayerManager.i: Controllers/CPP-Files/PlayerManager.cpp.i
@@ -326,7 +326,7 @@ Controllers/CPP-Files/PlayerManager.i: Controllers/CPP-Files/PlayerManager.cpp.i
 
 # target to preprocess a source file
 Controllers/CPP-Files/PlayerManager.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.i
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/PlayerManager.cpp.i
 .PHONY : Controllers/CPP-Files/PlayerManager.cpp.i
 
 Controllers/CPP-Files/PlayerManager.s: Controllers/CPP-Files/PlayerManager.cpp.s
@@ -335,7 +335,7 @@ Controllers/CPP-Files/PlayerManager.s: Controllers/CPP-Files/PlayerManager.cpp.s
 
 # target to generate assembly for a file
 Controllers/CPP-Files/PlayerManager.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/PlayerManager.cpp.s
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/PlayerManager.cpp.s
 .PHONY : Controllers/CPP-Files/PlayerManager.cpp.s
 
 Controllers/CPP-Files/TextManager.obj: Controllers/CPP-Files/TextManager.cpp.obj
@@ -344,7 +344,7 @@ Controllers/CPP-Files/TextManager.obj: Controllers/CPP-Files/TextManager.cpp.obj
 
 # target to build an object file
 Controllers/CPP-Files/TextManager.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/TextManager.cpp.obj
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/TextManager.cpp.obj
 .PHONY : Controllers/CPP-Files/TextManager.cpp.obj
 
 Controllers/CPP-Files/TextManager.i: Controllers/CPP-Files/TextManager.cpp.i
@@ -353,7 +353,7 @@ Controllers/CPP-Files/TextManager.i: Controllers/CPP-Files/TextManager.cpp.i
 
 # target to preprocess a source file
 Controllers/CPP-Files/TextManager.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/TextManager.cpp.i
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/TextManager.cpp.i
 .PHONY : Controllers/CPP-Files/TextManager.cpp.i
 
 Controllers/CPP-Files/TextManager.s: Controllers/CPP-Files/TextManager.cpp.s
@@ -362,7 +362,7 @@ Controllers/CPP-Files/TextManager.s: Controllers/CPP-Files/TextManager.cpp.s
 
 # target to generate assembly for a file
 Controllers/CPP-Files/TextManager.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/TextManager.cpp.s
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/TextManager.cpp.s
 .PHONY : Controllers/CPP-Files/TextManager.cpp.s
 
 Controllers/CPP-Files/TextureManager.obj: Controllers/CPP-Files/TextureManager.cpp.obj
@@ -371,7 +371,7 @@ Controllers/CPP-Files/TextureManager.obj: Controllers/CPP-Files/TextureManager.c
 
 # target to build an object file
 Controllers/CPP-Files/TextureManager.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/TextureManager.cpp.obj
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/TextureManager.cpp.obj
 .PHONY : Controllers/CPP-Files/TextureManager.cpp.obj
 
 Controllers/CPP-Files/TextureManager.i: Controllers/CPP-Files/TextureManager.cpp.i
@@ -380,7 +380,7 @@ Controllers/CPP-Files/TextureManager.i: Controllers/CPP-Files/TextureManager.cpp
 
 # target to preprocess a source file
 Controllers/CPP-Files/TextureManager.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/TextureManager.cpp.i
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/TextureManager.cpp.i
 .PHONY : Controllers/CPP-Files/TextureManager.cpp.i
 
 Controllers/CPP-Files/TextureManager.s: Controllers/CPP-Files/TextureManager.cpp.s
@@ -389,7 +389,7 @@ Controllers/CPP-Files/TextureManager.s: Controllers/CPP-Files/TextureManager.cpp
 
 # target to generate assembly for a file
 Controllers/CPP-Files/TextureManager.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Controllers/CPP-Files/TextureManager.cpp.s
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/TextureManager.cpp.s
 .PHONY : Controllers/CPP-Files/TextureManager.cpp.s
 
 Factories/SDLFactory.obj: Factories/SDLFactory.cpp.obj
@@ -398,7 +398,7 @@ Factories/SDLFactory.obj: Factories/SDLFactory.cpp.obj
 
 # target to build an object file
 Factories/SDLFactory.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Factories/SDLFactory.cpp.obj
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Factories/SDLFactory.cpp.obj
 .PHONY : Factories/SDLFactory.cpp.obj
 
 Factories/SDLFactory.i: Factories/SDLFactory.cpp.i
@@ -407,7 +407,7 @@ Factories/SDLFactory.i: Factories/SDLFactory.cpp.i
 
 # target to preprocess a source file
 Factories/SDLFactory.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Factories/SDLFactory.cpp.i
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Factories/SDLFactory.cpp.i
 .PHONY : Factories/SDLFactory.cpp.i
 
 Factories/SDLFactory.s: Factories/SDLFactory.cpp.s
@@ -416,7 +416,7 @@ Factories/SDLFactory.s: Factories/SDLFactory.cpp.s
 
 # target to generate assembly for a file
 Factories/SDLFactory.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Factories/SDLFactory.cpp.s
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Factories/SDLFactory.cpp.s
 .PHONY : Factories/SDLFactory.cpp.s
 
 Models/CPP-Files/Background.obj: Models/CPP-Files/Background.cpp.obj
@@ -425,7 +425,7 @@ Models/CPP-Files/Background.obj: Models/CPP-Files/Background.cpp.obj
 
 # target to build an object file
 Models/CPP-Files/Background.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Background.cpp.obj
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Background.cpp.obj
 .PHONY : Models/CPP-Files/Background.cpp.obj
 
 Models/CPP-Files/Background.i: Models/CPP-Files/Background.cpp.i
@@ -434,7 +434,7 @@ Models/CPP-Files/Background.i: Models/CPP-Files/Background.cpp.i
 
 # target to preprocess a source file
 Models/CPP-Files/Background.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Background.cpp.i
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Background.cpp.i
 .PHONY : Models/CPP-Files/Background.cpp.i
 
 Models/CPP-Files/Background.s: Models/CPP-Files/Background.cpp.s
@@ -443,7 +443,7 @@ Models/CPP-Files/Background.s: Models/CPP-Files/Background.cpp.s
 
 # target to generate assembly for a file
 Models/CPP-Files/Background.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Background.cpp.s
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Background.cpp.s
 .PHONY : Models/CPP-Files/Background.cpp.s
 
 Models/CPP-Files/Bonus.obj: Models/CPP-Files/Bonus.cpp.obj
@@ -452,7 +452,7 @@ Models/CPP-Files/Bonus.obj: Models/CPP-Files/Bonus.cpp.obj
 
 # target to build an object file
 Models/CPP-Files/Bonus.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Bonus.cpp.obj
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Bonus.cpp.obj
 .PHONY : Models/CPP-Files/Bonus.cpp.obj
 
 Models/CPP-Files/Bonus.i: Models/CPP-Files/Bonus.cpp.i
@@ -461,7 +461,7 @@ Models/CPP-Files/Bonus.i: Models/CPP-Files/Bonus.cpp.i
 
 # target to preprocess a source file
 Models/CPP-Files/Bonus.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Bonus.cpp.i
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Bonus.cpp.i
 .PHONY : Models/CPP-Files/Bonus.cpp.i
 
 Models/CPP-Files/Bonus.s: Models/CPP-Files/Bonus.cpp.s
@@ -470,7 +470,7 @@ Models/CPP-Files/Bonus.s: Models/CPP-Files/Bonus.cpp.s
 
 # target to generate assembly for a file
 Models/CPP-Files/Bonus.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Bonus.cpp.s
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Bonus.cpp.s
 .PHONY : Models/CPP-Files/Bonus.cpp.s
 
 Models/CPP-Files/Bullet.obj: Models/CPP-Files/Bullet.cpp.obj
@@ -479,7 +479,7 @@ Models/CPP-Files/Bullet.obj: Models/CPP-Files/Bullet.cpp.obj
 
 # target to build an object file
 Models/CPP-Files/Bullet.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Bullet.cpp.obj
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Bullet.cpp.obj
 .PHONY : Models/CPP-Files/Bullet.cpp.obj
 
 Models/CPP-Files/Bullet.i: Models/CPP-Files/Bullet.cpp.i
@@ -488,7 +488,7 @@ Models/CPP-Files/Bullet.i: Models/CPP-Files/Bullet.cpp.i
 
 # target to preprocess a source file
 Models/CPP-Files/Bullet.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Bullet.cpp.i
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Bullet.cpp.i
 .PHONY : Models/CPP-Files/Bullet.cpp.i
 
 Models/CPP-Files/Bullet.s: Models/CPP-Files/Bullet.cpp.s
@@ -497,7 +497,7 @@ Models/CPP-Files/Bullet.s: Models/CPP-Files/Bullet.cpp.s
 
 # target to generate assembly for a file
 Models/CPP-Files/Bullet.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Bullet.cpp.s
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Bullet.cpp.s
 .PHONY : Models/CPP-Files/Bullet.cpp.s
 
 Models/CPP-Files/EnemyShip.obj: Models/CPP-Files/EnemyShip.cpp.obj
@@ -506,7 +506,7 @@ Models/CPP-Files/EnemyShip.obj: Models/CPP-Files/EnemyShip.cpp.obj
 
 # target to build an object file
 Models/CPP-Files/EnemyShip.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/EnemyShip.cpp.obj
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/EnemyShip.cpp.obj
 .PHONY : Models/CPP-Files/EnemyShip.cpp.obj
 
 Models/CPP-Files/EnemyShip.i: Models/CPP-Files/EnemyShip.cpp.i
@@ -515,7 +515,7 @@ Models/CPP-Files/EnemyShip.i: Models/CPP-Files/EnemyShip.cpp.i
 
 # target to preprocess a source file
 Models/CPP-Files/EnemyShip.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/EnemyShip.cpp.i
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/EnemyShip.cpp.i
 .PHONY : Models/CPP-Files/EnemyShip.cpp.i
 
 Models/CPP-Files/EnemyShip.s: Models/CPP-Files/EnemyShip.cpp.s
@@ -524,7 +524,7 @@ Models/CPP-Files/EnemyShip.s: Models/CPP-Files/EnemyShip.cpp.s
 
 # target to generate assembly for a file
 Models/CPP-Files/EnemyShip.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/EnemyShip.cpp.s
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/EnemyShip.cpp.s
 .PHONY : Models/CPP-Files/EnemyShip.cpp.s
 
 Models/CPP-Files/Entity.obj: Models/CPP-Files/Entity.cpp.obj
@@ -533,7 +533,7 @@ Models/CPP-Files/Entity.obj: Models/CPP-Files/Entity.cpp.obj
 
 # target to build an object file
 Models/CPP-Files/Entity.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Entity.cpp.obj
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Entity.cpp.obj
 .PHONY : Models/CPP-Files/Entity.cpp.obj
 
 Models/CPP-Files/Entity.i: Models/CPP-Files/Entity.cpp.i
@@ -542,7 +542,7 @@ Models/CPP-Files/Entity.i: Models/CPP-Files/Entity.cpp.i
 
 # target to preprocess a source file
 Models/CPP-Files/Entity.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Entity.cpp.i
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Entity.cpp.i
 .PHONY : Models/CPP-Files/Entity.cpp.i
 
 Models/CPP-Files/Entity.s: Models/CPP-Files/Entity.cpp.s
@@ -551,7 +551,7 @@ Models/CPP-Files/Entity.s: Models/CPP-Files/Entity.cpp.s
 
 # target to generate assembly for a file
 Models/CPP-Files/Entity.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Entity.cpp.s
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Entity.cpp.s
 .PHONY : Models/CPP-Files/Entity.cpp.s
 
 Models/CPP-Files/PlayerLife.obj: Models/CPP-Files/PlayerLife.cpp.obj
@@ -560,7 +560,7 @@ Models/CPP-Files/PlayerLife.obj: Models/CPP-Files/PlayerLife.cpp.obj
 
 # target to build an object file
 Models/CPP-Files/PlayerLife.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/PlayerLife.cpp.obj
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/PlayerLife.cpp.obj
 .PHONY : Models/CPP-Files/PlayerLife.cpp.obj
 
 Models/CPP-Files/PlayerLife.i: Models/CPP-Files/PlayerLife.cpp.i
@@ -569,7 +569,7 @@ Models/CPP-Files/PlayerLife.i: Models/CPP-Files/PlayerLife.cpp.i
 
 # target to preprocess a source file
 Models/CPP-Files/PlayerLife.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/PlayerLife.cpp.i
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/PlayerLife.cpp.i
 .PHONY : Models/CPP-Files/PlayerLife.cpp.i
 
 Models/CPP-Files/PlayerLife.s: Models/CPP-Files/PlayerLife.cpp.s
@@ -578,7 +578,7 @@ Models/CPP-Files/PlayerLife.s: Models/CPP-Files/PlayerLife.cpp.s
 
 # target to generate assembly for a file
 Models/CPP-Files/PlayerLife.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/PlayerLife.cpp.s
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/PlayerLife.cpp.s
 .PHONY : Models/CPP-Files/PlayerLife.cpp.s
 
 Models/CPP-Files/PlayerShip.obj: Models/CPP-Files/PlayerShip.cpp.obj
@@ -587,7 +587,7 @@ Models/CPP-Files/PlayerShip.obj: Models/CPP-Files/PlayerShip.cpp.obj
 
 # target to build an object file
 Models/CPP-Files/PlayerShip.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/PlayerShip.cpp.obj
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/PlayerShip.cpp.obj
 .PHONY : Models/CPP-Files/PlayerShip.cpp.obj
 
 Models/CPP-Files/PlayerShip.i: Models/CPP-Files/PlayerShip.cpp.i
@@ -596,7 +596,7 @@ Models/CPP-Files/PlayerShip.i: Models/CPP-Files/PlayerShip.cpp.i
 
 # target to preprocess a source file
 Models/CPP-Files/PlayerShip.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/PlayerShip.cpp.i
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/PlayerShip.cpp.i
 .PHONY : Models/CPP-Files/PlayerShip.cpp.i
 
 Models/CPP-Files/PlayerShip.s: Models/CPP-Files/PlayerShip.cpp.s
@@ -605,7 +605,7 @@ Models/CPP-Files/PlayerShip.s: Models/CPP-Files/PlayerShip.cpp.s
 
 # target to generate assembly for a file
 Models/CPP-Files/PlayerShip.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/PlayerShip.cpp.s
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/PlayerShip.cpp.s
 .PHONY : Models/CPP-Files/PlayerShip.cpp.s
 
 Models/CPP-Files/RandomNumber.obj: Models/CPP-Files/RandomNumber.cpp.obj
@@ -614,7 +614,7 @@ Models/CPP-Files/RandomNumber.obj: Models/CPP-Files/RandomNumber.cpp.obj
 
 # target to build an object file
 Models/CPP-Files/RandomNumber.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/RandomNumber.cpp.obj
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/RandomNumber.cpp.obj
 .PHONY : Models/CPP-Files/RandomNumber.cpp.obj
 
 Models/CPP-Files/RandomNumber.i: Models/CPP-Files/RandomNumber.cpp.i
@@ -623,7 +623,7 @@ Models/CPP-Files/RandomNumber.i: Models/CPP-Files/RandomNumber.cpp.i
 
 # target to preprocess a source file
 Models/CPP-Files/RandomNumber.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/RandomNumber.cpp.i
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/RandomNumber.cpp.i
 .PHONY : Models/CPP-Files/RandomNumber.cpp.i
 
 Models/CPP-Files/RandomNumber.s: Models/CPP-Files/RandomNumber.cpp.s
@@ -632,7 +632,7 @@ Models/CPP-Files/RandomNumber.s: Models/CPP-Files/RandomNumber.cpp.s
 
 # target to generate assembly for a file
 Models/CPP-Files/RandomNumber.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/RandomNumber.cpp.s
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/RandomNumber.cpp.s
 .PHONY : Models/CPP-Files/RandomNumber.cpp.s
 
 Models/CPP-Files/Score.obj: Models/CPP-Files/Score.cpp.obj
@@ -641,7 +641,7 @@ Models/CPP-Files/Score.obj: Models/CPP-Files/Score.cpp.obj
 
 # target to build an object file
 Models/CPP-Files/Score.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Score.cpp.obj
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Score.cpp.obj
 .PHONY : Models/CPP-Files/Score.cpp.obj
 
 Models/CPP-Files/Score.i: Models/CPP-Files/Score.cpp.i
@@ -650,7 +650,7 @@ Models/CPP-Files/Score.i: Models/CPP-Files/Score.cpp.i
 
 # target to preprocess a source file
 Models/CPP-Files/Score.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Score.cpp.i
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Score.cpp.i
 .PHONY : Models/CPP-Files/Score.cpp.i
 
 Models/CPP-Files/Score.s: Models/CPP-Files/Score.cpp.s
@@ -659,7 +659,7 @@ Models/CPP-Files/Score.s: Models/CPP-Files/Score.cpp.s
 
 # target to generate assembly for a file
 Models/CPP-Files/Score.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/Models/CPP-Files/Score.cpp.s
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Score.cpp.s
 .PHONY : Models/CPP-Files/Score.cpp.s
 
 SDL/CPP-Files/SDLBackground.obj: SDL/CPP-Files/SDLBackground.cpp.obj
@@ -668,7 +668,7 @@ SDL/CPP-Files/SDLBackground.obj: SDL/CPP-Files/SDLBackground.cpp.obj
 
 # target to build an object file
 SDL/CPP-Files/SDLBackground.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLBackground.cpp.obj
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBackground.cpp.obj
 .PHONY : SDL/CPP-Files/SDLBackground.cpp.obj
 
 SDL/CPP-Files/SDLBackground.i: SDL/CPP-Files/SDLBackground.cpp.i
@@ -677,7 +677,7 @@ SDL/CPP-Files/SDLBackground.i: SDL/CPP-Files/SDLBackground.cpp.i
 
 # target to preprocess a source file
 SDL/CPP-Files/SDLBackground.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLBackground.cpp.i
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBackground.cpp.i
 .PHONY : SDL/CPP-Files/SDLBackground.cpp.i
 
 SDL/CPP-Files/SDLBackground.s: SDL/CPP-Files/SDLBackground.cpp.s
@@ -686,7 +686,7 @@ SDL/CPP-Files/SDLBackground.s: SDL/CPP-Files/SDLBackground.cpp.s
 
 # target to generate assembly for a file
 SDL/CPP-Files/SDLBackground.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLBackground.cpp.s
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBackground.cpp.s
 .PHONY : SDL/CPP-Files/SDLBackground.cpp.s
 
 SDL/CPP-Files/SDLBonus.obj: SDL/CPP-Files/SDLBonus.cpp.obj
@@ -695,7 +695,7 @@ SDL/CPP-Files/SDLBonus.obj: SDL/CPP-Files/SDLBonus.cpp.obj
 
 # target to build an object file
 SDL/CPP-Files/SDLBonus.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLBonus.cpp.obj
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBonus.cpp.obj
 .PHONY : SDL/CPP-Files/SDLBonus.cpp.obj
 
 SDL/CPP-Files/SDLBonus.i: SDL/CPP-Files/SDLBonus.cpp.i
@@ -704,7 +704,7 @@ SDL/CPP-Files/SDLBonus.i: SDL/CPP-Files/SDLBonus.cpp.i
 
 # target to preprocess a source file
 SDL/CPP-Files/SDLBonus.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLBonus.cpp.i
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBonus.cpp.i
 .PHONY : SDL/CPP-Files/SDLBonus.cpp.i
 
 SDL/CPP-Files/SDLBonus.s: SDL/CPP-Files/SDLBonus.cpp.s
@@ -713,7 +713,7 @@ SDL/CPP-Files/SDLBonus.s: SDL/CPP-Files/SDLBonus.cpp.s
 
 # target to generate assembly for a file
 SDL/CPP-Files/SDLBonus.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLBonus.cpp.s
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBonus.cpp.s
 .PHONY : SDL/CPP-Files/SDLBonus.cpp.s
 
 SDL/CPP-Files/SDLBullet.obj: SDL/CPP-Files/SDLBullet.cpp.obj
@@ -722,7 +722,7 @@ SDL/CPP-Files/SDLBullet.obj: SDL/CPP-Files/SDLBullet.cpp.obj
 
 # target to build an object file
 SDL/CPP-Files/SDLBullet.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLBullet.cpp.obj
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBullet.cpp.obj
 .PHONY : SDL/CPP-Files/SDLBullet.cpp.obj
 
 SDL/CPP-Files/SDLBullet.i: SDL/CPP-Files/SDLBullet.cpp.i
@@ -731,7 +731,7 @@ SDL/CPP-Files/SDLBullet.i: SDL/CPP-Files/SDLBullet.cpp.i
 
 # target to preprocess a source file
 SDL/CPP-Files/SDLBullet.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLBullet.cpp.i
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBullet.cpp.i
 .PHONY : SDL/CPP-Files/SDLBullet.cpp.i
 
 SDL/CPP-Files/SDLBullet.s: SDL/CPP-Files/SDLBullet.cpp.s
@@ -740,7 +740,7 @@ SDL/CPP-Files/SDLBullet.s: SDL/CPP-Files/SDLBullet.cpp.s
 
 # target to generate assembly for a file
 SDL/CPP-Files/SDLBullet.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLBullet.cpp.s
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBullet.cpp.s
 .PHONY : SDL/CPP-Files/SDLBullet.cpp.s
 
 SDL/CPP-Files/SDLEnemyShip.obj: SDL/CPP-Files/SDLEnemyShip.cpp.obj
@@ -749,7 +749,7 @@ SDL/CPP-Files/SDLEnemyShip.obj: SDL/CPP-Files/SDLEnemyShip.cpp.obj
 
 # target to build an object file
 SDL/CPP-Files/SDLEnemyShip.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj
 .PHONY : SDL/CPP-Files/SDLEnemyShip.cpp.obj
 
 SDL/CPP-Files/SDLEnemyShip.i: SDL/CPP-Files/SDLEnemyShip.cpp.i
@@ -758,7 +758,7 @@ SDL/CPP-Files/SDLEnemyShip.i: SDL/CPP-Files/SDLEnemyShip.cpp.i
 
 # target to preprocess a source file
 SDL/CPP-Files/SDLEnemyShip.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.i
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLEnemyShip.cpp.i
 .PHONY : SDL/CPP-Files/SDLEnemyShip.cpp.i
 
 SDL/CPP-Files/SDLEnemyShip.s: SDL/CPP-Files/SDLEnemyShip.cpp.s
@@ -767,7 +767,7 @@ SDL/CPP-Files/SDLEnemyShip.s: SDL/CPP-Files/SDLEnemyShip.cpp.s
 
 # target to generate assembly for a file
 SDL/CPP-Files/SDLEnemyShip.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLEnemyShip.cpp.s
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLEnemyShip.cpp.s
 .PHONY : SDL/CPP-Files/SDLEnemyShip.cpp.s
 
 SDL/CPP-Files/SDLKeyStates.obj: SDL/CPP-Files/SDLKeyStates.cpp.obj
@@ -776,7 +776,7 @@ SDL/CPP-Files/SDLKeyStates.obj: SDL/CPP-Files/SDLKeyStates.cpp.obj
 
 # target to build an object file
 SDL/CPP-Files/SDLKeyStates.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLKeyStates.cpp.obj
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLKeyStates.cpp.obj
 .PHONY : SDL/CPP-Files/SDLKeyStates.cpp.obj
 
 SDL/CPP-Files/SDLKeyStates.i: SDL/CPP-Files/SDLKeyStates.cpp.i
@@ -785,7 +785,7 @@ SDL/CPP-Files/SDLKeyStates.i: SDL/CPP-Files/SDLKeyStates.cpp.i
 
 # target to preprocess a source file
 SDL/CPP-Files/SDLKeyStates.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLKeyStates.cpp.i
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLKeyStates.cpp.i
 .PHONY : SDL/CPP-Files/SDLKeyStates.cpp.i
 
 SDL/CPP-Files/SDLKeyStates.s: SDL/CPP-Files/SDLKeyStates.cpp.s
@@ -794,7 +794,7 @@ SDL/CPP-Files/SDLKeyStates.s: SDL/CPP-Files/SDLKeyStates.cpp.s
 
 # target to generate assembly for a file
 SDL/CPP-Files/SDLKeyStates.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLKeyStates.cpp.s
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLKeyStates.cpp.s
 .PHONY : SDL/CPP-Files/SDLKeyStates.cpp.s
 
 SDL/CPP-Files/SDLPlayerLife.obj: SDL/CPP-Files/SDLPlayerLife.cpp.obj
@@ -803,7 +803,7 @@ SDL/CPP-Files/SDLPlayerLife.obj: SDL/CPP-Files/SDLPlayerLife.cpp.obj
 
 # target to build an object file
 SDL/CPP-Files/SDLPlayerLife.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLPlayerLife.cpp.obj
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLPlayerLife.cpp.obj
 .PHONY : SDL/CPP-Files/SDLPlayerLife.cpp.obj
 
 SDL/CPP-Files/SDLPlayerLife.i: SDL/CPP-Files/SDLPlayerLife.cpp.i
@@ -812,7 +812,7 @@ SDL/CPP-Files/SDLPlayerLife.i: SDL/CPP-Files/SDLPlayerLife.cpp.i
 
 # target to preprocess a source file
 SDL/CPP-Files/SDLPlayerLife.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLPlayerLife.cpp.i
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLPlayerLife.cpp.i
 .PHONY : SDL/CPP-Files/SDLPlayerLife.cpp.i
 
 SDL/CPP-Files/SDLPlayerLife.s: SDL/CPP-Files/SDLPlayerLife.cpp.s
@@ -821,7 +821,7 @@ SDL/CPP-Files/SDLPlayerLife.s: SDL/CPP-Files/SDLPlayerLife.cpp.s
 
 # target to generate assembly for a file
 SDL/CPP-Files/SDLPlayerLife.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLPlayerLife.cpp.s
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLPlayerLife.cpp.s
 .PHONY : SDL/CPP-Files/SDLPlayerLife.cpp.s
 
 SDL/CPP-Files/SDLPlayerShip.obj: SDL/CPP-Files/SDLPlayerShip.cpp.obj
@@ -830,7 +830,7 @@ SDL/CPP-Files/SDLPlayerShip.obj: SDL/CPP-Files/SDLPlayerShip.cpp.obj
 
 # target to build an object file
 SDL/CPP-Files/SDLPlayerShip.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLPlayerShip.cpp.obj
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLPlayerShip.cpp.obj
 .PHONY : SDL/CPP-Files/SDLPlayerShip.cpp.obj
 
 SDL/CPP-Files/SDLPlayerShip.i: SDL/CPP-Files/SDLPlayerShip.cpp.i
@@ -839,7 +839,7 @@ SDL/CPP-Files/SDLPlayerShip.i: SDL/CPP-Files/SDLPlayerShip.cpp.i
 
 # target to preprocess a source file
 SDL/CPP-Files/SDLPlayerShip.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLPlayerShip.cpp.i
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLPlayerShip.cpp.i
 .PHONY : SDL/CPP-Files/SDLPlayerShip.cpp.i
 
 SDL/CPP-Files/SDLPlayerShip.s: SDL/CPP-Files/SDLPlayerShip.cpp.s
@@ -848,7 +848,7 @@ SDL/CPP-Files/SDLPlayerShip.s: SDL/CPP-Files/SDLPlayerShip.cpp.s
 
 # target to generate assembly for a file
 SDL/CPP-Files/SDLPlayerShip.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLPlayerShip.cpp.s
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLPlayerShip.cpp.s
 .PHONY : SDL/CPP-Files/SDLPlayerShip.cpp.s
 
 SDL/CPP-Files/SDLScore.obj: SDL/CPP-Files/SDLScore.cpp.obj
@@ -857,7 +857,7 @@ SDL/CPP-Files/SDLScore.obj: SDL/CPP-Files/SDLScore.cpp.obj
 
 # target to build an object file
 SDL/CPP-Files/SDLScore.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLScore.cpp.obj
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLScore.cpp.obj
 .PHONY : SDL/CPP-Files/SDLScore.cpp.obj
 
 SDL/CPP-Files/SDLScore.i: SDL/CPP-Files/SDLScore.cpp.i
@@ -866,7 +866,7 @@ SDL/CPP-Files/SDLScore.i: SDL/CPP-Files/SDLScore.cpp.i
 
 # target to preprocess a source file
 SDL/CPP-Files/SDLScore.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLScore.cpp.i
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLScore.cpp.i
 .PHONY : SDL/CPP-Files/SDLScore.cpp.i
 
 SDL/CPP-Files/SDLScore.s: SDL/CPP-Files/SDLScore.cpp.s
@@ -875,7 +875,7 @@ SDL/CPP-Files/SDLScore.s: SDL/CPP-Files/SDLScore.cpp.s
 
 # target to generate assembly for a file
 SDL/CPP-Files/SDLScore.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLScore.cpp.s
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLScore.cpp.s
 .PHONY : SDL/CPP-Files/SDLScore.cpp.s
 
 SDL/CPP-Files/SDLTimer.obj: SDL/CPP-Files/SDLTimer.cpp.obj
@@ -884,7 +884,7 @@ SDL/CPP-Files/SDLTimer.obj: SDL/CPP-Files/SDLTimer.cpp.obj
 
 # target to build an object file
 SDL/CPP-Files/SDLTimer.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLTimer.cpp.obj
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLTimer.cpp.obj
 .PHONY : SDL/CPP-Files/SDLTimer.cpp.obj
 
 SDL/CPP-Files/SDLTimer.i: SDL/CPP-Files/SDLTimer.cpp.i
@@ -893,7 +893,7 @@ SDL/CPP-Files/SDLTimer.i: SDL/CPP-Files/SDLTimer.cpp.i
 
 # target to preprocess a source file
 SDL/CPP-Files/SDLTimer.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLTimer.cpp.i
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLTimer.cpp.i
 .PHONY : SDL/CPP-Files/SDLTimer.cpp.i
 
 SDL/CPP-Files/SDLTimer.s: SDL/CPP-Files/SDLTimer.cpp.s
@@ -902,7 +902,7 @@ SDL/CPP-Files/SDLTimer.s: SDL/CPP-Files/SDLTimer.cpp.s
 
 # target to generate assembly for a file
 SDL/CPP-Files/SDLTimer.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/SDL/CPP-Files/SDLTimer.cpp.s
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLTimer.cpp.s
 .PHONY : SDL/CPP-Files/SDLTimer.cpp.s
 
 main.obj: main.cpp.obj
@@ -911,7 +911,7 @@ main.obj: main.cpp.obj
 
 # target to build an object file
 main.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/main.cpp.obj
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/main.cpp.obj
 .PHONY : main.cpp.obj
 
 main.i: main.cpp.i
@@ -920,7 +920,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -929,7 +929,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -938,7 +938,7 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... Project
+	@echo ... SpaceInvaders
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Controllers/CPP-Files/BonusManager.obj

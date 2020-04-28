@@ -12,7 +12,7 @@ SDLNs::SDLBonus::SDLBonus() {}
  * Constructor
  * @param renderer
  */
-SDLNs::SDLBonus::SDLBonus(SDL_Renderer* renderer, int xPos, int yPos, int width, int height, std::string imagePath)
+SDLNs::SDLBonus::SDLBonus(SDL_Renderer* renderer, int xPos, int yPos, int width, int height, const char *imagePath)
 {
     m_renderer = renderer;
     m_bonusTexture = new GameNs::TextureManager(m_renderer);
@@ -20,7 +20,7 @@ SDLNs::SDLBonus::SDLBonus(SDL_Renderer* renderer, int xPos, int yPos, int width,
     setYPosition(yPos);
     setHeight(height);
     setWidth(width);
-    m_bonusImagePath = std::move(imagePath);
+    m_bonusImagePath = imagePath;
 
     //create texture
     loadMedia();

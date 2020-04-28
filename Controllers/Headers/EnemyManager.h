@@ -44,6 +44,7 @@ namespace GameNs
         double m_nextMissile=0.0;
         std::vector<Bullet*> m_bullets;
         Score* m_score= nullptr;
+        int m_randomId=0;
     };
 }
 

@@ -20,18 +20,18 @@ namespace SDLNs
     class SDLFactory:public GameNs::AbstractFactory {
     public:
         SDLFactory();
-        ~SDLFactory()override ;
-        GameNs::PlayerShip* createPlayerShip(std::string playerShipPath) override;
-        GameNs::EnemyShip *createEnemyShip(std::string enemyShipPath, int xPos, int yPos,GameNs::Timer* timer) override;
+        ~SDLFactory()override;
+        GameNs::PlayerShip* createPlayerShip(const char* playerShipPath) override;
+        GameNs::EnemyShip* createEnemyShip(const char* enemyShipPath, int xPos, int yPos, GameNs::Timer* timer) override;
         GameNs::Background* createBackground() override;
-        GameNs::Bullet *createBullet(std::string bulletPath, int xPos, int yPos, int width, int height) override;
+        GameNs::Bullet* createBullet(const char* bulletPath, int xPos, int yPos, int width, int height) override;
         GameNs::Timer* createTimer() override;
         GameNs::Score* createScore() override;
         GameNs::PlayerLife* createPlayerLife() override;
-        GameNs::Bonus* createBonus(std::string bonusImagePath, int xPos, int yPos, int width, int height) override;
+        GameNs::Bonus* createBonus(const char* bonusImagePath, int xPos, int yPos, int width, int height) override;
         void render() override;
         bool isRunning() override;
-        void createWindow(const char* title,int width, int height);
+        void createWindow(const char* title, int width, int height);
         void createRender();
         void setRunningState(bool state) override;
 

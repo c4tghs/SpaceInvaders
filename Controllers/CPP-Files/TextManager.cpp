@@ -5,17 +5,16 @@
 #include <iostream>
 #include "../Headers/TextManager.h"
 
-/**
- * Constructor
- */
+
 GameNs::TextManager::TextManager() {}
 
 /**
  * Constructor
  * @param renderer - the renderer
  */
-GameNs::TextManager::TextManager(SDL_Renderer* renderer) {
+GameNs::TextManager::TextManager(SDL_Renderer *renderer, int textSize) {
     m_renderer = renderer;
+    m_font = TTF_OpenFont(m_fontFile,textSize);
 }
 
 /**
@@ -24,6 +23,7 @@ GameNs::TextManager::TextManager(SDL_Renderer* renderer) {
 GameNs::TextManager::~TextManager()
 {
     SDL_DestroyTexture(m_texture);
+    TTF_CloseFont(m_font);
 }
 /**
  * Method to return the created texture
@@ -38,12 +38,12 @@ SDL_Texture* GameNs::TextManager::getTexture() {
  * @param text - the text to display
  * @param textSize - the size of the text
  */
-void GameNs::TextManager::loadTexture(const std::string& text, int textSize) {
+void GameNs::TextManager::loadTexture(const std::string &text) {
     SDL_Texture *texture;
     SDL_Surface *surface;
     SDL_Color color = {255,255,255};
     //Create Font
-    m_font = TTF_OpenFont(m_fontFile,textSize);
+
 
     //Check if font was created successfully.
     if(m_font==nullptr)
@@ -58,7 +58,7 @@ void GameNs::TextManager::loadTexture(const std::string& text, int textSize) {
         //Check if surface was created successfully.
         if(surface==nullptr)
         {
-            std::cerr << "Failed to create surface. Error: " << SDL_GetError() << std::endl;
+            std::cerr << "Failed to create text surface. Error: " << SDL_GetError() << std::endl;
             exit(1);
         }
         else
@@ -80,6 +80,8 @@ void GameNs::TextManager::loadTexture(const std::string& text, int textSize) {
         SDL_FreeSurface(surface);
     }
 }
+
+
 
 
 

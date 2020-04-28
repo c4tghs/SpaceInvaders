@@ -18,11 +18,11 @@
  * @param screenWidth
  * @param playerShipPath
  */
-SDLNs::SDLPlayerShip::SDLPlayerShip(int xPos, int yPos, int width, int height,SDL_Renderer* renderer,std::string playerShipPath):PlayerShip(
-        xPos,yPos,width,height)
+SDLNs::SDLPlayerShip::SDLPlayerShip(int xPos, int yPos, int width, int height, SDL_Renderer* renderer,
+                                    const char *playerShipPath): PlayerShip(xPos, yPos, width, height)
 {
     m_renderer = renderer;
-    m_playerShipPath = std::move(playerShipPath);
+    m_playerShipPath = playerShipPath;
 
     m_playerShipTexture = new GameNs::TextureManager(m_renderer);
     //create texture

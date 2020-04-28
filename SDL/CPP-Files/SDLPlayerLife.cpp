@@ -16,7 +16,7 @@ SDLNs::SDLPlayerLife::SDLPlayerLife() {}
 SDLNs::SDLPlayerLife::SDLPlayerLife(SDL_Renderer* renderer, int screenWidth) {
     m_renderer = renderer;
     m_screenWidth = screenWidth;
-    m_textTexture = new GameNs::TextManager(m_renderer);
+    m_textTexture = new GameNs::TextManager(m_renderer, 25);
 }
 
 /**
@@ -32,7 +32,7 @@ SDLNs::SDLPlayerLife::~SDLPlayerLife()
  */
 void SDLNs::SDLPlayerLife::render() {
     std::string life = std::to_string(getPlayerLife());
-    m_textTexture->loadTexture("Lives:   " + life, 20);
+    m_textTexture->loadTexture("Lives:   " + life);
     //Create rectangular area
     SDL_Rect rect = {m_screenWidth-100, 0, 60, 60};
     SDL_RenderCopy(m_renderer, m_textTexture->getTexture(), nullptr, &rect);

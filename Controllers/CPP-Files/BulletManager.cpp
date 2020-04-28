@@ -79,6 +79,8 @@ void GameNs::BulletManager::checkBulletBounds() {
         if(m_playerBullet->getYPosition() < - m_playerBullet->getHeight() || m_playerBullet->getYPosition() > (m_screenHeight + m_playerBullet->getHeight()))
         {
             setPlayerBulletInFlight(false);
+            //Deallocate memory
+            delete m_playerBullet;
         }
     }
     if(m_eBulletInFlight)
@@ -87,10 +89,32 @@ void GameNs::BulletManager::checkBulletBounds() {
             m_enemyBullet->getYPosition() > (m_screenHeight + m_enemyBullet->getHeight()))
         {
             setEnemyBulletInFlight(false);
+            delete m_enemyBullet;
         }
     }
 
 }
+
+
+/**
+ * Method to check collision between player and enemy bullet
+ */
+void GameNs::BulletManager::bulletsCollision() {
+    //If both enemy and player bullets are moving or not out of visible area, check for collision
+    if(m_pBulletInFlight and m_eBulletInFlight)
+    {
+        if(m_collisionDetector->twoBulletsCollision(m_playerBullet, m_enemyBullet))
+        {
+            m_playerBullet->setYPosition(0);
+            m_enemyBullet->setYPosition(m_screenHeight+5);
+            m_pBulletInFlight = false;
+            m_eBulletInFlight = false;
+            delete m_playerBullet;
+            delete m_enemyBullet;
+        }
+    }
+}
+
 
 /**
  * Method to check if player bullet is in flight
@@ -158,21 +182,7 @@ void GameNs::BulletManager::setPlayerBulletCollision(bool isCollided) {
 GameNs::Bullet *GameNs::BulletManager::getEnemyBullet() {
     return m_enemyBullet;
 }
-/**
- * Method to check collision between player and enemy bullet
- */
-void GameNs::BulletManager::bulletsCollision() {
-    //If both enemy and player bullets are moving or not out of visible area, check for collision
-    if(m_pBulletInFlight and m_eBulletInFlight)
-    {
 
-        if(m_collisionDetector->twoBulletsCollision(m_playerBullet, m_enemyBullet))
-        {
-            m_playerBullet->setYPosition(0);
-            m_enemyBullet->setYPosition(m_screenHeight+5);
-        }
-    }
-}
 
 
 

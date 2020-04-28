@@ -5,7 +5,7 @@
 #ifndef PROJECT_SDLENEMYSHIP_H
 #define PROJECT_SDLENEMYSHIP_H
 
-#include <SDL_render.h>
+#include "SDL2/SDL_render.h"
 #include "SDLTimer.h"
 #include "../../Models/Headers/EnemyShip.h"
 #include "../../Controllers/Headers/TextureManager.h"
@@ -14,7 +14,7 @@ namespace SDLNs
 {
     class SDLEnemyShip: public GameNs::EnemyShip {
     public:
-        SDLEnemyShip(SDL_Renderer *renderer, GameNs::Timer *timer, std::string enemyShipPath, int xPos, int yPos,
+        SDLEnemyShip(SDL_Renderer* renderer, GameNs::Timer* timer, const char* enemyShipPath, int xPos, int yPos,
                      int width, int height);
         ~SDLEnemyShip();
         void render();
@@ -24,9 +24,9 @@ namespace SDLNs
         void loadMedia();
 
     private:
-        SDL_Rect m_rects[SPRITES_FRAMES];
+        SDL_Rect m_rects[SPRITES_FRAMES]  ={};
         SDL_Renderer* m_renderer = nullptr;
-        std::string m_enemyShipPath;
+        const char* m_enemyShipPath;
         int m_moveDirection=1;
         GameNs::TextureManager* m_enemyShipTexture = nullptr;
         GameNs::Timer* m_timer= nullptr;

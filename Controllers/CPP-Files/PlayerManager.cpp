@@ -5,6 +5,7 @@
 #include <iostream>
 #include "../Headers/PlayerManager.h"
 #include "../Headers/ConfigHandler.h"
+#include "../../Models/Headers/RandomNumber.h"
 
 /**
  * Method to create instance of PlayerManager
@@ -31,7 +32,8 @@ GameNs::PlayerManager::PlayerManager(GameNs::AbstractFactory *AF, Timer *timer, 
     m_collisionDetector = collisionDetector;
     m_playerLife->setPlayerLife(m_configHandler->getPlayerLives());
     //Create playerShip;
-    m_playerShip  = m_factory->createPlayerShip(m_configHandler->getPathPlayerShip());
+    m_playerShip  = m_factory->createPlayerShip(m_configHandler->getPathPlayerShip().c_str());
+    //Set player speed factor
     m_playerShip->setPlayerSpeed(m_configHandler->getPlayerSpeed());
     //Reserve memory for 10 bullets
     m_bullets.reserve(10);
@@ -71,19 +73,16 @@ void GameNs::PlayerManager::update() {
  * Method to check what button has pressed and chnage position of player ship
  */
 void GameNs::PlayerManager::movePlayer() {
-    int direction = m_keyStates->directions();
-    int xPos;
-    switch(direction)
+    //int xPos;
+    switch(m_keyStates->directions())
     {
         case 1:
             //Move player ship left
-            xPos = m_playerShip->getXPosition() - m_timer->getDeltaTime() * m_playerShip->getPlayerSpeed();
-            m_playerShip->setXPosition(xPos);
+            m_playerShip->setXPosition(m_playerShip->getXPosition() - m_timer->getDeltaTime() * m_playerShip->getPlayerSpeed());
             break;
         case 2:
             //Move player ship right
-            xPos = m_playerShip->getXPosition() + m_timer->getDeltaTime() * m_playerShip->getPlayerSpeed();
-            m_playerShip->setXPosition(xPos);
+            m_playerShip->setXPosition(m_playerShip->getXPosition() + m_timer->getDeltaTime() * m_playerShip->getPlayerSpeed());
             break;
         case 3:
             shoot();
@@ -128,7 +127,7 @@ void GameNs::PlayerManager::shoot() {
         return;
     }
 
-    m_bullets[0]->setXPosition(m_playerShip->getXPosition()+60);
+    m_bullets[0]->setXPosition(m_playerShip->getXPosition()+40);
     m_bullets[0]->setYPosition(m_playerShip->getYPosition());
     m_bulletManager->setPlayerBullet(m_bullets[0]);
     m_bulletManager->setPlayerBulletInFlight(true);
@@ -150,7 +149,7 @@ void GameNs::PlayerManager::createBullets() {
     for(int i =0; i<10;i++)
     {
         //Create bullet and add it to vector.
-        m_bullets.emplace_back(m_factory->createBullet(m_configHandler->getPathPlayerBullet(), m_playerShip->getXPosition(),
+        m_bullets.emplace_back(m_factory->createBullet(m_configHandler->getPathPlayerBullet().c_str(), m_playerShip->getXPosition(),
                 m_playerShip->getYPosition(), 25, 25));
 
     }

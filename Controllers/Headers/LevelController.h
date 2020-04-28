@@ -13,6 +13,7 @@ namespace GameNs{
             LevelController();
             ~LevelController();
             LevelController(AbstractFactory *AF, Timer *timer, CollisionDetector *collisionDetector,ConfigHandler *configHandler);
+            void createObjects();
             void setLevel(int level);
             void clean();
             void startLevel();

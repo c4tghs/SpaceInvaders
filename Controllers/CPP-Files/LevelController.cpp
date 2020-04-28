@@ -53,32 +53,44 @@ void GameNs::LevelController::update() {
  * Method to start new level
  */
 void GameNs::LevelController::startLevel() {
-    switch (m_currentLevel){
+    /*switch (m_currentLevel){
         case 1:
             m_configHandler->setLevelParameters("one");
+            createObjects();
             break;
         case 2:
             m_configHandler->setLevelParameters("two");
+            createObjects();
             break;
         case 3:
             m_configHandler->setLevelParameters("three");
+            createObjects();
             break;
         default:
             //Level 3 completed
             m_factory->setRunningState(false);
             break;
+    }*/
+    if(m_currentLevel == 1)
+    {
+        m_configHandler->setLevelParameters("one");
+        createObjects();
     }
-    //Create player score
-    m_playerScore = m_factory->createScore();
-    m_playerScore->setScores(m_playerCurrentScore);
-    //Create bullet manager
-    m_bulletManager = new BulletManager(m_timer, m_collisionDetector, m_configHandler);
-    //Create player manager
-    m_playerManager = new PlayerManager(m_factory, m_timer, m_collisionDetector, m_configHandler, m_bulletManager);
-    //Create enemy manager
-    m_enemyManager = new EnemyManager(m_factory, m_timer, m_collisionDetector, m_configHandler, m_bulletManager,m_playerScore);
-    //Create bonus manager
-    m_bonusManager = new BonusManager(m_factory, m_timer, m_collisionDetector, m_configHandler, m_playerManager,m_playerScore);
+    else if (m_currentLevel == 2)
+    {
+        m_configHandler->setLevelParameters("two");
+        createObjects();
+    }
+    else if (m_currentLevel == 3)
+    {
+        m_configHandler->setLevelParameters("three");
+        createObjects();
+    }
+    else{
+        //Level 3 completed
+        m_factory->setRunningState(false);
+    }
+
 
 }
 
@@ -92,5 +104,20 @@ void GameNs::LevelController::clean() {
     delete m_playerManager;
     delete m_enemyManager;
     delete m_bonusManager;
-
+}
+/**
+ * Method to create objects
+ */
+void GameNs::LevelController::createObjects() {
+    //Create player score
+    m_playerScore = m_factory->createScore();
+    m_playerScore->setScores(m_playerCurrentScore);
+    //Create bullet manager
+    m_bulletManager = new BulletManager(m_timer, m_collisionDetector, m_configHandler);
+    //Create player manager
+    m_playerManager = new PlayerManager(m_factory, m_timer, m_collisionDetector, m_configHandler, m_bulletManager);
+    //Create enemy manager
+    m_enemyManager = new EnemyManager(m_factory, m_timer, m_collisionDetector, m_configHandler, m_bulletManager,m_playerScore);
+    //Create bonus manager
+    m_bonusManager = new BonusManager(m_factory, m_timer, m_collisionDetector, m_configHandler, m_playerManager,m_playerScore);
 }

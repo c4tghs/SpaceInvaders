@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="SpaceInvaders"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\MinGW\;CMake Files\MinGW\lib\;CMake Files\MinGW\lib\cmake\;CMake Files\MinGW\lib\cmake\SDL2\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/Users/cliff/Documents/C++/SpaceInvader/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/cliff/Documents/C++/SpaceInvader/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/cliff/Documents/C++/SpaceInvader/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/cliff/Documents/C++/SpaceInvader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/cliff/Documents/C++/SpaceInvader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SpaceInvaders">
+				<Option output="D:/Users/cliff/Documents/C++/SpaceInvader/cmake-build-debug/SpaceInvaders.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Users/cliff/Documents/C++/SpaceInvader/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/MinGW/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/MinGW/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="C:/MinGW/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/MinGW/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/MinGW/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/MinGW/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/cliff/Documents/C++/SpaceInvader/cmake-build-debug/Makefile&quot;  VERBOSE=1 SpaceInvaders"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/cliff/Documents/C++/SpaceInvader/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/cliff/Documents/C++/SpaceInvader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/cliff/Documents/C++/SpaceInvader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SpaceInvaders/fast">
+				<Option output="D:/Users/cliff/Documents/C++/SpaceInvader/cmake-build-debug/SpaceInvaders.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Users/cliff/Documents/C++/SpaceInvader/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/MinGW/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/MinGW/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="C:/MinGW/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/MinGW/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/MinGW/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/MinGW/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/cliff/Documents/C++/SpaceInvader/cmake-build-debug/Makefile&quot;  VERBOSE=1 SpaceInvaders/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/cliff/Documents/C++/SpaceInvader/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/cliff/Documents/C++/SpaceInvader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/cliff/Documents/C++/SpaceInvader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/Users/cliff/Documents/C++/SpaceInvader/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/cliff/Documents/C++/SpaceInvader/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/cliff/Documents/C++/SpaceInvader/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/cliff/Documents/C++/SpaceInvader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/cliff/Documents/C++/SpaceInvader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/Users/cliff/Documents/C++/SpaceInvader/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/cliff/Documents/C++/SpaceInvader/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/cliff/Documents/C++/SpaceInvader/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/cliff/Documents/C++/SpaceInvader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/cliff/Documents/C++/SpaceInvader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Controllers/CPP-Files/BonusManager.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Controllers/CPP-Files/BulletManager.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Controllers/CPP-Files/CollisionDetector.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Controllers/CPP-Files/ConfigHandler.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Controllers/CPP-Files/EnemyManager.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Controllers/CPP-Files/Game.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Controllers/CPP-Files/LevelController.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Controllers/CPP-Files/PlayerManager.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Controllers/CPP-Files/TextManager.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Controllers/CPP-Files/TextureManager.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Controllers/Headers/BonusManager.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Controllers/Headers/BulletManager.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Controllers/Headers/CollisionDetector.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Controllers/Headers/ConfigHandler.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Controllers/Headers/EnemyManager.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Controllers/Headers/Game.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Controllers/Headers/LevelController.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Controllers/Headers/PlayerManager.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Controllers/Headers/TextManager.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Controllers/Headers/TextureManager.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Factories/AbstractFactory.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Factories/SDLFactory.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Factories/SDLFactory.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Models/CPP-Files/Background.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Models/CPP-Files/Bonus.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Models/CPP-Files/Bullet.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Models/CPP-Files/EnemyShip.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Models/CPP-Files/Entity.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Models/CPP-Files/PlayerLife.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Models/CPP-Files/PlayerShip.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Models/CPP-Files/RandomNumber.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Models/CPP-Files/Score.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Models/Headers/Background.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Models/Headers/Bonus.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Models/Headers/Bullet.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Models/Headers/EnemyShip.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Models/Headers/Entity.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Models/Headers/PlayerLife.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Models/Headers/PlayerShip.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Models/Headers/RandomNumber.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Models/Headers/Score.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/Models/Headers/Timer.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/SDL/CPP-Files/SDLBackground.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/SDL/CPP-Files/SDLBonus.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/SDL/CPP-Files/SDLBullet.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/SDL/CPP-Files/SDLEnemyShip.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/SDL/CPP-Files/SDLKeyStates.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/SDL/CPP-Files/SDLPlayerLife.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/SDL/CPP-Files/SDLPlayerShip.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/SDL/CPP-Files/SDLScore.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/SDL/CPP-Files/SDLTimer.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/SDL/Headers/SDLBackground.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/SDL/Headers/SDLBonus.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/SDL/Headers/SDLBullet.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/SDL/Headers/SDLEnemyShip.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/SDL/Headers/SDLKeyStates.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/SDL/Headers/SDLPlayerLife.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/SDL/Headers/SDLPlayerShip.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/SDL/Headers/SDLScore.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/SDL/Headers/SDLTimer.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/main.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/C++/SpaceInvader/MinGW/lib/cmake/SDL2/sdl2-config.cmake">
+			<Option virtualFolder="CMake Files\MinGW\lib\cmake\SDL2\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
