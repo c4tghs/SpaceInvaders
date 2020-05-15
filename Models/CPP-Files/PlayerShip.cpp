@@ -6,35 +6,15 @@
 
 /**
  * Constructor for PlayerShip
- */
-GameNs::PlayerShip::PlayerShip(){}
-/**
- * Constructor for PlayerShip
  * @param xPos - x position of ship
  * @param yPos - y position of ship
  * @param width - width of ship
  * @param height - height of ship
  */
-GameNs::PlayerShip::PlayerShip(int xPos, int yPos, int width, int height):Entity(xPos,yPos,width,height) {}
+Abstract::PlayerShip::PlayerShip(double xPos, double yPos, double width, double height): Entity(xPos, yPos, width, height) {}
 
 /**
  * Destructor
  */
-GameNs::PlayerShip::~PlayerShip(){}
-
-/**
- * Method that returns the players speed
- * @return player's speed
- */
-int GameNs::PlayerShip::getPlayerSpeed() {
-    return m_playerSpeed;
-}
-
-/**
- * Method that sets player speed
- * @param speed
- */
-void GameNs::PlayerShip::setPlayerSpeed(int speed) {
-    m_playerSpeed = speed;
-}
+Abstract::PlayerShip::~PlayerShip(){}
 

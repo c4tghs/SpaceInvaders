@@ -1,36 +1,26 @@
-//
-// Created by cliff on 12/03/2020.
-//
-
-#ifndef PROJECT_SDLPLAYERSHIP_H
-#define PROJECT_SDLPLAYERSHIP_H
-
+#ifndef SPACEINVADERS_SDLPLAYERSHIP_H
+#define SPACEINVADERS_SDLPLAYERSHIP_H
 
 #include <SDL2/SDL_render.h>
 #include "../../Models/Headers/PlayerShip.h"
-#include "SDLKeyStates.h"
-#include "../../Controllers/Headers/TextureManager.h"
-#include "SDLTimer.h"
+#include "../../Models/Headers/TextureManager.h"
+#include "../../Models/Headers/Window.h"
 
-namespace SDLNs
+namespace SDL
 {
-    class SDLPlayerShip: public GameNs::PlayerShip {
+    class SDLPlayerShip: public Abstract::PlayerShip {
     public:
-        SDLPlayerShip(int xPos, int yPos, int width, int height, SDL_Renderer* renderer, const char* playerShipPath);
+        SDLPlayerShip(double xPos, double yPos, double width, double height, Abstract::Window *window);
         ~SDLPlayerShip();
-        void render();
-        void loadMedia();
-
+        void render() override ;
     private:
-
-        GameNs::TextureManager *m_playerShipTexture= nullptr;
-        SDL_Renderer* m_renderer= nullptr;
-        const char* m_playerShipPath;
-
-
+        Abstract::Window* m_window;
+        SDL_Renderer* m_renderer;
+        TextureManager* textureManager;
+        SDL_Texture* m_playerTexture;
     };
 }
 
 
 
-#endif //PROJECT_SDLPLAYERSHIP_H
+#endif //SPACEINVADERS_SDLPLAYERSHIP_H

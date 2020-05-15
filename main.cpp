@@ -1,8 +1,8 @@
 
 #include <iostream>
-#include "Factories/AbstractFactory.h"
+#include "Factories/Factory.h"
 #include "Factories/SDLFactory.h"
-#include "Controllers/Headers/Game.h"
+#include "Game.h"
 
 struct AllocationMetrics{
     uint32_t TotalAllocated =0;
@@ -15,7 +15,7 @@ static AllocationMetrics s_AllocationMetrics;
 
 static void PrintMemoryUsage()
 {
-    std::cout << "Memory usage: " << s_AllocationMetrics.CurrentUsage() << " bytes" << std::endl;
+    std::cout << "Memory usage: " << s_AllocationMetrics.CurrentUsage() << " bytes\n";
 }
 
 void* operator new(size_t size)
@@ -33,29 +33,17 @@ void operator delete(void* memory,size_t size)
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 int main(int argc, char *argv[]) {
     //create SDL factory
-    GameNs::AbstractFactory *AF = new SDLNs::SDLFactory();
+    Abstract::Factory *AF = new SDL::SDLFactory();
     //initialise game class
-    GameNs::Game *g = GameNs::Game::getInstance(AF);
+    Game *g = Game::getInstance(AF);
     //run game
     g->run();
 
     //Deallocate memory
-    delete g;
+    Game::destroyGame();
     delete AF;
-    std::cout << "Memory at the end of game: " << s_AllocationMetrics.CurrentUsage() << std::endl;
+    std::cout << "Memory at the end of game: " << s_AllocationMetrics.CurrentUsage() << " bytes\n";
     return 0;
 }

@@ -7,7 +7,7 @@
 
 #include <random>
 
-namespace GameNs{
+namespace Abstract{
     class RandomNumber {
     public:
         static RandomNumber& getInstance();

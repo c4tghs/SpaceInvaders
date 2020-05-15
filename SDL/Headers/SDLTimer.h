@@ -9,16 +9,16 @@
 #include "SDL2/SDL.h"
 #include "../../Models/Headers/Timer.h"
 
-namespace SDLNs
+namespace SDL
 {
-    class SDLTimer: public GameNs::Timer{
+    class SDLTimer: public Abstract::Timer{
     public:
         SDLTimer();
-        ~SDLTimer();
-        void update();
-        double getDeltaTime();
-        void reset();
-        float getTime();
+        ~SDLTimer() override;
+        void update() override ;
+        void reset() override ;
+        double getDeltaTime() override;
+        float getTime() override;
 
     private:
         double m_deltaTime=0.0f;

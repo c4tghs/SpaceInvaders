@@ -5,7 +5,7 @@
 #ifndef PROJECT_SCORE_H
 #define PROJECT_SCORE_H
 
-namespace GameNs{
+namespace Abstract{
     class Score {
     public:
         Score();

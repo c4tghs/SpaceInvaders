@@ -1,7 +1,3 @@
-//
-// Created by cliff on 14/04/2020.
-//
-
 #include "../Headers/Bonus.h"
 
 /**
@@ -11,31 +7,26 @@
  * @param width - width of bonus
  * @param height - height of bonus
  */
-GameNs::Bonus::Bonus(int xPos, int yPos, int width, int height, BonusType bonusType) : Entity(xPos, yPos, width, height) {
+Abstract::Bonus::Bonus(int xPos, int yPos, int width, int height, BonusType bonusType) : Entity(xPos, yPos, width, height) {
     setBonusType(bonusType);
 }
 /**
  * Destructor
  */
-GameNs::Bonus::~Bonus() {}
-
-/**
- * Constructor
- */
-GameNs::Bonus::Bonus() {}
+Abstract::Bonus::~Bonus() {}
 
 /**
  * Method that returns the bonus type
  * @return - bonus type
  */
-GameNs::BonusType GameNs::Bonus::getBonusType() {
+Abstract::BonusType Abstract::Bonus::getBonusType() {
     return m_bonusType;
 }
 /**
  * Method that set the bonus type
  * @param bonusType - bonus type
  */
-void GameNs::Bonus::setBonusType(GameNs::BonusType bonusType) {
+void Abstract::Bonus::setBonusType(Abstract::BonusType bonusType) {
     m_bonusType = bonusType;
 }
 

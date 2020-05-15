@@ -6,11 +6,10 @@
 
 #include "Entity.h"
 
-namespace GameNs
+namespace Abstract
 {
     class Bullet:public Entity {
     public:
-        Bullet();
         Bullet(int xPos, int yPos, int width, int height);
         virtual ~Bullet();
         virtual void render()=0;

@@ -3,23 +3,24 @@
 //
 
 #include "../Headers/Score.h"
+
 /**
  * Constructor
  */
-GameNs::Score::Score() {
+Abstract::Score::Score() {
     m_score = 0;
 }
 
 /**
  * Destructor
  */
-GameNs::Score::~Score() {}
+Abstract::Score::~Score() {}
 
 /**
  * Method that returns player score
  * @return - the score
  */
-int GameNs::Score::getScores() {
+int Abstract::Score::getScores() {
     return m_score;
 }
 
@@ -27,6 +28,6 @@ int GameNs::Score::getScores() {
  * Method that sets the player's score
  * @param scores - the player's current score
  */
-void GameNs::Score::setScores(int scores) {
+void Abstract::Score::setScores(int scores) {
     m_score = scores;
 }

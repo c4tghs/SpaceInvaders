@@ -5,7 +5,7 @@
 #ifndef PROJECT_PLAYERLIFE_H
 #define PROJECT_PLAYERLIFE_H
 
-namespace GameNs{
+namespace Abstract{
     class PlayerLife {
         public:
             PlayerLife();

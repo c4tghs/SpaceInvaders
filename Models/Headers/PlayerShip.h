@@ -1,26 +1,16 @@
-//
-// Created by cliff on 08/03/2020.
-//
-
 #ifndef PROJECT_PLAYERSHIP_H
 #define PROJECT_PLAYERSHIP_H
 
-
 #include "Entity.h"
 
-namespace GameNs
+namespace Abstract
 {
     class PlayerShip: public Entity {
     public:
-        PlayerShip();
-        PlayerShip(int xPos, int yPos, int width, int height);
+        PlayerShip(double xPos, double yPos, double width, double height);
         virtual ~PlayerShip();
         virtual void render() = 0;
-        void setPlayerSpeed(int speed);
-        int getPlayerSpeed();
 
-    private:
-        int m_playerSpeed=0;
     };
 
 }

@@ -5,25 +5,21 @@
 #ifndef PROJECT_ENTITY_H
 #define PROJECT_ENTITY_H
 
-namespace GameNs{
+namespace Abstract{
     class Entity {
     public:
-        Entity();
-        Entity(int xPos, int yPos, int width, int height);
-        int getXPosition() const;
-        void setXPosition(int xPos);
-        void setYPosition(int yPos);
-        int getYPosition() const;
-        int getWidth() const;
-        int getHeight() const;
-        void setHeight(int height);
-        void setWidth(int width);
+        Entity(double xPos, double yPos, double width, double height);
+        double getXPosition();
+        double getYPosition();
+        double getWidth() const;
+        double getHeight() const;
+        void moveEntity(double xPos, double yPos);
 
-    private:
-        int m_xPos;
-        int m_yPos;
-        int m_width;
-        int m_height;
+    protected:
+        double m_xPos;
+        double m_yPos;
+        double m_width;
+        double m_height;
     };
 
 }

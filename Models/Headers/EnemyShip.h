@@ -7,30 +7,24 @@
 
 #include <SDL2/SDL_rect.h>
 #include "Entity.h"
+#include "../../Enums.h"
 
-#define SPRITES_FRAMES 2
-
-namespace GameNs
+namespace Abstract
 {
-    enum EnemyType{Octopus,Crab,Squid};
-
     class EnemyShip: public Entity {
     public:
-        EnemyShip();
-        EnemyShip(int xPos, int yPos, int width, int height);
-        virtual ~EnemyShip();
+        EnemyShip(double xPos, double yPos, double width, double height);
+        virtual ~EnemyShip()=default;
         virtual void render() = 0;
-        virtual int getMoveDirection()=0;
-        virtual void setMoveDirection(int direction)=0;
-        virtual void setRect(SDL_Rect rects[])=0;
-        void setEnemyType(EnemyType type);
-        void setEnemySpeed(int speed);
-        int getEnemySpeed();
-        EnemyType getEnemyType();
+        int getMoveDirection() const;
+        void setMoveDirection(int direction);
+        void setEnemyType(ENEMY_TYPE type);
+        ENEMY_TYPE getEnemyType();
+        SPRITE getSpriteType();
 
     private:
-        EnemyType  m_enemyType= Squid;
-        int m_enemySpeed=0;
+        ENEMY_TYPE  m_enemyType= SQUID;
+        int m_moveDirection;
     };
 }
 

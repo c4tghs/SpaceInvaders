@@ -7,7 +7,7 @@
 
 #include "Entity.h"
 
-namespace GameNs{
+namespace Abstract{
     enum BonusType{SPEED,LIFE, POINTS};
 
     class Bonus:public Entity {

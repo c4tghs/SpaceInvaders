@@ -1,22 +1,18 @@
-//
-// Created by cliff on 09/04/2020.
-//
-
 #include "../Headers/PlayerLife.h"
 
 /**
  * Constructor
  */
-GameNs::PlayerLife::PlayerLife() {}
+Abstract::PlayerLife::PlayerLife() {}
 /**
  * Destructor
  */
-GameNs::PlayerLife::~PlayerLife(){}
+Abstract::PlayerLife::~PlayerLife(){}
 /**
  * Method that returns player life
  * @return player life
  */
-int GameNs::PlayerLife::getPlayerLife() {
+int Abstract::PlayerLife::getPlayerLife() {
     return m_playerLife;
 }
 
@@ -24,6 +20,6 @@ int GameNs::PlayerLife::getPlayerLife() {
  * Method that sets player life
  * @param life - player life
  */
-void GameNs::PlayerLife::setPlayerLife(int life) {
+void Abstract::PlayerLife::setPlayerLife(int life) {
     m_playerLife = life;
 }

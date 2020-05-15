@@ -1,54 +1,57 @@
-//
-// Created by cliff on 08/03/2020.
-//
 
 #include "../Headers/EnemyShip.h"
-/**
- * Constructor
- */
-GameNs::EnemyShip::EnemyShip() {}
+
 /**
  * Constructor for EnemyShip
- * @param xPos - x position of ship
- * @param yPos - y position of ship
+ * @param xPos - initial x position of ship
+ * @param yPos -  initial y position of ship
  * @param width - width of ship
  * @param height - height of ship
  */
-GameNs::EnemyShip::EnemyShip(int xPos, int yPos, int width, int height):Entity(xPos,yPos,width,height) {}
-
-/**
- * Destructor
- */
-GameNs::EnemyShip::~EnemyShip(){}
+Abstract::EnemyShip::EnemyShip(double xPos, double yPos, double width, double height): Entity(xPos, yPos, width, height) {
+    m_moveDirection = 1;
+}
 
 /**
  * Method that sets an enemy's type
  * @param type - enemy type
  */
-void GameNs::EnemyShip::setEnemyType(GameNs::EnemyType type) {
+void Abstract::EnemyShip::setEnemyType(ENEMY_TYPE type) {
     m_enemyType = type;
 }
 
 /**
  * Method that returns an enemy's type
- * @return - EnemyType
+ * @return - ENEMYTYPE
  */
-GameNs::EnemyType GameNs::EnemyShip::getEnemyType() {
+ENEMY_TYPE Abstract::EnemyShip::getEnemyType() {
     return m_enemyType;
 }
 
+SPRITE Abstract::EnemyShip::getSpriteType() {
+   if(m_enemyType == SQUID)
+   {
+       return ENEMY_SMALL;
+   }
+   else if(m_enemyType == CRAB)
+   {
+       return ENEMY_MEDIUM;
+   }
+   else
+   {
+       return ENEMY_BIG;
+   }
+
+}
 /**
- * Method to set enemy speed
- * @param speed - enemy speed
+ * Method that returns the direction enemy is moving
+ * @return integer representing move direction
  */
-void GameNs::EnemyShip::setEnemySpeed(int speed) {
-    m_enemySpeed = speed;
+int Abstract::EnemyShip::getMoveDirection() const {
+    return m_moveDirection;
 }
 
-/**
- * Method to return enemy speed
- * @return - enemy speed
- */
-int GameNs::EnemyShip::getEnemySpeed() {
-    return m_enemySpeed;
+void Abstract::EnemyShip::setMoveDirection(int direction) {
+    m_moveDirection = direction;
 }
+

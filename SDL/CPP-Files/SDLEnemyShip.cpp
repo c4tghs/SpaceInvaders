@@ -1,83 +1,26 @@
-//
-// Created by cliff on 12/03/2020.
-//
-
 #include "../Headers/SDLEnemyShip.h"
 
-#include <utility>
-#include <iostream>
-
 /**
- * Constructor for SDlEnemyShip
- * @param renderer
- * @param screenHeight
- * @param screenWidth
- * @param enemyShipPath
+ * Constructor
+ * @param window
  * @param xPos
  * @param yPos
+ * @param width
+ * @param height
  */
-SDLNs::SDLEnemyShip::SDLEnemyShip(SDL_Renderer* renderer, GameNs::Timer* timer, const char *enemyShipPath, int xPos,
-                                  int yPos, int width, int height) : EnemyShip(xPos,yPos,width,height)
+SDL::SDLEnemyShip::SDLEnemyShip(Abstract::Window *window, double xPos, double yPos, double width, double height):Abstract::EnemyShip
+                                                                                                        (xPos, yPos, width, height)
 {
-    m_renderer = renderer;
-    m_timer = timer;
-    m_enemyShipPath = enemyShipPath;
-    m_enemyShipTexture = new GameNs::TextureManager(m_renderer);
-    m_moveDirection = 1;
-    //create texture
-    loadMedia();
-
+ m_window = window;
 }
-
 /**
  * Destructor
  */
-SDLNs::SDLEnemyShip::~SDLEnemyShip()
-{
-    delete m_enemyShipTexture;
-}
+SDL::SDLEnemyShip::~SDLEnemyShip() {}
 
 /**
- * Method to create enemyShip texture
+ * Method to render enemy ship
  */
-void SDLNs::SDLEnemyShip::loadMedia() {
-    m_enemyShipTexture->loadTexture(m_enemyShipPath);
-    if(m_enemyShipTexture->getTexture() == nullptr)
-    {
-        std::cout << "Something went wrong loading texture: "<< SDL_GetError()<< std::endl;
-        exit(1);
-    }
-
-}
-/**
- * Method to set direction enemy
- * @param direction
- */
-void SDLNs::SDLEnemyShip::setMoveDirection(int direction) {
-    m_moveDirection = direction;
-}
-/**
- * Method to get the direction enemy is moving
- * @return - direction,ie -1 for left, 1 for right
- */
-int SDLNs::SDLEnemyShip::getMoveDirection() {
-    return m_moveDirection;
-}
-/**
- * Method to show enemy
- */
-void SDLNs::SDLEnemyShip::render(){
-
-    int seconds = m_timer->getTime();
-    int sprite = seconds % SPRITES_FRAMES;
-    SDL_Rect currentRect = m_rects[sprite];
-    SDL_Rect rect = {getXPosition(), getYPosition(), getWidth(), getHeight()};
-    SDL_RenderCopy(m_renderer,m_enemyShipTexture->getTexture(),&currentRect,&rect);
-
-
-}
-
-void SDLNs::SDLEnemyShip::setRect(SDL_Rect rects[]) {
-    m_rects[0]=rects[0];
-    m_rects[1]=rects[1];
+void SDL::SDLEnemyShip::render() {
+    m_window->drawRect(getSpriteType(),m_xPos,m_yPos,m_width,m_height);
 }
