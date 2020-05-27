@@ -1,10 +1,8 @@
-1. When creating SDLPlayerShip etc, add the Rect to display instead of sending window as parameter
-2. Create sound manager -> Singleton. why? sounds are stored in one place and should be accessible from anywhere in the game. From page 193 Book SDL Game Dev
-3. Movement = https://lazyfoo.net/tutorials/SDL/44_frame_independent_movement/index.php
-4. Set window size and height in controller
-5. Check Timer
-6. Example random https://dev.to/noah11012/using-sdl2-pong-3-206b
+1. Example random https://dev.to/noah11012/using-sdl2-pong-3-206b
+3. Check for freeing of memory
+
 
 spritesheet
 https://github.com/kurtjd/space-invaders/blob/master/src/Textures.cpp
-https://stackoverflow.com/questions/14880601/translating-between-cartesian-and-screen-coordinates
+//spritesheet
+https://edinburgh-napier.github.io/set09121/spaceinvaders1.html

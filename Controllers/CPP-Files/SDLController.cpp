@@ -1,3 +1,4 @@
+#include <iostream>
 #include "../Headers/SDLController.h"
 
 /**
@@ -5,43 +6,76 @@
  */
 SDL::SDLController::SDLController() {}
 
+/**
+ * Destructor
+ */
+SDL::SDLController::~SDLController() {}
 
+
+/**
+ * Method to check if user has not pressed X
+ * @return boolean that says if user has quit or not
+ */
 bool SDL::SDLController::isRunning() {
-    while(SDL_PollEvent(&m_event) !=0)
-    {
-        if(m_event.type == SDL_QUIT)
-        {
-            return true;
-        }
-    }
-    return false;
+    return m_isRunning;
 }
 
 /**
- * Method that returns current events
- * @return vector containing current events
+ * Method to poll events
  */
-PLAYER_ACTION SDL::SDLController::getEvent() {
-    PLAYER_ACTION event = NONE;
-    //SDL_Event keyEvent;
-    SDL_PollEvent(&m_event);
-    const Uint8* keystate = SDL_GetKeyboardState(nullptr);
-    if(keystate[SDL_SCANCODE_LEFT])
+void SDL::SDLController::pollEvents()
+{
+    while(SDL_PollEvent(&m_event) !=0)
     {
-        event = MOVE_LEFT;
+        switch(m_event.type)
+        {
+            case SDL_QUIT:
+                m_isRunning = false;
+                break;
+            case SDL_KEYUP:
+                handleKeyboardEvent(m_event.key.keysym.sym, false);
+                break;
+            case SDL_KEYDOWN:
+                handleKeyboardEvent(m_event.key.keysym.sym, true);
+                break;
+            default:
+                break;
+        }
     }
-    else if(keystate[SDL_SCANCODE_RIGHT]){
-        event = MOVE_RIGHT;
-    }
-    else if(keystate[SDL_SCANCODE_SPACE])
-    {
-        event = PLAYER_SHOOT;
-    } else
-    {
-        event = NONE;
-    }
+}
 
-    return event;
+/**
+ * Method used to handle a key pressed by the user
+ * @param code - the SDL key code
+ * @param keyDown - boolean that says if key is pressed down or not
+ */
+void SDL::SDLController::handleKeyboardEvent(SDL_Keycode code, bool keyDown) {
+    KEY key = NONE;
+    switch (code)
+    {
+        case SDLK_LEFT:
+            key = MOVE_LEFT;
+            break;
+        case SDLK_RIGHT:
+            key = MOVE_RIGHT;
+            break;
+        case SDLK_SPACE:
+            key = PLAYER_SHOOT;
+            break;
+        default:
+            key = NONE;
+            break;
+    }
+    if(key != NONE)m_keyPressed[key] = keyDown;
+
+}
+/**
+ *
+ * @param key
+ * @return
+ */
+bool SDL::SDLController::isPressed(KEY key) {
+    return m_keyPressed[key];
 }
 
 

@@ -13,13 +13,15 @@ namespace SDL
     class SDLController: public Abstract::Controller {
     public:
         SDLController();
-        ~SDLController() =default;
-        PLAYER_ACTION getEvent() override ;
-        bool isRunning() override ;
-
+        ~SDLController();
+        void pollEvents();
+        bool isRunning() override;
+        bool isPressed(KEY key);
     private:
+        void handleKeyboardEvent(SDL_Keycode code, bool keyDown);
         SDL_Event m_event;
-
+        std::map<KEY,bool> m_keyPressed;
+        bool m_isRunning = true;
     };
 }
 

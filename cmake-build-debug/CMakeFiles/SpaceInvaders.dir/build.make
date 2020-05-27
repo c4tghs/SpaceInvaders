@@ -154,38 +154,10 @@ CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Entity.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Entity.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\Models\CPP-Files\Entity.cpp" -o CMakeFiles\SpaceInvaders.dir\Models\CPP-Files\Entity.cpp.s
 
-CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Score.cpp.obj: CMakeFiles/SpaceInvaders.dir/flags.make
-CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Score.cpp.obj: CMakeFiles/SpaceInvaders.dir/includes_CXX.rsp
-CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Score.cpp.obj: ../Models/CPP-Files/Score.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Score.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SpaceInvaders.dir\Models\CPP-Files\Score.cpp.obj -c "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\Models\CPP-Files\Score.cpp"
-
-CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Score.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Score.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\Models\CPP-Files\Score.cpp" > CMakeFiles\SpaceInvaders.dir\Models\CPP-Files\Score.cpp.i
-
-CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Score.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Score.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\Models\CPP-Files\Score.cpp" -o CMakeFiles\SpaceInvaders.dir\Models\CPP-Files\Score.cpp.s
-
-CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/PlayerLife.cpp.obj: CMakeFiles/SpaceInvaders.dir/flags.make
-CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/PlayerLife.cpp.obj: CMakeFiles/SpaceInvaders.dir/includes_CXX.rsp
-CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/PlayerLife.cpp.obj: ../Models/CPP-Files/PlayerLife.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/PlayerLife.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SpaceInvaders.dir\Models\CPP-Files\PlayerLife.cpp.obj -c "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\Models\CPP-Files\PlayerLife.cpp"
-
-CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/PlayerLife.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/PlayerLife.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\Models\CPP-Files\PlayerLife.cpp" > CMakeFiles\SpaceInvaders.dir\Models\CPP-Files\PlayerLife.cpp.i
-
-CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/PlayerLife.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/PlayerLife.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\Models\CPP-Files\PlayerLife.cpp" -o CMakeFiles\SpaceInvaders.dir\Models\CPP-Files\PlayerLife.cpp.s
-
 CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Bonus.cpp.obj: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Bonus.cpp.obj: CMakeFiles/SpaceInvaders.dir/includes_CXX.rsp
 CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Bonus.cpp.obj: ../Models/CPP-Files/Bonus.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Bonus.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Bonus.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SpaceInvaders.dir\Models\CPP-Files\Bonus.cpp.obj -c "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\Models\CPP-Files\Bonus.cpp"
 
 CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Bonus.cpp.i: cmake_force
@@ -199,7 +171,7 @@ CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Bonus.cpp.s: cmake_force
 CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/RandomNumber.cpp.obj: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/RandomNumber.cpp.obj: CMakeFiles/SpaceInvaders.dir/includes_CXX.rsp
 CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/RandomNumber.cpp.obj: ../Models/CPP-Files/RandomNumber.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/RandomNumber.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/RandomNumber.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SpaceInvaders.dir\Models\CPP-Files\RandomNumber.cpp.obj -c "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\Models\CPP-Files\RandomNumber.cpp"
 
 CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/RandomNumber.cpp.i: cmake_force
@@ -213,7 +185,7 @@ CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/RandomNumber.cpp.s: cmake_force
 CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextureManager.cpp.obj: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextureManager.cpp.obj: CMakeFiles/SpaceInvaders.dir/includes_CXX.rsp
 CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextureManager.cpp.obj: ../Models/CPP-Files/TextureManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextureManager.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextureManager.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SpaceInvaders.dir\Models\CPP-Files\TextureManager.cpp.obj -c "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\Models\CPP-Files\TextureManager.cpp"
 
 CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextureManager.cpp.i: cmake_force
@@ -227,7 +199,7 @@ CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextureManager.cpp.s: cmake_force
 CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Window.cpp.obj: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Window.cpp.obj: CMakeFiles/SpaceInvaders.dir/includes_CXX.rsp
 CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Window.cpp.obj: ../Models/CPP-Files/Window.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Window.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Window.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SpaceInvaders.dir\Models\CPP-Files\Window.cpp.obj -c "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\Models\CPP-Files\Window.cpp"
 
 CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Window.cpp.i: cmake_force
@@ -238,10 +210,24 @@ CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Window.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Window.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\Models\CPP-Files\Window.cpp" -o CMakeFiles\SpaceInvaders.dir\Models\CPP-Files\Window.cpp.s
 
+CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextManager.cpp.obj: CMakeFiles/SpaceInvaders.dir/flags.make
+CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextManager.cpp.obj: CMakeFiles/SpaceInvaders.dir/includes_CXX.rsp
+CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextManager.cpp.obj: ../Models/CPP-Files/TextManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextManager.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SpaceInvaders.dir\Models\CPP-Files\TextManager.cpp.obj -c "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\Models\CPP-Files\TextManager.cpp"
+
+CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextManager.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\Models\CPP-Files\TextManager.cpp" > CMakeFiles\SpaceInvaders.dir\Models\CPP-Files\TextManager.cpp.i
+
+CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextManager.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\Models\CPP-Files\TextManager.cpp" -o CMakeFiles\SpaceInvaders.dir\Models\CPP-Files\TextManager.cpp.s
+
 CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLTimer.cpp.obj: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLTimer.cpp.obj: CMakeFiles/SpaceInvaders.dir/includes_CXX.rsp
 CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLTimer.cpp.obj: ../SDL/CPP-Files/SDLTimer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLTimer.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLTimer.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SpaceInvaders.dir\SDL\CPP-Files\SDLTimer.cpp.obj -c "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\SDL\CPP-Files\SDLTimer.cpp"
 
 CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLTimer.cpp.i: cmake_force
@@ -255,7 +241,7 @@ CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLTimer.cpp.s: cmake_force
 CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLWindow.cpp.obj: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLWindow.cpp.obj: CMakeFiles/SpaceInvaders.dir/includes_CXX.rsp
 CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLWindow.cpp.obj: ../SDL/CPP-Files/SDLWindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLWindow.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLWindow.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SpaceInvaders.dir\SDL\CPP-Files\SDLWindow.cpp.obj -c "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\SDL\CPP-Files\SDLWindow.cpp"
 
 CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLWindow.cpp.i: cmake_force
@@ -269,7 +255,7 @@ CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLWindow.cpp.s: cmake_force
 CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLPlayerShip.cpp.obj: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLPlayerShip.cpp.obj: CMakeFiles/SpaceInvaders.dir/includes_CXX.rsp
 CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLPlayerShip.cpp.obj: ../SDL/CPP-Files/SDLPlayerShip.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLPlayerShip.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLPlayerShip.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SpaceInvaders.dir\SDL\CPP-Files\SDLPlayerShip.cpp.obj -c "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\SDL\CPP-Files\SDLPlayerShip.cpp"
 
 CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLPlayerShip.cpp.i: cmake_force
@@ -283,7 +269,7 @@ CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLPlayerShip.cpp.s: cmake_force
 CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj: CMakeFiles/SpaceInvaders.dir/includes_CXX.rsp
 CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj: ../SDL/CPP-Files/SDLEnemyShip.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SpaceInvaders.dir\SDL\CPP-Files\SDLEnemyShip.cpp.obj -c "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\SDL\CPP-Files\SDLEnemyShip.cpp"
 
 CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLEnemyShip.cpp.i: cmake_force
@@ -294,10 +280,52 @@ CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLEnemyShip.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLEnemyShip.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\SDL\CPP-Files\SDLEnemyShip.cpp" -o CMakeFiles\SpaceInvaders.dir\SDL\CPP-Files\SDLEnemyShip.cpp.s
 
+CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBullet.cpp.obj: CMakeFiles/SpaceInvaders.dir/flags.make
+CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBullet.cpp.obj: CMakeFiles/SpaceInvaders.dir/includes_CXX.rsp
+CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBullet.cpp.obj: ../SDL/CPP-Files/SDLBullet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBullet.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SpaceInvaders.dir\SDL\CPP-Files\SDLBullet.cpp.obj -c "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\SDL\CPP-Files\SDLBullet.cpp"
+
+CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBullet.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBullet.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\SDL\CPP-Files\SDLBullet.cpp" > CMakeFiles\SpaceInvaders.dir\SDL\CPP-Files\SDLBullet.cpp.i
+
+CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBullet.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBullet.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\SDL\CPP-Files\SDLBullet.cpp" -o CMakeFiles\SpaceInvaders.dir\SDL\CPP-Files\SDLBullet.cpp.s
+
+CMakeFiles/SpaceInvaders.dir/Constants.cpp.obj: CMakeFiles/SpaceInvaders.dir/flags.make
+CMakeFiles/SpaceInvaders.dir/Constants.cpp.obj: CMakeFiles/SpaceInvaders.dir/includes_CXX.rsp
+CMakeFiles/SpaceInvaders.dir/Constants.cpp.obj: ../Constants.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/SpaceInvaders.dir/Constants.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SpaceInvaders.dir\Constants.cpp.obj -c "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\Constants.cpp"
+
+CMakeFiles/SpaceInvaders.dir/Constants.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/Constants.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\Constants.cpp" > CMakeFiles\SpaceInvaders.dir\Constants.cpp.i
+
+CMakeFiles/SpaceInvaders.dir/Constants.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/Constants.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\Constants.cpp" -o CMakeFiles\SpaceInvaders.dir\Constants.cpp.s
+
+CMakeFiles/SpaceInvaders.dir/Configuration.cpp.obj: CMakeFiles/SpaceInvaders.dir/flags.make
+CMakeFiles/SpaceInvaders.dir/Configuration.cpp.obj: CMakeFiles/SpaceInvaders.dir/includes_CXX.rsp
+CMakeFiles/SpaceInvaders.dir/Configuration.cpp.obj: ../Configuration.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/SpaceInvaders.dir/Configuration.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SpaceInvaders.dir\Configuration.cpp.obj -c "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\Configuration.cpp"
+
+CMakeFiles/SpaceInvaders.dir/Configuration.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/Configuration.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\Configuration.cpp" > CMakeFiles\SpaceInvaders.dir\Configuration.cpp.i
+
+CMakeFiles/SpaceInvaders.dir/Configuration.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/Configuration.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\Configuration.cpp" -o CMakeFiles\SpaceInvaders.dir\Configuration.cpp.s
+
 CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/Controller.cpp.obj: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/Controller.cpp.obj: CMakeFiles/SpaceInvaders.dir/includes_CXX.rsp
 CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/Controller.cpp.obj: ../Controllers/CPP-Files/Controller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/Controller.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/Controller.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SpaceInvaders.dir\Controllers\CPP-Files\Controller.cpp.obj -c "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\Controllers\CPP-Files\Controller.cpp"
 
 CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/Controller.cpp.i: cmake_force
@@ -311,7 +339,7 @@ CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/Controller.cpp.s: cmake_force
 CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/SDLController.cpp.obj: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/SDLController.cpp.obj: CMakeFiles/SpaceInvaders.dir/includes_CXX.rsp
 CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/SDLController.cpp.obj: ../Controllers/CPP-Files/SDLController.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/SDLController.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/SDLController.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SpaceInvaders.dir\Controllers\CPP-Files\SDLController.cpp.obj -c "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\Controllers\CPP-Files\SDLController.cpp"
 
 CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/SDLController.cpp.i: cmake_force
@@ -322,48 +350,6 @@ CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/SDLController.cpp.s: cmake_fo
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/SDLController.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\Controllers\CPP-Files\SDLController.cpp" -o CMakeFiles\SpaceInvaders.dir\Controllers\CPP-Files\SDLController.cpp.s
 
-CMakeFiles/SpaceInvaders.dir/EntityControllers/CPP-Files/EnemyShipController.cpp.obj: CMakeFiles/SpaceInvaders.dir/flags.make
-CMakeFiles/SpaceInvaders.dir/EntityControllers/CPP-Files/EnemyShipController.cpp.obj: CMakeFiles/SpaceInvaders.dir/includes_CXX.rsp
-CMakeFiles/SpaceInvaders.dir/EntityControllers/CPP-Files/EnemyShipController.cpp.obj: ../EntityControllers/CPP-Files/EnemyShipController.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/SpaceInvaders.dir/EntityControllers/CPP-Files/EnemyShipController.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SpaceInvaders.dir\EntityControllers\CPP-Files\EnemyShipController.cpp.obj -c "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\EntityControllers\CPP-Files\EnemyShipController.cpp"
-
-CMakeFiles/SpaceInvaders.dir/EntityControllers/CPP-Files/EnemyShipController.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/EntityControllers/CPP-Files/EnemyShipController.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\EntityControllers\CPP-Files\EnemyShipController.cpp" > CMakeFiles\SpaceInvaders.dir\EntityControllers\CPP-Files\EnemyShipController.cpp.i
-
-CMakeFiles/SpaceInvaders.dir/EntityControllers/CPP-Files/EnemyShipController.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/EntityControllers/CPP-Files/EnemyShipController.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\EntityControllers\CPP-Files\EnemyShipController.cpp" -o CMakeFiles\SpaceInvaders.dir\EntityControllers\CPP-Files\EnemyShipController.cpp.s
-
-CMakeFiles/SpaceInvaders.dir/EntityControllers/CPP-Files/PlayerShipController.cpp.obj: CMakeFiles/SpaceInvaders.dir/flags.make
-CMakeFiles/SpaceInvaders.dir/EntityControllers/CPP-Files/PlayerShipController.cpp.obj: CMakeFiles/SpaceInvaders.dir/includes_CXX.rsp
-CMakeFiles/SpaceInvaders.dir/EntityControllers/CPP-Files/PlayerShipController.cpp.obj: ../EntityControllers/CPP-Files/PlayerShipController.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/SpaceInvaders.dir/EntityControllers/CPP-Files/PlayerShipController.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SpaceInvaders.dir\EntityControllers\CPP-Files\PlayerShipController.cpp.obj -c "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\EntityControllers\CPP-Files\PlayerShipController.cpp"
-
-CMakeFiles/SpaceInvaders.dir/EntityControllers/CPP-Files/PlayerShipController.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/EntityControllers/CPP-Files/PlayerShipController.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\EntityControllers\CPP-Files\PlayerShipController.cpp" > CMakeFiles\SpaceInvaders.dir\EntityControllers\CPP-Files\PlayerShipController.cpp.i
-
-CMakeFiles/SpaceInvaders.dir/EntityControllers/CPP-Files/PlayerShipController.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/EntityControllers/CPP-Files/PlayerShipController.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\EntityControllers\CPP-Files\PlayerShipController.cpp" -o CMakeFiles\SpaceInvaders.dir\EntityControllers\CPP-Files\PlayerShipController.cpp.s
-
-CMakeFiles/SpaceInvaders.dir/TranslateRelative.cpp.obj: CMakeFiles/SpaceInvaders.dir/flags.make
-CMakeFiles/SpaceInvaders.dir/TranslateRelative.cpp.obj: CMakeFiles/SpaceInvaders.dir/includes_CXX.rsp
-CMakeFiles/SpaceInvaders.dir/TranslateRelative.cpp.obj: ../TranslateRelative.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/SpaceInvaders.dir/TranslateRelative.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SpaceInvaders.dir\TranslateRelative.cpp.obj -c "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\TranslateRelative.cpp"
-
-CMakeFiles/SpaceInvaders.dir/TranslateRelative.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/TranslateRelative.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\TranslateRelative.cpp" > CMakeFiles\SpaceInvaders.dir\TranslateRelative.cpp.i
-
-CMakeFiles/SpaceInvaders.dir/TranslateRelative.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/TranslateRelative.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\TranslateRelative.cpp" -o CMakeFiles\SpaceInvaders.dir\TranslateRelative.cpp.s
-
 # Object files for target SpaceInvaders
 SpaceInvaders_OBJECTS = \
 "CMakeFiles/SpaceInvaders.dir/main.cpp.obj" \
@@ -373,21 +359,20 @@ SpaceInvaders_OBJECTS = \
 "CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/EnemyShip.cpp.obj" \
 "CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Bullet.cpp.obj" \
 "CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Entity.cpp.obj" \
-"CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Score.cpp.obj" \
-"CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/PlayerLife.cpp.obj" \
 "CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Bonus.cpp.obj" \
 "CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/RandomNumber.cpp.obj" \
 "CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextureManager.cpp.obj" \
 "CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Window.cpp.obj" \
+"CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextManager.cpp.obj" \
 "CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLTimer.cpp.obj" \
 "CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLWindow.cpp.obj" \
 "CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLPlayerShip.cpp.obj" \
 "CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj" \
+"CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBullet.cpp.obj" \
+"CMakeFiles/SpaceInvaders.dir/Constants.cpp.obj" \
+"CMakeFiles/SpaceInvaders.dir/Configuration.cpp.obj" \
 "CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/Controller.cpp.obj" \
-"CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/SDLController.cpp.obj" \
-"CMakeFiles/SpaceInvaders.dir/EntityControllers/CPP-Files/EnemyShipController.cpp.obj" \
-"CMakeFiles/SpaceInvaders.dir/EntityControllers/CPP-Files/PlayerShipController.cpp.obj" \
-"CMakeFiles/SpaceInvaders.dir/TranslateRelative.cpp.obj"
+"CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/SDLController.cpp.obj"
 
 # External object files for target SpaceInvaders
 SpaceInvaders_EXTERNAL_OBJECTS =
@@ -399,27 +384,26 @@ SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/PlayerShip.cpp.
 SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/EnemyShip.cpp.obj
 SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Bullet.cpp.obj
 SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Entity.cpp.obj
-SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Score.cpp.obj
-SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/PlayerLife.cpp.obj
 SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Bonus.cpp.obj
 SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/RandomNumber.cpp.obj
 SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextureManager.cpp.obj
 SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Window.cpp.obj
+SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextManager.cpp.obj
 SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLTimer.cpp.obj
 SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLWindow.cpp.obj
 SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLPlayerShip.cpp.obj
 SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj
+SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBullet.cpp.obj
+SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/Constants.cpp.obj
+SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/Configuration.cpp.obj
 SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/Controller.cpp.obj
 SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/SDLController.cpp.obj
-SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/EntityControllers/CPP-Files/EnemyShipController.cpp.obj
-SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/EntityControllers/CPP-Files/PlayerShipController.cpp.obj
-SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/TranslateRelative.cpp.obj
 SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/build.make
 SpaceInvaders.exe: C:/MinGW/lib/lib/libSDL2.dll.a
 SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/linklibs.rsp
 SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/objects1.rsp
 SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX executable SpaceInvaders.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX executable SpaceInvaders.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\SpaceInvaders.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

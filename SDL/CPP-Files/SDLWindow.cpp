@@ -9,8 +9,6 @@ SDL::SDLWindow::SDLWindow(const char *title, int screenWidth, int screenHeight) 
     m_title = title;
     m_windowHeight = screenHeight;
     m_windowWidth = screenWidth;
-    m_window = nullptr;
-    m_renderer= nullptr;
 }
 
 /**
@@ -21,8 +19,14 @@ SDL::SDLWindow::~SDLWindow() {
     TTF_CloseFont(m_font);
 
     delete m_textureManager;
+    delete m_playerScore;
+    delete m_playerLives;
+
     //Destroy Renderer
     SDL_DestroyRenderer(m_renderer);
+
+    //Destroy background texture
+    SDL_DestroyTexture(m_background);
 
     //Destory Window
     SDL_DestroyWindow(m_window);
@@ -81,9 +85,6 @@ bool SDL::SDLWindow::initialise()
             }
             else
             {
-                //Texture manager
-                m_textureManager = new TextureManager(m_renderer);
-
                 //Initialise PNG, JPG loading
                 int imgFlags = IMG_INIT_PNG | IMG_INIT_JPG;
                 if(!(IMG_Init(imgFlags) & imgFlags))
@@ -124,7 +125,16 @@ void SDL::SDLWindow::render() {
  * @return boolean representing successfulness
  */
 bool SDL::SDLWindow::loadMedia() {
-    //Background
+    //Texture manager
+    m_textureManager = new TextureManager(m_renderer);
+
+    //Text manager for player score
+    m_playerScore = new TextManager(m_renderer);
+
+    //Text manager for player lives
+    m_playerLives = new TextManager(m_renderer);
+
+     //Background
     SDL_Surface* backgroundSurface = IMG_Load("../assets/background.png");
     if(backgroundSurface == nullptr)
     {
@@ -141,47 +151,58 @@ bool SDL::SDLWindow::loadMedia() {
         SDL_FreeSurface(backgroundSurface);
     }
 
-    if(m_textureManager->loadTexture("../assets/invader_sprites.png"))
+    if(m_textureManager->loadTexture("../assets/invaders_sheet.png"))
     {
-        //load sprite
-        //Octopus
-        //octopus closed 315,35,45,45
-        //octopus open 257,35,45,35
+        //Sprite positions and dimensions in sprite sheet
+        m_sprites[ENEMY_BIG_CLOSED].x = 160;
+        m_sprites[ENEMY_BIG_CLOSED].y = 0;
+        m_sprites[ENEMY_BIG_CLOSED].w = 32;
+        m_sprites[ENEMY_BIG_CLOSED].h = 32;
 
-        m_sprites[ENEMY_BIG].x = 315;
-        m_sprites[ENEMY_BIG].y = 35;
-        m_sprites[ENEMY_BIG].w = 45;
-        m_sprites[ENEMY_BIG].h = 45;
-        //Crab
-        //crab 126,35,45,35
-        //crab 186 35 45 35
-        m_sprites[ENEMY_MEDIUM].x = 126;
-        m_sprites[ENEMY_MEDIUM].y = 35;
-        m_sprites[ENEMY_MEDIUM].w = 45;
-        m_sprites[ENEMY_MEDIUM].h = 35;
+        m_sprites[ENEMY_BIG_OPEN].x = 128;
+        m_sprites[ENEMY_BIG_OPEN].y = 0;
+        m_sprites[ENEMY_BIG_OPEN].w = 32;
+        m_sprites[ENEMY_BIG_OPEN].h = 32;
 
-        //Squid
-        //squid 64 35 30 35
-        //squid 6 35 30 35
-        m_sprites[ENEMY_SMALL].x = 64;
-        m_sprites[ENEMY_SMALL].y = 35;
-        m_sprites[ENEMY_SMALL].w = 30;
-        m_sprites[ENEMY_SMALL].h = 35;
+        m_sprites[ENEMY_MEDIUM_CLOSED].x = 96;
+        m_sprites[ENEMY_MEDIUM_CLOSED].y = 0;
+        m_sprites[ENEMY_MEDIUM_CLOSED].w = 32;
+        m_sprites[ENEMY_MEDIUM_CLOSED].h = 32;
 
-        m_sprites[UFO].x = 382;
-        m_sprites[UFO].y = 33;
-        m_sprites[UFO].w = 86;
-        m_sprites[UFO].h= 38;
+        m_sprites[ENEMY_MEDIUM_OPEN].x = 64;
+        m_sprites[ENEMY_MEDIUM_OPEN].y = 0;
+        m_sprites[ENEMY_MEDIUM_OPEN].w = 32;
+        m_sprites[ENEMY_MEDIUM_OPEN].h = 32;
 
-        m_sprites[PLAYERSHIP].x = 492;
-        m_sprites[PLAYERSHIP].y = 40;
-        m_sprites[PLAYERSHIP].w = 48;
-        m_sprites[PLAYERSHIP].h= 30;
+        m_sprites[ENEMY_SMALL_CLOSED].x = 32;
+        m_sprites[ENEMY_SMALL_CLOSED].y = 0;
+        m_sprites[ENEMY_SMALL_CLOSED].w = 32;
+        m_sprites[ENEMY_SMALL_CLOSED].h = 32;
 
-        m_sprites[INVADER_DEATH].x = 555;
-        m_sprites[INVADER_DEATH].y = 107;
-        m_sprites[INVADER_DEATH].w = 48;
-        m_sprites[INVADER_DEATH].h= 30;
+        m_sprites[ENEMY_SMALL_OPEN].x = 0;
+        m_sprites[ENEMY_SMALL_OPEN].y = 0;
+        m_sprites[ENEMY_SMALL_OPEN].w = 32;
+        m_sprites[ENEMY_SMALL_OPEN].h = 32;
+
+        m_sprites[PLAYERSHIP].x = 160;
+        m_sprites[PLAYERSHIP].y = 32;
+        m_sprites[PLAYERSHIP].w = 32;
+        m_sprites[PLAYERSHIP].h = 32;
+
+        m_sprites[PLAYER_BULLET].x = 32;
+        m_sprites[PLAYER_BULLET].y = 32;
+        m_sprites[PLAYER_BULLET].w = 32;
+        m_sprites[PLAYER_BULLET].h = 32;
+
+        m_sprites[ENEMY_BULLET].x = 64;
+        m_sprites[ENEMY_BULLET].y = 32;
+        m_sprites[ENEMY_BULLET].w = 32;
+        m_sprites[ENEMY_BULLET].h = 32;
+
+        m_sprites[BONUS_ENEMY].x = 192;
+        m_sprites[BONUS_ENEMY].y = 0;
+        m_sprites[BONUS_ENEMY].w = 64;
+        m_sprites[BONUS_ENEMY].h = 32;
     }
     else
     {
@@ -214,7 +235,7 @@ bool SDL::SDLWindow::loadMedia() {
 
 
     //font
-    m_font = TTF_OpenFont("../assets/Fonts/impact.ttf",32);
+    m_font = TTF_OpenFont("../assets/Font/Lato-Regular.ttf",23);
     if(m_font == nullptr)
     {
         std::cerr << "Unable to create font: "<< TTF_GetError() << "\n";
@@ -222,8 +243,6 @@ bool SDL::SDLWindow::loadMedia() {
     }
 
     SDL_RenderClear(m_renderer);
-    //Show background
-    //SDL_RenderCopy(m_renderer,m_background,nullptr,nullptr);
     return true;
 }
 
@@ -233,23 +252,8 @@ bool SDL::SDLWindow::loadMedia() {
  */
 void SDL::SDLWindow::drawRect(SPRITE sprite, double xPos, double yPos, double width, double height) {
 
-    m_textureManager->renderTexture(xPos,yPos,width,height,&m_sprites[sprite]);
-}
-
-/**
- * Method that returns window width
- * @return int representing window width
- */
-int SDL::SDLWindow::getWindowWidth() {
-    return m_windowWidth;
-}
-
-/**
- * Method that returns window height
- * @return int representing window height
- */
-int SDL::SDLWindow::getWindowHeight() {
-    return m_windowHeight;
+   // m_textureManager->renderTexture(xPos,yPos,m_sprites[sprite].w*Constants::SCALE_X,m_sprites[sprite].h*Constants::SCALE_Y,&m_sprites[sprite]);
+    m_textureManager->renderTexture(xPos,yPos,width*Constants::SCALE_X,height*Constants::SCALE_Y,&m_sprites[sprite]);
 }
 
 void SDL::SDLWindow::refresh() {
@@ -265,6 +269,44 @@ void SDL::SDLWindow::refresh() {
 void SDL::SDLWindow::playSound(SOUND_TYPE sound) {
     //-1: choose appropriate channel
     Mix_PlayChannel(-1,sounds[sound],0);
+}
+
+/**
+ * Method executed when SDL, window and other elements are not initialised successfully;
+ */
+void SDL::SDLWindow::exit(const char *message) {
+    SDL_Quit();
+    throw std::runtime_error(message);
+}
+
+/**
+ * Method used to show player score
+ * @param score - integer representing player score
+ */
+void SDL::SDLWindow::showScore(int score) {
+    SDL_Color color = {255,255,255};
+
+    //Loaded texture
+    if(!(m_playerScore->loadTextTexture(m_font,"SCORE "+std::to_string(score),color)))
+    {
+        std::cerr << "Failed to load text texture" << "\n";
+    }
+    m_playerScore->renderText(static_cast<int>(10*Constants::SCALE_X), 0);
+}
+
+/**
+ * Method used to show player lives
+ * @param lives - integer representing player remaining lives
+ */
+void SDL::SDLWindow::showLives(int lives) {
+    SDL_Color color = {255,0,0};
+
+    //Loaded texture
+    if(!(m_playerLives->loadTextTexture(m_font,"Lives "+std::to_string(lives),color)))
+    {
+        std::cerr << "Failed to load text texture" << "\n";
+    }
+    m_playerLives->renderText(static_cast<int>(Constants::WINDOW_WIDTH-(m_playerLives->getSurfaceWidth()+10*Constants::SCALE_X)), 0);
 }
 
 

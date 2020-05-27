@@ -7,24 +7,23 @@
 
 #include <SDL2/SDL_rect.h>
 #include "Entity.h"
-#include "../../Enums.h"
+#include "../../Constants.h"
 
 namespace Abstract
 {
     class EnemyShip: public Entity {
     public:
         EnemyShip(double xPos, double yPos, double width, double height);
-        virtual ~EnemyShip()=default;
+        virtual ~EnemyShip(){};
         virtual void render() = 0;
         int getMoveDirection() const;
         void setMoveDirection(int direction);
-        void setEnemyType(ENEMY_TYPE type);
         ENEMY_TYPE getEnemyType();
-        SPRITE getSpriteType();
 
     private:
-        ENEMY_TYPE  m_enemyType= SQUID;
         int m_moveDirection;
+    protected:
+        ENEMY_TYPE m_enemyType;
     };
 }
 

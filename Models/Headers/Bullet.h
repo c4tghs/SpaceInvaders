@@ -10,7 +10,7 @@ namespace Abstract
 {
     class Bullet:public Entity {
     public:
-        Bullet(int xPos, int yPos, int width, int height);
+        Bullet(double xPos, double yPos, double width, double height);
         virtual ~Bullet();
         virtual void render()=0;
     };

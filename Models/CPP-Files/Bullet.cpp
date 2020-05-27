@@ -7,7 +7,7 @@
  * @param width - width of bullet
  * @param height - height of bullet
  */
-Abstract::Bullet::Bullet(int xPos, int yPos, int width, int height): Abstract::Entity(xPos, yPos, width, height) {}
+Abstract::Bullet::Bullet(double xPos, double yPos, double width, double height): Abstract::Entity(xPos, yPos, width, height) {}
 /**
  * Destructor
  */

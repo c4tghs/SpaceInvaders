@@ -26,10 +26,6 @@ add_executable(SpaceInvaders
         Models/Headers/Timer.h
         Models/CPP-Files/Entity.cpp
         Models/Headers/Entity.h
-        Models/CPP-Files/Score.cpp
-        Models/Headers/Score.h
-        Models/CPP-Files/PlayerLife.cpp
-        Models/Headers/PlayerLife.h
         Models/CPP-Files/Bonus.cpp
         Models/Headers/Bonus.h
         Models/CPP-Files/RandomNumber.cpp
@@ -38,6 +34,8 @@ add_executable(SpaceInvaders
         Models/Headers/TextureManager.h
         Models/Headers/Window.h
         Models/CPP-Files/Window.cpp
+        Models/CPP-Files/TextManager.cpp
+        Models/Headers/TextManager.h
 
         SDL/CPP-Files/SDLTimer.cpp
         SDL/Headers/SDLTimer.h
@@ -47,19 +45,20 @@ add_executable(SpaceInvaders
         SDL/Headers/SDLPlayerShip.h
         SDL/CPP-Files/SDLEnemyShip.cpp
         SDL/Headers/SDLEnemyShip.h
+        SDL/CPP-Files/SDLBullet.cpp
+        SDL/Headers/SDLBullet.h
 
 
-        Enums.h
+        Constants.h
+        Constants.cpp
+        Configuration.cpp
+        Configuration.h
 
         Controllers/Headers/Controller.h
         Controllers/CPP-Files/Controller.cpp
         Controllers/CPP-Files/SDLController.cpp
         Controllers/Headers/SDLController.h
 
-        EntityControllers/CPP-Files/EnemyShipController.cpp
-        EntityControllers/Headers/EnemyShipController.h
-        EntityControllers/CPP-Files/PlayerShipController.cpp
-        EntityControllers/Headers/PlayerShipController.h
-        TranslateRelative.cpp TranslateRelative.h)
+        )
 
 target_link_libraries(SpaceInvaders ${SDL2_LIBRARY} -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer)

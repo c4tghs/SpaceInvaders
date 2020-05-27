@@ -6,8 +6,6 @@
 
 
 #include "Factories/Factory.h"
-#include "EntityControllers/Headers/PlayerShipController.h"
-#include "EntityControllers/Headers/EnemyShipController.h"
 
 class Game {
 public:
@@ -18,21 +16,27 @@ public:
 private:
     void createStartObjects();
     Game(Abstract::Factory *AF);
+    void createEnemies();
+    void moveEnemies();
+    bool checkEnemyBoundaries();
+    void playerActions();
+    void playerShoot();
+    void movePlayerBullet();
+    void handleCollision();
+    bool isCollision(Abstract::Entity* one,Abstract::Entity* two);
     ~Game();
 private:
     static Game* m_instance;
 
     Abstract::Factory* m_factory = nullptr;
     Abstract::Controller* m_controller= nullptr;
-    PlayerShipController* m_playerShipController=nullptr;
-    EnemyShipController* m_enemyShipController=nullptr;
     Abstract::Timer* m_timer=nullptr;
-    Abstract::Window* m_window;
-
+    Abstract::Window* m_window= nullptr;
+    Abstract::PlayerShip* m_playership= nullptr;
+    std::vector<Abstract::EnemyShip *> m_enemyShips;
+    Abstract::Bullet* m_playerBullet = nullptr;
     int m_currentGameLevel=1;
     bool m_levelCompleted=false;
-
-    const int FRAME_RATE = 60;
 };
 
 

@@ -21,14 +21,14 @@ Abstract::Entity::Entity(double xPos, double yPos, double width, double height){
  * Method that returns y position of entity
  * @return y position
  */
-double Abstract::Entity::getYPosition(){
+double Abstract::Entity::getYPosition() const{
     return m_yPos;
 }
 /**
  * Method that returns x position of entity
  * @return x position
  */
-double Abstract::Entity::getXPosition(){
+double Abstract::Entity::getXPosition() const{
     return m_xPos;
 }
 /**

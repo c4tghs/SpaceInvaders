@@ -1,7 +1,16 @@
 #include "../Headers/RandomNumber.h"
 
-//seed for random number generator
+//Initialisation of static member
 std::random_device Abstract::RandomNumber::m_rd;
+
+/**
+ * Method that returns instance of Random number
+ * @return - object that represents random number
+ */
+Abstract::RandomNumber& Abstract::RandomNumber::getInstance() {
+    static RandomNumber m_instance;
+    return m_instance;
+}
 
 /**
  * Constructor
@@ -9,36 +18,33 @@ std::random_device Abstract::RandomNumber::m_rd;
 Abstract::RandomNumber::RandomNumber() {}
 
 /**
- * Method that creates and returns instance of RandomNumber or returns instance of RandomNumber
- * @return instance of RandomNumber
- */
-Abstract::RandomNumber& Abstract::RandomNumber::getInstance() {
-    static RandomNumber m_instance;
-    return m_instance;
-}
-/**
  * Method that returns a random number between a range
- * @param lowerBound - lower limit of range
- * @param higherBound - upper limit of range
+ * @param min - lower limit of range
+ * @param max - upper limit of range
  * @return - double representing the generated number
  */
-double Abstract::RandomNumber::getRandomDouble(int lowerBound, int higherBound) {
+double Abstract::RandomNumber::getRandomDouble(int min, int max) {
     std::mt19937 mt(m_rd());
-    std::uniform_real_distribution<double> m_dist(lowerBound,higherBound);
+    //[min,max[
+    std::uniform_real_distribution<double> m_dist(min, max);
     return m_dist(mt);
 }
 
 /**
  * Method that returns a random number between a range
- * @param lowerBound - lower limit of range
- * @param higherBound - upper limit of range
+ * @param min - lower limit of range
+ * @param max - upper limit of range
  * @return - integer representing the generated number
  */
-int Abstract::RandomNumber::getRandomInt(int lowerBound, int higherBound) {
+int Abstract::RandomNumber::getRandomInt(int min, int max) {
     std::mt19937 mt(m_rd());
+
     //HigherBound -1 because otherwise it is included
-    std::uniform_int_distribution<int> m_dist(lowerBound,higherBound-1);
+    //[min,max]
+    std::uniform_int_distribution<int> m_dist(min, max - 1);
     return m_dist(mt);
 }
+
+
 
 

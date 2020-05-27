@@ -82,6 +82,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Configuration.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Configuration.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Constants.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Constants.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Controllers/CPP-Files/Controller.cpp">
 			<Option target="SpaceInvaders"/>
 		</Unit>
@@ -92,21 +104,6 @@
 			<Option target="SpaceInvaders"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Controllers/Headers/SDLController.h">
-			<Option target="SpaceInvaders"/>
-		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/EntityControllers/CPP-Files/EnemyShipController.cpp">
-			<Option target="SpaceInvaders"/>
-		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/EntityControllers/CPP-Files/PlayerShipController.cpp">
-			<Option target="SpaceInvaders"/>
-		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/EntityControllers/Headers/EnemyShipController.h">
-			<Option target="SpaceInvaders"/>
-		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/EntityControllers/Headers/PlayerShipController.h">
-			<Option target="SpaceInvaders"/>
-		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Enums.h">
 			<Option target="SpaceInvaders"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Factories/Factory.h">
@@ -136,16 +133,13 @@
 		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/CPP-Files/Entity.cpp">
 			<Option target="SpaceInvaders"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/CPP-Files/PlayerLife.cpp">
-			<Option target="SpaceInvaders"/>
-		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/CPP-Files/PlayerShip.cpp">
 			<Option target="SpaceInvaders"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/CPP-Files/RandomNumber.cpp">
 			<Option target="SpaceInvaders"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/CPP-Files/Score.cpp">
+		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/CPP-Files/TextManager.cpp">
 			<Option target="SpaceInvaders"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/CPP-Files/TextureManager.cpp">
@@ -166,16 +160,13 @@
 		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Entity.h">
 			<Option target="SpaceInvaders"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/PlayerLife.h">
-			<Option target="SpaceInvaders"/>
-		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/PlayerShip.h">
 			<Option target="SpaceInvaders"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/RandomNumber.h">
 			<Option target="SpaceInvaders"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Score.h">
+		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/TextManager.h">
 			<Option target="SpaceInvaders"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/TextureManager.h">
@@ -185,6 +176,9 @@
 			<Option target="SpaceInvaders"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Window.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/SDL/CPP-Files/SDLBullet.cpp">
 			<Option target="SpaceInvaders"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/SDL/CPP-Files/SDLEnemyShip.cpp">
@@ -199,6 +193,9 @@
 		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/SDL/CPP-Files/SDLWindow.cpp">
 			<Option target="SpaceInvaders"/>
 		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/SDL/Headers/SDLBullet.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/SDL/Headers/SDLEnemyShip.h">
 			<Option target="SpaceInvaders"/>
 		</Unit>
@@ -209,12 +206,6 @@
 			<Option target="SpaceInvaders"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/SDL/Headers/SDLWindow.h">
-			<Option target="SpaceInvaders"/>
-		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/TranslateRelative.cpp">
-			<Option target="SpaceInvaders"/>
-		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/TranslateRelative.h">
 			<Option target="SpaceInvaders"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/main.cpp">

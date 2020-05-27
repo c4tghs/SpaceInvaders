@@ -12,16 +12,16 @@
 #include "../Models/Headers/PlayerShip.h"
 #include "../Models/Headers/Window.h"
 #include "../Models/Headers/EnemyShip.h"
+#include "../Models/Headers/Bullet.h"
 
 
 namespace Abstract{
     class Factory {
     public:
         virtual Abstract::PlayerShip* createPlayerShip(double xPos, double yPos, double width, double height, Window* window) =0;
-        virtual Abstract::EnemyShip* createEnemyShip(double xPos, double yPos, double width, double height, Window* window) =0;
-       /* virtual Background* createBackground()=0;
-
-        virtual Bullet *createBullet(int xPos, int yPos, int width, int height) =0;
+        virtual Abstract::EnemyShip* createEnemyShip(double xPos, double yPos, double width, double height, Window *window, ENEMY_TYPE type) =0;
+        virtual Abstract::Bullet* createBullet(double xPos, double yPos, double width, double height, Window *window, BULLET_TYPE type)=0;
+        /*virtual Bullet *createBullet(int xPos, int yPos, int width, int height) =0;
         virtual Score* createScore()=0;
         virtual PlayerLife* createPlayerLife()=0;
         virtual Bonus *createBonus(int xPos, int yPos, int width, int height) =0;*/

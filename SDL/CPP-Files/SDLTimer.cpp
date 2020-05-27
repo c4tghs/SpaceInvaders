@@ -16,8 +16,8 @@ SDL::SDLTimer::SDLTimer()
 SDL::SDLTimer::~SDLTimer(){}
 
 /**
- * Method that returns private member variable
- * @return m_deltaTime
+ * Method that returns delta time
+ * @return double representing the delta time
  */
 double SDL::SDLTimer::getDeltaTime() {
     return m_deltaTime;
@@ -29,7 +29,8 @@ void SDL::SDLTimer::update() {
     //ElapsedTicks is the time between reset and current time;
     m_elapsedTicks = SDL_GetTicks() - m_startTicks;
     //Divide by 1000 to get time in seconds
-    m_deltaTime  = m_elapsedTicks/1000.0;
+    m_deltaTime  = (SDL_GetTicks() - m_startTicks)/1000.0;
+    //m_deltaTime  = m_elapsedTicks/1000.0;
 }
 
 /**

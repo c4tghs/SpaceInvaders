@@ -18,13 +18,13 @@ SDL::TextureManager::~TextureManager() {
 }
 
 /**
+ * Method used to load a texture
  * @param filename - path to file
- * @param renderer - the renderer
  * @return boolean value that says if texture was loaded or not
  */
 bool SDL::TextureManager::loadTexture(const char *filename) {
     SDL_Surface* spriteSurface = IMG_Load(filename);
-    SDL_Texture* texture = nullptr;
+    SDL_Texture* texture;
     if(spriteSurface == nullptr)
     {
         std::cerr << "Unable to create surface: " << IMG_GetError() << "\n";
@@ -41,8 +41,6 @@ bool SDL::TextureManager::loadTexture(const char *filename) {
         else
         {
             m_texture = texture;
-            m_width = spriteSurface->w;
-            m_height = spriteSurface->h;
         }
         SDL_FreeSurface(spriteSurface);
     }
@@ -50,15 +48,17 @@ bool SDL::TextureManager::loadTexture(const char *filename) {
     return true;
 }
 
-int SDL::TextureManager::getHeight() {
-    return m_height;
-}
-
-int SDL::TextureManager::getWidth() {
-    return m_width;
-}
-
+/**
+ *
+ * @param xPos
+ * @param yPos
+ * @param width
+ * @param height
+ * @param sourceRect
+ */
 void SDL::TextureManager::renderTexture(double xPos, double yPos, double width, double height, SDL_Rect *sourceRect) {
     SDL_Rect destRect = {static_cast<int>(xPos),static_cast<int>(yPos),static_cast<int>(width),static_cast<int>(height)};
     SDL_RenderCopy(m_renderer,m_texture,sourceRect,&destRect);
 }
+
+

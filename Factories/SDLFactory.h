@@ -17,8 +17,6 @@
 #include "../Models/Headers/EnemyShip.h"
 #include "../Models/Headers/Bullet.h"
 #include "../Models/Headers/Timer.h"
-#include "../Models/Headers/Score.h"
-#include "../Models/Headers/PlayerLife.h"
 #include "../Models/Headers/Bonus.h"
 #include "../SDL/Headers/SDLWindow.h"
 #include "../SDL/Headers/SDLEnemyShip.h"
@@ -32,16 +30,11 @@ namespace SDL
         ~SDLFactory()override;
         Abstract::Controller* createController() override ;
         Abstract::Timer* createTimer() override;
-        Abstract::PlayerShip *
-        createPlayerShip(double xPos, double yPos, double width, double height, Abstract::Window* window) override;
+        Abstract::PlayerShip* createPlayerShip(double xPos, double yPos, double width, double height, Abstract::Window* window) override;
         Abstract::Window* createWindow(const char* title,int width, int height)override ;
-
-        Abstract::EnemyShip *createEnemyShip(double xPos, double yPos, double width, double height, Abstract::Window* window) override;
-        /* Abstract::Background* createBackground() override;
-        Abstract::Bullet *createBullet(int xPos, int yPos, int width, int height) override;
-        Abstract::Score* createScore() override;
-        Abstract::PlayerLife* createPlayerLife() override;
-        Abstract::Bonus *createBonus(int xPos, int yPos, int width, int height) override;*/
+        Abstract::EnemyShip* createEnemyShip(double xPos, double yPos, double width, double height, Abstract::Window *window,ENEMY_TYPE type) override;
+        Abstract::Bullet* createBullet(double xPos, double yPos, double width, double height, Abstract::Window *window, BULLET_TYPE type) override;
+        /*Abstract::Bonus *createBonus(int xPos, int yPos, int width, int height) override;*/
         //void render() override;
     };
 }

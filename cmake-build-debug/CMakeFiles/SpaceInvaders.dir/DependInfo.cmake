@@ -4,27 +4,26 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Configuration.cpp" "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Configuration.cpp.obj"
+  "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Constants.cpp" "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Constants.cpp.obj"
   "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Controllers/CPP-Files/Controller.cpp" "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/Controller.cpp.obj"
   "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Controllers/CPP-Files/SDLController.cpp" "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/SDLController.cpp.obj"
-  "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/EntityControllers/CPP-Files/EnemyShipController.cpp" "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/EntityControllers/CPP-Files/EnemyShipController.cpp.obj"
-  "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/EntityControllers/CPP-Files/PlayerShipController.cpp" "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/EntityControllers/CPP-Files/PlayerShipController.cpp.obj"
   "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Factories/SDLFactory.cpp" "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Factories/SDLFactory.cpp.obj"
   "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Game.cpp" "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Game.cpp.obj"
   "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/CPP-Files/Bonus.cpp" "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Bonus.cpp.obj"
   "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/CPP-Files/Bullet.cpp" "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Bullet.cpp.obj"
   "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/CPP-Files/EnemyShip.cpp" "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/EnemyShip.cpp.obj"
   "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/CPP-Files/Entity.cpp" "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Entity.cpp.obj"
-  "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/CPP-Files/PlayerLife.cpp" "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/PlayerLife.cpp.obj"
   "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/CPP-Files/PlayerShip.cpp" "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/PlayerShip.cpp.obj"
   "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/CPP-Files/RandomNumber.cpp" "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/RandomNumber.cpp.obj"
-  "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/CPP-Files/Score.cpp" "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Score.cpp.obj"
+  "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/CPP-Files/TextManager.cpp" "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextManager.cpp.obj"
   "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/CPP-Files/TextureManager.cpp" "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextureManager.cpp.obj"
   "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/CPP-Files/Window.cpp" "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Window.cpp.obj"
+  "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/SDL/CPP-Files/SDLBullet.cpp" "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBullet.cpp.obj"
   "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/SDL/CPP-Files/SDLEnemyShip.cpp" "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj"
   "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/SDL/CPP-Files/SDLPlayerShip.cpp" "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLPlayerShip.cpp.obj"
   "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/SDL/CPP-Files/SDLTimer.cpp" "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLTimer.cpp.obj"
   "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/SDL/CPP-Files/SDLWindow.cpp" "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLWindow.cpp.obj"
-  "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/TranslateRelative.cpp" "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/TranslateRelative.cpp.obj"
   "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/main.cpp" "D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

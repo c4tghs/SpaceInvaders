@@ -1,7 +1,4 @@
-#include <iostream>
 #include "../Headers/SDLPlayerShip.h"
-#include "../../Enums.h"
-#include "../Headers/SDLWindow.h"
 
 /**
  * Constructor
@@ -25,7 +22,7 @@ SDL::SDLPlayerShip::~SDLPlayerShip() {}
  * Method to render player ship
  */
 void SDL::SDLPlayerShip::render() {
-    m_window->drawRect(PLAYERSHIP,m_xPos,m_yPos,m_width,m_height);
+    m_window->drawRect(PLAYERSHIP, m_xPos, m_yPos, m_width, m_height);
 }
 
 

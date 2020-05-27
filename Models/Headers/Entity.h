@@ -9,8 +9,8 @@ namespace Abstract{
     class Entity {
     public:
         Entity(double xPos, double yPos, double width, double height);
-        double getXPosition();
-        double getYPosition();
+        double getXPosition() const;
+        double getYPosition() const;
         double getWidth() const;
         double getHeight() const;
         void moveEntity(double xPos, double yPos);
