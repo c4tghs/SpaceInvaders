@@ -30,12 +30,12 @@ add_executable(SpaceInvaders
         Models/Headers/Bonus.h
         Models/CPP-Files/RandomNumber.cpp
         Models/Headers/RandomNumber.h
-        Models/CPP-Files/TextureManager.cpp
-        Models/Headers/TextureManager.h
+        SDL/CPP-Files/TextureManager.cpp
+        SDL/Headers/TextureManager.h
         Models/Headers/Window.h
         Models/CPP-Files/Window.cpp
-        Models/CPP-Files/TextManager.cpp
-        Models/Headers/TextManager.h
+        SDL/CPP-Files/TextManager.cpp
+        SDL/Headers/TextManager.h
 
         SDL/CPP-Files/SDLTimer.cpp
         SDL/Headers/SDLTimer.h

@@ -1,4 +1,5 @@
 1. Example random https://dev.to/noah11012/using-sdl2-pong-3-206b
+2. Fix enemy and player borders
 3. Check for freeing of memory
 
 

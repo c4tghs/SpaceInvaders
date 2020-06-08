@@ -18,7 +18,7 @@ namespace Abstract
         virtual void exit(const char* message) =0;
         virtual void showScore(int score)=0;
         virtual void showLives(int lives)=0;
-        //virtual void
+        virtual void showLevel(int level)=0;
     };
 }
 

@@ -15,7 +15,7 @@ SDL::SDLFactory::SDLFactory() {}
  * Destructor
  */
 SDL::SDLFactory::~SDLFactory() {
-    std::cerr << "Game cleaned successfully" << std::endl;
+    std::cerr << "Factory destructor" << std::endl;
 }
 
 /**

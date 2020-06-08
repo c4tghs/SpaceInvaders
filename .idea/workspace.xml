@@ -12,85 +12,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9b927c9-45e5-452c-a253-826dba99af31" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Configuration.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Configuration.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Constants.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/CPP-Files/TextManager.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/Headers/TextManager.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL/CPP-Files/SDLBullet.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL/Headers/SDLBullet.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/CPP-Files/SDLController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/CPP-Files/SDLController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/Headers/Controller.h" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/Headers/Controller.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/Headers/SDLController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/Headers/SDLController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntityControllers/CPP-Files/EnemyShipController.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntityControllers/CPP-Files/PlayerShipController.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntityControllers/Headers/EnemyShipController.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntityControllers/Headers/PlayerShipController.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Enums.h" beforeDir="false" afterPath="$PROJECT_DIR$/Constants.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Constants.h" beforeDir="false" afterPath="$PROJECT_DIR$/Constants.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Factories/Factory.h" beforeDir="false" afterPath="$PROJECT_DIR$/Factories/Factory.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Factories/SDLFactory.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Factories/SDLFactory.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Factories/SDLFactory.h" beforeDir="false" afterPath="$PROJECT_DIR$/Factories/SDLFactory.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/CPP-Files/Bullet.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Models/CPP-Files/Bullet.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/CPP-Files/EnemyShip.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Models/CPP-Files/EnemyShip.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/CPP-Files/Entity.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Models/CPP-Files/Entity.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/CPP-Files/PlayerLife.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/CPP-Files/PlayerShip.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Models/CPP-Files/PlayerShip.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/CPP-Files/RandomNumber.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Models/CPP-Files/RandomNumber.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/CPP-Files/Score.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/CPP-Files/TextureManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Models/CPP-Files/TextureManager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Headers/Bullet.h" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Headers/Bullet.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Headers/EnemyShip.h" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Headers/EnemyShip.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Headers/Entity.h" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Headers/Entity.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Headers/PlayerLife.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Headers/PlayerShip.h" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Headers/PlayerShip.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/CPP-Files/TextManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL/CPP-Files/TextManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/CPP-Files/TextureManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL/CPP-Files/TextureManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/CPP-Files/Window.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Models/CPP-Files/Window.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/Headers/RandomNumber.h" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Headers/RandomNumber.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Headers/Score.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Headers/TextureManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Headers/TextureManager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Headers/TextManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL/Headers/TextManager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Headers/TextureManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL/Headers/TextureManager.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/Headers/Window.h" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Headers/Window.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL/CPP-Files/SDLEnemyShip.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL/CPP-Files/SDLEnemyShip.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL/CPP-Files/SDLPlayerShip.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL/CPP-Files/SDLPlayerShip.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL/CPP-Files/SDLTimer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL/CPP-Files/SDLTimer.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SDL/CPP-Files/SDLWindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL/CPP-Files/SDLWindow.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL/Headers/SDLEnemyShip.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL/Headers/SDLEnemyShip.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL/Headers/SDLPlayerShip.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL/Headers/SDLPlayerShip.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SDL/Headers/SDLWindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL/Headers/SDLWindow.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TranslateRelative.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TranslateRelative.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Fonts/Lato-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Fonts/alexandria.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Fonts/impact.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bullet.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bullet1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/laser.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/playerBullet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/Controller.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/Controller.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/SDLController.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/SDLController.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Constants.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Constants.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/EntityControllers/CPP-Files/EnemyShipController.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/EntityControllers/CPP-Files/PlayerShipController.cpp.obj" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Factories/SDLFactory.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Factories/SDLFactory.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Game.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Game.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Bonus.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Bonus.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Bullet.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Bullet.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/EnemyShip.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/EnemyShip.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Entity.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Entity.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/PlayerLife.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/PlayerShip.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/PlayerShip.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/RandomNumber.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/RandomNumber.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Score.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextureManager.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextureManager.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextManager.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextureManager.cpp.obj" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Window.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Window.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLPlayerShip.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLPlayerShip.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLTimer.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLTimer.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLWindow.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLWindow.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/TranslateRelative.cpp.obj" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/depend.internal" afterDir="false" />
@@ -98,14 +50,11 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/objects.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/objects1.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/SpaceInvaders.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/SpaceInvaders.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/SpaceInvaders.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/SpaceInvaders.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/SpaceInvaders.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configuration.json" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlohmann/json.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/nlohmann/json.hpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,16 +97,16 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\assets\Sounds" />
-      <recent name="D:\Users\cliff\Documents\C++\Project\assets\Fonts" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\SDL\Headers" />
       <recent name="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\SDL\CPP-Files" />
       <recent name="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\Models\Headers" />
       <recent name="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\Models\CPP-Files" />
       <recent name="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\EntityControllers\CPP-Files" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\cliff\Documents\Github\C++ game\SpaceInvaders\assets\Sounds" />
+      <recent name="D:\Users\cliff\Documents\C++\Project\assets\Fonts" />
     </key>
   </component>
   <component name="RunManager">
@@ -277,7 +226,17 @@
       <workItem from="1590519554316" duration="8010000" />
       <workItem from="1590569298884" duration="4882000" />
       <workItem from="1590587411766" duration="759000" />
-      <workItem from="1590598360949" duration="5354000" />
+      <workItem from="1590598360949" duration="5536000" />
+      <workItem from="1590613211581" duration="276000" />
+      <workItem from="1590613593393" duration="64000" />
+      <workItem from="1590650423168" duration="76000" />
+      <workItem from="1590686643896" duration="3700000" />
+      <workItem from="1590697539762" duration="40000" />
+      <workItem from="1590994916182" duration="719000" />
+      <workItem from="1591292087935" duration="1374000" />
+      <workItem from="1591296142324" duration="28000" />
+      <workItem from="1591364015377" duration="12222000" />
+      <workItem from="1591637265628" duration="12101000" />
     </task>
     <servers />
   </component>
@@ -292,7 +251,6 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="179" key="#New_File_Extensions/0.0.1920.1040/1920.27.1680.1010@0.0.1920.1040" timestamp="1583690556698" />
-    <state x="552" y="179" key="#New_File_Extensions/0.0.1920.1040/4.-1080.1920.1040@0.0.1920.1040" timestamp="1582558305629" />
     <state x="666" y="317" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586806203476">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -332,72 +290,68 @@
     <state x="741" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.35.1680.1010@0.0.1920.1040" timestamp="1589296939537" />
     <state x="2568" y="302" key="FileChooserDialogImpl/0.0.1920.1040/1920.35.1680.1010@1920.35.1680.1010" timestamp="1589996896077" />
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1583927641841" />
-    <state width="1877" height="139" key="GridCell.Tab.0.bottom" timestamp="1590613002641">
+    <state width="1877" height="187" key="GridCell.Tab.0.bottom" timestamp="1591650559788">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="157" key="GridCell.Tab.0.bottom/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1583760396912" />
     <state width="1877" height="107" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.27.1680.1010@0.0.1920.1040" timestamp="1584994372213" />
     <state width="1637" height="107" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.27.1680.1010@1920.27.1680.1010" timestamp="1584978020349" />
-    <state width="1877" height="139" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.35.1680.1010@0.0.1920.1040" timestamp="1590613002641" />
-    <state width="1877" height="370" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.35.1680.1010@1920.35.1680.1010" timestamp="1590353969724" />
-    <state width="938" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/4.-1080.1920.1040@0.0.1920.1040" timestamp="1582562878906" />
+    <state width="1877" height="187" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.35.1680.1010@0.0.1920.1040" timestamp="1591650559788" />
+    <state width="1637" height="229" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.35.1680.1010@1920.35.1680.1010" timestamp="1591641063140" />
     <state width="1877" height="18" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589206420006" />
-    <state width="1877" height="139" key="GridCell.Tab.0.center" timestamp="1590613002641">
+    <state width="1877" height="187" key="GridCell.Tab.0.center" timestamp="1591650559788">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="157" key="GridCell.Tab.0.center/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1583760396911" />
     <state width="1877" height="107" key="GridCell.Tab.0.center/0.0.1920.1040/1920.27.1680.1010@0.0.1920.1040" timestamp="1584994372212" />
     <state width="1637" height="107" key="GridCell.Tab.0.center/0.0.1920.1040/1920.27.1680.1010@1920.27.1680.1010" timestamp="1584978020349" />
-    <state width="1877" height="139" key="GridCell.Tab.0.center/0.0.1920.1040/1920.35.1680.1010@0.0.1920.1040" timestamp="1590613002641" />
-    <state width="1877" height="370" key="GridCell.Tab.0.center/0.0.1920.1040/1920.35.1680.1010@1920.35.1680.1010" timestamp="1590353969724" />
-    <state width="938" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/4.-1080.1920.1040@0.0.1920.1040" timestamp="1582562878906" />
+    <state width="1877" height="187" key="GridCell.Tab.0.center/0.0.1920.1040/1920.35.1680.1010@0.0.1920.1040" timestamp="1591650559788" />
+    <state width="1637" height="229" key="GridCell.Tab.0.center/0.0.1920.1040/1920.35.1680.1010@1920.35.1680.1010" timestamp="1591641063140" />
     <state width="1877" height="18" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589206420005" />
-    <state width="1877" height="139" key="GridCell.Tab.0.left" timestamp="1590613002640">
+    <state width="1877" height="187" key="GridCell.Tab.0.left" timestamp="1591650559788">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="157" key="GridCell.Tab.0.left/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1583760396911" />
     <state width="1877" height="107" key="GridCell.Tab.0.left/0.0.1920.1040/1920.27.1680.1010@0.0.1920.1040" timestamp="1584994372212" />
     <state width="1637" height="107" key="GridCell.Tab.0.left/0.0.1920.1040/1920.27.1680.1010@1920.27.1680.1010" timestamp="1584978020348" />
-    <state width="1877" height="139" key="GridCell.Tab.0.left/0.0.1920.1040/1920.35.1680.1010@0.0.1920.1040" timestamp="1590613002640" />
-    <state width="1877" height="370" key="GridCell.Tab.0.left/0.0.1920.1040/1920.35.1680.1010@1920.35.1680.1010" timestamp="1590353969724" />
-    <state width="938" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/4.-1080.1920.1040@0.0.1920.1040" timestamp="1582562878906" />
+    <state width="1877" height="187" key="GridCell.Tab.0.left/0.0.1920.1040/1920.35.1680.1010@0.0.1920.1040" timestamp="1591650559788" />
+    <state width="1637" height="229" key="GridCell.Tab.0.left/0.0.1920.1040/1920.35.1680.1010@1920.35.1680.1010" timestamp="1591641063140" />
     <state width="1877" height="18" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589206420005" />
-    <state width="1877" height="139" key="GridCell.Tab.0.right" timestamp="1590613002641">
+    <state width="1877" height="187" key="GridCell.Tab.0.right" timestamp="1591650559788">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="157" key="GridCell.Tab.0.right/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1583760396911" />
     <state width="1877" height="107" key="GridCell.Tab.0.right/0.0.1920.1040/1920.27.1680.1010@0.0.1920.1040" timestamp="1584994372212" />
     <state width="1637" height="107" key="GridCell.Tab.0.right/0.0.1920.1040/1920.27.1680.1010@1920.27.1680.1010" timestamp="1584978020349" />
-    <state width="1877" height="139" key="GridCell.Tab.0.right/0.0.1920.1040/1920.35.1680.1010@0.0.1920.1040" timestamp="1590613002641" />
-    <state width="1877" height="370" key="GridCell.Tab.0.right/0.0.1920.1040/1920.35.1680.1010@1920.35.1680.1010" timestamp="1590353969724" />
-    <state width="938" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/4.-1080.1920.1040@0.0.1920.1040" timestamp="1582562878906" />
+    <state width="1877" height="187" key="GridCell.Tab.0.right/0.0.1920.1040/1920.35.1680.1010@0.0.1920.1040" timestamp="1591650559788" />
+    <state width="1637" height="229" key="GridCell.Tab.0.right/0.0.1920.1040/1920.35.1680.1010@1920.35.1680.1010" timestamp="1591641063140" />
     <state width="1877" height="18" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589206420006" />
-    <state width="1877" height="235" key="GridCell.Tab.1.bottom" timestamp="1590612999750">
+    <state width="1877" height="444" key="GridCell.Tab.1.bottom" timestamp="1591650266797">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="17" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.27.1680.1010@0.0.1920.1040" timestamp="1584382398875" />
-    <state width="1877" height="235" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.35.1680.1010@0.0.1920.1040" timestamp="1590612999750" />
+    <state width="1877" height="444" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.35.1680.1010@0.0.1920.1040" timestamp="1591650266797" />
     <state width="1877" height="370" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.35.1680.1010@1920.35.1680.1010" timestamp="1590353969724" />
     <state width="1637" height="152" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587746097054" />
-    <state width="1877" height="235" key="GridCell.Tab.1.center" timestamp="1590612999750">
+    <state width="1877" height="444" key="GridCell.Tab.1.center" timestamp="1591650266797">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="17" key="GridCell.Tab.1.center/0.0.1920.1040/1920.27.1680.1010@0.0.1920.1040" timestamp="1584382398875" />
-    <state width="1877" height="235" key="GridCell.Tab.1.center/0.0.1920.1040/1920.35.1680.1010@0.0.1920.1040" timestamp="1590612999750" />
+    <state width="1877" height="444" key="GridCell.Tab.1.center/0.0.1920.1040/1920.35.1680.1010@0.0.1920.1040" timestamp="1591650266797" />
     <state width="1877" height="370" key="GridCell.Tab.1.center/0.0.1920.1040/1920.35.1680.1010@1920.35.1680.1010" timestamp="1590353969724" />
     <state width="1637" height="152" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587746097054" />
-    <state width="1877" height="235" key="GridCell.Tab.1.left" timestamp="1590612999750">
+    <state width="1877" height="444" key="GridCell.Tab.1.left" timestamp="1591650266797">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="17" key="GridCell.Tab.1.left/0.0.1920.1040/1920.27.1680.1010@0.0.1920.1040" timestamp="1584382398875" />
-    <state width="1877" height="235" key="GridCell.Tab.1.left/0.0.1920.1040/1920.35.1680.1010@0.0.1920.1040" timestamp="1590612999750" />
+    <state width="1877" height="444" key="GridCell.Tab.1.left/0.0.1920.1040/1920.35.1680.1010@0.0.1920.1040" timestamp="1591650266797" />
     <state width="1877" height="370" key="GridCell.Tab.1.left/0.0.1920.1040/1920.35.1680.1010@1920.35.1680.1010" timestamp="1590353969724" />
     <state width="1637" height="152" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587746097054" />
-    <state width="1877" height="235" key="GridCell.Tab.1.right" timestamp="1590612999750">
+    <state width="1877" height="444" key="GridCell.Tab.1.right" timestamp="1591650266797">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="17" key="GridCell.Tab.1.right/0.0.1920.1040/1920.27.1680.1010@0.0.1920.1040" timestamp="1584382398875" />
-    <state width="1877" height="235" key="GridCell.Tab.1.right/0.0.1920.1040/1920.35.1680.1010@0.0.1920.1040" timestamp="1590612999750" />
+    <state width="1877" height="444" key="GridCell.Tab.1.right/0.0.1920.1040/1920.35.1680.1010@0.0.1920.1040" timestamp="1591650266797" />
     <state width="1877" height="370" key="GridCell.Tab.1.right/0.0.1920.1040/1920.35.1680.1010@1920.35.1680.1010" timestamp="1590353969724" />
     <state width="1637" height="152" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587746097054" />
     <state width="640" height="204" key="ImportCMakeProjectWizard.bottomPanel" timestamp="1589296960117">

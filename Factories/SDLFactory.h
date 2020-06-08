@@ -35,7 +35,6 @@ namespace SDL
         Abstract::EnemyShip* createEnemyShip(double xPos, double yPos, double width, double height, Abstract::Window *window,ENEMY_TYPE type) override;
         Abstract::Bullet* createBullet(double xPos, double yPos, double width, double height, Abstract::Window *window, BULLET_TYPE type) override;
         /*Abstract::Bonus *createBonus(int xPos, int yPos, int width, int height) override;*/
-        //void render() override;
     };
 }
 

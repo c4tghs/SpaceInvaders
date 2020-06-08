@@ -11,12 +11,13 @@ namespace Abstract{
     class RandomNumber {
     public:
         static RandomNumber& getInstance();
-        static double getRandomDouble(int min, int max);
-        static int getRandomInt(int min, int max);
+        double getRandomDouble(int min, int max);
+        int getRandomInt(int min, int max);
     private:
         static RandomNumber* m_instance;
         RandomNumber();
         static std::random_device m_rd;
+        std::mt19937 m_mt;
     };
 }
 

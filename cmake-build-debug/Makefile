@@ -446,60 +446,6 @@ Models/CPP-Files/RandomNumber.cpp.s:
 	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/RandomNumber.cpp.s
 .PHONY : Models/CPP-Files/RandomNumber.cpp.s
 
-Models/CPP-Files/TextManager.obj: Models/CPP-Files/TextManager.cpp.obj
-
-.PHONY : Models/CPP-Files/TextManager.obj
-
-# target to build an object file
-Models/CPP-Files/TextManager.cpp.obj:
-	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextManager.cpp.obj
-.PHONY : Models/CPP-Files/TextManager.cpp.obj
-
-Models/CPP-Files/TextManager.i: Models/CPP-Files/TextManager.cpp.i
-
-.PHONY : Models/CPP-Files/TextManager.i
-
-# target to preprocess a source file
-Models/CPP-Files/TextManager.cpp.i:
-	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextManager.cpp.i
-.PHONY : Models/CPP-Files/TextManager.cpp.i
-
-Models/CPP-Files/TextManager.s: Models/CPP-Files/TextManager.cpp.s
-
-.PHONY : Models/CPP-Files/TextManager.s
-
-# target to generate assembly for a file
-Models/CPP-Files/TextManager.cpp.s:
-	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextManager.cpp.s
-.PHONY : Models/CPP-Files/TextManager.cpp.s
-
-Models/CPP-Files/TextureManager.obj: Models/CPP-Files/TextureManager.cpp.obj
-
-.PHONY : Models/CPP-Files/TextureManager.obj
-
-# target to build an object file
-Models/CPP-Files/TextureManager.cpp.obj:
-	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextureManager.cpp.obj
-.PHONY : Models/CPP-Files/TextureManager.cpp.obj
-
-Models/CPP-Files/TextureManager.i: Models/CPP-Files/TextureManager.cpp.i
-
-.PHONY : Models/CPP-Files/TextureManager.i
-
-# target to preprocess a source file
-Models/CPP-Files/TextureManager.cpp.i:
-	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextureManager.cpp.i
-.PHONY : Models/CPP-Files/TextureManager.cpp.i
-
-Models/CPP-Files/TextureManager.s: Models/CPP-Files/TextureManager.cpp.s
-
-.PHONY : Models/CPP-Files/TextureManager.s
-
-# target to generate assembly for a file
-Models/CPP-Files/TextureManager.cpp.s:
-	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/TextureManager.cpp.s
-.PHONY : Models/CPP-Files/TextureManager.cpp.s
-
 Models/CPP-Files/Window.obj: Models/CPP-Files/Window.cpp.obj
 
 .PHONY : Models/CPP-Files/Window.obj
@@ -662,6 +608,60 @@ SDL/CPP-Files/SDLWindow.cpp.s:
 	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLWindow.cpp.s
 .PHONY : SDL/CPP-Files/SDLWindow.cpp.s
 
+SDL/CPP-Files/TextManager.obj: SDL/CPP-Files/TextManager.cpp.obj
+
+.PHONY : SDL/CPP-Files/TextManager.obj
+
+# target to build an object file
+SDL/CPP-Files/TextManager.cpp.obj:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/TextManager.cpp.obj
+.PHONY : SDL/CPP-Files/TextManager.cpp.obj
+
+SDL/CPP-Files/TextManager.i: SDL/CPP-Files/TextManager.cpp.i
+
+.PHONY : SDL/CPP-Files/TextManager.i
+
+# target to preprocess a source file
+SDL/CPP-Files/TextManager.cpp.i:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/TextManager.cpp.i
+.PHONY : SDL/CPP-Files/TextManager.cpp.i
+
+SDL/CPP-Files/TextManager.s: SDL/CPP-Files/TextManager.cpp.s
+
+.PHONY : SDL/CPP-Files/TextManager.s
+
+# target to generate assembly for a file
+SDL/CPP-Files/TextManager.cpp.s:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/TextManager.cpp.s
+.PHONY : SDL/CPP-Files/TextManager.cpp.s
+
+SDL/CPP-Files/TextureManager.obj: SDL/CPP-Files/TextureManager.cpp.obj
+
+.PHONY : SDL/CPP-Files/TextureManager.obj
+
+# target to build an object file
+SDL/CPP-Files/TextureManager.cpp.obj:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/TextureManager.cpp.obj
+.PHONY : SDL/CPP-Files/TextureManager.cpp.obj
+
+SDL/CPP-Files/TextureManager.i: SDL/CPP-Files/TextureManager.cpp.i
+
+.PHONY : SDL/CPP-Files/TextureManager.i
+
+# target to preprocess a source file
+SDL/CPP-Files/TextureManager.cpp.i:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/TextureManager.cpp.i
+.PHONY : SDL/CPP-Files/TextureManager.cpp.i
+
+SDL/CPP-Files/TextureManager.s: SDL/CPP-Files/TextureManager.cpp.s
+
+.PHONY : SDL/CPP-Files/TextureManager.s
+
+# target to generate assembly for a file
+SDL/CPP-Files/TextureManager.cpp.s:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/TextureManager.cpp.s
+.PHONY : SDL/CPP-Files/TextureManager.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -734,12 +734,6 @@ help:
 	@echo ... Models/CPP-Files/RandomNumber.obj
 	@echo ... Models/CPP-Files/RandomNumber.i
 	@echo ... Models/CPP-Files/RandomNumber.s
-	@echo ... Models/CPP-Files/TextManager.obj
-	@echo ... Models/CPP-Files/TextManager.i
-	@echo ... Models/CPP-Files/TextManager.s
-	@echo ... Models/CPP-Files/TextureManager.obj
-	@echo ... Models/CPP-Files/TextureManager.i
-	@echo ... Models/CPP-Files/TextureManager.s
 	@echo ... Models/CPP-Files/Window.obj
 	@echo ... Models/CPP-Files/Window.i
 	@echo ... Models/CPP-Files/Window.s
@@ -758,6 +752,12 @@ help:
 	@echo ... SDL/CPP-Files/SDLWindow.obj
 	@echo ... SDL/CPP-Files/SDLWindow.i
 	@echo ... SDL/CPP-Files/SDLWindow.s
+	@echo ... SDL/CPP-Files/TextManager.obj
+	@echo ... SDL/CPP-Files/TextManager.i
+	@echo ... SDL/CPP-Files/TextManager.s
+	@echo ... SDL/CPP-Files/TextureManager.obj
+	@echo ... SDL/CPP-Files/TextureManager.i
+	@echo ... SDL/CPP-Files/TextureManager.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

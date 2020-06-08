@@ -1,6 +1,7 @@
 #include "../Headers/RandomNumber.h"
 
-//Initialisation of static member
+
+//seed for random number generator
 std::random_device Abstract::RandomNumber::m_rd;
 
 /**
@@ -24,10 +25,10 @@ Abstract::RandomNumber::RandomNumber() {}
  * @return - double representing the generated number
  */
 double Abstract::RandomNumber::getRandomDouble(int min, int max) {
-    std::mt19937 mt(m_rd());
+    m_mt = std::mt19937(m_rd());
     //[min,max[
     std::uniform_real_distribution<double> m_dist(min, max);
-    return m_dist(mt);
+    return m_dist(m_mt);
 }
 
 /**
@@ -37,12 +38,11 @@ double Abstract::RandomNumber::getRandomDouble(int min, int max) {
  * @return - integer representing the generated number
  */
 int Abstract::RandomNumber::getRandomInt(int min, int max) {
-    std::mt19937 mt(m_rd());
-
+    m_mt = std::mt19937(m_rd());
     //HigherBound -1 because otherwise it is included
     //[min,max]
     std::uniform_int_distribution<int> m_dist(min, max - 1);
-    return m_dist(mt);
+    return m_dist(m_mt);
 }
 
 

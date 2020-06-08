@@ -40,7 +40,9 @@ class Constants
         static const int DEFAULT_WINDOW_HEIGHT = 720;
         static const int PLAYER_SIZE = 50;
         static const int ENEMY_SIZE = 50;
-        static const int BULLET_SIZE = 32;
+        static const int BULLET_SIZE = 50;
+        static const int SPRITE_SIZE = 32;
+        constexpr static const double SPRITE_SCALE = PLAYER_SIZE/SPRITE_SIZE;
         static int FRAME_RATE;
         static int PLAYER_LIVES;
         static double PLAYER_SPEED;

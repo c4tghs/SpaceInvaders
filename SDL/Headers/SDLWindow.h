@@ -3,8 +3,8 @@
 #define SPACEINVADERS_SDLWINDOW_H
 #include "../../Constants.h"
 #include "../../Models/Headers/Window.h"
-#include "../../Models/Headers/TextureManager.h"
-#include "../../Models/Headers/TextManager.h"
+#include "TextureManager.h"
+#include "TextManager.h"
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_ttf.h>
@@ -26,6 +26,7 @@ namespace SDL
         void exit(const char* message);
         void showScore(int score);
         void showLives(int lives);
+        void showLevel(int level);
 
     private:
         const char* m_title;
@@ -37,6 +38,7 @@ namespace SDL
         TextureManager* m_textureManager;
         TextManager* m_playerScore;
         TextManager* m_playerLives;
+        TextManager* m_level;
         SDL_Texture* m_background = nullptr;
         std::map<SPRITE,SDL_Rect> m_sprites;
         std::map<SOUND_TYPE,Mix_Chunk*> sounds;

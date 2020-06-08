@@ -15,12 +15,14 @@ SDL::SDLWindow::SDLWindow(const char *title, int screenWidth, int screenHeight) 
  * Destructor
  */
 SDL::SDLWindow::~SDLWindow() {
+
     //Destory fonts
     TTF_CloseFont(m_font);
 
     delete m_textureManager;
     delete m_playerScore;
     delete m_playerLives;
+    delete m_level;
 
     //Destroy Renderer
     SDL_DestroyRenderer(m_renderer);
@@ -55,12 +57,6 @@ bool SDL::SDLWindow::initialise()
     if(SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) !=0)
     {
         std::cerr << "Failed to initialise SDL: "<< SDL_GetError() << "\n";
-        return false;
-    }
-    //Check if TTF was initialised successfully
-    else if (TTF_Init() < 0)
-    {
-        std::cerr << "Unable to initialise TTF library: "<< TTF_GetError() << "\n";
         return false;
     }
     else
@@ -133,6 +129,9 @@ bool SDL::SDLWindow::loadMedia() {
 
     //Text manager for player lives
     m_playerLives = new TextManager(m_renderer);
+
+    //Text manager for player level
+    m_level = new TextManager(m_renderer);
 
      //Background
     SDL_Surface* backgroundSurface = IMG_Load("../assets/background.png");
@@ -251,9 +250,7 @@ bool SDL::SDLWindow::loadMedia() {
  * @param sprite  - the sprite type to render
  */
 void SDL::SDLWindow::drawRect(SPRITE sprite, double xPos, double yPos, double width, double height) {
-
-   // m_textureManager->renderTexture(xPos,yPos,m_sprites[sprite].w*Constants::SCALE_X,m_sprites[sprite].h*Constants::SCALE_Y,&m_sprites[sprite]);
-    m_textureManager->renderTexture(xPos,yPos,width*Constants::SCALE_X,height*Constants::SCALE_Y,&m_sprites[sprite]);
+    m_textureManager->renderTexture(xPos,yPos,width,height,&m_sprites[sprite]);
 }
 
 void SDL::SDLWindow::refresh() {
@@ -289,7 +286,7 @@ void SDL::SDLWindow::showScore(int score) {
     //Loaded texture
     if(!(m_playerScore->loadTextTexture(m_font,"SCORE "+std::to_string(score),color)))
     {
-        std::cerr << "Failed to load text texture" << "\n";
+        std::cerr << "Failed to load score texture" << "\n";
     }
     m_playerScore->renderText(static_cast<int>(10*Constants::SCALE_X), 0);
 }
@@ -304,9 +301,23 @@ void SDL::SDLWindow::showLives(int lives) {
     //Loaded texture
     if(!(m_playerLives->loadTextTexture(m_font,"Lives "+std::to_string(lives),color)))
     {
-        std::cerr << "Failed to load text texture" << "\n";
+        std::cerr << "Failed to load lives texture" << "\n";
     }
-    m_playerLives->renderText(static_cast<int>(Constants::WINDOW_WIDTH-(m_playerLives->getSurfaceWidth()+10*Constants::SCALE_X)), 0);
+    //m_playerLives->renderText(static_cast<int>(Constants::WINDOW_WIDTH-(m_playerLives->getSurfaceWidth()+10*Constants::SCALE_X)), 0);
+    m_playerLives->renderText(static_cast<int>(Constants::WINDOW_WIDTH-(m_playerLives->getSurfaceWidth()*Constants::SCALE_X)), 0);
+
+}
+/**
+ * Method used to show current game level
+ * @param level - integer representing current game level
+ */
+void SDL::SDLWindow::showLevel(int level) {
+    SDL_Color color= {173,255,47};
+    if(!m_level->loadTextTexture(m_font,"Level "+std::to_string(level),color))
+    {
+        std::cerr << "Failed to load level texture" << "\n";
+    }
+    m_level->renderText(Constants::WINDOW_WIDTH/2, 0);
 }
 
 

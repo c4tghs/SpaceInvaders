@@ -1,8 +1,8 @@
 {
 	"settings":
 	{
-		"WINDOW_WIDTH":760,
-		"WINDOW_HEIGHT":640,
+		"WINDOW_WIDTH":640,
+		"WINDOW_HEIGHT":460,
 		"LIVES":5,
 		"FRAME_RATE":60
 	},
@@ -28,8 +28,8 @@
 		{
 			"ENEMYSPEED":250,
 			"BULLETSPEED":600,
-			"PLAYERSPEED":200,
-			"BONUSSPEED":6,
+			"PLAYERSPEED":250,
+			"BONUSSPEED":500,
 			"ENEMIES":50
 		}
 	}

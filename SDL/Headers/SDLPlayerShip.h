@@ -3,7 +3,7 @@
 
 #include <SDL2/SDL_render.h>
 #include "../../Models/Headers/PlayerShip.h"
-#include "../../Models/Headers/TextureManager.h"
+#include "TextureManager.h"
 #include "../../Models/Headers/Window.h"
 
 namespace SDL

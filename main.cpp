@@ -21,14 +21,14 @@ static void PrintMemoryUsage()
 void* operator new(size_t size)
 {
     s_AllocationMetrics.TotalAllocated += size;
-    //PrintMemoryUsage();
+    PrintMemoryUsage();
     return malloc(size);
 }
 
 void operator delete(void* memory,size_t size)
 {
     s_AllocationMetrics.TotalFreed += size;
-    //PrintMemoryUsage();
+    PrintMemoryUsage();
     free(memory);
 }
 
