@@ -26,6 +26,10 @@ void SDL::SDLBullet::render() {
     m_window->drawRect(getSpriteType(), m_xPos, m_yPos, m_width, m_height);
 }
 
+/**
+ * Method that returns the bullet's sprite type
+ * @return sprite type
+ */
 Sprite SDL::SDLBullet::getSpriteType() {
     if(m_bulletType == player)
     {

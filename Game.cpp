@@ -62,6 +62,7 @@ Game::Game(Abstract::Factory* AF) {
     //Create window
     m_window = m_factory->createWindow("Space invaders",Constants::WINDOW_WIDTH,Constants::WINDOW_HEIGHT);
 
+    //Initialise SDL etc.
     if(m_window->initialise())
     {
         if(m_window->loadMedia())
@@ -88,6 +89,7 @@ void Game::run() {
 
     createStartObjects();
 
+    //Game loop
     while (m_controller->isRunning())
     {
 
@@ -168,10 +170,10 @@ void Game::createStartObjects() {
     m_nextEnemyBullet = m_timer->getTime()+Abstract::RandomNumber::getInstance().getRandomDouble(0,Constants::LEVELS[m_currentGameLevel]["ENEMY_SHOOT_TIME"]);
 
     //Next points bonus time
-    m_nextPointBonus = m_timer->getTime() + Abstract::RandomNumber::getInstance().getRandomDouble(0, Constants::BONUS_TIME);
+    m_nextPointBonus = m_timer->getTime() + Abstract::RandomNumber::getInstance().getRandomDouble(5, Constants::BONUS_TIME);
 
     //Next lives bonus time
-    m_nextLivesBonus = m_timer->getTime() + Abstract::RandomNumber::getInstance().getRandomDouble(0, Constants::BONUS_TIME);
+    m_nextLivesBonus = m_timer->getTime() + Abstract::RandomNumber::getInstance().getRandomDouble(10, Constants::BONUS_TIME);
 }
 
 /**
@@ -204,6 +206,7 @@ void Game::createEnemies() {
 
 /**
  * Method to handle enemies ie, shooting, moving, drawing
+ * It is also used to create bonuses
  */
 void Game::handleEnemyShips() {
     //Move enemyships
@@ -309,6 +312,7 @@ void Game::handlePlayerShip() {
     {
         this->playerShoot();
     }
+
     //Render player ship
     m_playerShip->render();
 
@@ -331,6 +335,7 @@ void Game::playerShoot() {
  */
 void Game::moveBullets()
 {
+    //Move player's bullet if it exists
     if(m_playerBullet != nullptr)
     {
         //If bullet is out of view
@@ -349,6 +354,7 @@ void Game::moveBullets()
     }
 
     Abstract::Bullet* bullet;
+    //Loop through all enemy bullets and move them
     for(int i =0; i < m_enemyBullets.size(); i++)
     {
         bullet = m_enemyBullets.at(i);
@@ -373,6 +379,7 @@ void Game::moveBullets()
 void Game::handleCollision()
 {
     Abstract::EnemyShip* enemy;
+    //Player bullet collision with enemies
     if(m_playerBullet != nullptr)
     {
         for(int i = 0; i< m_enemyShips.size();i++)
@@ -420,9 +427,11 @@ void Game::handleCollision()
         }
     }
     Abstract::Bullet* bullet;
+    //Enemy bullets collision with player ship and player bullet
     for(int i=0; i < m_enemyBullets.size(); i++)
     {
         bullet = m_enemyBullets.at(i);
+        //Collision between enemy bullet and player ship
         if(isCollision(m_playerShip, bullet))
         {
             m_window->playSound(HIT);
@@ -451,7 +460,9 @@ void Game::handleCollision()
     {
         if(isCollision(m_bonus,m_playerShip))
         {
-
+            m_playerShip->setLives(m_playerShip->getLives()+1);
+            delete m_bonus;
+            m_bonus = nullptr;
         }
     }
 }
@@ -460,7 +471,7 @@ void Game::handleCollision()
  * Method used to check for collision between two entities
  * @param one - entity one
  * @param two - entity two
- * @return - boolean that says if there is collision
+ * @return - boolean indicating if there is collision
  */
 bool Game::isCollision(Abstract::Entity *one, Abstract::Entity *two) {
 

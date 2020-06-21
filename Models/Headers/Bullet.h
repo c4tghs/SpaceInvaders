@@ -1,6 +1,3 @@
-/**
- * Bullet class
- */
 #ifndef PROJECT_BULLET_H
 #define PROJECT_BULLET_H
 

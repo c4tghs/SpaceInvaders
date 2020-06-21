@@ -1,6 +1,5 @@
 #include <SDL2/SDL_image.h>
 #include <iostream>
-#include <SDL2/SDL_render.h>
 #include "../Headers/TextureManager.h"
 
 /**
@@ -23,8 +22,9 @@ SDL::TextureManager::~TextureManager() {
  * @return boolean value that says if texture was loaded or not
  */
 bool SDL::TextureManager::loadTexture(const char *filename) {
+    //Create surface from loaded image
     SDL_Surface* spriteSurface = IMG_Load(filename);
-    //SDL_Texture* texture;
+
     if(spriteSurface == nullptr)
     {
         std::cerr << "Unable to create surface: " << IMG_GetError() << "\n";
@@ -32,6 +32,7 @@ bool SDL::TextureManager::loadTexture(const char *filename) {
     }
     else
     {
+        //Create texture
         m_texture = SDL_CreateTextureFromSurface(m_renderer,spriteSurface);
         if(m_texture == nullptr)
         {
@@ -46,12 +47,12 @@ bool SDL::TextureManager::loadTexture(const char *filename) {
 }
 
 /**
- *
- * @param xPos
- * @param yPos
- * @param width
- * @param height
- * @param sourceRect
+ * Method used to render a texture
+ * @param xPos - x position of texture
+ * @param yPos - y position of texture
+ * @param width - width of texture
+ * @param height - height of texture
+ * @param sourceRect - source of rect
  */
 void SDL::TextureManager::renderTexture(double xPos, double yPos, double width, double height, SDL_Rect *sourceRect) {
     SDL_Rect destRect = {static_cast<int>(xPos),static_cast<int>(yPos),static_cast<int>(width),static_cast<int>(height)};

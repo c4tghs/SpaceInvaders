@@ -3,8 +3,8 @@
 
 /**
  * Constructor for PlayerShip
- * @param xPos - x position of ship
- * @param yPos - y position of ship
+ * @param xPos - initial x position of ship
+ * @param yPos - initial y position of ship
  * @param width - width of ship
  * @param height - height of ship
  */

@@ -139,9 +139,6 @@
 		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/CPP-Files/RandomNumber.cpp">
 			<Option target="SpaceInvaders"/>
 		</Unit>
-		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/CPP-Files/Window.cpp">
-			<Option target="SpaceInvaders"/>
-		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Bonus.h">
 			<Option target="SpaceInvaders"/>
 		</Unit>

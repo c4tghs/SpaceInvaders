@@ -39,7 +39,7 @@ namespace SDL
         TTF_Font* m_fontEndScore= nullptr;
         TextureManager* m_textureManager;
         TextureManager* m_bonusLivesTexture;
-        TextureManager* m_bonusSpeedTexture;
+        //TextureManager* m_bonusSpeedTexture;
         TextManager* m_playerScore;
         TextManager* m_playerLives;
         TextManager* m_level;

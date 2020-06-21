@@ -1,6 +1,3 @@
-//
-// Created by cliff on 31/03/2020.
-//
 
 #ifndef PROJECT_TIMER_H
 #define PROJECT_TIMER_H

@@ -15,8 +15,6 @@ namespace SDL
 
     private:
         Abstract::Window* m_window;
-        //ENEMY_TYPE m_enemyType;
-
     };
 }
 

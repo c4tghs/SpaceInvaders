@@ -2,18 +2,18 @@
 
 /**
  * Constructor
- * @param window
- * @param xPos
- * @param yPos
- * @param width
- * @param height
+ * @param window - window
+ * @param xPos - initial x position of enemy
+ * @param yPos - initial y position of enemy
+ * @param width - width of enemy
+ * @param height - height of enemy
  */
 SDL::SDLEnemyShip::SDLEnemyShip(Abstract::Window *window, double xPos, double yPos, double width, double height,
                                 Enemy_type type) : Abstract::EnemyShip(xPos, yPos, width, height)
 
 {
- m_window = window;
- m_enemyType = type;
+    m_window = window;
+    m_enemyType = type;
 }
 /**
  * Destructor

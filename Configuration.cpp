@@ -5,7 +5,6 @@
 
 /**
  * Method used to load configuration
- * @param path - path to configuration
  */
 void Configuration::load() {
     json m_json;

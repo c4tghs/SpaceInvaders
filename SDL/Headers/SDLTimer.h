@@ -1,7 +1,3 @@
-//
-// Created by cliff on 30/03/2020.
-//
-
 #ifndef PROJECT_SDLTIMER_H
 #define PROJECT_SDLTIMER_H
 
@@ -23,7 +19,6 @@ namespace SDL
     private:
         double m_deltaTime=0.0f;
         unsigned int m_startTicks =0;
-        unsigned int m_elapsedTicks=0;
     };
 
 }

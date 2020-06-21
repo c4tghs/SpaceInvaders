@@ -1,12 +1,6 @@
-/**
- * Header for abstract factory
- */
-
 #ifndef PROJECT_ABSTRACTFACTORY_H
 #define PROJECT_ABSTRACTFACTORY_H
 
-
-#include <string>
 #include "../Controllers/Headers/Controller.h"
 #include "../Models/Headers/Timer.h"
 #include "../Models/Headers/PlayerShip.h"

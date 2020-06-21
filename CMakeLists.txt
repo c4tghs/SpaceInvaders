@@ -33,7 +33,6 @@ add_executable(SpaceInvaders
         SDL/CPP-Files/TextureManager.cpp
         SDL/Headers/TextureManager.h
         Models/Headers/Window.h
-        Models/CPP-Files/Window.cpp
         SDL/CPP-Files/TextManager.cpp
         SDL/Headers/TextManager.h
 

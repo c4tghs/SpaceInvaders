@@ -1,5 +1,5 @@
-
 #include "../Headers/SDLTimer.h"
+
 /**
  * Constructor for SDLTimer
  */
@@ -7,7 +7,6 @@ SDL::SDLTimer::SDLTimer()
 {
    m_startTicks = SDL_GetTicks();
    m_deltaTime = 0.0f;
-   m_elapsedTicks = 0;
 }
 
 /**
@@ -26,11 +25,8 @@ double SDL::SDLTimer::getDeltaTime() {
  * Method to update parameters
  */
 void SDL::SDLTimer::update() {
-    //ElapsedTicks is the time between reset and current time;
-    m_elapsedTicks = SDL_GetTicks() - m_startTicks;
     //Divide by 1000 to get time in seconds
     m_deltaTime  = (SDL_GetTicks() - m_startTicks)/1000.0;
-    //m_deltaTime  = m_elapsedTicks/1000.0;
 }
 
 /**

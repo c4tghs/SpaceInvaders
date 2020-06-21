@@ -1,9 +1,6 @@
-#pragma once
-
 #ifndef SPACEINVADERS_CONTROLLER_H
 #define SPACEINVADERS_CONTROLLER_H
 
-#include <vector>
 #include "../../Constants.h"
 
 namespace Abstract

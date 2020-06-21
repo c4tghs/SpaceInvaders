@@ -18,12 +18,14 @@ SDL::SDLWindow::~SDLWindow() {
 
     //Destory fonts
     TTF_CloseFont(m_font);
+    TTF_CloseFont(m_fontEndScore);
 
     delete m_textureManager;
     delete m_playerScore;
     delete m_playerLives;
     delete m_level;
     delete m_endScore;
+    delete m_bonusLivesTexture;
 
     //Destroy Renderer
     SDL_DestroyRenderer(m_renderer);
@@ -39,7 +41,8 @@ SDL::SDLWindow::~SDLWindow() {
         //free chunk
         Mix_FreeChunk(iter.second);
     }
-    //close sound
+
+    //close sounds
     Mix_CloseAudio();
     Mix_Quit();
 
@@ -55,6 +58,7 @@ SDL::SDLWindow::~SDLWindow() {
  */
 bool SDL::SDLWindow::initialise()
 {
+    //Initialise SDL
     if(SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) !=0)
     {
         std::cerr << "Failed to initialise SDL: "<< SDL_GetError() << "\n";
@@ -64,6 +68,7 @@ bool SDL::SDLWindow::initialise()
     {
         //Create window
         m_window = SDL_CreateWindow(m_title, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, m_windowWidth, m_windowHeight, SDL_WINDOW_SHOWN);
+
         //Check if window was created successfully
         if(m_window == nullptr)
         {
@@ -82,7 +87,7 @@ bool SDL::SDLWindow::initialise()
             }
             else
             {
-                //Initialise PNG, JPG loading
+                //Initialise PNG, JPG
                 int imgFlags = IMG_INIT_PNG | IMG_INIT_JPG;
                 if(!(IMG_Init(imgFlags) & imgFlags))
                 {
@@ -119,7 +124,7 @@ void SDL::SDLWindow::render() {
 
 /**
  * Method to load media, ie images, sounds, font
- * @return boolean representing successfulness
+ * @return boolean indicating if media were loaded successfully
  */
 bool SDL::SDLWindow::loadMedia() {
     //Texture manager for sprite sheet
@@ -139,8 +144,9 @@ bool SDL::SDLWindow::loadMedia() {
     //Text manager for end score
     m_endScore = new TextManager(m_renderer);
 
-     //Background
+    //Background surface
     SDL_Surface* backgroundSurface = IMG_Load("../assets/background.png");
+
     if(backgroundSurface == nullptr)
     {
         std::cout << "Could not load background image. " << IMG_GetError() << "\n";
@@ -152,9 +158,11 @@ bool SDL::SDLWindow::loadMedia() {
         if(m_background == nullptr)
         {
             std::cout << "Could not create back ground. " << SDL_GetError() << "\n";
+            return false;
         }
         SDL_FreeSurface(backgroundSurface);
     }
+
     //Load sprite sheet
     if(m_textureManager->loadTexture("../assets/invaders_sheet.png"))
     {
@@ -225,15 +233,15 @@ bool SDL::SDLWindow::loadMedia() {
     }
 
     //player shoot sound
-    m_sounds[SHOOT] = Mix_LoadWAV("../assets/Sounds/player.wav");
+    m_sounds[SHOOT] = Mix_LoadWAV("../assets/Sounds/playerShoot.wav");
     if(m_sounds[SHOOT] == nullptr)
     {
         std::cerr << "Could not load player shoot sound effect: " << Mix_GetError() << "\n";
         return false;
     }
 
-    //enemy shoot sound
-    m_sounds[HIT] = Mix_LoadWAV("../assets/Sounds/enemy.wav");
+    //player hit sound
+    m_sounds[HIT] = Mix_LoadWAV("../assets/Sounds/ShipHit.wav");
     if(m_sounds[HIT] == nullptr)
     {
         std::cerr << "Could not load enemy shoot sound effect: " << Mix_GetError() << "\n";
@@ -241,7 +249,7 @@ bool SDL::SDLWindow::loadMedia() {
     }
 
     //invader killed sound
-    m_sounds[INVADER_KILLED] =Mix_LoadWAV("../assets/Sounds/invader_killed.wav");
+    m_sounds[INVADER_KILLED] =Mix_LoadWAV("../assets/Sounds/InvaderHit.wav");
     if(m_sounds[INVADER_KILLED] == nullptr)
     {
         std::cerr << "Could not load enemy killed sound effect: " << Mix_GetError() << "\n";
@@ -249,7 +257,7 @@ bool SDL::SDLWindow::loadMedia() {
     }
 
 
-    //font
+    //Font for scores, lives, level
     m_font = TTF_OpenFont("../assets/Font/space_invaders.ttf",23);
     if(m_font == nullptr)
     {
@@ -257,6 +265,7 @@ bool SDL::SDLWindow::loadMedia() {
         return false;
     }
 
+    //Font for end screen
     m_fontEndScore = TTF_OpenFont("../assets/Font/space_invaders.ttf",50);
     if(m_fontEndScore == nullptr)
     {
@@ -273,18 +282,20 @@ bool SDL::SDLWindow::loadMedia() {
  * @param sprite  - the sprite type to render
  */
 void SDL::SDLWindow::drawRect(Sprite sprite, double xPos, double yPos, double width, double height) {
-
+    //Not from sprite sheet
     if(sprite == BONUS_LIFE)
     {
         m_bonusLivesTexture->renderTexture(xPos,yPos,width,height, nullptr);
     }
-    else
+    else //From sprite sheet
     {
         m_textureManager->renderTexture(xPos,yPos,width,height,&m_sprites[sprite]);
     }
 
 }
-
+/**
+ * Method to refresh screen ie, clear everything and show background
+ */
 void SDL::SDLWindow::refresh() {
     SDL_RenderClear(m_renderer);
 
@@ -293,7 +304,7 @@ void SDL::SDLWindow::refresh() {
 }
 
 /**
- * Method to player a sound
+ * Method used to play a sound
  * @param sound - the sound to play
  */
 void SDL::SDLWindow::playSound(Sound_type sound) {
@@ -349,7 +360,7 @@ void SDL::SDLWindow::showLevel(int level) {
     {
         std::cerr << "Failed to load level texture" << "\n";
     }
-    m_level->renderText(static_cast<int>(Constants::WINDOW_WIDTH/2), 0);
+    m_level->renderText(Constants::WINDOW_WIDTH / 2, 0);
 }
 
 /**

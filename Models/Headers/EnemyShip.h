@@ -1,11 +1,6 @@
-//
-// Created by cliff on 08/03/2020.
-//
-
 #ifndef PROJECT_ENEMYSHIP_H
 #define PROJECT_ENEMYSHIP_H
 
-#include <SDL2/SDL_rect.h>
 #include "Entity.h"
 #include "../../Constants.h"
 

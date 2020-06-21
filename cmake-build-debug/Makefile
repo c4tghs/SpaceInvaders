@@ -446,33 +446,6 @@ Models/CPP-Files/RandomNumber.cpp.s:
 	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/RandomNumber.cpp.s
 .PHONY : Models/CPP-Files/RandomNumber.cpp.s
 
-Models/CPP-Files/Window.obj: Models/CPP-Files/Window.cpp.obj
-
-.PHONY : Models/CPP-Files/Window.obj
-
-# target to build an object file
-Models/CPP-Files/Window.cpp.obj:
-	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Window.cpp.obj
-.PHONY : Models/CPP-Files/Window.cpp.obj
-
-Models/CPP-Files/Window.i: Models/CPP-Files/Window.cpp.i
-
-.PHONY : Models/CPP-Files/Window.i
-
-# target to preprocess a source file
-Models/CPP-Files/Window.cpp.i:
-	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Window.cpp.i
-.PHONY : Models/CPP-Files/Window.cpp.i
-
-Models/CPP-Files/Window.s: Models/CPP-Files/Window.cpp.s
-
-.PHONY : Models/CPP-Files/Window.s
-
-# target to generate assembly for a file
-Models/CPP-Files/Window.cpp.s:
-	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Window.cpp.s
-.PHONY : Models/CPP-Files/Window.cpp.s
-
 SDL/CPP-Files/SDLBonus.obj: SDL/CPP-Files/SDLBonus.cpp.obj
 
 .PHONY : SDL/CPP-Files/SDLBonus.obj
@@ -761,9 +734,6 @@ help:
 	@echo ... Models/CPP-Files/RandomNumber.obj
 	@echo ... Models/CPP-Files/RandomNumber.i
 	@echo ... Models/CPP-Files/RandomNumber.s
-	@echo ... Models/CPP-Files/Window.obj
-	@echo ... Models/CPP-Files/Window.i
-	@echo ... Models/CPP-Files/Window.s
 	@echo ... SDL/CPP-Files/SDLBonus.obj
 	@echo ... SDL/CPP-Files/SDLBonus.i
 	@echo ... SDL/CPP-Files/SDLBonus.s

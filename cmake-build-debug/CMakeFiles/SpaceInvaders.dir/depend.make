@@ -94,8 +94,6 @@ CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/PlayerShip.cpp.obj: ../Models/Head
 CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/RandomNumber.cpp.obj: ../Models/CPP-Files/RandomNumber.cpp
 CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/RandomNumber.cpp.obj: ../Models/Headers/RandomNumber.h
 
-CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Window.cpp.obj: ../Models/CPP-Files/Window.cpp
-
 CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBonus.cpp.obj: ../Constants.h
 CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBonus.cpp.obj: ../Models/Headers/Bonus.h
 CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBonus.cpp.obj: ../Models/Headers/Entity.h
@@ -157,20 +155,6 @@ CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/TextManager.cpp.obj: ../SDL/Headers/T
 CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/TextureManager.cpp.obj: ../SDL/CPP-Files/TextureManager.cpp
 CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/TextureManager.cpp.obj: ../SDL/Headers/TextureManager.h
 
-CMakeFiles/SpaceInvaders.dir/main.cpp.obj: C:/MinGW/include/SDL2/SDL2/SDL_mixer.h
-CMakeFiles/SpaceInvaders.dir/main.cpp.obj: C:/MinGW/include/SDL2/SDL_atomic.h
-CMakeFiles/SpaceInvaders.dir/main.cpp.obj: C:/MinGW/include/SDL2/SDL_audio.h
-CMakeFiles/SpaceInvaders.dir/main.cpp.obj: C:/MinGW/include/SDL2/SDL_config.h
-CMakeFiles/SpaceInvaders.dir/main.cpp.obj: C:/MinGW/include/SDL2/SDL_endian.h
-CMakeFiles/SpaceInvaders.dir/main.cpp.obj: C:/MinGW/include/SDL2/SDL_error.h
-CMakeFiles/SpaceInvaders.dir/main.cpp.obj: C:/MinGW/include/SDL2/SDL_mutex.h
-CMakeFiles/SpaceInvaders.dir/main.cpp.obj: C:/MinGW/include/SDL2/SDL_platform.h
-CMakeFiles/SpaceInvaders.dir/main.cpp.obj: C:/MinGW/include/SDL2/SDL_rwops.h
-CMakeFiles/SpaceInvaders.dir/main.cpp.obj: C:/MinGW/include/SDL2/SDL_stdinc.h
-CMakeFiles/SpaceInvaders.dir/main.cpp.obj: C:/MinGW/include/SDL2/SDL_thread.h
-CMakeFiles/SpaceInvaders.dir/main.cpp.obj: C:/MinGW/include/SDL2/SDL_version.h
-CMakeFiles/SpaceInvaders.dir/main.cpp.obj: C:/MinGW/include/SDL2/begin_code.h
-CMakeFiles/SpaceInvaders.dir/main.cpp.obj: C:/MinGW/include/SDL2/close_code.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../Constants.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../Controllers/Headers/Controller.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../Factories/Factory.h
@@ -184,9 +168,5 @@ CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../Models/Headers/PlayerShip.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../Models/Headers/RandomNumber.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../Models/Headers/Timer.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../Models/Headers/Window.h
-CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../SDL/Headers/SDLEnemyShip.h
-CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../SDL/Headers/SDLWindow.h
-CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../SDL/Headers/TextManager.h
-CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../SDL/Headers/TextureManager.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../main.cpp
 

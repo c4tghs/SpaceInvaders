@@ -7,6 +7,8 @@
 #include "../SDL/Headers/SDLPlayerShip.h"
 #include "../SDL/Headers/SDLBullet.h"
 #include "../SDL/Headers/SDLBonus.h"
+#include "../SDL/Headers/SDLWindow.h"
+#include "../SDL/Headers/SDLEnemyShip.h"
 
 /**
  * Constructor
@@ -35,15 +37,14 @@ Abstract::Timer* SDL::SDLFactory::createTimer() {
     return new SDL::SDLTimer();
 }
 /**
- * Method that creates new playership
+ * Method that creates new player ship
  * @param xPos - initial x position
  * @param yPos - initial y position
  * @param width - width of player ship
  * @param height - height of player ship
  * @return instance of SDL playership
  */
-Abstract::PlayerShip* SDL::SDLFactory::createPlayerShip(double xPos, double yPos, double width, double height,
-                                                        Abstract::Window *window) {
+Abstract::PlayerShip* SDL::SDLFactory::createPlayerShip(double xPos, double yPos, double width, double height,Abstract::Window *window) {
     return new SDL::SDLPlayerShip(xPos,yPos,width,height,window);
 }
 /**

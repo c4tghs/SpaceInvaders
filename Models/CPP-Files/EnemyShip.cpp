@@ -20,10 +20,18 @@ int Abstract::EnemyShip::getMoveDirection() const {
     return m_moveDirection;
 }
 
+/**
+ * Method used to set direction of enemy
+ * @param direction -  integer representing direction. 1 for right, -1 for left
+ */
 void Abstract::EnemyShip::setMoveDirection(int direction) {
     m_moveDirection = direction;
 }
 
+/**
+ * Method that returns the enemy's type
+ * @return the enemy's type
+ */
 Enemy_type Abstract::EnemyShip::getEnemyType() {
     return m_enemyType;
 }

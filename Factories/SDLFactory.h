@@ -1,19 +1,7 @@
-/**
- * Header for SDLfactory
- */
-
 #ifndef PROJECT_SDLFACTORY_H
 #define PROJECT_SDLFACTORY_H
 
-
-#include <string>
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
-#include <SDL2/SDL_ttf.h>
 #include "Factory.h"
-#include "../SDL/Headers/SDLWindow.h"
-#include "../SDL/Headers/SDLEnemyShip.h"
-
 
 namespace SDL
 {

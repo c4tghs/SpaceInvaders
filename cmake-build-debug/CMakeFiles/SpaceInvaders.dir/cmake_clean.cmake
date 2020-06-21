@@ -11,7 +11,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Entity.cpp.obj"
   "CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/PlayerShip.cpp.obj"
   "CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/RandomNumber.cpp.obj"
-  "CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Window.cpp.obj"
   "CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBonus.cpp.obj"
   "CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBullet.cpp.obj"
   "CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLEnemyShip.cpp.obj"

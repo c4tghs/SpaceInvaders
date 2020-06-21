@@ -13,7 +13,7 @@ double Constants::SCALE_Y = (Constants::WINDOW_HEIGHT+0.0) / Constants::DEFAULT_
 std::map<int,std::map<std::string,int>> Constants::LEVELS = {};
 
 /**
- * Method used to rescale
+ * Method used to rescale when configuration is read
  */
 void Constants::rescale() {
     Constants::SCALE_X = (Constants::WINDOW_WIDTH+0.0) / Constants::DEFAULT_WINDOW_WIDTH;

@@ -1,4 +1,3 @@
-#include <iostream>
 #include "../Headers/SDLController.h"
 
 /**
@@ -47,10 +46,10 @@ void SDL::SDLController::pollEvents()
 /**
  * Method used to handle a key pressed by the user
  * @param code - the SDL key code
- * @param keyDown - boolean that says if key is pressed down or not
+ * @param keyDown - boolean indicating if key is pressed down or not
  */
 void SDL::SDLController::handleKeyboardEvent(SDL_Keycode code, bool keyDown) {
-    Key key = none;
+    Key key;
     switch (code)
     {
         case SDLK_LEFT:
@@ -70,9 +69,9 @@ void SDL::SDLController::handleKeyboardEvent(SDL_Keycode code, bool keyDown) {
 
 }
 /**
- *
- * @param key
- * @return
+ * Method used to check if a key a pressed
+ * @param key - the key to check
+ * @return Boolean indicating if the key is pressed
  */
 bool SDL::SDLController::isPressed(Key key) {
     return m_keyPressed[key];
