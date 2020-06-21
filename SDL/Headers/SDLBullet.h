@@ -8,14 +8,14 @@ namespace SDL
 {
     class SDLBullet: public Abstract::Bullet {
     public:
-        SDLBullet(double xPos, double yPos, double width, double height, Abstract::Window *window, BULLET_TYPE type);
+        SDLBullet(double xPos, double yPos, double width, double height, Abstract::Window *window, Bullet_type type);
         ~SDLBullet();
         void render();
-        SPRITE getSpriteType();
+        Sprite getSpriteType();
 
     private:
         Abstract::Window* m_window = nullptr;
-        BULLET_TYPE m_bulletType;
+        Bullet_type m_bulletType;
     };
 
 }

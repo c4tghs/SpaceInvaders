@@ -12,13 +12,11 @@ CMakeFiles/SpaceInvaders.dir/Constants.cpp.obj: ../Constants.h
 CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/Controller.cpp.obj: ../Constants.h
 CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/Controller.cpp.obj: ../Controllers/CPP-Files/Controller.cpp
 CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/Controller.cpp.obj: ../Controllers/Headers/Controller.h
-CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/Controller.cpp.obj: ../Models/Headers/Window.h
 
 CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/SDLController.cpp.obj: ../Constants.h
 CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/SDLController.cpp.obj: ../Controllers/CPP-Files/SDLController.cpp
 CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/SDLController.cpp.obj: ../Controllers/Headers/Controller.h
 CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/SDLController.cpp.obj: ../Controllers/Headers/SDLController.h
-CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/SDLController.cpp.obj: ../Models/Headers/Window.h
 
 CMakeFiles/SpaceInvaders.dir/Factories/SDLFactory.cpp.obj: C:/MinGW/include/SDL2/SDL2/SDL_mixer.h
 CMakeFiles/SpaceInvaders.dir/Factories/SDLFactory.cpp.obj: C:/MinGW/include/SDL2/SDL_atomic.h
@@ -47,6 +45,7 @@ CMakeFiles/SpaceInvaders.dir/Factories/SDLFactory.cpp.obj: ../Models/Headers/Ent
 CMakeFiles/SpaceInvaders.dir/Factories/SDLFactory.cpp.obj: ../Models/Headers/PlayerShip.h
 CMakeFiles/SpaceInvaders.dir/Factories/SDLFactory.cpp.obj: ../Models/Headers/Timer.h
 CMakeFiles/SpaceInvaders.dir/Factories/SDLFactory.cpp.obj: ../Models/Headers/Window.h
+CMakeFiles/SpaceInvaders.dir/Factories/SDLFactory.cpp.obj: ../SDL/Headers/SDLBonus.h
 CMakeFiles/SpaceInvaders.dir/Factories/SDLFactory.cpp.obj: ../SDL/Headers/SDLBullet.h
 CMakeFiles/SpaceInvaders.dir/Factories/SDLFactory.cpp.obj: ../SDL/Headers/SDLEnemyShip.h
 CMakeFiles/SpaceInvaders.dir/Factories/SDLFactory.cpp.obj: ../SDL/Headers/SDLPlayerShip.h
@@ -61,6 +60,7 @@ CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../Controllers/Headers/Controller.h
 CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../Factories/Factory.h
 CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../Game.cpp
 CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../Game.h
+CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../Models/Headers/Bonus.h
 CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../Models/Headers/Bullet.h
 CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../Models/Headers/EnemyShip.h
 CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../Models/Headers/Entity.h
@@ -70,6 +70,7 @@ CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../Models/Headers/Timer.h
 CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../Models/Headers/Window.h
 CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../nlohmann/json.hpp
 
+CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Bonus.cpp.obj: ../Constants.h
 CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Bonus.cpp.obj: ../Models/CPP-Files/Bonus.cpp
 CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Bonus.cpp.obj: ../Models/Headers/Bonus.h
 CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Bonus.cpp.obj: ../Models/Headers/Entity.h
@@ -94,6 +95,13 @@ CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/RandomNumber.cpp.obj: ../Models/CP
 CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/RandomNumber.cpp.obj: ../Models/Headers/RandomNumber.h
 
 CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Window.cpp.obj: ../Models/CPP-Files/Window.cpp
+
+CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBonus.cpp.obj: ../Constants.h
+CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBonus.cpp.obj: ../Models/Headers/Bonus.h
+CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBonus.cpp.obj: ../Models/Headers/Entity.h
+CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBonus.cpp.obj: ../Models/Headers/Window.h
+CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBonus.cpp.obj: ../SDL/CPP-Files/SDLBonus.cpp
+CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBonus.cpp.obj: ../SDL/Headers/SDLBonus.h
 
 CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBullet.cpp.obj: ../Constants.h
 CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBullet.cpp.obj: ../Models/Headers/Bullet.h

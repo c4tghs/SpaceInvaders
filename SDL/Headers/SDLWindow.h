@@ -20,13 +20,14 @@ namespace SDL
         bool initialise();
         void render();
         bool loadMedia();
-        void drawRect(SPRITE sprite, double xPos, double yPos, double width, double height);
+        void drawRect(Sprite sprite, double xPos, double yPos, double width, double height);
         void refresh();
-        void playSound(SOUND_TYPE sound);
+        void playSound(Sound_type sound);
         void exit(const char* message);
         void showScore(int score);
         void showLives(int lives);
         void showLevel(int level);
+        void showEndScore(int score);
 
     private:
         const char* m_title;
@@ -35,13 +36,17 @@ namespace SDL
         SDL_Window* m_window = nullptr;
         SDL_Renderer* m_renderer= nullptr;
         TTF_Font* m_font= nullptr;
+        TTF_Font* m_fontEndScore= nullptr;
         TextureManager* m_textureManager;
+        TextureManager* m_bonusLivesTexture;
+        TextureManager* m_bonusSpeedTexture;
         TextManager* m_playerScore;
         TextManager* m_playerLives;
         TextManager* m_level;
+        TextManager* m_endScore;
         SDL_Texture* m_background = nullptr;
-        std::map<SPRITE,SDL_Rect> m_sprites;
-        std::map<SOUND_TYPE,Mix_Chunk*> sounds;
+        std::map<Sprite,SDL_Rect> m_sprites;
+        std::map<Sound_type,Mix_Chunk*> m_sounds;
     };
 }
 

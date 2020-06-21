@@ -15,9 +15,6 @@ namespace SDL
         void render() override ;
     private:
         Abstract::Window* m_window;
-        SDL_Renderer* m_renderer;
-        TextureManager* textureManager;
-        SDL_Texture* m_playerTexture;
     };
 }
 

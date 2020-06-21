@@ -11,7 +11,7 @@ namespace Abstract{
     class RandomNumber {
     public:
         static RandomNumber& getInstance();
-        double getRandomDouble(int min, int max);
+        double getRandomDouble(double min, double max);
         int getRandomInt(int min, int max);
     private:
         static RandomNumber* m_instance;

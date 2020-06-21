@@ -24,7 +24,7 @@ Abstract::RandomNumber::RandomNumber() {}
  * @param max - upper limit of range
  * @return - double representing the generated number
  */
-double Abstract::RandomNumber::getRandomDouble(int min, int max) {
+double Abstract::RandomNumber::getRandomDouble(double min, double max) {
     m_mt = std::mt19937(m_rd());
     //[min,max[
     std::uniform_real_distribution<double> m_dist(min, max);

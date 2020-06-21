@@ -18,12 +18,13 @@ namespace Abstract
         virtual void render() = 0;
         int getMoveDirection() const;
         void setMoveDirection(int direction);
-        ENEMY_TYPE getEnemyType();
+        Enemy_type getEnemyType();
 
     private:
         int m_moveDirection;
     protected:
-        ENEMY_TYPE m_enemyType;
+        Enemy_type m_enemyType;
+
     };
 }
 

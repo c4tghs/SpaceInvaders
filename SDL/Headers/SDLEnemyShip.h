@@ -8,10 +8,10 @@ namespace SDL
 {
     class SDLEnemyShip: public Abstract::EnemyShip {
     public:
-        SDLEnemyShip(Abstract::Window *window, double xPos, double yPos, double width, double height, ENEMY_TYPE type);
+        SDLEnemyShip(Abstract::Window *window, double xPos, double yPos, double width, double height, Enemy_type type);
         ~SDLEnemyShip();
         void render();
-        SPRITE getSpriteType();
+        Sprite getSpriteType();
 
     private:
         Abstract::Window* m_window;

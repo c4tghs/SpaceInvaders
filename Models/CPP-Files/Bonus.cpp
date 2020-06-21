@@ -7,9 +7,7 @@
  * @param width - width of bonus
  * @param height - height of bonus
  */
-Abstract::Bonus::Bonus(int xPos, int yPos, int width, int height, BonusType bonusType) : Entity(xPos, yPos, width, height) {
-    setBonusType(bonusType);
-}
+Abstract::Bonus::Bonus(double xPos, double yPos, double width, double height) : Entity(xPos, yPos, width, height) {}
 /**
  * Destructor
  */
@@ -19,15 +17,8 @@ Abstract::Bonus::~Bonus() {}
  * Method that returns the bonus type
  * @return - bonus type
  */
-Abstract::BonusType Abstract::Bonus::getBonusType() {
+Bonus_type Abstract::Bonus::getBonusType() {
     return m_bonusType;
-}
-/**
- * Method that set the bonus type
- * @param bonusType - bonus type
- */
-void Abstract::Bonus::setBonusType(Abstract::BonusType bonusType) {
-    m_bonusType = bonusType;
 }
 
 

@@ -50,23 +50,23 @@ void SDL::SDLController::pollEvents()
  * @param keyDown - boolean that says if key is pressed down or not
  */
 void SDL::SDLController::handleKeyboardEvent(SDL_Keycode code, bool keyDown) {
-    KEY key = NONE;
+    Key key = none;
     switch (code)
     {
         case SDLK_LEFT:
-            key = MOVE_LEFT;
+            key = moveLeft;
             break;
         case SDLK_RIGHT:
-            key = MOVE_RIGHT;
+            key = moveRight;
             break;
         case SDLK_SPACE:
-            key = PLAYER_SHOOT;
+            key = playerShoot;
             break;
         default:
-            key = NONE;
+            key = none;
             break;
     }
-    if(key != NONE)m_keyPressed[key] = keyDown;
+    if(key != none)m_keyPressed[key] = keyDown;
 
 }
 /**
@@ -74,7 +74,7 @@ void SDL::SDLController::handleKeyboardEvent(SDL_Keycode code, bool keyDown) {
  * @param key
  * @return
  */
-bool SDL::SDLController::isPressed(KEY key) {
+bool SDL::SDLController::isPressed(Key key) {
     return m_keyPressed[key];
 }
 

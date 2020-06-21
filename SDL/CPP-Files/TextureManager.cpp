@@ -40,11 +40,6 @@ bool SDL::TextureManager::loadTexture(const char *filename) {
             return false;
         }
         SDL_FreeSurface(spriteSurface);
-        /*else
-        {
-            m_texture = texture;
-        }*/
-
     }
 
     return true;

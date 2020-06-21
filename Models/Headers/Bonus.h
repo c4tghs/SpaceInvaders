@@ -6,21 +6,20 @@
 #define PROJECT_BONUS_H
 
 #include "Entity.h"
+#include "../../Constants.h"
 
 namespace Abstract{
-    enum BonusType{SPEED,LIFE, POINTS};
 
     class Bonus:public Entity {
         public:
-            Bonus();
-            Bonus(int xPos, int yPos, int width, int height, BonusType bonusType);
+            Bonus(double xPos, double yPos, double width, double height);
             virtual ~Bonus();
             virtual void render()=0;
-            BonusType getBonusType();
-            void setBonusType(BonusType bonusType);
+            Bonus_type getBonusType();
 
-        private:
-            BonusType m_bonusType=POINTS;
+
+        protected:
+            Bonus_type m_bonusType=POINTS;
     };
 
 }

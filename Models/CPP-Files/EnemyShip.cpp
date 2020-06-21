@@ -24,7 +24,7 @@ void Abstract::EnemyShip::setMoveDirection(int direction) {
     m_moveDirection = direction;
 }
 
-ENEMY_TYPE Abstract::EnemyShip::getEnemyType() {
+Enemy_type Abstract::EnemyShip::getEnemyType() {
     return m_enemyType;
 }
 

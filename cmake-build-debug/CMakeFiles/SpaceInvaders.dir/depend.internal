@@ -13,13 +13,11 @@ CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/Controller.cpp.obj
  D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Constants.h
  D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Controllers/CPP-Files/Controller.cpp
  D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Controllers/Headers/Controller.h
- D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Window.h
 CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/SDLController.cpp.obj
  D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Constants.h
  D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Controllers/CPP-Files/SDLController.cpp
  D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Controllers/Headers/Controller.h
  D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Controllers/Headers/SDLController.h
- D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Window.h
 CMakeFiles/SpaceInvaders.dir/Factories/SDLFactory.cpp.obj
  C:/MinGW/include/SDL2/SDL2/SDL_mixer.h
  C:/MinGW/include/SDL2/SDL_atomic.h
@@ -48,6 +46,7 @@ CMakeFiles/SpaceInvaders.dir/Factories/SDLFactory.cpp.obj
  D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/PlayerShip.h
  D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Timer.h
  D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Window.h
+ D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/SDL/Headers/SDLBonus.h
  D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/SDL/Headers/SDLBullet.h
  D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/SDL/Headers/SDLEnemyShip.h
  D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/SDL/Headers/SDLPlayerShip.h
@@ -62,6 +61,7 @@ CMakeFiles/SpaceInvaders.dir/Game.cpp.obj
  D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Factories/Factory.h
  D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Game.cpp
  D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Game.h
+ D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Bonus.h
  D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Bullet.h
  D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/EnemyShip.h
  D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Entity.h
@@ -71,6 +71,7 @@ CMakeFiles/SpaceInvaders.dir/Game.cpp.obj
  D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Window.h
  D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/nlohmann/json.hpp
 CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Bonus.cpp.obj
+ D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Constants.h
  D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/CPP-Files/Bonus.cpp
  D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Bonus.h
  D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Entity.h
@@ -95,6 +96,13 @@ CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/RandomNumber.cpp.obj
  D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/RandomNumber.h
 CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Window.cpp.obj
  D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/CPP-Files/Window.cpp
+CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBonus.cpp.obj
+ D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Constants.h
+ D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Bonus.h
+ D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Entity.h
+ D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Window.h
+ D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/SDL/CPP-Files/SDLBonus.cpp
+ D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/SDL/Headers/SDLBonus.h
 CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBullet.cpp.obj
  D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Constants.h
  D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Bullet.h

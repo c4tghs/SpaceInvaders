@@ -473,6 +473,33 @@ Models/CPP-Files/Window.cpp.s:
 	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Models/CPP-Files/Window.cpp.s
 .PHONY : Models/CPP-Files/Window.cpp.s
 
+SDL/CPP-Files/SDLBonus.obj: SDL/CPP-Files/SDLBonus.cpp.obj
+
+.PHONY : SDL/CPP-Files/SDLBonus.obj
+
+# target to build an object file
+SDL/CPP-Files/SDLBonus.cpp.obj:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBonus.cpp.obj
+.PHONY : SDL/CPP-Files/SDLBonus.cpp.obj
+
+SDL/CPP-Files/SDLBonus.i: SDL/CPP-Files/SDLBonus.cpp.i
+
+.PHONY : SDL/CPP-Files/SDLBonus.i
+
+# target to preprocess a source file
+SDL/CPP-Files/SDLBonus.cpp.i:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBonus.cpp.i
+.PHONY : SDL/CPP-Files/SDLBonus.cpp.i
+
+SDL/CPP-Files/SDLBonus.s: SDL/CPP-Files/SDLBonus.cpp.s
+
+.PHONY : SDL/CPP-Files/SDLBonus.s
+
+# target to generate assembly for a file
+SDL/CPP-Files/SDLBonus.cpp.s:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/CPP-Files/SDLBonus.cpp.s
+.PHONY : SDL/CPP-Files/SDLBonus.cpp.s
+
 SDL/CPP-Files/SDLBullet.obj: SDL/CPP-Files/SDLBullet.cpp.obj
 
 .PHONY : SDL/CPP-Files/SDLBullet.obj
@@ -737,6 +764,9 @@ help:
 	@echo ... Models/CPP-Files/Window.obj
 	@echo ... Models/CPP-Files/Window.i
 	@echo ... Models/CPP-Files/Window.s
+	@echo ... SDL/CPP-Files/SDLBonus.obj
+	@echo ... SDL/CPP-Files/SDLBonus.i
+	@echo ... SDL/CPP-Files/SDLBonus.s
 	@echo ... SDL/CPP-Files/SDLBullet.obj
 	@echo ... SDL/CPP-Files/SDLBullet.i
 	@echo ... SDL/CPP-Files/SDLBullet.s

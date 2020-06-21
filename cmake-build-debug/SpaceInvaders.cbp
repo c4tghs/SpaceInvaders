@@ -166,6 +166,9 @@
 		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Window.h">
 			<Option target="SpaceInvaders"/>
 		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/SDL/CPP-Files/SDLBonus.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/SDL/CPP-Files/SDLBullet.cpp">
 			<Option target="SpaceInvaders"/>
 		</Unit>
@@ -185,6 +188,9 @@
 			<Option target="SpaceInvaders"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/SDL/CPP-Files/TextureManager.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/SDL/Headers/SDLBonus.h">
 			<Option target="SpaceInvaders"/>
 		</Unit>
 		<Unit filename="D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/SDL/Headers/SDLBullet.h">

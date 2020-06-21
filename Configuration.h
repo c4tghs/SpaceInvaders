@@ -5,11 +5,11 @@
 
 using json = nlohmann::json;
 class Configuration {
-public:
-    static void load();
+    public:
+        static void load();
 
-private:
-    constexpr static const char* m_filePath = "../configuration.json";
+    private:
+        constexpr static const char* m_filePath = "../configuration.json";
 
 };
 

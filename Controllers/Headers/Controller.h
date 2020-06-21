@@ -5,7 +5,6 @@
 
 #include <vector>
 #include "../../Constants.h"
-#include "../../Models/Headers/Window.h"
 
 namespace Abstract
 {
@@ -14,15 +13,11 @@ namespace Abstract
         Controller()=default;
         virtual ~Controller()=default;
         virtual void pollEvents()=0;
-        virtual bool isPressed(KEY key)=0;
-        void setWindow(Abstract::Window* window);
-        virtual bool isRunning()=0;
-        Abstract::Window* getWindow();
+        virtual bool isPressed(Key key)=0;
 
-    private:
-        Abstract::Window* m_window= nullptr;
-    protected:
-        //bool m_isRunning = true;
+        virtual bool isRunning()=0;
+
+
 
     };
 

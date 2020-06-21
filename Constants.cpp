@@ -1,10 +1,8 @@
 #include <iostream>
 #include "Constants.h"
+
 int Constants::WINDOW_WIDTH = 1080;
 int Constants::WINDOW_HEIGHT = 720;
-double Constants::PLAYER_SPEED = 200;
-double Constants::ENEMY_SPEED = 100;
-double Constants::BULLET_SPEED = 500;
 int Constants::FRAME_RATE = 60;
 int Constants::PLAYER_LIVES = 5;
 

@@ -59,6 +59,6 @@ add_executable(SpaceInvaders
         Controllers/CPP-Files/SDLController.cpp
         Controllers/Headers/SDLController.h
 
-        )
+        SDL/CPP-Files/SDLBonus.cpp SDL/Headers/SDLBonus.h)
 
 target_link_libraries(SpaceInvaders ${SDL2_LIBRARY} -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer)
