@@ -32,11 +32,11 @@ void SDL::SDLEnemyShip::render() {
  * @return SPRITE representing the ship's type
  */
 SPRITE SDL::SDLEnemyShip::getSpriteType() {
-    if(m_enemyType == Squid)
+    if(m_enemyType == SQUID)
     {
         return ENEMY_SMALL_OPEN;
     }
-    else if(m_enemyType == Crab)
+    else if(m_enemyType == CRAB)
     {
         return ENEMY_MEDIUM_OPEN;
     }

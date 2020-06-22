@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
         //Deallocate memory
         Game::destroyGame();
         delete AF;
-       
+
 
     }
     catch (std::runtime_error& e) {

@@ -53,19 +53,19 @@ void SDL::SDLController::handleKeyboardEvent(SDL_Keycode code, bool keyDown) {
     switch (code)
     {
         case SDLK_LEFT:
-            key = moveLeft;
+            key = MOVE_LEFT;
             break;
         case SDLK_RIGHT:
-            key = moveRight;
+            key = MOVE_RIGHT;
             break;
         case SDLK_SPACE:
-            key = playerShoot;
+            key = PLAYER_SHOOT;
             break;
         default:
-            key = none;
+            key = NONE;
             break;
     }
-    if(key != none)m_keyPressed[key] = keyDown;
+    if(key != NONE)m_keyPressed[key] = keyDown;
 
 }
 /**

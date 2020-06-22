@@ -31,7 +31,7 @@ void SDL::SDLBullet::render() {
  * @return sprite type
  */
 SPRITE SDL::SDLBullet::getSpriteType() {
-    if(m_bulletType == player)
+    if(m_bulletType == PLAYER)
     {
         return PLAYER_BULLET;
     }

@@ -34,10 +34,6 @@ D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Bullet.h
 ../Models/Headers/Bonus.h
 D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Bonus.h
 
-D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Factories/SDLFactory.h
-Factory.h
-D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Factories/Factory.h
-
 D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Game.cpp
 iostream
 -
@@ -83,16 +79,6 @@ D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Timer.h
 D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Window.h
 ../../Constants.h
 D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Constants.h
-
-D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/main.cpp
-iostream
--
-Factories/Factory.h
-D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Factories/Factory.h
-Factories/SDLFactory.h
-D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Factories/SDLFactory.h
-Game.h
-D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Game.h
 
 D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/nlohmann/json.hpp
 algorithm

@@ -85,7 +85,7 @@ Game::Game(Abstract::Factory* AF) {
  */
 void Game::run() {
     //Set game mode
-    m_gameMode = playing;
+    m_gameMode = PLAYING;
 
     createStartObjects();
 
@@ -108,7 +108,7 @@ void Game::run() {
             }
             else
             {
-                m_gameMode = gameOver;
+                m_gameMode = GAME_OVER;
             }
         }
         if(m_timer->getDeltaTime() >= 1.0/Constants::FRAME_RATE)
@@ -116,7 +116,7 @@ void Game::run() {
             //Clear window -> show background
             m_window->refresh();
 
-            if(m_gameMode == playing)
+            if(m_gameMode == PLAYING)
             {
                 this->handlePlayerShip();
                 this->moveBullets();
@@ -185,19 +185,19 @@ void Game::createEnemies() {
     for(int i=0; i < 10; i++)
     {
 
-        m_enemyShips.emplace_back(m_factory->createEnemyShip(50 * i * Constants::SCALE_X, 50 * Constants::SCALE_Y,Constants::ENEMY_SIZE*Constants::SCALE_X, Constants::ENEMY_SIZE*Constants::SCALE_Y, m_window, Octopus));
-        m_enemyShips.emplace_back(m_factory->createEnemyShip(50 * i * Constants::SCALE_X, 2 * 50 * Constants::SCALE_Y,Constants::ENEMY_SIZE*Constants::SCALE_X,Constants::ENEMY_SIZE*Constants::SCALE_Y, m_window, Crab));
-        m_enemyShips.emplace_back(m_factory->createEnemyShip(50 * i * Constants::SCALE_X, 3 * 50 * Constants::SCALE_Y,Constants::ENEMY_SIZE*Constants::SCALE_X,Constants::ENEMY_SIZE*Constants::SCALE_Y, m_window, Squid));
+        m_enemyShips.emplace_back(m_factory->createEnemyShip(50 * i * Constants::SCALE_X, 50 * Constants::SCALE_Y,Constants::ENEMY_SIZE*Constants::SCALE_X, Constants::ENEMY_SIZE*Constants::SCALE_Y, m_window, OCTOPUS));
+        m_enemyShips.emplace_back(m_factory->createEnemyShip(50 * i * Constants::SCALE_X, 2 * 50 * Constants::SCALE_Y,Constants::ENEMY_SIZE*Constants::SCALE_X,Constants::ENEMY_SIZE*Constants::SCALE_Y, m_window, CRAB));
+        m_enemyShips.emplace_back(m_factory->createEnemyShip(50 * i * Constants::SCALE_X, 3 * 50 * Constants::SCALE_Y,Constants::ENEMY_SIZE*Constants::SCALE_X,Constants::ENEMY_SIZE*Constants::SCALE_Y, m_window, SQUID));
         if(m_currentGameLevel>1)
         {
             if(m_currentGameLevel < 3 )
             {
-                m_enemyShips.emplace_back(m_factory->createEnemyShip(50 * i * Constants::SCALE_X, 4 * 50 * Constants::SCALE_Y,Constants::ENEMY_SIZE*Constants::SCALE_X,Constants::ENEMY_SIZE*Constants::SCALE_Y, m_window, Squid));
+                m_enemyShips.emplace_back(m_factory->createEnemyShip(50 * i * Constants::SCALE_X, 4 * 50 * Constants::SCALE_Y,Constants::ENEMY_SIZE*Constants::SCALE_X,Constants::ENEMY_SIZE*Constants::SCALE_Y, m_window, SQUID));
             }
             else
             {
-                m_enemyShips.emplace_back(m_factory->createEnemyShip(50 * i * Constants::SCALE_X, 4 * 50 * Constants::SCALE_Y,Constants::ENEMY_SIZE*Constants::SCALE_X,Constants::ENEMY_SIZE*Constants::SCALE_Y, m_window, Squid));
-                m_enemyShips.emplace_back(m_factory->createEnemyShip(50 * i * Constants::SCALE_X, 5 * 50 * Constants::SCALE_Y,Constants::ENEMY_SIZE*Constants::SCALE_X,Constants::ENEMY_SIZE*Constants::SCALE_Y, m_window, Squid));
+                m_enemyShips.emplace_back(m_factory->createEnemyShip(50 * i * Constants::SCALE_X, 4 * 50 * Constants::SCALE_Y,Constants::ENEMY_SIZE*Constants::SCALE_X,Constants::ENEMY_SIZE*Constants::SCALE_Y, m_window, SQUID));
+                m_enemyShips.emplace_back(m_factory->createEnemyShip(50 * i * Constants::SCALE_X, 5 * 50 * Constants::SCALE_Y,Constants::ENEMY_SIZE*Constants::SCALE_X,Constants::ENEMY_SIZE*Constants::SCALE_Y, m_window, SQUID));
 
             }
         }
@@ -237,7 +237,7 @@ void Game::handleEnemyShips() {
     // Check if time for next enemy bullet has been surpassed
     if(m_timer->getTime() > m_nextEnemyBullet)
     {
-        m_enemyBullets.emplace_back(m_factory->createBullet(m_enemyShips[randomId]->getXPosition(), m_enemyShips[randomId]->getYPosition(),Constants::BULLET_SIZE * Constants::SCALE_X, Constants::BULLET_SIZE * Constants::SCALE_Y, m_window, enemy));
+        m_enemyBullets.emplace_back(m_factory->createBullet(m_enemyShips[randomId]->getXPosition(), m_enemyShips[randomId]->getYPosition(),Constants::BULLET_SIZE * Constants::SCALE_X, Constants::BULLET_SIZE * Constants::SCALE_Y, m_window, ENEMY));
         m_nextEnemyBullet = m_timer->getTime()+Abstract::RandomNumber::getInstance().getRandomDouble(0,Constants::LEVELS[m_currentGameLevel]["ENEMY_SHOOT_TIME"]);
     }
     // Render enemies
@@ -280,7 +280,7 @@ bool Game::checkEnemyBoundaries() {
  */
 void Game::handlePlayerShip() {
     //Player move left
-    if(m_controller->isPressed(moveLeft))
+    if(m_controller->isPressed(MOVE_LEFT))
     {
         //Player ship has reached right border
         if(m_playerShip->getXPosition() < 0)
@@ -293,7 +293,7 @@ void Game::handlePlayerShip() {
         }
     }
     //Player move right
-    if (m_controller->isPressed(moveRight))
+    if (m_controller->isPressed(MOVE_RIGHT))
     {
         //Player ship has reached right border
         if(m_playerShip->getXPosition() >= Constants::WINDOW_WIDTH - m_playerShip->getWidth())
@@ -306,7 +306,7 @@ void Game::handlePlayerShip() {
         }
     }
     //Player shoot
-    if (m_controller->isPressed(KEY::playerShoot))
+    if (m_controller->isPressed(KEY::PLAYER_SHOOT))
     {
         this->playerShoot();
     }
@@ -324,7 +324,7 @@ void Game::playerShoot() {
     if(m_playerBullet == nullptr)
     {
         m_window->playSound(SHOOT);
-        m_playerBullet = m_factory->createBullet(m_playerShip->getXPosition(), m_playerShip->getYPosition(), Constants::BULLET_SIZE * Constants::SCALE_X, Constants::BULLET_SIZE * Constants::SCALE_Y, m_window, player);
+        m_playerBullet = m_factory->createBullet(m_playerShip->getXPosition(), m_playerShip->getYPosition(), Constants::BULLET_SIZE * Constants::SCALE_X, Constants::BULLET_SIZE * Constants::SCALE_Y, m_window, PLAYER);
     }
 }
 
@@ -392,17 +392,14 @@ void Game::handleCollision()
                 //set player score based on enemy type
                 switch (enemy->getEnemyType())
                 {
-                    case Octopus:
+                    case OCTOPUS:
                         m_playerShip->setScore(m_playerShip->getScore() + 50);
                         break;
-                    case Crab:
+                    case CRAB:
                         m_playerShip->setScore(m_playerShip->getScore() + 20);
                         break;
-                    case Squid:
+                    case SQUID:
                         m_playerShip->setScore(m_playerShip->getScore() + 10);
-                        break;
-                    case Ufo:
-                        m_playerShip->setScore(m_playerShip->getScore() + 100);
                         break;
                     default:
                         break;
@@ -438,7 +435,7 @@ void Game::handleCollision()
             m_playerShip->setLives(m_playerShip->getLives() - 1);
             if(m_playerShip->getLives() <= 0)
             {
-                m_gameMode = gameOver;
+                m_gameMode = GAME_OVER;
             }
             delete bullet;
             m_enemyBullets.erase(m_enemyBullets.begin()+i);
@@ -463,6 +460,17 @@ void Game::handleCollision()
             m_playerShip->setLives(m_playerShip->getLives()+1);
             delete m_bonus;
             m_bonus = nullptr;
+        }
+    }
+    if((m_bonusPoints != nullptr) && (m_playerBullet != nullptr))
+    {
+        if(isCollision(m_bonusPoints,m_playerBullet))
+        {
+            m_playerShip->setScore(m_playerShip->getScore()+100);
+            delete m_playerBullet;
+            m_playerBullet = nullptr;
+            delete m_bonusPoints;
+            m_bonusPoints = nullptr;
         }
     }
 }

@@ -9,15 +9,15 @@ enum BONUS_TYPE{
 };
 
 enum ENEMY_TYPE{
-    Octopus,Crab,Squid,Ufo
+    OCTOPUS,CRAB,SQUID
 };
 
 enum KEY{
-    moveLeft, moveRight, playerShoot,none
+    MOVE_LEFT, MOVE_RIGHT, PLAYER_SHOOT,NONE
 };
 
 enum BULLET_TYPE{
-    player,enemy
+    PLAYER,ENEMY
 };
 
 enum SOUND_TYPE{
@@ -28,7 +28,7 @@ enum SPRITE{
 };
 
 enum MODE{
-    playing, gameOver, start
+    PLAYING, GAME_OVER
 };
 
 class Constants
