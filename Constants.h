@@ -4,30 +4,30 @@
 
 #include <map>
 
-enum Bonus_type{
-    SPEED,LIFE, POINTS
+enum BONUS_TYPE{
+    LIFE, POINTS
 };
 
-enum Enemy_type{
+enum ENEMY_TYPE{
     Octopus,Crab,Squid,Ufo
 };
 
-enum Key{
+enum KEY{
     moveLeft, moveRight, playerShoot,none
 };
 
-enum Bullet_type{
+enum BULLET_TYPE{
     player,enemy
 };
 
-enum Sound_type{
+enum SOUND_TYPE{
     SHOOT, HIT, INVADER_KILLED
 };
-enum Sprite{
+enum SPRITE{
     PLAYERSHIP,ENEMY_BIG_OPEN,ENEMY_BIG_CLOSED,ENEMY_MEDIUM_OPEN,ENEMY_MEDIUM_CLOSED,ENEMY_SMALL_OPEN,ENEMY_SMALL_CLOSED,BONUS_POINTS,PLAYER_BULLET,ENEMY_BULLET,ENEMY_DEAD,BONUS_LIFE
 };
 
-enum Mode{
+enum MODE{
     playing, gameOver, start
 };
 
@@ -44,8 +44,7 @@ class Constants
         static const int BULLET_SIZE = 50;
         static const int SPRITE_SIZE = 32;
         static const int BONUS_TIME = 30;
-        //static const int
-        constexpr static const double SPRITE_SCALE = PLAYER_SIZE/SPRITE_SIZE;
+        constexpr static const double SPRITE_SCALE = (PLAYER_SIZE+0.0)/SPRITE_SIZE;
         static int FRAME_RATE;
         static int PLAYER_LIVES;
         static double SCALE_X;

@@ -9,7 +9,7 @@ namespace SDL
     public:
         TextureManager(SDL_Renderer* renderer);
         ~TextureManager();
-        bool loadTexture(const char* filename);
+        bool loadTexture(const char *filename, bool transparent);
         void renderTexture(double xPos, double yPos,double width, double height, SDL_Rect* sourceRect);
 
     private:

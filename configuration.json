@@ -1,9 +1,9 @@
 {
 	"settings":
 	{
-		"WINDOW_WIDTH":640,
-		"WINDOW_HEIGHT":460,
-		"LIVES":5,
+		"WINDOW_WIDTH":1080,
+		"WINDOW_HEIGHT":720,
+		"LIVES":3,
 		"FRAME_RATE":60
 	},
 	"levels":

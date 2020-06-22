@@ -49,7 +49,7 @@ void SDL::SDLController::pollEvents()
  * @param keyDown - boolean indicating if key is pressed down or not
  */
 void SDL::SDLController::handleKeyboardEvent(SDL_Keycode code, bool keyDown) {
-    Key key;
+    KEY key;
     switch (code)
     {
         case SDLK_LEFT:
@@ -73,7 +73,7 @@ void SDL::SDLController::handleKeyboardEvent(SDL_Keycode code, bool keyDown) {
  * @param key - the key to check
  * @return Boolean indicating if the key is pressed
  */
-bool SDL::SDLController::isPressed(Key key) {
+bool SDL::SDLController::isPressed(KEY key) {
     return m_keyPressed[key];
 }
 

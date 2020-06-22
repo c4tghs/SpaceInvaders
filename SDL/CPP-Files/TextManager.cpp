@@ -65,7 +65,7 @@ bool SDL::TextManager::loadTextTexture(TTF_Font *font, const std::string &text, 
  * @param height - height of text
  */
 void SDL::TextManager::renderText(int xPos, int yPos) {
-    //rectangle
+    //Destination rectangle
     SDL_Rect rect = {xPos,yPos,static_cast<int>(m_width*Constants::SCALE_X),static_cast<int>(m_height*Constants::SCALE_Y)};
 
     //Render

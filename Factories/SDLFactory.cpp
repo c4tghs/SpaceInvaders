@@ -1,5 +1,3 @@
-
-//TODO use controller for states
 #include <iostream>
 #include "SDLFactory.h"
 #include "../Controllers/Headers/SDLController.h"
@@ -68,7 +66,7 @@ Abstract::Window* SDL::SDLFactory::createWindow(const char *title, int width, in
  * @param type - enemy type
  * @return SDL instance of enemy ship
  */
-Abstract::EnemyShip* SDL::SDLFactory::createEnemyShip(double xPos, double yPos, double width, double height, Abstract::Window *window, Enemy_type type) {
+Abstract::EnemyShip* SDL::SDLFactory::createEnemyShip(double xPos, double yPos, double width, double height, Abstract::Window *window, ENEMY_TYPE type) {
     return new SDL::SDLEnemyShip(window, xPos, yPos, width, height, type);
 }
 
@@ -82,7 +80,7 @@ Abstract::EnemyShip* SDL::SDLFactory::createEnemyShip(double xPos, double yPos, 
  * @param type - bullet bullet
  * @return SDL instance of bullet
  */
-Abstract::Bullet* SDL::SDLFactory::createBullet(double xPos, double yPos, double width, double height, Abstract::Window *window, Bullet_type type) {
+Abstract::Bullet* SDL::SDLFactory::createBullet(double xPos, double yPos, double width, double height, Abstract::Window *window, BULLET_TYPE type) {
     return new SDL::SDLBullet(xPos,yPos,width,height,window,type);
 }
 
@@ -95,7 +93,7 @@ Abstract::Bullet* SDL::SDLFactory::createBullet(double xPos, double yPos, double
  * @param type - bonus type
  * @return SDL instance of bonus
  */
-Abstract::Bonus *SDL::SDLFactory::createBonus(double xPos, double yPos, double width, double height, Abstract::Window *window, Bonus_type type) {
+Abstract::Bonus *SDL::SDLFactory::createBonus(double xPos, double yPos, double width, double height, Abstract::Window *window, BONUS_TYPE type) {
     return new SDLBonus(xPos,yPos,width,height,type,window);
 }
 

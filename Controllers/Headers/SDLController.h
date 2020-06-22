@@ -12,13 +12,13 @@ namespace SDL
         ~SDLController();
         void pollEvents() override;
         bool isRunning() override;
-        bool isPressed(Key key) override;
+        bool isPressed(KEY key) override;
 
     private:
         void handleKeyboardEvent(SDL_Keycode code, bool keyDown);
     private:
         SDL_Event m_event;
-        std::map<Key,bool> m_keyPressed;
+        std::map<KEY,bool> m_keyPressed;
         bool m_isRunning = true;
     };
 }

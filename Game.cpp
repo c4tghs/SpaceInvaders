@@ -136,8 +136,7 @@ void Game::run() {
 
             // Draw everything on window
             m_window->render();
-
-            //Reset timer
+            //Reset timer -> get time
             m_timer->reset();
         }
 
@@ -161,7 +160,7 @@ void Game::createStartObjects() {
     //Create enemies
     this->createEnemies();
 
-    //Create playership
+    //Create player ship
     m_playerShip = m_factory->createPlayerShip(Constants::WINDOW_WIDTH / 2.0, (Constants::WINDOW_HEIGHT - Constants::PLAYER_SIZE * Constants::SCALE_Y), Constants::PLAYER_SIZE * Constants::SCALE_X, Constants::PLAYER_SIZE * Constants::SCALE_Y, m_window);
     m_playerShip->setScore(0);
     m_playerShip->setLives(Constants::PLAYER_LIVES);
@@ -182,6 +181,7 @@ void Game::createStartObjects() {
 void Game::createEnemies() {
     m_enemyShips.reserve(Constants::LEVELS[m_currentGameLevel]["ENEMIES"]);
 
+    //Create enemies. Max of 10 in each row
     for(int i=0; i < 10; i++)
     {
 
@@ -209,7 +209,7 @@ void Game::createEnemies() {
  * It is also used to create bonuses
  */
 void Game::handleEnemyShips() {
-    //Move enemyships
+    //Move enemy ships
     for(auto & enemyShip : m_enemyShips) {
         enemyShip->moveEntity(enemyShip->getXPosition() + (m_timer->getDeltaTime() * enemyShip->getMoveDirection() *  (Constants::LEVELS[m_currentGameLevel]["ENEMY_SPEED"]+m_enemySpeedBoost)* Constants::SCALE_X),enemyShip->getYPosition());
     }
@@ -249,17 +249,16 @@ void Game::handleEnemyShips() {
     //Create point bonus
     if(m_timer->getTime() > m_nextPointBonus)
     {
-        m_bonusPoints = m_factory->createBonus(0,25*Constants::SCALE_X,Constants::ENEMY_SIZE*Constants::SCALE_X, Constants::ENEMY_SIZE*Constants::SCALE_Y, m_window,POINTS);
-        m_nextPointBonus = m_timer->getTime() + Abstract::RandomNumber::getInstance().getRandomDouble(0, Constants::BONUS_TIME);
+        m_bonusPoints = m_factory->createBonus(0,25*Constants::SCALE_Y,Constants::ENEMY_SIZE*Constants::SCALE_X, Constants::ENEMY_SIZE*Constants::SCALE_Y, m_window,POINTS);
+        m_nextPointBonus = m_timer->getTime() + Abstract::RandomNumber::getInstance().getRandomDouble(5, Constants::BONUS_TIME);
     }
 
     //Create time bonus
     if(m_timer->getTime() > m_nextLivesBonus)
     {
-        printf("-----------Time has passed-----------\n");
         int randomPosition = Abstract::RandomNumber::getInstance().getRandomInt(0,Constants::WINDOW_WIDTH-10);
         m_bonus = m_factory->createBonus(randomPosition,-1,20*Constants::SCALE_X, 20*Constants::SCALE_Y, m_window,LIFE);
-        m_nextLivesBonus = m_timer->getTime() + Abstract::RandomNumber::getInstance().getRandomDouble(0, Constants::BONUS_TIME);
+        m_nextLivesBonus = m_timer->getTime() + Abstract::RandomNumber::getInstance().getRandomDouble(10, Constants::BONUS_TIME);
     }
 }
 
@@ -290,7 +289,6 @@ void Game::handlePlayerShip() {
         }
         else
         {
-            //200 pixels to move per second
             m_playerShip->moveEntity(m_playerShip->getXPosition() - (m_timer->getDeltaTime() * Constants::LEVELS[m_currentGameLevel]["PLAYER_SPEED"] * Constants::SCALE_X), m_playerShip->getYPosition());
         }
     }
@@ -308,7 +306,7 @@ void Game::handlePlayerShip() {
         }
     }
     //Player shoot
-    if (m_controller->isPressed(Key::playerShoot))
+    if (m_controller->isPressed(KEY::playerShoot))
     {
         this->playerShoot();
     }
@@ -354,10 +352,12 @@ void Game::moveBullets()
     }
 
     Abstract::Bullet* bullet;
+
     //Loop through all enemy bullets and move them
     for(int i =0; i < m_enemyBullets.size(); i++)
     {
         bullet = m_enemyBullets.at(i);
+        //Delete bullet if is out of view
         if(bullet->getYPosition() > Constants::WINDOW_HEIGHT-bullet->getHeight())
         {
             delete bullet;
@@ -474,13 +474,11 @@ void Game::handleCollision()
  * @return - boolean indicating if there is collision
  */
 bool Game::isCollision(Abstract::Entity *one, Abstract::Entity *two) {
+    return one->getXPosition()+(one->getWidth()/Constants::SPRITE_SCALE) >= two->getXPosition() &&
+           one->getXPosition() <= two->getXPosition() + (two->getWidth()/Constants::SPRITE_SCALE) &&
+           one->getYPosition() + (one->getHeight()/Constants::SPRITE_SCALE) >= two->getYPosition() &&
+           one->getYPosition() <= two->getYPosition() + (two->getHeight()/Constants::SPRITE_SCALE);
 
-     double xScale = Constants::SCALE_X*Constants::SPRITE_SCALE;
-     double yScale = Constants::SCALE_Y*Constants::SPRITE_SCALE;
-     return one->getXPosition()+(Constants::SPRITE_SIZE*xScale) >= two->getXPosition() &&
-           one->getXPosition() <= two->getXPosition() + (Constants::SPRITE_SIZE*xScale) &&
-           one->getYPosition() + (Constants::SPRITE_SIZE*yScale) >= two->getYPosition() &&
-           one->getYPosition() <= two->getYPosition() + (Constants::SPRITE_SIZE*yScale);
 }
 
 /**

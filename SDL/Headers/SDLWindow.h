@@ -1,4 +1,3 @@
-#pragma once
 #ifndef SPACEINVADERS_SDLWINDOW_H
 #define SPACEINVADERS_SDLWINDOW_H
 #include "../../Constants.h"
@@ -20,9 +19,9 @@ namespace SDL
         bool initialise();
         void render();
         bool loadMedia();
-        void drawRect(Sprite sprite, double xPos, double yPos, double width, double height);
+        void drawRect(SPRITE sprite, double xPos, double yPos, double width, double height);
         void refresh();
-        void playSound(Sound_type sound);
+        void playSound(SOUND_TYPE sound);
         void exit(const char* message);
         void showScore(int score);
         void showLives(int lives);
@@ -39,14 +38,13 @@ namespace SDL
         TTF_Font* m_fontEndScore= nullptr;
         TextureManager* m_textureManager;
         TextureManager* m_bonusLivesTexture;
-        //TextureManager* m_bonusSpeedTexture;
         TextManager* m_playerScore;
         TextManager* m_playerLives;
         TextManager* m_level;
         TextManager* m_endScore;
         SDL_Texture* m_background = nullptr;
-        std::map<Sprite,SDL_Rect> m_sprites;
-        std::map<Sound_type,Mix_Chunk*> m_sounds;
+        std::map<SPRITE,SDL_Rect> m_sprites;
+        std::map<SOUND_TYPE,Mix_Chunk*> m_sounds;
     };
 }
 

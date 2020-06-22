@@ -9,7 +9,7 @@
  * @param height - height of bullet
  * @param window - Window
  */
-SDL::SDLBullet::SDLBullet(double xPos, double yPos, double width, double height, Abstract::Window *window, Bullet_type type) : Abstract::Bullet(xPos, yPos, width, height) {
+SDL::SDLBullet::SDLBullet(double xPos, double yPos, double width, double height, Abstract::Window *window, BULLET_TYPE type) : Abstract::Bullet(xPos, yPos, width, height) {
     m_window = window;
     m_bulletType = type;
 }
@@ -30,7 +30,7 @@ void SDL::SDLBullet::render() {
  * Method that returns the bullet's sprite type
  * @return sprite type
  */
-Sprite SDL::SDLBullet::getSpriteType() {
+SPRITE SDL::SDLBullet::getSpriteType() {
     if(m_bulletType == player)
     {
         return PLAYER_BULLET;

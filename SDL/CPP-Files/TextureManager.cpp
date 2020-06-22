@@ -19,9 +19,9 @@ SDL::TextureManager::~TextureManager() {
 /**
  * Method used to load a texture
  * @param filename - path to file
- * @return boolean value that says if texture was loaded or not
+ * @return boolean indicating if texture was loaded or not
  */
-bool SDL::TextureManager::loadTexture(const char *filename) {
+bool SDL::TextureManager::loadTexture(const char *filename, bool transparent) {
     //Create surface from loaded image
     SDL_Surface* spriteSurface = IMG_Load(filename);
 
@@ -32,6 +32,13 @@ bool SDL::TextureManager::loadTexture(const char *filename) {
     }
     else
     {
+        if(transparent)
+        {
+            //Transparent background
+            Uint32 colorkey = SDL_MapRGB(spriteSurface->format, 255, 255, 255);
+            SDL_SetColorKey(spriteSurface, SDL_TRUE, colorkey);
+        }
+
         //Create texture
         m_texture = SDL_CreateTextureFromSurface(m_renderer,spriteSurface);
         if(m_texture == nullptr)
@@ -55,7 +62,9 @@ bool SDL::TextureManager::loadTexture(const char *filename) {
  * @param sourceRect - source of rect
  */
 void SDL::TextureManager::renderTexture(double xPos, double yPos, double width, double height, SDL_Rect *sourceRect) {
+    // Destination rectangle
     SDL_Rect destRect = {static_cast<int>(xPos),static_cast<int>(yPos),static_cast<int>(width),static_cast<int>(height)};
+
     SDL_RenderCopy(m_renderer,m_texture,sourceRect,&destRect);
 }
 

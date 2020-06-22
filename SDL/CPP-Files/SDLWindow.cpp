@@ -164,7 +164,7 @@ bool SDL::SDLWindow::loadMedia() {
     }
 
     //Load sprite sheet
-    if(m_textureManager->loadTexture("../assets/invaders_sheet.png"))
+    if(m_textureManager->loadTexture("../assets/invaders_sheet.png", false))
     {
         //Sprite positions and dimensions in sprite sheet
         m_sprites[ENEMY_BIG_CLOSED].x = 160;
@@ -227,7 +227,7 @@ bool SDL::SDLWindow::loadMedia() {
         return false;
     }
 
-    if(!m_bonusLivesTexture->loadTexture("../assets/life.jpg"))
+    if(!m_bonusLivesTexture->loadTexture("../assets/heart.jpg", false))
     {
         return false;
     }
@@ -281,7 +281,7 @@ bool SDL::SDLWindow::loadMedia() {
  * Method to render objects
  * @param sprite  - the sprite type to render
  */
-void SDL::SDLWindow::drawRect(Sprite sprite, double xPos, double yPos, double width, double height) {
+void SDL::SDLWindow::drawRect(SPRITE sprite, double xPos, double yPos, double width, double height) {
     //Not from sprite sheet
     if(sprite == BONUS_LIFE)
     {
@@ -307,7 +307,7 @@ void SDL::SDLWindow::refresh() {
  * Method used to play a sound
  * @param sound - the sound to play
  */
-void SDL::SDLWindow::playSound(Sound_type sound) {
+void SDL::SDLWindow::playSound(SOUND_TYPE sound) {
     //-1: choose appropriate channel
     Mix_PlayChannel(-1, m_sounds[sound], 0);
 }

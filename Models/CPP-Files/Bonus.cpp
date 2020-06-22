@@ -8,6 +8,7 @@
  * @param height - height of bonus
  */
 Abstract::Bonus::Bonus(double xPos, double yPos, double width, double height) : Entity(xPos, yPos, width, height) {}
+
 /**
  * Destructor
  */

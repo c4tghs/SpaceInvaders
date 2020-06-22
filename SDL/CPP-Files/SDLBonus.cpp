@@ -9,7 +9,7 @@
  * @param type - bonus type
  * @param window - window to render bonus on
  */
-SDL::SDLBonus::SDLBonus(double xPos, double yPos, double width, double height, Bonus_type type, Abstract::Window *window): Abstract::Bonus(xPos, yPos, width, height) {
+SDL::SDLBonus::SDLBonus(double xPos, double yPos, double width, double height, BONUS_TYPE type, Abstract::Window *window): Abstract::Bonus(xPos, yPos, width, height) {
     m_bonusType = type;
     m_window = window;
 }
@@ -27,9 +27,9 @@ void SDL::SDLBonus::render() {
 }
 /**
  * Method that returns the bonus' sprite type
- * @return
+ * @return sprite type
  */
-Sprite SDL::SDLBonus::getSpriteType() {
+SPRITE SDL::SDLBonus::getSpriteType() {
     if(m_bonusType == POINTS)
     {
         return BONUS_POINTS;

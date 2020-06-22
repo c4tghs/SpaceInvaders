@@ -6,239 +6,425 @@
 
 #IncludeRegexTransform: 
 
-C:/MinGW/include/SDL2/SDL2/SDL_mixer.h
-SDL_stdinc.h
-C:/MinGW/include/SDL2/SDL2/SDL_stdinc.h
-SDL_rwops.h
-C:/MinGW/include/SDL2/SDL2/SDL_rwops.h
-SDL_audio.h
-C:/MinGW/include/SDL2/SDL2/SDL_audio.h
-SDL_endian.h
-C:/MinGW/include/SDL2/SDL2/SDL_endian.h
-SDL_version.h
-C:/MinGW/include/SDL2/SDL2/SDL_version.h
-begin_code.h
-C:/MinGW/include/SDL2/SDL2/begin_code.h
-close_code.h
-C:/MinGW/include/SDL2/SDL2/close_code.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Configuration.h
+nlohmann/json.hpp
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/nlohmann/json.hpp
 
-C:/MinGW/include/SDL2/SDL_atomic.h
-SDL_stdinc.h
-C:/MinGW/include/SDL2/SDL_stdinc.h
-SDL_platform.h
-C:/MinGW/include/SDL2/SDL_platform.h
-begin_code.h
-C:/MinGW/include/SDL2/begin_code.h
-sys/cpuinline.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Constants.h
+map
 -
-mbarrier.h
--
-close_code.h
-C:/MinGW/include/SDL2/close_code.h
 
-C:/MinGW/include/SDL2/SDL_audio.h
-SDL_stdinc.h
-C:/MinGW/include/SDL2/SDL_stdinc.h
-SDL_error.h
-C:/MinGW/include/SDL2/SDL_error.h
-SDL_endian.h
-C:/MinGW/include/SDL2/SDL_endian.h
-SDL_mutex.h
-C:/MinGW/include/SDL2/SDL_mutex.h
-SDL_thread.h
-C:/MinGW/include/SDL2/SDL_thread.h
-SDL_rwops.h
-C:/MinGW/include/SDL2/SDL_rwops.h
-begin_code.h
-C:/MinGW/include/SDL2/begin_code.h
-close_code.h
-C:/MinGW/include/SDL2/close_code.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Controllers/Headers/Controller.h
+../../Constants.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Constants.h
 
-C:/MinGW/include/SDL2/SDL_config.h
-SDL_platform.h
-C:/MinGW/include/SDL2/SDL_platform.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Factories/Factory.h
+../Controllers/Headers/Controller.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Controllers/Headers/Controller.h
+../Models/Headers/Timer.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Timer.h
+../Models/Headers/PlayerShip.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/PlayerShip.h
+../Models/Headers/Window.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Window.h
+../Models/Headers/EnemyShip.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/EnemyShip.h
+../Models/Headers/Bullet.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Bullet.h
+../Models/Headers/Bonus.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Bonus.h
 
-C:/MinGW/include/SDL2/SDL_endian.h
-SDL_stdinc.h
-C:/MinGW/include/SDL2/SDL_stdinc.h
-endian.h
--
-endian.h
--
-begin_code.h
-C:/MinGW/include/SDL2/begin_code.h
-close_code.h
-C:/MinGW/include/SDL2/close_code.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Factories/SDLFactory.h
+Factory.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Factories/Factory.h
 
-C:/MinGW/include/SDL2/SDL_error.h
-SDL_stdinc.h
-C:/MinGW/include/SDL2/SDL_stdinc.h
-begin_code.h
-C:/MinGW/include/SDL2/begin_code.h
-close_code.h
-C:/MinGW/include/SDL2/close_code.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Game.cpp
+iostream
+-
+Game.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Game.h
+Configuration.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Configuration.h
 
-C:/MinGW/include/SDL2/SDL_mutex.h
-SDL_stdinc.h
-C:/MinGW/include/SDL2/SDL_stdinc.h
-SDL_error.h
-C:/MinGW/include/SDL2/SDL_error.h
-begin_code.h
-C:/MinGW/include/SDL2/begin_code.h
-close_code.h
-C:/MinGW/include/SDL2/close_code.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Game.h
+Factories/Factory.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Factories/Factory.h
+Models/Headers/RandomNumber.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/RandomNumber.h
 
-C:/MinGW/include/SDL2/SDL_platform.h
-AvailabilityMacros.h
-C:/MinGW/include/SDL2/AvailabilityMacros.h
-TargetConditionals.h
-C:/MinGW/include/SDL2/TargetConditionals.h
-winapifamily.h
--
-begin_code.h
-C:/MinGW/include/SDL2/begin_code.h
-close_code.h
-C:/MinGW/include/SDL2/close_code.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Bonus.h
+Entity.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Entity.h
+../../Constants.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Constants.h
 
-C:/MinGW/include/SDL2/SDL_rwops.h
-SDL_stdinc.h
-C:/MinGW/include/SDL2/SDL_stdinc.h
-SDL_error.h
-C:/MinGW/include/SDL2/SDL_error.h
-begin_code.h
-C:/MinGW/include/SDL2/begin_code.h
-close_code.h
-C:/MinGW/include/SDL2/close_code.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Bullet.h
+Entity.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Entity.h
 
-C:/MinGW/include/SDL2/SDL_stdinc.h
-SDL_config.h
-C:/MinGW/include/SDL2/SDL_config.h
-sys/types.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/EnemyShip.h
+Entity.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Entity.h
+../../Constants.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Constants.h
+
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Entity.h
+
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/PlayerShip.h
+Entity.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Entity.h
+
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/RandomNumber.h
+random
 -
-stdio.h
+
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Timer.h
+
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Window.h
+../../Constants.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Constants.h
+
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/main.cpp
+iostream
 -
-stdlib.h
+Factories/Factory.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Factories/Factory.h
+Factories/SDLFactory.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Factories/SDLFactory.h
+Game.h
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Game.h
+
+D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/nlohmann/json.hpp
+algorithm
 -
-stddef.h
+cassert
 -
-stdarg.h
+ciso646
 -
-stdlib.h
+cstddef
 -
-malloc.h
+functional
 -
-stddef.h
+initializer_list
 -
-stdarg.h
+iosfwd
 -
-memory.h
+iterator
 -
-string.h
+memory
 -
-strings.h
+numeric
 -
-wchar.h
+string
 -
-inttypes.h
+utility
+-
+vector
+-
+utility
+-
+algorithm
+-
+array
+-
+ciso646
+-
+forward_list
+-
+iterator
+-
+map
+-
+string
+-
+tuple
+-
+type_traits
+-
+unordered_map
+-
+utility
+-
+valarray
+-
+exception
+-
+stdexcept
+-
+string
+-
+cstddef
+-
+utility
 -
 stdint.h
 -
-ctype.h
+stdint.h
 -
-math.h
+cstdlib
 -
-float.h
+ciso646
 -
-alloca.h
+cstddef
 -
-malloc.h
+type_traits
 -
-malloc.h
+ciso646
 -
-malloc.h
+limits
 -
-stdlib.h
+type_traits
 -
-sal.h
+utility
 -
-begin_code.h
-C:/MinGW/include/SDL2/begin_code.h
-close_code.h
-C:/MinGW/include/SDL2/close_code.h
-
-C:/MinGW/include/SDL2/SDL_thread.h
-SDL_stdinc.h
-C:/MinGW/include/SDL2/SDL_stdinc.h
-SDL_error.h
-C:/MinGW/include/SDL2/SDL_error.h
-SDL_atomic.h
-C:/MinGW/include/SDL2/SDL_atomic.h
-SDL_mutex.h
-C:/MinGW/include/SDL2/SDL_mutex.h
-begin_code.h
-C:/MinGW/include/SDL2/begin_code.h
-process.h
+iterator
 -
-process.h
+type_traits
 -
-stdlib.h
--
-close_code.h
-C:/MinGW/include/SDL2/close_code.h
-
-C:/MinGW/include/SDL2/SDL_version.h
-SDL_stdinc.h
-C:/MinGW/include/SDL2/SDL_stdinc.h
-begin_code.h
-C:/MinGW/include/SDL2/begin_code.h
-close_code.h
-C:/MinGW/include/SDL2/close_code.h
-
-C:/MinGW/include/SDL2/begin_code.h
-
-C:/MinGW/include/SDL2/close_code.h
-
-D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Constants.h
-map
--
-
-D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Window.h
-../../Constants.h
-D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Constants.h
-
-D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/SDL/CPP-Files/SDLWindow.cpp
-iostream
--
-../Headers/SDLWindow.h
-D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/SDL/Headers/SDLWindow.h
-
-D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/SDL/Headers/SDLWindow.h
-../../Constants.h
-D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Constants.h
-../../Models/Headers/Window.h
-D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/Models/Headers/Window.h
-TextureManager.h
-D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/SDL/Headers/TextureManager.h
-TextManager.h
-D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/SDL/Headers/TextManager.h
-SDL2/SDL.h
--
-SDL2/SDL_image.h
--
-SDL2/SDL_ttf.h
--
-SDL2/SDL_mixer.h
+cstdint
 -
 map
 -
-
-D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/SDL/Headers/TextManager.h
-SDL2/SDL_render.h
+memory
 -
-SDL2/SDL_ttf.h
+string
 -
-
-D:/Users/cliff/Documents/Github/C++ game/SpaceInvaders/SDL/Headers/TextureManager.h
-SDL2/SDL_render.h
+vector
+-
+array
+-
+ciso646
+-
+cstddef
+-
+cstdint
+-
+string
+-
+algorithm
+-
+ciso646
+-
+iterator
+-
+string
+-
+tuple
+-
+type_traits
+-
+utility
+-
+valarray
+-
+vector
+-
+cstddef
+-
+iterator
+-
+string
+-
+tuple
+-
+algorithm
+-
+array
+-
+cassert
+-
+cmath
+-
+cstddef
+-
+cstdint
+-
+cstdio
+-
+cstring
+-
+iterator
+-
+limits
+-
+string
+-
+utility
+-
+array
+-
+cassert
+-
+cstddef
+-
+cstdio
+-
+cstring
+-
+istream
+-
+iterator
+-
+memory
+-
+numeric
+-
+string
+-
+type_traits
+-
+utility
+-
+cassert
+-
+cstddef
+-
+string
+-
+utility
+-
+vector
+-
+cstdint
+-
+utility
+-
+string
+-
+array
+-
+clocale
+-
+cstddef
+-
+cstdio
+-
+cstdlib
+-
+initializer_list
+-
+string
+-
+utility
+-
+vector
+-
+cassert
+-
+cmath
+-
+cstdint
+-
+functional
+-
+string
+-
+utility
+-
+vector
+-
+cstddef
+-
+limits
+-
+ciso646
+-
+iterator
+-
+type_traits
+-
+cstddef
+-
+iterator
+-
+utility
+-
+algorithm
+-
+cassert
+-
+cctype
+-
+numeric
+-
+string
+-
+utility
+-
+vector
+-
+initializer_list
+-
+utility
+-
+algorithm
+-
+array
+-
+cstdint
+-
+cstring
+-
+limits
+-
+string
+-
+algorithm
+-
+cstddef
+-
+ios
+-
+iterator
+-
+memory
+-
+ostream
+-
+string
+-
+vector
+-
+algorithm
+-
+array
+-
+cassert
+-
+ciso646
+-
+clocale
+-
+cmath
+-
+cstddef
+-
+cstdint
+-
+cstdio
+-
+limits
+-
+string
+-
+type_traits
+-
+utility
+-
+array
+-
+cassert
+-
+ciso646
+-
+cmath
+-
+cstdint
+-
+cstring
+-
+limits
+-
+type_traits
 -
 

@@ -9,7 +9,7 @@
  * @param height - height of enemy
  */
 SDL::SDLEnemyShip::SDLEnemyShip(Abstract::Window *window, double xPos, double yPos, double width, double height,
-                                Enemy_type type) : Abstract::EnemyShip(xPos, yPos, width, height)
+                                ENEMY_TYPE type) : Abstract::EnemyShip(xPos, yPos, width, height)
 
 {
     m_window = window;
@@ -31,7 +31,7 @@ void SDL::SDLEnemyShip::render() {
  * Method that returns the ship"s sprite type
  * @return SPRITE representing the ship's type
  */
-Sprite SDL::SDLEnemyShip::getSpriteType() {
+SPRITE SDL::SDLEnemyShip::getSpriteType() {
     if(m_enemyType == Squid)
     {
         return ENEMY_SMALL_OPEN;
@@ -40,12 +40,8 @@ Sprite SDL::SDLEnemyShip::getSpriteType() {
     {
         return ENEMY_MEDIUM_OPEN;
     }
-    else if(m_enemyType == Octopus)
-    {
-        return ENEMY_BIG_OPEN;
-    }
     else
     {
-        return BONUS_POINTS;
+        return ENEMY_BIG_OPEN;
     }
 }

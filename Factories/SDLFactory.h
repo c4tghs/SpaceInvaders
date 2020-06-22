@@ -13,9 +13,9 @@ namespace SDL
         Abstract::Timer* createTimer() override;
         Abstract::PlayerShip* createPlayerShip(double xPos, double yPos, double width, double height, Abstract::Window* window) override;
         Abstract::Window* createWindow(const char* title,int width, int height)override ;
-        Abstract::EnemyShip* createEnemyShip(double xPos, double yPos, double width, double height, Abstract::Window *window, Enemy_type type) override;
-        Abstract::Bullet* createBullet(double xPos, double yPos, double width, double height, Abstract::Window *window, Bullet_type type) override;
-        Abstract::Bonus* createBonus(double xPos, double yPos, double width, double height, Abstract::Window *window, Bonus_type type) override;
+        Abstract::EnemyShip* createEnemyShip(double xPos, double yPos, double width, double height, Abstract::Window *window, ENEMY_TYPE type) override;
+        Abstract::Bullet* createBullet(double xPos, double yPos, double width, double height, Abstract::Window *window, BULLET_TYPE type) override;
+        Abstract::Bonus* createBonus(double xPos, double yPos, double width, double height, Abstract::Window *window, BONUS_TYPE type) override;
     };
 }
 

@@ -4,7 +4,7 @@
 int Constants::WINDOW_WIDTH = 1080;
 int Constants::WINDOW_HEIGHT = 720;
 int Constants::FRAME_RATE = 60;
-int Constants::PLAYER_LIVES = 5;
+int Constants::PLAYER_LIVES = 3;
 
 
 double Constants::SCALE_X = (Constants::WINDOW_WIDTH+0.0) / Constants::DEFAULT_WINDOW_WIDTH;

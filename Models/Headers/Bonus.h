@@ -13,7 +13,7 @@ namespace Abstract{
             virtual void render()=0;
 
     protected:
-            Bonus_type m_bonusType=POINTS;
+            BONUS_TYPE m_bonusType=POINTS;
     };
 
 }

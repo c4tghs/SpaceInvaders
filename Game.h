@@ -26,7 +26,7 @@ private:
     ~Game();
 private:
     static Game* m_instance;
-    Mode m_gameMode;
+    MODE m_gameMode;
     Abstract::Factory* m_factory = nullptr;
     Abstract::Controller* m_controller= nullptr;
     Abstract::Timer* m_timer=nullptr;

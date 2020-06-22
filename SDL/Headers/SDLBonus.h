@@ -8,10 +8,10 @@ namespace SDL
 {
     class SDLBonus:public Abstract::Bonus {
         public:
-            SDLBonus(double xPos, double yPos, double width, double height, Bonus_type type, Abstract::Window* window);
+            SDLBonus(double xPos, double yPos, double width, double height, BONUS_TYPE type, Abstract::Window* window);
             ~SDLBonus();
             void render();
-            Sprite getSpriteType();
+            SPRITE getSpriteType();
 
         private:
             Abstract::Window* m_window;

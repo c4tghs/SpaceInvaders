@@ -9,9 +9,7 @@ CMakeFiles/SpaceInvaders.dir/Configuration.cpp.obj: ../nlohmann/json.hpp
 CMakeFiles/SpaceInvaders.dir/Constants.cpp.obj: ../Constants.cpp
 CMakeFiles/SpaceInvaders.dir/Constants.cpp.obj: ../Constants.h
 
-CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/Controller.cpp.obj: ../Constants.h
 CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/Controller.cpp.obj: ../Controllers/CPP-Files/Controller.cpp
-CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/Controller.cpp.obj: ../Controllers/Headers/Controller.h
 
 CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/SDLController.cpp.obj: ../Constants.h
 CMakeFiles/SpaceInvaders.dir/Controllers/CPP-Files/SDLController.cpp.obj: ../Controllers/CPP-Files/SDLController.cpp

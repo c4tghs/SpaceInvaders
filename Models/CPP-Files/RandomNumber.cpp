@@ -26,6 +26,7 @@ Abstract::RandomNumber::RandomNumber() {}
  */
 double Abstract::RandomNumber::getRandomDouble(double min, double max) {
     m_mt = std::mt19937(m_rd());
+
     //[min,max[
     std::uniform_real_distribution<double> m_dist(min, max);
     return m_dist(m_mt);
@@ -39,6 +40,7 @@ double Abstract::RandomNumber::getRandomDouble(double min, double max) {
  */
 int Abstract::RandomNumber::getRandomInt(int min, int max) {
     m_mt = std::mt19937(m_rd());
+
     //HigherBound -1 because otherwise it is included
     //[min,max]
     std::uniform_int_distribution<int> m_dist(min, max - 1);

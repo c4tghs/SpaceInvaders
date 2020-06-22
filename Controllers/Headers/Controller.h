@@ -10,7 +10,7 @@ namespace Abstract
         Controller()=default;
         virtual ~Controller()=default;
         virtual void pollEvents()=0;
-        virtual bool isPressed(Key key)=0;
+        virtual bool isPressed(KEY key)=0;
 
         virtual bool isRunning()=0;
 

@@ -1,7 +1,3 @@
-/**
- * Entity class
- */
-
 #ifndef PROJECT_ENTITY_H
 #define PROJECT_ENTITY_H
 
